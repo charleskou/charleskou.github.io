@@ -61,7 +61,16 @@ TODO
 # 扩展
 
 ## 主题修改
-
+下载主题文件到主目录：
+```
+cd your-hexo-site
+git clone https://github.com/iissnan/hexo-theme-next themes/next
+```
+修改主目录下的_config.yml，指向自定义的主题：
+```
+theme: {#theme-title}
+```
+theme-title: 自定义主题的名称
 ## 文章内链
 ```
 {% post_link post-title-sample 点此查看 %}
