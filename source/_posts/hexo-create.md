@@ -39,7 +39,7 @@ hexo new '文章标题'
 执行完成后可以在 /source/_posts 下看到一个“文章标题.md”的文章文件
 
 # 启动服务
-启动前先生产静态文件
+启动前先编译生成静态文件
 ```
 hexo g
 ```
@@ -49,19 +49,22 @@ hexo s
 默认访问地址：http://localhost:4000
 
 # 部署
-
-## 插件
-```
-npm install hexo-deployer-git --save
-```
-
-## 推送到Github
+{% post_link hexo-deploy %}
 
 ## 访问
+[网站链接](https://charleskou.github.io)
 
 ## 域名绑定
+TODO
 
 
 # 扩展
 
 ## 主题修改
+
+## 文章内链
+```
+{% post_link post-title-sample 点此查看 %}
+```
+- post-title-sample - 文章名称，如果文章不存在，这段代码将会被直接忽略。
+- 点此查看 - 链接标题。如果置空，则自动提取文章的标题。

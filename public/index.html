@@ -141,13 +141,13 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-08-08T10:43:21.000Z">2019-08-08</time>
+                <time class="level-item has-text-grey" datetime="2019-08-09T04:16:21.000Z">2019-08-09</time>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    1 分钟 读完 (大约 125 个字)
+                    1 分钟 读完 (大约 153 个字)
                 </span>
                 
                 
@@ -156,7 +156,75 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/08/08/hexo-博客搭建/">hexo 博客搭建</a>
+                <a class="has-link-black-ter" href="/2019/08/09/hexo-deploy/">hexo 博客部署</a>
+            
+        </h1>
+        <div class="content">
+            <h1 id="发布流程-V2"><a href="#发布流程-V2" class="headerlink" title="发布流程 - V2"></a>发布流程 - V2</h1><ol>
+<li><p>安装hexo-deployer-git插件</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>修改_config.yml配置</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https://github.com/username/username.github.io.git</span><br><span class="line">  branch: master</span><br><span class="line">  message:</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>编译</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>部署</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>等待2min左右，页面展示。</p>
+</li>
+</ol>
+<p>V2流程中, 步骤1、2只需执行一次。</p>
+<h1 id="发布流程-V1"><a href="#发布流程-V1" class="headerlink" title="发布流程 - V1"></a>发布流程 - V1</h1><ol>
+<li>编译：hexo g</li>
+<li>src分支代码提交</li>
+<li>xshell同步到阿里云服务器</li>
+<li>服务器端git提交</li>
+<li>等待2min左右，页面展示</li>
+</ol>
+<p>Tip：<br>服务器初次提交Git配置：</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.email &quot;username@xx.com&quot;</span><br><span class="line">git config --global user.name &quot;username&quot;</span><br></pre></td></tr></table></figure>
+
+<p>提交时输入username和密码。</p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-08T10:43:21.000Z">2019-08-08</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    1 分钟 读完 (大约 194 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/08/08/hexo-create/">hexo 博客搭建</a>
             
         </h1>
         <div class="content">
@@ -170,15 +238,23 @@
 <h2 id="文章"><a href="#文章" class="headerlink" title="文章"></a>文章</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new &apos;文章标题&apos;</span><br></pre></td></tr></table></figure>
 
 <p>执行完成后可以在 /source/_posts 下看到一个“文章标题.md”的文章文件</p>
-<h1 id="启动服务"><a href="#启动服务" class="headerlink" title="启动服务"></a>启动服务</h1><p>启动前先生产静态文件</p>
+<h1 id="启动服务"><a href="#启动服务" class="headerlink" title="启动服务"></a>启动服务</h1><p>启动前先编译生成静态文件</p>
 <figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
 
 <p>默认访问地址：<a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a></p>
-<h1 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h1><h2 id="插件"><a href="#插件" class="headerlink" title="插件"></a>插件</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+<h1 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h1><a href="/2019/08/09/hexo-deploy/" title="hexo 博客部署">hexo 博客部署</a>
 
-<h2 id="推送到Github"><a href="#推送到Github" class="headerlink" title="推送到Github"></a>推送到Github</h2><h2 id="访问"><a href="#访问" class="headerlink" title="访问"></a>访问</h2><h2 id="域名绑定"><a href="#域名绑定" class="headerlink" title="域名绑定"></a>域名绑定</h2><h1 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h1><h2 id="主题修改"><a href="#主题修改" class="headerlink" title="主题修改"></a>主题修改</h2>
+<h2 id="访问"><a href="#访问" class="headerlink" title="访问"></a>访问</h2><p><a href="https://charleskou.github.io" target="_blank" rel="noopener">网站链接</a></p>
+<h2 id="域名绑定"><a href="#域名绑定" class="headerlink" title="域名绑定"></a>域名绑定</h2><p>TODO</p>
+<h1 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h1><h2 id="主题修改"><a href="#主题修改" class="headerlink" title="主题修改"></a>主题修改</h2><h2 id="文章内链"><a href="#文章内链" class="headerlink" title="文章内链"></a>文章内链</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% post_link post-title-sample 点此查看 %&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>post-title-sample - 文章名称，如果文章不存在，这段代码将会被直接忽略。</li>
+<li>点此查看 - 链接标题。如果置空，则自动提取文章的标题。</li>
+</ul>
+
         </div>
         
         
@@ -205,7 +281,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    1 分钟 读完 (大约 169 个字)
+                    2 分钟 读完 (大约 251 个字)
                 </span>
                 
                 
@@ -214,7 +290,7 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/08/08/hexo-命令/">hexo 命令</a>
+                <a class="has-link-black-ter" href="/2019/08/08/hexo-command/">hexo 命令</a>
             
         </h1>
         <div class="content">
@@ -222,6 +298,9 @@
 <h2 id="hexo-init-folder"><a href="#hexo-init-folder" class="headerlink" title="hexo init [folder]"></a>hexo init [folder]</h2><p>新建网站。如果没有设置 folder ，Hexo 默认在目前的文件夹建立网站。</p>
 <h2 id="hexo-g"><a href="#hexo-g" class="headerlink" title="hexo g"></a>hexo g</h2><p>生成静态文件。<br>完整命令：</p>
 <figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>监控文件变动，实时编译</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo generate -w</span><br></pre></td></tr></table></figure>
 
 
 <h2 id="hexo-s"><a href="#hexo-s" class="headerlink" title="hexo s"></a>hexo s</h2><p>启动服务器。默认情况下，访问网址为： <a href="http://localhost:4000/。" target="_blank" rel="noopener">http://localhost:4000/。</a><br>-p 或 –port 参数可指定端口<br>完整命令：</p>
@@ -234,59 +313,7 @@
 <figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new &quot;post title with whitespace&quot;</span><br></pre></td></tr></table></figure>
 
 <h2 id="hexo-list"><a href="#hexo-list" class="headerlink" title="hexo list "></a>hexo list <type></type></h2><p>列出网站资料。<br>Description:<br>List the information of the site.<br>Arguments:<br>  type  Available types: page, post, route, tag, category</p>
-
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-06-28T09:31:17.510Z">2019-06-28</time>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    1 分钟 读完 (大约 121 个字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/06/28/hello-world/">Hello World</a>
-            
-        </h1>
-        <div class="content">
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="hljs-string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+<h2 id="hexo-clean"><a href="#hexo-clean" class="headerlink" title="hexo clean"></a>hexo clean</h2><p>清除缓存文件 (db.json) 和已生成的静态文件 (public)。在某些情况（尤其是更换主题后），如果发现您对站点的更改无论如何也不生效，您可能需要运行该命令。</p>
 
         </div>
         
@@ -482,7 +509,26 @@
         
         <article class="media">
             
-            <a href="/2019/08/08/hexo-博客搭建/" class="media-left">
+            <a href="/2019/08/09/hexo-deploy/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="hexo 博客部署">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-09T04:16:21.000Z">2019-08-09</time></div>
+                    <a href="/2019/08/09/hexo-deploy/" class="title has-link-black-ter is-size-6 has-text-weight-normal">hexo 博客部署</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/08/08/hexo-create/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/images/thumbnail.svg" alt="hexo 博客搭建">
                 </p>
@@ -491,7 +537,7 @@
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-08T10:43:21.000Z">2019-08-08</time></div>
-                    <a href="/2019/08/08/hexo-博客搭建/" class="title has-link-black-ter is-size-6 has-text-weight-normal">hexo 博客搭建</a>
+                    <a href="/2019/08/08/hexo-create/" class="title has-link-black-ter is-size-6 has-text-weight-normal">hexo 博客搭建</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
@@ -501,7 +547,7 @@
         
         <article class="media">
             
-            <a href="/2019/08/08/hexo-命令/" class="media-left">
+            <a href="/2019/08/08/hexo-command/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/images/thumbnail.svg" alt="hexo 命令">
                 </p>
@@ -510,26 +556,7 @@
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-08T10:29:31.000Z">2019-08-08</time></div>
-                    <a href="/2019/08/08/hexo-命令/" class="title has-link-black-ter is-size-6 has-text-weight-normal">hexo 命令</a>
-                    <p class="is-size-7 is-uppercase">
-                        
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/06/28/hello-world/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Hello World">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-28T09:31:17.510Z">2019-06-28</time></div>
-                    <a href="/2019/06/28/hello-world/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Hello World</a>
+                    <a href="/2019/08/08/hexo-command/" class="title has-link-black-ter is-size-6 has-text-weight-normal">hexo 命令</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
@@ -555,18 +582,7 @@
                     <span class="level-item">八月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">2</span>
-                </span>
-            </a>
-        </li>
-        
-        <li>
-            <a class="level is-marginless" href="/archives/2019/06/">
-                <span class="level-start">
-                    <span class="level-item">六月 2019</span>
-                </span>
-                <span class="level-end">
-                    <span class="level-item tag">1</span>
+                    <span class="level-item tag">3</span>
                 </span>
             </a>
         </li>
@@ -609,7 +625,26 @@
         
         <article class="media">
             
-            <a href="/2019/08/08/hexo-博客搭建/" class="media-left">
+            <a href="/2019/08/09/hexo-deploy/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="hexo 博客部署">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-09T04:16:21.000Z">2019-08-09</time></div>
+                    <a href="/2019/08/09/hexo-deploy/" class="title has-link-black-ter is-size-6 has-text-weight-normal">hexo 博客部署</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/08/08/hexo-create/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/images/thumbnail.svg" alt="hexo 博客搭建">
                 </p>
@@ -618,7 +653,7 @@
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-08T10:43:21.000Z">2019-08-08</time></div>
-                    <a href="/2019/08/08/hexo-博客搭建/" class="title has-link-black-ter is-size-6 has-text-weight-normal">hexo 博客搭建</a>
+                    <a href="/2019/08/08/hexo-create/" class="title has-link-black-ter is-size-6 has-text-weight-normal">hexo 博客搭建</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
@@ -628,7 +663,7 @@
         
         <article class="media">
             
-            <a href="/2019/08/08/hexo-命令/" class="media-left">
+            <a href="/2019/08/08/hexo-command/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/images/thumbnail.svg" alt="hexo 命令">
                 </p>
@@ -637,26 +672,7 @@
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-08T10:29:31.000Z">2019-08-08</time></div>
-                    <a href="/2019/08/08/hexo-命令/" class="title has-link-black-ter is-size-6 has-text-weight-normal">hexo 命令</a>
-                    <p class="is-size-7 is-uppercase">
-                        
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/06/28/hello-world/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Hello World">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-28T09:31:17.510Z">2019-06-28</time></div>
-                    <a href="/2019/06/28/hello-world/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Hello World</a>
+                    <a href="/2019/08/08/hexo-command/" class="title has-link-black-ter is-size-6 has-text-weight-normal">hexo 命令</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
@@ -682,18 +698,7 @@
                     <span class="level-item">八月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">2</span>
-                </span>
-            </a>
-        </li>
-        
-        <li>
-            <a class="level is-marginless" href="/archives/2019/06/">
-                <span class="level-start">
-                    <span class="level-item">六月 2019</span>
-                </span>
-                <span class="level-end">
-                    <span class="level-item tag">1</span>
+                    <span class="level-item tag">3</span>
                 </span>
             </a>
         </li>
