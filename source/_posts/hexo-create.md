@@ -71,9 +71,35 @@ git clone https://github.com/iissnan/hexo-theme-next themes/next
 theme: {#theme-title}
 ```
 theme-title: 自定义主题的名称
+
+## 主题定制
+字体修改：主题source文件夹下css目录
+示例：
+```css
+family-sans = "Open Sans", "Helvetica Neue", "Microsoft YaHei", sans-serif
+```
+
 ## 文章内链
 ```
 {% post_link post-title-sample 点此查看 %}
 ```
 - post-title-sample - 文章名称，如果文章不存在，这段代码将会被直接忽略。
 - 点此查看 - 链接标题。如果置空，则自动提取文章的标题。
+
+## 插件
+
+### 代码着色
+https://github.com/highlightjs/highlight.js
+https://highlightjs.org/
+推荐样式：monokai-sublime
+
+### 实时预览
+BrowserSync plugin for Hexo.
+```
+npm install hexo-browsersync --save
+```
+
+### 自动摘要
+```
+npm install hexo-excerpt --save
+```
