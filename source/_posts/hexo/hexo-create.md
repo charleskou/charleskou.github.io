@@ -49,7 +49,7 @@ hexo s
 默认访问地址：http://localhost:4000
 
 # 部署
-{% post_link hexo-deploy %}
+{% post_link hexo/hexo-deploy %}
 
 ## 访问
 [网站链接](https://charleskou.github.io)
