@@ -2,7 +2,7 @@
 <html lang="zh">
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-<title>标签: git - Coder</title>
+<title>Maven - Coder</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
@@ -71,7 +71,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="Coder" height="28">
+                <img src="/images/logo.svg" alt="Maven" height="28">
             
             </a>
         </div>
@@ -106,29 +106,18 @@
         <div class="container">
             <div class="columns">
                 <div class="column is-8-tablet is-8-desktop is-8-widescreen has-order-2 column-main"><div class="card">
-    <div class="card-content">
-        <nav class="breadcrumb" aria-label="breadcrumbs">
-        <ul>
-            <li><a href="/tags">标签</a></li>
-            <li class="is-active"><a href="#" aria-current="page">git</a></li>
-        </ul>
-        </nav>
-    </div>
-</div>
-
-    <div class="card">
     
     <div class="card-content article ">
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-08-09T09:55:21.000Z">2019-08-09</time>
+                <time class="level-item has-text-grey" datetime="2019-08-10T07:15:21.000Z">2019-08-10</time>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    几秒 读完 (大约 34 个字)
+                    2 分钟 读完 (大约 243 个字)
                 </span>
                 
                 
@@ -137,24 +126,38 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/08/09/tools/git-subtree/">Git Subtree</a>
+                Maven
             
         </h1>
         <div class="content">
-            <h2 id="推送指定文件夹到远程主机指定分支"><a href="#推送指定文件夹到远程主机指定分支" class="headerlink" title="推送指定文件夹到远程主机指定分支"></a>推送指定文件夹到远程主机指定分支</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git subtree push --prefix public origin master</span><br></pre></td></tr></table></figure>
+            <h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">mvn clean</span><br><span class="line">mvn package</span><br><span class="line">mvn install</span><br><span class="line">mvn clean package -DskipTests</span><br><span class="line">mvn clean package -DskipTests -U</span><br></pre></td></tr></table></figure>
 
-<p>public - 指定文件夹<br>master - 指定分支</p>
+<p>mvn install 会将项目生成的构件安装到本地Maven仓库</p>
+<h2 id="mirror"><a href="#mirror" class="headerlink" title="mirror"></a>mirror</h2><p>阿里镜像：</p>
+<figure class="highlight xml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">mirror</span>&gt;</span>  </span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">id</span>&gt;</span>repo2<span class="hljs-tag">&lt;/<span class="hljs-name">id</span>&gt;</span>  </span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">mirrorOf</span>&gt;</span>central<span class="hljs-tag">&lt;/<span class="hljs-name">mirrorOf</span>&gt;</span>  </span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">name</span>&gt;</span>human readable name for this mirror.<span class="hljs-tag">&lt;/<span class="hljs-name">name</span>&gt;</span>  </span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">url</span>&gt;</span>http://maven.aliyun.com/nexus/content/groups/public/<span class="hljs-tag">&lt;/<span class="hljs-name">url</span>&gt;</span>  </span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">mirror</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="nexus"><a href="#nexus" class="headerlink" title="nexus"></a>nexus</h2><p>maven私服</p>
+<h3 id="配置参考"><a href="#配置参考" class="headerlink" title="配置参考"></a>配置参考</h3><p>配置文件路径(示例)：C:\Users\username.m2\settings.xml</p>
+<figure class="highlight xml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">&lt;?xml version="1.0" encoding="UTF-8" standalone="no"?&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">settings</span> <span class="hljs-attr">xmlns</span>=<span class="hljs-string">"http://maven.apache.org/SETTINGS/1.0.0"</span> <span class="hljs-attr">xmlns:xsi</span>=<span class="hljs-string">"http://www.w3.org/2001/XMLSchema-instance"</span> <span class="hljs-attr">xsi:schemaLocation</span>=<span class="hljs-string">"http://maven.apache.org/xsd/settings-1.0.0.xsd"</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">localRepository</span>/&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">pluginGroups</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">pluginGroup</span>&gt;</span>org.sonarsource.scanner.maven<span class="hljs-tag">&lt;/<span class="hljs-name">pluginGroup</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;/<span class="hljs-name">pluginGroups</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">profiles</span>&gt;</span></span><br><span class="line">		<span class="hljs-tag">&lt;<span class="hljs-name">profile</span>&gt;</span></span><br><span class="line">			<span class="hljs-tag">&lt;<span class="hljs-name">id</span>&gt;</span>nexus<span class="hljs-tag">&lt;/<span class="hljs-name">id</span>&gt;</span></span><br><span class="line">			<span class="hljs-tag">&lt;<span class="hljs-name">repositories</span>&gt;</span></span><br><span class="line">				<span class="hljs-tag">&lt;<span class="hljs-name">repository</span>&gt;</span></span><br><span class="line">					<span class="hljs-tag">&lt;<span class="hljs-name">id</span>&gt;</span>nexus<span class="hljs-tag">&lt;/<span class="hljs-name">id</span>&gt;</span></span><br><span class="line">					<span class="hljs-tag">&lt;<span class="hljs-name">url</span>&gt;</span>http://private.mvnrepository.com/repository/maven-public/<span class="hljs-tag">&lt;/<span class="hljs-name">url</span>&gt;</span></span><br><span class="line">					<span class="hljs-tag">&lt;<span class="hljs-name">releases</span>&gt;</span></span><br><span class="line">						<span class="hljs-tag">&lt;<span class="hljs-name">enabled</span>&gt;</span>true<span class="hljs-tag">&lt;/<span class="hljs-name">enabled</span>&gt;</span></span><br><span class="line">					<span class="hljs-tag">&lt;/<span class="hljs-name">releases</span>&gt;</span></span><br><span class="line">					<span class="hljs-tag">&lt;<span class="hljs-name">snapshots</span>&gt;</span></span><br><span class="line">						<span class="hljs-tag">&lt;<span class="hljs-name">enabled</span>&gt;</span>true<span class="hljs-tag">&lt;/<span class="hljs-name">enabled</span>&gt;</span></span><br><span class="line">					<span class="hljs-tag">&lt;/<span class="hljs-name">snapshots</span>&gt;</span></span><br><span class="line">				<span class="hljs-tag">&lt;/<span class="hljs-name">repository</span>&gt;</span></span><br><span class="line">			<span class="hljs-tag">&lt;/<span class="hljs-name">repositories</span>&gt;</span></span><br><span class="line">		<span class="hljs-tag">&lt;/<span class="hljs-name">profile</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;/<span class="hljs-name">profiles</span>&gt;</span></span><br><span class="line">	<span class="hljs-tag">&lt;<span class="hljs-name">activeProfiles</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">activeProfile</span>&gt;</span>nexus<span class="hljs-tag">&lt;/<span class="hljs-name">activeProfile</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;/<span class="hljs-name">activeProfiles</span>&gt;</span></span><br><span class="line">	<span class="hljs-tag">&lt;<span class="hljs-name">servers</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">server</span>&gt;</span></span><br><span class="line">          <span class="hljs-tag">&lt;<span class="hljs-name">id</span>&gt;</span>nexus<span class="hljs-tag">&lt;/<span class="hljs-name">id</span>&gt;</span></span><br><span class="line">          <span class="hljs-tag">&lt;<span class="hljs-name">username</span>&gt;</span>username<span class="hljs-tag">&lt;/<span class="hljs-name">username</span>&gt;</span></span><br><span class="line">          <span class="hljs-tag">&lt;<span class="hljs-name">password</span>&gt;</span>password<span class="hljs-tag">&lt;/<span class="hljs-name">password</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;/<span class="hljs-name">server</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;/<span class="hljs-name">servers</span>&gt;</span> </span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">mirrors</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">mirror</span>&gt;</span>  </span><br><span class="line">            <span class="hljs-tag">&lt;<span class="hljs-name">id</span>&gt;</span>repo2<span class="hljs-tag">&lt;/<span class="hljs-name">id</span>&gt;</span>  </span><br><span class="line">            <span class="hljs-tag">&lt;<span class="hljs-name">mirrorOf</span>&gt;</span>central<span class="hljs-tag">&lt;/<span class="hljs-name">mirrorOf</span>&gt;</span>  </span><br><span class="line">            <span class="hljs-tag">&lt;<span class="hljs-name">name</span>&gt;</span>human readable name for this mirror.<span class="hljs-tag">&lt;/<span class="hljs-name">name</span>&gt;</span>  </span><br><span class="line">            <span class="hljs-tag">&lt;<span class="hljs-name">url</span>&gt;</span>http://maven.aliyun.com/nexus/content/groups/public/<span class="hljs-tag">&lt;/<span class="hljs-name">url</span>&gt;</span>  </span><br><span class="line">        <span class="hljs-tag">&lt;/<span class="hljs-name">mirror</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;/<span class="hljs-name">mirrors</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">settings</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="上传至私服"><a href="#上传至私服" class="headerlink" title="上传至私服"></a>上传至私服</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn deploy</span><br></pre></td></tr></table></figure>
+
+<p>用来将项目生成的构件分发到远程Maven仓库</p>
+<figure class="highlight xml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">distributionManagement</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">repository</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">id</span>&gt;</span>nexus<span class="hljs-tag">&lt;/<span class="hljs-name">id</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">name</span>&gt;</span>Nexus Release<span class="hljs-tag">&lt;/<span class="hljs-name">name</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">url</span>&gt;</span>http://private.mvnrepository.com/repository/maven-releases/<span class="hljs-tag">&lt;/<span class="hljs-name">url</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;/<span class="hljs-name">repository</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">snapshotRepository</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">id</span>&gt;</span>nexus<span class="hljs-tag">&lt;/<span class="hljs-name">id</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">name</span>&gt;</span>Nexus Snapshot<span class="hljs-tag">&lt;/<span class="hljs-name">name</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">url</span>&gt;</span>http://private.mvnrepository.com/repository/maven-snapshots/<span class="hljs-tag">&lt;/<span class="hljs-name">url</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;/<span class="hljs-name">snapshotRepository</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">distributionManagement</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>Maven区别对待release版本的构件和snapshot版本的构件，snapshot为开发过程中的版本，实时，但不稳定，release版本则比较稳定。Maven会根据你项目的版本来判断将构件分发到哪个仓库。</p>
 
         </div>
         
-        
-        <div class="level is-mobile">
+        <div class="level is-size-7 is-uppercase">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/08/09/tools/git-subtree/#more">阅读更多</a>
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/Java-工具/">Java, 工具</a>
                 </div>
             </div>
         </div>
+        
         
         
     </div>
@@ -162,9 +165,37 @@
 
 
 
+<div class="card">
+    <div class="card-content">
+        <h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3>
+        <div class="buttons is-centered">
+            
+        </div>
+    </div>
+</div>
 
 
 
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/08/10/java/eclipse/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">Eclipse</span>
+            </a>
+        </div>
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/08/10/tools/jira/">
+                <span class="level-item">Jira</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
 
 
 </div>
@@ -458,7 +489,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="Coder" height="28">
+                    <img src="/images/logo.svg" alt="Maven" height="28">
                 
                 </a>
                 <p class="is-size-7">

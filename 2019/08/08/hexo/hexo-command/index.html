@@ -2,7 +2,7 @@
 <html lang="zh">
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-<title>标签: git - Coder</title>
+<title>hexo 命令 - Coder</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
@@ -71,7 +71,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="Coder" height="28">
+                <img src="/images/logo.svg" alt="hexo 命令" height="28">
             
             </a>
         </div>
@@ -106,29 +106,18 @@
         <div class="container">
             <div class="columns">
                 <div class="column is-8-tablet is-8-desktop is-8-widescreen has-order-2 column-main"><div class="card">
-    <div class="card-content">
-        <nav class="breadcrumb" aria-label="breadcrumbs">
-        <ul>
-            <li><a href="/tags">标签</a></li>
-            <li class="is-active"><a href="#" aria-current="page">git</a></li>
-        </ul>
-        </nav>
-    </div>
-</div>
-
-    <div class="card">
     
     <div class="card-content article ">
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-08-09T09:55:21.000Z">2019-08-09</time>
+                <time class="level-item has-text-grey" datetime="2019-08-08T10:29:31.000Z">2019-08-08</time>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    几秒 读完 (大约 34 个字)
+                    2 分钟 读完 (大约 251 个字)
                 </span>
                 
                 
@@ -137,24 +126,33 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/08/09/tools/git-subtree/">Git Subtree</a>
+                hexo 命令
             
         </h1>
         <div class="content">
-            <h2 id="推送指定文件夹到远程主机指定分支"><a href="#推送指定文件夹到远程主机指定分支" class="headerlink" title="推送指定文件夹到远程主机指定分支"></a>推送指定文件夹到远程主机指定分支</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git subtree push --prefix public origin master</span><br></pre></td></tr></table></figure>
+            <h2 id="hexo-version"><a href="#hexo-version" class="headerlink" title="hexo version"></a>hexo version</h2><p>显示 Hexo 版本。</p>
+<h2 id="hexo-init-folder"><a href="#hexo-init-folder" class="headerlink" title="hexo init [folder]"></a>hexo init [folder]</h2><p>新建网站。如果没有设置 folder ，Hexo 默认在目前的文件夹建立网站。</p>
+<h2 id="hexo-g"><a href="#hexo-g" class="headerlink" title="hexo g"></a>hexo g</h2><p>生成静态文件。<br>完整命令：</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br></pre></td></tr></table></figure>
 
-<p>public - 指定文件夹<br>master - 指定分支</p>
+<p>监控文件变动，实时编译</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo generate -w</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="hexo-s"><a href="#hexo-s" class="headerlink" title="hexo s"></a>hexo s</h2><p>启动服务器。默认情况下，访问网址为： <a href="http://localhost:4000/。" target="_blank" rel="noopener">http://localhost:4000/。</a><br>-p 或 –port 参数可指定端口<br>完整命令：</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+
+<h2 id="hexo-d"><a href="#hexo-d" class="headerlink" title="hexo d"></a>hexo d</h2><p>部署网站。<br>完整命令：</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+
+<h2 id="hexo-new-‘文章标题’"><a href="#hexo-new-‘文章标题’" class="headerlink" title="hexo new ‘文章标题’"></a>hexo new ‘文章标题’</h2><p>新建文章。如果标题包含空格，使用引号括起来。<br>eg:</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new &quot;post title with whitespace&quot;</span><br></pre></td></tr></table></figure>
+
+<h2 id="hexo-list"><a href="#hexo-list" class="headerlink" title="hexo list "></a>hexo list <type></type></h2><p>列出网站资料。<br>Description:<br>List the information of the site.<br>Arguments:<br>  type  Available types: page, post, route, tag, category</p>
+<h2 id="hexo-clean"><a href="#hexo-clean" class="headerlink" title="hexo clean"></a>hexo clean</h2><p>清除缓存文件 (db.json) 和已生成的静态文件 (public)。在某些情况（尤其是更换主题后），如果发现您对站点的更改无论如何也不生效，您可能需要运行该命令。</p>
 
         </div>
         
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/08/09/tools/git-subtree/#more">阅读更多</a>
-                </div>
-            </div>
-        </div>
         
         
     </div>
@@ -162,9 +160,30 @@
 
 
 
+<div class="card">
+    <div class="card-content">
+        <h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3>
+        <div class="buttons is-centered">
+            
+        </div>
+    </div>
+</div>
 
 
 
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/08/08/hexo/hexo-create/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">hexo 博客搭建</span>
+            </a>
+        </div>
+        
+        
+    </div>
+</div>
 
 
 </div>
@@ -458,7 +477,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="Coder" height="28">
+                    <img src="/images/logo.svg" alt="hexo 命令" height="28">
                 
                 </a>
                 <p class="is-size-7">
