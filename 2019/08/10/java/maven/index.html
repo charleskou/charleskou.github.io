@@ -117,7 +117,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    2 分钟 读完 (大约 243 个字)
+                    6 分钟 读完 (大约 891 个字)
                 </span>
                 
                 
@@ -146,6 +146,40 @@
 <figure class="highlight xml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">distributionManagement</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">repository</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">id</span>&gt;</span>nexus<span class="hljs-tag">&lt;/<span class="hljs-name">id</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">name</span>&gt;</span>Nexus Release<span class="hljs-tag">&lt;/<span class="hljs-name">name</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">url</span>&gt;</span>http://private.mvnrepository.com/repository/maven-releases/<span class="hljs-tag">&lt;/<span class="hljs-name">url</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;/<span class="hljs-name">repository</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">snapshotRepository</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">id</span>&gt;</span>nexus<span class="hljs-tag">&lt;/<span class="hljs-name">id</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">name</span>&gt;</span>Nexus Snapshot<span class="hljs-tag">&lt;/<span class="hljs-name">name</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">url</span>&gt;</span>http://private.mvnrepository.com/repository/maven-snapshots/<span class="hljs-tag">&lt;/<span class="hljs-name">url</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;/<span class="hljs-name">snapshotRepository</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">distributionManagement</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p>Maven区别对待release版本的构件和snapshot版本的构件，snapshot为开发过程中的版本，实时，但不稳定，release版本则比较稳定。Maven会根据你项目的版本来判断将构件分发到哪个仓库。</p>
+<h2 id="snapshot-更新策略"><a href="#snapshot-更新策略" class="headerlink" title="snapshot 更新策略"></a>snapshot 更新策略</h2><p>maven对构件的更新判断基本上是两种，一种是稳定版本，一种是maven特有的SNAPSHOT版本。<br>稳定版本很好判断，直接根据maven构件的坐标体系就能够获得。先从本地仓库中找，如果本地仓库没有，就从pom.xml和setting.xml配置的远程仓库来找。<br>SNAPSHOT版本的判断比较麻烦，基本步骤如下：<br>假设我在2014年08月22日09时40分52秒在我自己的电脑上使用 “mvn install” 构建了“com.mycompany.demo:test:1.0-SNAPSHOT”。那么Maven会在本地仓库目录“~/.m2/com/mycompany/demo/test/1.0-SNAPSHOT/”下生成文件“maven-metadata-local.xml”，内容如下：</p>
+<figure class="highlight xml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">metadata</span> <span class="hljs-attr">modelVersion</span>=<span class="hljs-string">"1.1.0"</span>&gt;</span></span><br><span class="line">  <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>com.mycompany.demo<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span></span><br><span class="line">  <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>test<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span></span><br><span class="line">  <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>1.0-SNAPSHOT<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span></span><br><span class="line">  <span class="hljs-tag">&lt;<span class="hljs-name">versioning</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">snapshot</span>&gt;</span></span><br><span class="line">      <span class="hljs-tag">&lt;<span class="hljs-name">localCopy</span>&gt;</span>true<span class="hljs-tag">&lt;/<span class="hljs-name">localCopy</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;/<span class="hljs-name">snapshot</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">lastUpdated</span>&gt;</span>20140822084052<span class="hljs-tag">&lt;/<span class="hljs-name">lastUpdated</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">snapshotVersions</span>&gt;</span></span><br><span class="line">      <span class="hljs-tag">&lt;<span class="hljs-name">snapshotVersion</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">extension</span>&gt;</span>jar<span class="hljs-tag">&lt;/<span class="hljs-name">extension</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">value</span>&gt;</span>1.0-SNAPSHOT<span class="hljs-tag">&lt;/<span class="hljs-name">value</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">updated</span>&gt;</span>20140822084052<span class="hljs-tag">&lt;/<span class="hljs-name">updated</span>&gt;</span></span><br><span class="line">      <span class="hljs-tag">&lt;/<span class="hljs-name">snapshotVersion</span>&gt;</span></span><br><span class="line">      <span class="hljs-tag">&lt;<span class="hljs-name">snapshotVersion</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">extension</span>&gt;</span>pom<span class="hljs-tag">&lt;/<span class="hljs-name">extension</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">value</span>&gt;</span>1.0-SNAPSHOT<span class="hljs-tag">&lt;/<span class="hljs-name">value</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">updated</span>&gt;</span>20140822084052<span class="hljs-tag">&lt;/<span class="hljs-name">updated</span>&gt;</span></span><br><span class="line">      <span class="hljs-tag">&lt;/<span class="hljs-name">snapshotVersion</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;/<span class="hljs-name">snapshotVersions</span>&gt;</span></span><br><span class="line">  <span class="hljs-tag">&lt;/<span class="hljs-name">versioning</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">metadata</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>十点钟的时候，其他同事更新了com.mycompany.demo:test:1.0-SNAPSHOT的内容，并通过 “mvn deploy” 发布到了公司的Maven服务器上。公司Maven服务器上产生了文件：test-1.0-20140822.100021-1.jar, test-1.0-20140822.100021-1.pom并更新了maven-metadata.xml，内容如下：<br><code>xml
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;metadata modelVersion=&quot;1.1.0&quot;&gt;
+  &lt;groupId&gt;com.mycompany.demo&lt;/groupId&gt;
+  &lt;artifactId&gt;test&lt;/artifactId&gt;
+  &lt;version&gt;1.0-SNAPSHOT&lt;/version&gt;
+  &lt;versioning&gt;
+    &lt;snapshot&gt;
+      &lt;timestamp&gt;20140822.100021&lt;/timestamp&gt;
+      &lt;buildNumber&gt;34&lt;/buildNumber&gt;
+    &lt;/snapshot&gt;
+    &lt;lastUpdated&gt;20140822100021&lt;/lastUpdated&gt;
+    &lt;snapshotVersions&gt;
+      &lt;snapshotVersion&gt;
+        &lt;extension&gt;jar&lt;/extension&gt;
+        &lt;value&gt;1.0-20140822.100021-1&lt;/value&gt;
+        &lt;updated&gt;20140822100021&lt;/updated&gt;
+      &lt;/snapshotVersion&gt;
+      &lt;snapshotVersion&gt;
+        &lt;extension&gt;pom&lt;/extension&gt;
+        &lt;value&gt;1.0-20140822.100021-1&lt;/value&gt;
+        &lt;updated&gt;20130407081828&lt;/updated&gt;
+      &lt;/snapshotVersion&gt;
+  &lt;/versioning&gt;
+&lt;/metadata&gt;</code>xml<br>在这期间我的电脑上没有发生过任何关于test的构建。</p>
+<p>某一天，我需要构建一个依赖于test的项目，于是我运行了mvn package来打包。这个时候，maven做了什么呢（背景：我通过配置镜像，使我本地Maven的任何资源都是从公司的Maven服务器下载的）？</p>
+<ul>
+<li>Step1：从公司的Maven服务器上下载maven-metadata.xml，重命名为“maven-metadata-<repositoryid>.xml”，并保存到本地仓库相应目录。</repositoryid></li>
+<li>Step2：比较maven-metadata-local.xml与maven-metadata-<repositoryid>.xml中的lastUpdated时间戳的值。<br>如果maven-metadata-local.xml中的时间戳比较大，则终止。<br>如果maven-metadata-<repositoryid>.xml中的时间戳较大，则从公司Maven服务器上下载最新版本。即：testu-1.0.1-20130407.081828-34.jar。<br>这个过程分两步：<br>（1）下载test-1.0-20140822.100021-1.jar到本地Maven仓库。<br>（2）将test-1.0-20140822.100021-1.jar复制一份，覆盖掉原先的test-1.0-SNAPSHOT.jar。也就是说，如果Maven从远程仓库下载了最新的SNAPSHOT发布包的话，那么最新的待时间戳的包和xxx-SNAPSHOT包是完全一样的。</repositoryid></repositoryid></li>
+</ul>
+<p>作者：邓涛<br>链接：<a href="https://www.zhihu.com/question/24930782/answer/29532274" target="_blank" rel="noopener">https://www.zhihu.com/question/24930782/answer/29532274</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
 
         </div>
         
@@ -153,7 +187,7 @@
             <div class="level-start">
                 <div class="level-item">
                     <span class="is-size-6 has-text-grey has-mr-7">#</span>
-                    <a class="has-link-grey -link" href="/tags/Java-工具/">Java, 工具</a>
+                    <a class="has-link-grey -link" href="/tags/Java/">Java</a>, <a class="has-link-grey -link" href="/tags/Tool/">Tool</a>
                 </div>
             </div>
         </div>
@@ -244,7 +278,7 @@
                         文章
                     </p>
                     <p class="title has-text-weight-normal">
-                        18
+                        28
                     </p>
                 </div>
             </div>
@@ -287,22 +321,43 @@
             <div class="field is-grouped is-grouped-multiline">
                 
                 <div class="control">
-                    <a class="tags has-addons" href="/tags/Java-TODO/">
-                        <span class="tag">Java, TODO</span>
-                        <span class="tag is-grey">3</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/Java-TODO-工具/">
-                        <span class="tag">Java, TODO, 工具</span>
+                    <a class="tags has-addons" href="/tags/Android/">
+                        <span class="tag">Android</span>
                         <span class="tag is-grey">1</span>
                     </a>
                 </div>
                 
                 <div class="control">
-                    <a class="tags has-addons" href="/tags/Java-工具/">
-                        <span class="tag">Java, 工具</span>
+                    <a class="tags has-addons" href="/tags/Git/">
+                        <span class="tag">Git</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Hexo/">
+                        <span class="tag">Hexo</span>
+                        <span class="tag is-grey">3</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Java/">
+                        <span class="tag">Java</span>
+                        <span class="tag is-grey">14</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Kotlin/">
+                        <span class="tag">Kotlin</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Spring-Cloud/">
+                        <span class="tag">Spring Cloud</span>
                         <span class="tag is-grey">1</span>
                     </a>
                 </div>
@@ -310,35 +365,14 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/TODO/">
                         <span class="tag">TODO</span>
-                        <span class="tag is-grey">3</span>
+                        <span class="tag is-grey">5</span>
                     </a>
                 </div>
                 
                 <div class="control">
-                    <a class="tags has-addons" href="/tags/TODO-Java-工具/">
-                        <span class="tag">TODO, Java, 工具</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/TODO-工具/">
-                        <span class="tag">TODO, 工具</span>
-                        <span class="tag is-grey">2</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/git/">
-                        <span class="tag">git</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/工具/">
-                        <span class="tag">工具</span>
-                        <span class="tag is-grey">1</span>
+                    <a class="tags has-addons" href="/tags/Tool/">
+                        <span class="tag">Tool</span>
+                        <span class="tag is-grey">14</span>
                     </a>
                 </div>
                 
@@ -361,7 +395,7 @@
                     <span class="level-item">八月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">18</span>
+                    <span class="level-item tag">28</span>
                 </span>
             </a>
         </li>
@@ -380,16 +414,16 @@
         
         <article class="media">
             
-            <a href="/2019/08/10/android/" class="media-left">
+            <a href="/2019/08/13/java/java-8/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="android">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="java-8">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-10T08:34:10.000Z">2019-08-10</time></div>
-                    <a href="/2019/08/10/android/" class="title has-link-black-ter is-size-6 has-text-weight-normal">android</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-13T10:19:42.000Z">2019-08-13</time></div>
+                    <a href="/2019/08/13/java/java-8/" class="title has-link-black-ter is-size-6 has-text-weight-normal">java-8</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
@@ -399,16 +433,16 @@
         
         <article class="media">
             
-            <a href="/2019/08/10/java/guava/" class="media-left">
+            <a href="/2019/08/13/java/deadlock/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="guava">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="deadlock">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-10T08:24:03.000Z">2019-08-10</time></div>
-                    <a href="/2019/08/10/java/guava/" class="title has-link-black-ter is-size-6 has-text-weight-normal">guava</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-13T10:14:10.000Z">2019-08-13</time></div>
+                    <a href="/2019/08/13/java/deadlock/" class="title has-link-black-ter is-size-6 has-text-weight-normal">deadlock</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
@@ -418,16 +452,16 @@
         
         <article class="media">
             
-            <a href="/2019/08/10/tools/elk/" class="media-left">
+            <a href="/2019/08/13/java/spring-boot-2-0/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="elk">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="spring-boot-2.0">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-10T08:20:07.000Z">2019-08-10</time></div>
-                    <a href="/2019/08/10/tools/elk/" class="title has-link-black-ter is-size-6 has-text-weight-normal">elk</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-13T08:54:38.000Z">2019-08-13</time></div>
+                    <a href="/2019/08/13/java/spring-boot-2-0/" class="title has-link-black-ter is-size-6 has-text-weight-normal">spring-boot-2.0</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
@@ -437,16 +471,16 @@
         
         <article class="media">
             
-            <a href="/2019/08/10/java/design-pattern/" class="media-left">
+            <a href="/2019/08/13/java/sonar/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="design-pattern">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="sonar">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-10T08:17:14.000Z">2019-08-10</time></div>
-                    <a href="/2019/08/10/java/design-pattern/" class="title has-link-black-ter is-size-6 has-text-weight-normal">design-pattern</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-13T08:42:01.000Z">2019-08-13</time></div>
+                    <a href="/2019/08/13/java/sonar/" class="title has-link-black-ter is-size-6 has-text-weight-normal">sonar</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
@@ -456,16 +490,16 @@
         
         <article class="media">
             
-            <a href="/2019/08/10/java/lambda/" class="media-left">
+            <a href="/2019/08/13/java/spring-cloud-config/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="lambda">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="spring-cloud-config">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-10T08:16:08.000Z">2019-08-10</time></div>
-                    <a href="/2019/08/10/java/lambda/" class="title has-link-black-ter is-size-6 has-text-weight-normal">lambda</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-13T08:38:59.000Z">2019-08-13</time></div>
+                    <a href="/2019/08/13/java/spring-cloud-config/" class="title has-link-black-ter is-size-6 has-text-weight-normal">spring-cloud-config</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>

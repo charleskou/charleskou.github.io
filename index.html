@@ -112,13 +112,13 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-08-10T08:34:10.000Z">2019-08-10</time>
+                <time class="level-item has-text-grey" datetime="2019-08-13T10:19:42.000Z">2019-08-13</time>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    1 分钟 读完 (大约 171 个字)
+                    几秒 读完 (大约 5 个字)
                 </span>
                 
                 
@@ -127,27 +127,19 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/08/10/android/">android</a>
+                <a class="has-link-black-ter" href="/2019/08/13/java/java-8/">java-8</a>
             
         </h1>
         <div class="content">
-            <p>版本 9</p>
-<p>IDE<br>Android Studio</p>
-<p>val<br>val a: Int = ch.toInt();</p>
-<p>var 变量<br>val 常量<br>    常量不能再次更改</p>
-<p>boolean</p>
-<p>arrayOf</p>
-<p>Array</p>
-<p>日志</p>
-<p>swith ==&gt; when</p>
-<p>for 倒序遍历</p>
+            <h2 id="Stream-API"><a href="#Stream-API" class="headerlink" title="Stream API"></a>Stream API</h2><p>lambda</p>
+<h2 id="Date-Time"><a href="#Date-Time" class="headerlink" title="Date-Time"></a>Date-Time</h2>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/08/10/android/#more">阅读更多</a>
+                <a class="button is-size-7 is-light" href="/2019/08/13/java/java-8/#more">阅读更多</a>
                 </div>
             </div>
         </div>
@@ -169,13 +161,13 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-08-10T08:24:03.000Z">2019-08-10</time>
+                <time class="level-item has-text-grey" datetime="2019-08-13T10:14:10.000Z">2019-08-13</time>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    几秒 读完 (大约 0 个字)
+                    1 分钟 读完 (大约 170 个字)
                 </span>
                 
                 
@@ -184,52 +176,26 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/08/10/java/guava/">guava</a>
+                <a class="has-link-black-ter" href="/2019/08/13/java/deadlock/">deadlock</a>
             
         </h1>
         <div class="content">
-            
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-08-10T08:20:07.000Z">2019-08-10</time>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    几秒 读完 (大约 74 个字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/08/10/tools/elk/">elk</a>
-            
-        </h1>
-        <div class="content">
-            <h2 id="组件"><a href="#组件" class="headerlink" title="组件"></a>组件</h2><h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><p>使用双引号包起来作为一个短语搜索    “like Gecko”<br>返回结果中需要有http字段    <em>exists</em>:http<br>不能含有http字段    <em>missing</em>:http<br>匹配单个字符    ?<br>匹配0到多个字符    *
-搜索结果中必须包含此项    +<br>不能含有此项    -</p>
+            <ol>
+<li><p>for update 是否锁表</p>
+</li>
+<li><p>事务传播 @Transactional</p>
+</li>
+<li><p>异常 MySQLTransactionRollbackException</p>
+</li>
+<li><p>隔离级别</p>
+<figure class="highlight sql hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">show</span> <span class="hljs-keyword">engines</span>;</span><br><span class="line"><span class="hljs-keyword">show</span> <span class="hljs-keyword">variables</span> <span class="hljs-keyword">like</span> <span class="hljs-string">'%storage_engine%'</span>;</span><br><span class="line"><span class="hljs-keyword">select</span> <span class="hljs-keyword">version</span>();</span><br><span class="line"><span class="hljs-keyword">select</span> @@tx_isolation; <span class="hljs-comment">-- 查看数据库隔离级别</span></span><br><span class="line"><span class="hljs-keyword">select</span> @@autocommit;</span><br><span class="line"><span class="hljs-keyword">show</span> <span class="hljs-keyword">variables</span> <span class="hljs-keyword">like</span> <span class="hljs-string">'innodb_lock_wait_timeout'</span>;</span><br><span class="line"><span class="hljs-keyword">show</span> <span class="hljs-keyword">global</span> <span class="hljs-keyword">variables</span> <span class="hljs-keyword">like</span> <span class="hljs-string">'innodb_lock_wait_timeout'</span>;</span><br><span class="line"><span class="hljs-keyword">set</span> innodb_lock_wait_timeout=<span class="hljs-number">1000</span>; <span class="hljs-comment">-- 设置当前会话 Innodb 行锁等待超时时间，单位秒</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>INNODB 事务</p>
+<figure class="highlight sql hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">SELECT</span></span><br><span class="line">    <span class="hljs-string">`trx_id`</span>,</span><br><span class="line">    <span class="hljs-string">`trx_state`</span> <span class="hljs-keyword">AS</span> 事务状态,</span><br><span class="line">    <span class="hljs-string">`trx_started`</span> <span class="hljs-keyword">AS</span> 开始时间,</span><br><span class="line">    <span class="hljs-string">`trx_requested_lock_id`</span>,</span><br><span class="line">    <span class="hljs-string">`trx_wait_started`</span>,</span><br><span class="line">    <span class="hljs-string">`trx_weight`</span> <span class="hljs-keyword">AS</span> 权重,</span><br><span class="line">    <span class="hljs-string">`trx_mysql_thread_id`</span> <span class="hljs-keyword">AS</span> 线程<span class="hljs-keyword">ID</span>,</span><br><span class="line">    <span class="hljs-string">`trx_query`</span>,</span><br><span class="line">    <span class="hljs-string">`trx_operation_state`</span>,</span><br><span class="line">    <span class="hljs-string">`trx_tables_locked`</span> <span class="hljs-keyword">AS</span> 锁表个数,</span><br><span class="line">    <span class="hljs-string">`trx_rows_locked`</span> <span class="hljs-keyword">AS</span> 锁表行数,</span><br><span class="line">    <span class="hljs-string">`trx_rows_modified`</span> <span class="hljs-keyword">AS</span> 修改行数,</span><br><span class="line">    <span class="hljs-string">`trx_autocommit_non_locking`</span> <span class="hljs-keyword">AS</span> 是否自动提交</span><br><span class="line"><span class="hljs-keyword">FROM</span></span><br><span class="line">    INNODB_TRX t;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>场景模拟</p>
+</li>
+</ol>
 
         </div>
         
@@ -237,7 +203,7 @@
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/08/10/tools/elk/#more">阅读更多</a>
+                <a class="button is-size-7 is-light" href="/2019/08/13/java/deadlock/#more">阅读更多</a>
                 </div>
             </div>
         </div>
@@ -259,13 +225,13 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-08-10T08:17:14.000Z">2019-08-10</time>
+                <time class="level-item has-text-grey" datetime="2019-08-13T08:54:38.000Z">2019-08-13</time>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    几秒 读完 (大约 0 个字)
+                    几秒 读完 (大约 6 个字)
                 </span>
                 
                 
@@ -274,13 +240,22 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/08/10/java/design-pattern/">design-pattern</a>
+                <a class="has-link-black-ter" href="/2019/08/13/java/spring-boot-2-0/">spring-boot-2.0</a>
             
         </h1>
         <div class="content">
-            
+            <h2 id="context-path"><a href="#context-path" class="headerlink" title="context-path"></a>context-path</h2><p>server.servlet.context-path</p>
+
         </div>
         
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/08/13/java/spring-boot-2-0/#more">阅读更多</a>
+                </div>
+            </div>
+        </div>
         
         
     </div>
@@ -299,13 +274,13 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-08-10T08:16:08.000Z">2019-08-10</time>
+                <time class="level-item has-text-grey" datetime="2019-08-13T08:42:01.000Z">2019-08-13</time>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    几秒 读完 (大约 0 个字)
+                    2 分钟 读完 (大约 366 个字)
                 </span>
                 
                 
@@ -314,103 +289,34 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/08/10/java/lambda/">lambda</a>
+                <a class="has-link-black-ter" href="/2019/08/13/java/sonar/">sonar</a>
             
         </h1>
         <div class="content">
-            
-        </div>
-        
-        
-        
-    </div>
-</div>
+            <h2 id="start"><a href="#start" class="headerlink" title="start"></a>start</h2><figure class="highlight sh hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">docker run -d --name sonarqube \</span><br><span class="line">    -p 9797:9000 -p 9092:9092 \</span><br><span class="line">    -v /opt/sonarqube/temp:/opt/sonarqube/temp \</span><br><span class="line">    -v /opt/sonarqube/conf:/opt/sonarqube/conf \</span><br><span class="line">    -v /opt/sonarqube/extensions:/opt/sonarqube/extensions \</span><br><span class="line">    -e SONARQUBE_JDBC_USERNAME=username \</span><br><span class="line">    -e SONARQUBE_JDBC_PASSWORD=password \</span><br><span class="line">    -e SONARQUBE_JDBC_URL=<span class="hljs-string">"jdbc:mysql://192.168.20.234:3306/sonar?useUnicode=true&amp;characterEncoding=utf8"</span> \</span><br><span class="line">    sonarqube:7.1</span><br></pre></td></tr></table></figure>
 
+<h2 id="plugins"><a href="#plugins" class="headerlink" title="plugins"></a>plugins</h2><figure class="highlight sh hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">FROM sonarqube</span><br><span class="line">ADD ./sonar-l10n-zh-plugin-1.15.jar /opt/sonarqube/extensions/plugins/sonar-l10n-zh-plugin-1.15.jar</span><br><span class="line">ADD ./sonar-java-plugin-4.7.0.9212.jar /opt/sonarqube/extensions/plugins/sonar-java-plugin-4.7.0.9212.jar</span><br><span class="line">ADD ./sonar-findbugs-plugin-3.4.4.jar /opt/sonarqube/extensions/plugins/sonar-findbugs-plugin-3.4.4.jar</span><br><span class="line">ADD ./checkstyle-sonar-plugin-3.6.jar /opt/sonarqube/extensions/plugins/checkstyle-sonar-plugin-3.6.jar</span><br><span class="line">ADD ./backelite-sonar-swift-plugin-0.3.2.jar /opt/sonarqube/extensions/plugins/backelite-sonar-swift-plugin-0.3.2.jar</span><br><span class="line">ADD ./sonar-web-plugin-2.5.0.476.jar /opt/sonarqube/extensions/plugins/sonar-web-plugin-2.5.0.476.jar</span><br><span class="line">ADD ./sonar-javascript-plugin-2.21.0.4409.jar /opt/sonarqube/extensions/plugins/sonar-javascript-plugin-2.21.0.4409.jar</span><br></pre></td></tr></table></figure>
 
+<h2 id="IDE-Support"><a href="#IDE-Support" class="headerlink" title="IDE Support"></a>IDE Support</h2><p>Eclipse<br>IDEA</p>
+<p>maven项目sonar扫描本地配置和扫描相关命令</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn sonar:sonar</span><br></pre></td></tr></table></figure>
 
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-08-10T07:45:01.000Z">2019-08-10</time>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    几秒 读完 (大约 0 个字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/08/10/tools/sublime/">sublime</a>
-            
-        </h1>
-        <div class="content">
-            
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-08-10T07:44:54.000Z">2019-08-10</time>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    几秒 读完 (大约 75 个字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/08/10/tools/vscode/">vscode</a>
-            
-        </h1>
-        <div class="content">
-            <h2 id="实时预览"><a href="#实时预览" class="headerlink" title="实时预览"></a>实时预览</h2><ul>
-<li>Ctrl + Shift + P 调出主命令框，输入 Markdown，应该会匹配到几项 Markdown相关命令, 选择Markdown: Open Preview to the Side，就能调出实时预览框</li>
-<li>先按Ctrl + K，然后放掉，紧接着再按 v，也能调出实时预览框</li>
+<h2 id="术语"><a href="#术语" class="headerlink" title="术语"></a>术语</h2><ul>
+<li>Reliability 可靠性</li>
+<li>Security 安全</li>
+<li>Maintainability 可维护性</li>
+<li>Coverage 覆盖率</li>
+<li>Duplications 重复</li>
+<li>Quality Gate 质量门限</li>
+<li>Compliant Solution 兼容的解决方案</li>
 </ul>
-<p>## </p>
-
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/08/10/tools/vscode/#more">阅读更多</a>
+                <a class="button is-size-7 is-light" href="/2019/08/13/java/sonar/#more">阅读更多</a>
                 </div>
             </div>
         </div>
@@ -432,13 +338,13 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-08-10T07:34:38.000Z">2019-08-10</time>
+                <time class="level-item has-text-grey" datetime="2019-08-13T08:38:59.000Z">2019-08-13</time>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    2 分钟 读完 (大约 240 个字)
+                    1 分钟 读完 (大约 131 个字)
                 </span>
                 
                 
@@ -447,27 +353,23 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/08/10/markdown/">markdown</a>
+                <a class="has-link-black-ter" href="/2019/08/13/java/spring-cloud-config/">spring-cloud-config</a>
             
         </h1>
         <div class="content">
-            <p>Markdown是一种纯文本格式的标记语言。通过简单的标记语法，它可以使普通文本内容具有一定的格式。</p>
-<h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># 这是一级标题</span><br><span class="line">## 这是二级标题</span><br><span class="line">### 这是三级标题</span><br></pre></td></tr></table></figure>
+            <h2 id="dependency"><a href="#dependency" class="headerlink" title="dependency"></a>dependency</h2><h2 id="动态刷新"><a href="#动态刷新" class="headerlink" title="动态刷新"></a>动态刷新</h2><h3 id="使用限制"><a href="#使用限制" class="headerlink" title="使用限制"></a>使用限制</h3><p>@RefreshScope @Configuration 不能同时在一个类上使用<br>原因说明：</p>
+<blockquote>
+<p>@RefreshScope works (technically) on an @Configuration class, but it might lead to surprising behaviour: e.g. it does not mean that all the @Beans defined in that class are themselves @RefreshScope. Specifically, anything that depends on those beans cannot rely on them being updated when a refresh is initiated, unless it is itself in @RefreshScope (in which it will be rebuilt on a refresh and its dependencies re-injected, at which point they will be re-initialized from the refreshed @Configuration).</p>
+</blockquote>
+<p>参考：<br><a href="https://stackoverflow.com/questions/45137555/refreshscope-not-working-spring-boot" target="_blank" rel="noopener">https://stackoverflow.com/questions/45137555/refreshscope-not-working-spring-boot</a><br><a href="http://projects.spring.io/spring-cloud/spring-cloud.html#_refresh_scope" target="_blank" rel="noopener">http://projects.spring.io/spring-cloud/spring-cloud.html#_refresh_scope</a></p>
 
-<h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;这是引用的内容</span><br><span class="line">&gt;&gt;这是引用的内容</span><br></pre></td></tr></table></figure>
-
-<h2 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">***</span><br></pre></td></tr></table></figure>
-
-<h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">![图片alt](图片地址 &apos;&apos;图片title&apos;&apos;)</span><br><span class="line"></span><br><span class="line">图片alt就是显示在图片下面的文字，相当于对图片内容的解释。</span><br><span class="line">图片title是图片的标题，当鼠标移到图片上时显示的内容。title可加可不加</span><br></pre></td></tr></table></figure>
-
-<h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/08/10/markdown/#more">阅读更多</a>
+                <a class="button is-size-7 is-light" href="/2019/08/13/java/spring-cloud-config/#more">阅读更多</a>
                 </div>
             </div>
         </div>
@@ -489,13 +391,13 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-08-10T07:27:21.000Z">2019-08-10</time>
+                <time class="level-item has-text-grey" datetime="2019-08-13T08:30:12.000Z">2019-08-13</time>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    几秒 读完 (大约 26 个字)
+                    1 分钟 读完 (大约 214 个字)
                 </span>
                 
                 
@@ -504,12 +406,15 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/08/10/java/eclipse/">Eclipse</a>
+                <a class="has-link-black-ter" href="/2019/08/13/java/druid/">druid</a>
             
         </h1>
         <div class="content">
-            <h2 id="自动升级"><a href="#自动升级" class="headerlink" title="自动升级"></a>自动升级</h2><p><img src="http://download.eclipse.org/errors/content/eclipse-software-install-win10-v1.png" alt></p>
-<p>原文链接：<br><a href="https://download.eclipse.org/releases/2019-06/" target="_blank" rel="noopener">https://download.eclipse.org/releases/2019-06/</a></p>
+            <h2 id="dependency"><a href="#dependency" class="headerlink" title="dependency"></a>dependency</h2><figure class="highlight xml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">&lt;!-- https://mvnrepository.com/artifact/com.alibaba/druid --&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>com.alibaba<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>druid<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>1.1.10<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="config"><a href="#config" class="headerlink" title="config"></a>config</h2><figure class="highlight xml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">bean</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"dataSource"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"com.alibaba.druid.pool.DruidDataSource"</span> <span class="hljs-attr">init-method</span>=<span class="hljs-string">"init"</span> <span class="hljs-attr">destroy-method</span>=<span class="hljs-string">"close"</span>&gt;</span></span><br><span class="line">    <span class="hljs-comment">&lt;!-- 基本属性 url、user、password --&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"url"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"$&#123;jdbc_url&#125;"</span> /&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"username"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"$&#123;jdbc_user&#125;"</span> /&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"password"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"$&#123;jdbc_password&#125;"</span> /&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="hljs-comment">&lt;!-- 配置初始化大小、最小、最大 --&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"maxActive"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"20"</span> /&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"initialSize"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"1"</span> /&gt;</span></span><br><span class="line">    <span class="hljs-comment">&lt;!-- 配置获取连接等待超时的时间 --&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"maxWait"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"60000"</span> /&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"minIdle"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"1"</span> /&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="hljs-comment">&lt;!-- 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒 --&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"timeBetweenEvictionRunsMillis"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"60000"</span> /&gt;</span></span><br><span class="line">    <span class="hljs-comment">&lt;!-- 配置一个连接在池中最小生存的时间，单位是毫秒 --&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"minEvictableIdleTimeMillis"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"300000"</span> /&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="hljs-comment">&lt;!-- 用来检测连接是否有效的sql，要求是一个查询语句，常用select 'x'。如果validationQuery为null，testOnBorrow、testOnReturn、testWhileIdle都不会起作用。 --&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"validationQuery"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"SELECT 1"</span> /&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"testWhileIdle"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"true"</span> /&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"testOnBorrow"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"false"</span> /&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"testOnReturn"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"false"</span> /&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="hljs-comment">&lt;!-- 打开PSCache，并且指定每个连接上PSCache的大小 --&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"poolPreparedStatements"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"true"</span> /&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"maxPoolPreparedStatementPerConnectionSize"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"20"</span> /&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="hljs-comment">&lt;!-- 配置监控统计拦截的filters --&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"filters"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"stat"</span> /&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="hljs-comment">&lt;!-- 1.1.4中新增配置，如果有initialSize数量较多时，打开会加快应用启动时间 --&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"asyncInit"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"true"</span> /&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">bean</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://github.com/alibaba/druid/wiki/常见问题" target="_blank" rel="noopener">https://github.com/alibaba/druid/wiki/常见问题</a></p>
 
         </div>
         
@@ -517,7 +422,7 @@
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/08/10/java/eclipse/#more">阅读更多</a>
+                <a class="button is-size-7 is-light" href="/2019/08/13/java/druid/#more">阅读更多</a>
                 </div>
             </div>
         </div>
@@ -539,13 +444,13 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-08-10T07:15:21.000Z">2019-08-10</time>
+                <time class="level-item has-text-grey" datetime="2019-08-13T07:42:51.000Z">2019-08-13</time>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    2 分钟 读完 (大约 243 个字)
+                    几秒 读完 (大约 19 个字)
                 </span>
                 
                 
@@ -554,25 +459,178 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/08/10/java/maven/">Maven</a>
+                <a class="has-link-black-ter" href="/2019/08/13/java/lombok/">lombok</a>
             
         </h1>
         <div class="content">
-            <h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">mvn clean</span><br><span class="line">mvn package</span><br><span class="line">mvn install</span><br><span class="line">mvn clean package -DskipTests</span><br><span class="line">mvn clean package -DskipTests -U</span><br></pre></td></tr></table></figure>
+            <h2 id="dependency"><a href="#dependency" class="headerlink" title="dependency"></a>dependency</h2><figure class="highlight xml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.projectlombok<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>lombok<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>1.16.18<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">scope</span>&gt;</span>provided<span class="hljs-tag">&lt;/<span class="hljs-name">scope</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<p>mvn install 会将项目生成的构件安装到本地Maven仓库</p>
-<h2 id="mirror"><a href="#mirror" class="headerlink" title="mirror"></a>mirror</h2><p>阿里镜像：</p>
-<figure class="highlight xml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">mirror</span>&gt;</span>  </span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">id</span>&gt;</span>repo2<span class="hljs-tag">&lt;/<span class="hljs-name">id</span>&gt;</span>  </span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">mirrorOf</span>&gt;</span>central<span class="hljs-tag">&lt;/<span class="hljs-name">mirrorOf</span>&gt;</span>  </span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">name</span>&gt;</span>human readable name for this mirror.<span class="hljs-tag">&lt;/<span class="hljs-name">name</span>&gt;</span>  </span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">url</span>&gt;</span>http://maven.aliyun.com/nexus/content/groups/public/<span class="hljs-tag">&lt;/<span class="hljs-name">url</span>&gt;</span>  </span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">mirror</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="nexus"><a href="#nexus" class="headerlink" title="nexus"></a>nexus</h2><p>maven私服</p>
-<h3 id="配置参考"><a href="#配置参考" class="headerlink" title="配置参考"></a>配置参考</h3><p>配置文件路径(示例)：C:\Users\username.m2\settings.xml</p>
+<h1 id="IDE支持"><a href="#IDE支持" class="headerlink" title="IDE支持"></a>IDE支持</h1><p>Eclipse<br>IDEA</p>
+<h2 id="Data"><a href="#Data" class="headerlink" title="@Data"></a>@Data</h2><h2 id="Getter"><a href="#Getter" class="headerlink" title="@Getter"></a>@Getter</h2><h2 id="Setter"><a href="#Setter" class="headerlink" title="@Setter"></a>@Setter</h2><h2 id="Slf4j"><a href="#Slf4j" class="headerlink" title="@Slf4j"></a>@Slf4j</h2><h2 id="AllArgsConstructor"><a href="#AllArgsConstructor" class="headerlink" title="@AllArgsConstructor"></a>@AllArgsConstructor</h2><h2 id="EqualsAndHashCode"><a href="#EqualsAndHashCode" class="headerlink" title="@EqualsAndHashCode"></a>@EqualsAndHashCode</h2>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/08/10/java/maven/#more">阅读更多</a>
+                <a class="button is-size-7 is-light" href="/2019/08/13/java/lombok/#more">阅读更多</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-13T07:32:18.000Z">2019-08-13</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    几秒 读完 (大约 81 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/08/13/java/mybatis/">mybatis</a>
+            
+        </h1>
+        <div class="content">
+            <h2 id="batch-update"><a href="#batch-update" class="headerlink" title="batch update"></a>batch update</h2><p>批量更新<br>eg:</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">update table_post p</span><br><span class="line">inner join (</span><br><span class="line">    SELECT u.user_id,u.post_count</span><br><span class="line">    FROM table_user u</span><br><span class="line">) as c_u on p.user_id = c_u.user_id</span><br><span class="line">set u.post_count=c_u.post_count;</span><br></pre></td></tr></table></figure>
+
+<h2 id="文档"><a href="#文档" class="headerlink" title="文档"></a>文档</h2><p>中文文档<br><a href="http://www.mybatis.org/mybatis-3/zh/" target="_blank" rel="noopener">http://www.mybatis.org/mybatis-3/zh/</a></p>
+<p>mybatis-spring<br><a href="http://www.mybatis.org/spring/zh/" target="_blank" rel="noopener">http://www.mybatis.org/spring/zh/</a></p>
+<p>MyBatis Generator<br><a href="http://www.mybatis.org/generator/" target="_blank" rel="noopener">http://www.mybatis.org/generator/</a><br><a href="http://generator.sturgeon.mopaas.com/" target="_blank" rel="noopener">http://generator.sturgeon.mopaas.com/</a></p>
+<h2 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h2><p><a href="http://www.mybatis.tk/" target="_blank" rel="noopener">http://www.mybatis.tk/</a></p>
+
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/08/13/java/mybatis/#more">阅读更多</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-13T06:47:04.000Z">2019-08-13</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    几秒 读完 (大约 72 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/08/13/tools/vpn/">vpn</a>
+            
+        </h1>
+        <div class="content">
+            <h2 id="注册"><a href="#注册" class="headerlink" title="注册"></a>注册</h2><p>连接vpn后在管理员模式命令行执行以下命令进行注册</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">REG ADD HKLM\SYSTEM\CurrentControlSet\Services\PolicyAgent /v AssumeUDPEncapsulationContextOnSendRule /t REG_DWORD /d 0x2 /f</span><br><span class="line">REG ADD HKLM\SYSTEM\CurrentControlSet\Services\RasMan\Parameters /v ProhibitIpSec /t REG_DWORD /d 0x0 /f</span><br><span class="line">REG ADD HKLM\SYSTEM\CurrentControlSet\Services\PolicyAgent /v AllowL2TPWeakCrypto /t REG_DWORD /d 0x1 /f</span><br></pre></td></tr></table></figure>
+
+
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/08/13/tools/vpn/#more">阅读更多</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-13T06:36:40.000Z">2019-08-13</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    几秒 读完 (大约 18 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/08/13/tools/fiddler/">fiddler</a>
+            
+        </h1>
+        <div class="content">
+            <h2 id="urlreplace"><a href="#urlreplace" class="headerlink" title="urlreplace"></a>urlreplace</h2><p>路由拦截重定向<br>eg：</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">urlreplace 192.168.20.220/hub 192.168.21.110:8080/hub</span><br><span class="line">urlreplace test.api.com localhost:8088</span><br></pre></td></tr></table></figure>
+
+
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/08/13/tools/fiddler/#more">阅读更多</a>
                 </div>
             </div>
         </div>
@@ -603,6 +661,8 @@
             <li><a class="pagination-link is-current" href="/">1</a></li>
             
             <li><a class="pagination-link has-text-black-ter" href="/page/2/">2</a></li>
+            
+            <li><a class="pagination-link has-text-black-ter" href="/page/3/">3</a></li>
             
         </ul>
     </nav>
@@ -653,7 +713,7 @@
                         文章
                     </p>
                     <p class="title has-text-weight-normal">
-                        18
+                        28
                     </p>
                 </div>
             </div>
@@ -696,22 +756,43 @@
             <div class="field is-grouped is-grouped-multiline">
                 
                 <div class="control">
-                    <a class="tags has-addons" href="/tags/Java-TODO/">
-                        <span class="tag">Java, TODO</span>
-                        <span class="tag is-grey">3</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/Java-TODO-工具/">
-                        <span class="tag">Java, TODO, 工具</span>
+                    <a class="tags has-addons" href="/tags/Android/">
+                        <span class="tag">Android</span>
                         <span class="tag is-grey">1</span>
                     </a>
                 </div>
                 
                 <div class="control">
-                    <a class="tags has-addons" href="/tags/Java-工具/">
-                        <span class="tag">Java, 工具</span>
+                    <a class="tags has-addons" href="/tags/Git/">
+                        <span class="tag">Git</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Hexo/">
+                        <span class="tag">Hexo</span>
+                        <span class="tag is-grey">3</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Java/">
+                        <span class="tag">Java</span>
+                        <span class="tag is-grey">14</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Kotlin/">
+                        <span class="tag">Kotlin</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Spring-Cloud/">
+                        <span class="tag">Spring Cloud</span>
                         <span class="tag is-grey">1</span>
                     </a>
                 </div>
@@ -719,35 +800,14 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/TODO/">
                         <span class="tag">TODO</span>
-                        <span class="tag is-grey">3</span>
+                        <span class="tag is-grey">5</span>
                     </a>
                 </div>
                 
                 <div class="control">
-                    <a class="tags has-addons" href="/tags/TODO-Java-工具/">
-                        <span class="tag">TODO, Java, 工具</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/TODO-工具/">
-                        <span class="tag">TODO, 工具</span>
-                        <span class="tag is-grey">2</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/git/">
-                        <span class="tag">git</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/工具/">
-                        <span class="tag">工具</span>
-                        <span class="tag is-grey">1</span>
+                    <a class="tags has-addons" href="/tags/Tool/">
+                        <span class="tag">Tool</span>
+                        <span class="tag is-grey">14</span>
                     </a>
                 </div>
                 
@@ -770,7 +830,7 @@
                     <span class="level-item">八月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">18</span>
+                    <span class="level-item tag">28</span>
                 </span>
             </a>
         </li>
@@ -789,16 +849,16 @@
         
         <article class="media">
             
-            <a href="/2019/08/10/android/" class="media-left">
+            <a href="/2019/08/13/java/java-8/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="android">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="java-8">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-10T08:34:10.000Z">2019-08-10</time></div>
-                    <a href="/2019/08/10/android/" class="title has-link-black-ter is-size-6 has-text-weight-normal">android</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-13T10:19:42.000Z">2019-08-13</time></div>
+                    <a href="/2019/08/13/java/java-8/" class="title has-link-black-ter is-size-6 has-text-weight-normal">java-8</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
@@ -808,16 +868,16 @@
         
         <article class="media">
             
-            <a href="/2019/08/10/java/guava/" class="media-left">
+            <a href="/2019/08/13/java/deadlock/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="guava">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="deadlock">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-10T08:24:03.000Z">2019-08-10</time></div>
-                    <a href="/2019/08/10/java/guava/" class="title has-link-black-ter is-size-6 has-text-weight-normal">guava</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-13T10:14:10.000Z">2019-08-13</time></div>
+                    <a href="/2019/08/13/java/deadlock/" class="title has-link-black-ter is-size-6 has-text-weight-normal">deadlock</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
@@ -827,16 +887,16 @@
         
         <article class="media">
             
-            <a href="/2019/08/10/tools/elk/" class="media-left">
+            <a href="/2019/08/13/java/spring-boot-2-0/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="elk">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="spring-boot-2.0">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-10T08:20:07.000Z">2019-08-10</time></div>
-                    <a href="/2019/08/10/tools/elk/" class="title has-link-black-ter is-size-6 has-text-weight-normal">elk</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-13T08:54:38.000Z">2019-08-13</time></div>
+                    <a href="/2019/08/13/java/spring-boot-2-0/" class="title has-link-black-ter is-size-6 has-text-weight-normal">spring-boot-2.0</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
@@ -846,16 +906,16 @@
         
         <article class="media">
             
-            <a href="/2019/08/10/java/design-pattern/" class="media-left">
+            <a href="/2019/08/13/java/sonar/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="design-pattern">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="sonar">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-10T08:17:14.000Z">2019-08-10</time></div>
-                    <a href="/2019/08/10/java/design-pattern/" class="title has-link-black-ter is-size-6 has-text-weight-normal">design-pattern</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-13T08:42:01.000Z">2019-08-13</time></div>
+                    <a href="/2019/08/13/java/sonar/" class="title has-link-black-ter is-size-6 has-text-weight-normal">sonar</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
@@ -865,16 +925,16 @@
         
         <article class="media">
             
-            <a href="/2019/08/10/java/lambda/" class="media-left">
+            <a href="/2019/08/13/java/spring-cloud-config/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="lambda">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="spring-cloud-config">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-10T08:16:08.000Z">2019-08-10</time></div>
-                    <a href="/2019/08/10/java/lambda/" class="title has-link-black-ter is-size-6 has-text-weight-normal">lambda</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-13T08:38:59.000Z">2019-08-13</time></div>
+                    <a href="/2019/08/13/java/spring-cloud-config/" class="title has-link-black-ter is-size-6 has-text-weight-normal">spring-cloud-config</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
