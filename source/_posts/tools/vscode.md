@@ -1,7 +1,7 @@
 ---
 title: vscode
 date: 2019-08-10 15:44:54
-tags:
+tags: Tool
 ---
 
 ## 实时预览

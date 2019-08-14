@@ -1,7 +1,7 @@
 ---
 title: hexo 博客部署
 date: 2019-08-09 12:16:21
-tags:
+tags: Hexo
 ---
 
 # 发布流程 - V2

@@ -1,7 +1,7 @@
 ---
 title: hexo 命令
 date: 2019-08-08 18:29:31
-tags:
+tags: Hexo
 ---
 
 ## hexo version

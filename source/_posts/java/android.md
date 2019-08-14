@@ -1,7 +1,7 @@
 ---
 title: android
 date: 2019-08-10 16:34:10
-tags: TODO
+tags: [Android, Java, Kotlin]
 ---
 
 版本 9

@@ -1,7 +1,7 @@
 ---
 title: Grafana
 date: 2019-08-10 13:40:21
-tags: TODO, 工具
+tags: [Tool]
 ---
 
 ## Time series

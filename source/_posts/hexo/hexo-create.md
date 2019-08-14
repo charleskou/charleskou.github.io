@@ -1,7 +1,7 @@
 ---
 title: hexo 博客搭建
 date: 2019-08-08 18:43:21
-tags:
+tags: Hexo
 ---
 
 # 安装
@@ -85,6 +85,15 @@ family-sans = "Open Sans", "Helvetica Neue", "Microsoft YaHei", sans-serif
 ```
 - post-title-sample - 文章名称，如果文章不存在，这段代码将会被直接忽略。
 - 点此查看 - 链接标题。如果置空，则自动提取文章的标题。
+
+## 文章标签
+遵循yaml文件格式
+```
+tags：tag-name
+tags: [tag-name1, tag-name2]
+```
+参考：http://www.ruanyifeng.com/blog/2016/07/yaml.html
+
 
 ## 插件
 
