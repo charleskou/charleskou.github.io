@@ -122,6 +122,63 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-14T02:48:11.000Z">2019-08-14</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    5 分钟 读完 (大约 697 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/08/14/tools/redis/">redis</a>
+            
+        </h1>
+        <div class="content">
+            <p>Redis是一个开源的使用 ANSI C语言编写，支持网络，可基于内存也可持久化的日志型，Key-Value数据库，并提供了多种语言的 API ,相比 Memcached 它支持存储的类型相对更多 (字符，哈希，集合，有序集合，列表等)，同时Redis是线程安全的。</p>
+<h2 id="redis-cli"><a href="#redis-cli" class="headerlink" title="redis-cli"></a>redis-cli</h2><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><h3 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h3><figure class="highlight sh hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">redis-cli -h redis.test.net -a TlJ8JsgzWHMOcbBMUEIw info memory</span><br><span class="line">redis-cli -h redis.test.net -a TlJ8JsgzWHMOcbBMUEIw keys <span class="hljs-string">"*"</span></span><br><span class="line">redis-cli -h redis.test.net -a TlJ8JsgzWHMOcbBMUEIw keys <span class="hljs-string">"KEY:KEYNAME*"</span></span><br><span class="line">redis-cli -h redis.test.net -a TlJ8JsgzWHMOcbBMUEIw keys <span class="hljs-string">"KEY:KEYNAME*"</span> | xargs redis-cli -h redis.test.net -a TlJ8JsgzWHMOcbBMUEIw del</span><br></pre></td></tr></table></figure>
+
+<h2 id="Redis-客户端"><a href="#Redis-客户端" class="headerlink" title="Redis 客户端"></a>Redis 客户端</h2><h3 id="连接池"><a href="#连接池" class="headerlink" title="连接池"></a>连接池</h3><p>客户端连接 Redis 使用的是 TCP协议，直连的方式每次需要建立 TCP连接，而连接池的方式是可以预先初始化好客户端连接，所以每次只需要从 连接池借用即可，而借用和归还操作是在本地进行的，只有少量的并发同步开销，远远小于新建TCP连接的开销。另外，直连的方式无法限制 redis客户端对象的个数，在极端情况下可能会造成连接泄漏，而连接池的形式可以有效的保护和控制资源的使用。<br>客户端直连方式和连接池方式的对比：<br>优点缺点<br>直连<br>优点：简单方便，适用于少量长期连接的场景<br>缺点：</p>
+<ol>
+<li>存在每次新建/关闭TCP连接开销 </li>
+<li>资源无法控制，极端情况下出现连接泄漏 </li>
+<li>Jedis对象线程不安全(Lettuce对象是线程安全的)<br>连接池<br>优点：无需每次连接生成Jedis对象，降低开销<br>缺点：使用连接池的形式保护和控制资源的使用相对于直连，使用更加麻烦，尤其在资源的管理上需要很多参数来保证，一旦规划不合理也会出现问题</li>
+</ol>
+<h3 id="Lettuce"><a href="#Lettuce" class="headerlink" title="Lettuce"></a>Lettuce</h3>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/08/14/tools/redis/#more">阅读更多</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2019-08-13T08:42:01.000Z">2019-08-13</time>
                 
                 
@@ -294,7 +351,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    几秒 读完 (大约 18 个字)
+                    几秒 读完 (大约 32 个字)
                 </span>
                 
                 
@@ -310,6 +367,7 @@
             <h2 id="urlreplace"><a href="#urlreplace" class="headerlink" title="urlreplace"></a>urlreplace</h2><p>路由拦截重定向<br>eg：</p>
 <figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">urlreplace 192.168.20.220/hub 192.168.21.110:8080/hub</span><br><span class="line">urlreplace test.api.com localhost:8088</span><br></pre></td></tr></table></figure>
 
+<h2 id="手机抓包"><a href="#手机抓包" class="headerlink" title="手机抓包"></a>手机抓包</h2><p>参考：<a href="https://www.cnblogs.com/yyhh/p/5140852.html" target="_blank" rel="noopener">https://www.cnblogs.com/yyhh/p/5140852.html</a></p>
 
         </div>
         
@@ -497,7 +555,7 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/08/10/markdown/">markdown</a>
+                <a class="has-link-black-ter" href="/2019/08/10/tools/markdown/">markdown</a>
             
         </h1>
         <div class="content">
@@ -517,7 +575,7 @@
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/08/10/markdown/#more">阅读更多</a>
+                <a class="button is-size-7 is-light" href="/2019/08/10/tools/markdown/#more">阅读更多</a>
                 </div>
             </div>
         </div>
@@ -598,61 +656,6 @@
 
 
 
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-08-10T07:15:21.000Z">2019-08-10</time>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    6 分钟 读完 (大约 891 个字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/08/10/java/maven/">Maven</a>
-            
-        </h1>
-        <div class="content">
-            <h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">mvn clean</span><br><span class="line">mvn package</span><br><span class="line">mvn install</span><br><span class="line">mvn clean package -DskipTests</span><br><span class="line">mvn clean package -DskipTests -U</span><br></pre></td></tr></table></figure>
-
-<p>mvn install 会将项目生成的构件安装到本地Maven仓库</p>
-<h2 id="mirror"><a href="#mirror" class="headerlink" title="mirror"></a>mirror</h2><p>阿里镜像：</p>
-<figure class="highlight xml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">mirror</span>&gt;</span>  </span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">id</span>&gt;</span>repo2<span class="hljs-tag">&lt;/<span class="hljs-name">id</span>&gt;</span>  </span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">mirrorOf</span>&gt;</span>central<span class="hljs-tag">&lt;/<span class="hljs-name">mirrorOf</span>&gt;</span>  </span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">name</span>&gt;</span>human readable name for this mirror.<span class="hljs-tag">&lt;/<span class="hljs-name">name</span>&gt;</span>  </span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">url</span>&gt;</span>http://maven.aliyun.com/nexus/content/groups/public/<span class="hljs-tag">&lt;/<span class="hljs-name">url</span>&gt;</span>  </span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">mirror</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="nexus"><a href="#nexus" class="headerlink" title="nexus"></a>nexus</h2><p>maven私服</p>
-<h3 id="配置参考"><a href="#配置参考" class="headerlink" title="配置参考"></a>配置参考</h3><p>配置文件路径(示例)：C:\Users\username.m2\settings.xml</p>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/08/10/java/maven/#more">阅读更多</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
 
     
 <div class="card card-transparent">
@@ -718,7 +721,7 @@
                         文章
                     </p>
                     <p class="title has-text-weight-normal">
-                        28
+                        35
                     </p>
                 </div>
             </div>
@@ -738,7 +741,7 @@
                         标签
                     </p>
                     <p class="title has-text-weight-normal">
-                        8
+                        13
                     </p>
                 </div>
             </div>
@@ -768,6 +771,20 @@
                 </div>
                 
                 <div class="control">
+                    <a class="tags has-addons" href="/tags/Architecture/">
+                        <span class="tag">Architecture</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Docker/">
+                        <span class="tag">Docker</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
                     <a class="tags has-addons" href="/tags/Git/">
                         <span class="tag">Git</span>
                         <span class="tag is-grey">1</span>
@@ -784,7 +801,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Java/">
                         <span class="tag">Java</span>
-                        <span class="tag is-grey">14</span>
+                        <span class="tag is-grey">20</span>
                     </a>
                 </div>
                 
@@ -796,9 +813,30 @@
                 </div>
                 
                 <div class="control">
+                    <a class="tags has-addons" href="/tags/Kubernetes/">
+                        <span class="tag">Kubernetes</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/MySQL/">
+                        <span class="tag">MySQL</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Spring-Boot/">
+                        <span class="tag">Spring Boot</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
                     <a class="tags has-addons" href="/tags/Spring-Cloud/">
                         <span class="tag">Spring Cloud</span>
-                        <span class="tag is-grey">1</span>
+                        <span class="tag is-grey">2</span>
                     </a>
                 </div>
                 
@@ -812,7 +850,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Tool/">
                         <span class="tag">Tool</span>
-                        <span class="tag is-grey">14</span>
+                        <span class="tag is-grey">15</span>
                     </a>
                 </div>
                 
@@ -835,7 +873,7 @@
                     <span class="level-item">八月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">28</span>
+                    <span class="level-item tag">35</span>
                 </span>
             </a>
         </li>
@@ -854,16 +892,16 @@
         
         <article class="media">
             
-            <a href="/2019/08/13/java/java-8/" class="media-left">
+            <a href="/2019/08/14/tools/mysql/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="java-8">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="mysql">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-13T10:19:42.000Z">2019-08-13</time></div>
-                    <a href="/2019/08/13/java/java-8/" class="title has-link-black-ter is-size-6 has-text-weight-normal">java-8</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-14T02:51:56.000Z">2019-08-14</time></div>
+                    <a href="/2019/08/14/tools/mysql/" class="title has-link-black-ter is-size-6 has-text-weight-normal">mysql</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
@@ -873,16 +911,16 @@
         
         <article class="media">
             
-            <a href="/2019/08/13/java/deadlock/" class="media-left">
+            <a href="/2019/08/14/tools/redis/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="deadlock">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="redis">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-13T10:14:10.000Z">2019-08-13</time></div>
-                    <a href="/2019/08/13/java/deadlock/" class="title has-link-black-ter is-size-6 has-text-weight-normal">deadlock</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-14T02:48:11.000Z">2019-08-14</time></div>
+                    <a href="/2019/08/14/tools/redis/" class="title has-link-black-ter is-size-6 has-text-weight-normal">redis</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
@@ -892,16 +930,16 @@
         
         <article class="media">
             
-            <a href="/2019/08/13/java/spring-boot-2-0/" class="media-left">
+            <a href="/2019/08/14/tools/linux/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="spring-boot-2.0">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="linux">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-13T08:54:38.000Z">2019-08-13</time></div>
-                    <a href="/2019/08/13/java/spring-boot-2-0/" class="title has-link-black-ter is-size-6 has-text-weight-normal">spring-boot-2.0</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-14T02:41:04.000Z">2019-08-14</time></div>
+                    <a href="/2019/08/14/tools/linux/" class="title has-link-black-ter is-size-6 has-text-weight-normal">linux</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
@@ -911,16 +949,16 @@
         
         <article class="media">
             
-            <a href="/2019/08/13/java/sonar/" class="media-left">
+            <a href="/2019/08/14/java/docker/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="sonar">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="docker">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-13T08:42:01.000Z">2019-08-13</time></div>
-                    <a href="/2019/08/13/java/sonar/" class="title has-link-black-ter is-size-6 has-text-weight-normal">sonar</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-14T02:29:03.000Z">2019-08-14</time></div>
+                    <a href="/2019/08/14/java/docker/" class="title has-link-black-ter is-size-6 has-text-weight-normal">docker</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
@@ -930,16 +968,16 @@
         
         <article class="media">
             
-            <a href="/2019/08/13/java/spring-cloud-config/" class="media-left">
+            <a href="/2019/08/14/java/spring-boot/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="spring-cloud-config">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="spring-boot">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-13T08:38:59.000Z">2019-08-13</time></div>
-                    <a href="/2019/08/13/java/spring-cloud-config/" class="title has-link-black-ter is-size-6 has-text-weight-normal">spring-cloud-config</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-14T01:41:02.000Z">2019-08-14</time></div>
+                    <a href="/2019/08/14/java/spring-boot/" class="title has-link-black-ter is-size-6 has-text-weight-normal">spring-boot</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>

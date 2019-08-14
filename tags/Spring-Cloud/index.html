@@ -122,6 +122,58 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-14T01:40:56.000Z">2019-08-14</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    2 分钟 读完 (大约 322 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/08/14/java/spring-cloud/">spring-cloud</a>
+            
+        </h1>
+        <div class="content">
+            <h2 id="registry"><a href="#registry" class="headerlink" title="registry"></a>registry</h2><p>注册中心<br>Eureka</p>
+<h3 id="Eureka自我保护机制"><a href="#Eureka自我保护机制" class="headerlink" title="Eureka自我保护机制"></a>Eureka自我保护机制</h3><p>springcloud服务已经关但是Eureka还是显示up，该状态持续很久，访问该服务也返回错误，但在注册中心界面，该服务却一直存在，且为UP状态，并且在大约十分钟后，出现一行红色大字：EMERGENCY! EUREKA MAY BE INCORRECTLY CLAIMING INSTANCES ARE UP WHEN THEY’RE NOT. RENEWALS ARE LESSER THAN THRESHOLD AND HENCE THE INSTANCES ARE NOT BEING EXPIRED JUST TO BE SAFE.<br>原因：自我保护机制。Eureka Server在运行期间，会统计心跳失败的比例在15分钟之内是否低于85%，如果出现低于的情况（在单机调试的时候很容易满足，实际在生产环境上通常是由于网络不稳定导致），Eureka Server会将当前的实例注册信息保护起来，同时提示这个警告。</p>
+<h2 id="进程间通信"><a href="#进程间通信" class="headerlink" title="进程间通信"></a>进程间通信</h2><p>Feign</p>
+<h2 id="负载均衡"><a href="#负载均衡" class="headerlink" title="负载均衡"></a>负载均衡</h2><p>客户端负载均衡<br>Ribbon</p>
+<h2 id="分布式配置中心"><a href="#分布式配置中心" class="headerlink" title="分布式配置中心"></a>分布式配置中心</h2><p>Spring Cloud Config<br>动态刷新<br><a href="http://blog.didispace.com/springcloud4-2/" target="_blank" rel="noopener">http://blog.didispace.com/springcloud4-2/</a><br>消息总线</p>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/08/14/java/spring-cloud/#more">阅读更多</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2019-08-13T08:38:59.000Z">2019-08-13</time>
                 
                 
@@ -215,7 +267,7 @@
                         文章
                     </p>
                     <p class="title has-text-weight-normal">
-                        28
+                        35
                     </p>
                 </div>
             </div>
@@ -235,7 +287,7 @@
                         标签
                     </p>
                     <p class="title has-text-weight-normal">
-                        8
+                        13
                     </p>
                 </div>
             </div>
@@ -265,6 +317,20 @@
                 </div>
                 
                 <div class="control">
+                    <a class="tags has-addons" href="/tags/Architecture/">
+                        <span class="tag">Architecture</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Docker/">
+                        <span class="tag">Docker</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
                     <a class="tags has-addons" href="/tags/Git/">
                         <span class="tag">Git</span>
                         <span class="tag is-grey">1</span>
@@ -281,7 +347,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Java/">
                         <span class="tag">Java</span>
-                        <span class="tag is-grey">14</span>
+                        <span class="tag is-grey">20</span>
                     </a>
                 </div>
                 
@@ -293,9 +359,30 @@
                 </div>
                 
                 <div class="control">
+                    <a class="tags has-addons" href="/tags/Kubernetes/">
+                        <span class="tag">Kubernetes</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/MySQL/">
+                        <span class="tag">MySQL</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Spring-Boot/">
+                        <span class="tag">Spring Boot</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
                     <a class="tags has-addons" href="/tags/Spring-Cloud/">
                         <span class="tag">Spring Cloud</span>
-                        <span class="tag is-grey">1</span>
+                        <span class="tag is-grey">2</span>
                     </a>
                 </div>
                 
@@ -309,7 +396,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Tool/">
                         <span class="tag">Tool</span>
-                        <span class="tag is-grey">14</span>
+                        <span class="tag is-grey">15</span>
                     </a>
                 </div>
                 
@@ -332,7 +419,7 @@
                     <span class="level-item">八月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">28</span>
+                    <span class="level-item tag">35</span>
                 </span>
             </a>
         </li>
@@ -351,16 +438,16 @@
         
         <article class="media">
             
-            <a href="/2019/08/13/java/java-8/" class="media-left">
+            <a href="/2019/08/14/tools/mysql/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="java-8">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="mysql">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-13T10:19:42.000Z">2019-08-13</time></div>
-                    <a href="/2019/08/13/java/java-8/" class="title has-link-black-ter is-size-6 has-text-weight-normal">java-8</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-14T02:51:56.000Z">2019-08-14</time></div>
+                    <a href="/2019/08/14/tools/mysql/" class="title has-link-black-ter is-size-6 has-text-weight-normal">mysql</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
@@ -370,16 +457,16 @@
         
         <article class="media">
             
-            <a href="/2019/08/13/java/deadlock/" class="media-left">
+            <a href="/2019/08/14/tools/redis/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="deadlock">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="redis">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-13T10:14:10.000Z">2019-08-13</time></div>
-                    <a href="/2019/08/13/java/deadlock/" class="title has-link-black-ter is-size-6 has-text-weight-normal">deadlock</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-14T02:48:11.000Z">2019-08-14</time></div>
+                    <a href="/2019/08/14/tools/redis/" class="title has-link-black-ter is-size-6 has-text-weight-normal">redis</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
@@ -389,16 +476,16 @@
         
         <article class="media">
             
-            <a href="/2019/08/13/java/spring-boot-2-0/" class="media-left">
+            <a href="/2019/08/14/tools/linux/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="spring-boot-2.0">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="linux">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-13T08:54:38.000Z">2019-08-13</time></div>
-                    <a href="/2019/08/13/java/spring-boot-2-0/" class="title has-link-black-ter is-size-6 has-text-weight-normal">spring-boot-2.0</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-14T02:41:04.000Z">2019-08-14</time></div>
+                    <a href="/2019/08/14/tools/linux/" class="title has-link-black-ter is-size-6 has-text-weight-normal">linux</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
@@ -408,16 +495,16 @@
         
         <article class="media">
             
-            <a href="/2019/08/13/java/sonar/" class="media-left">
+            <a href="/2019/08/14/java/docker/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="sonar">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="docker">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-13T08:42:01.000Z">2019-08-13</time></div>
-                    <a href="/2019/08/13/java/sonar/" class="title has-link-black-ter is-size-6 has-text-weight-normal">sonar</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-14T02:29:03.000Z">2019-08-14</time></div>
+                    <a href="/2019/08/14/java/docker/" class="title has-link-black-ter is-size-6 has-text-weight-normal">docker</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
@@ -427,16 +514,16 @@
         
         <article class="media">
             
-            <a href="/2019/08/13/java/spring-cloud-config/" class="media-left">
+            <a href="/2019/08/14/java/spring-boot/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="spring-cloud-config">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="spring-boot">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-13T08:38:59.000Z">2019-08-13</time></div>
-                    <a href="/2019/08/13/java/spring-cloud-config/" class="title has-link-black-ter is-size-6 has-text-weight-normal">spring-cloud-config</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-14T01:41:02.000Z">2019-08-14</time></div>
+                    <a href="/2019/08/14/java/spring-boot/" class="title has-link-black-ter is-size-6 has-text-weight-normal">spring-boot</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
