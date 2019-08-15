@@ -2,6 +2,41 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://charleskou.github.io/2019/08/15/java/spring-retry/</loc>
+    
+    <lastmod>2019-08-15T06:01:02.371Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://charleskou.github.io/2019/08/10/tools/vscode/</loc>
+    
+    <lastmod>2019-08-14T10:50:16.031Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://charleskou.github.io/2019/08/14/tools/proxy/</loc>
+    
+    <lastmod>2019-08-14T09:07:29.097Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://charleskou.github.io/2019/08/14/tools/mysql/</loc>
+    
+    <lastmod>2019-08-14T09:06:32.410Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://charleskou.github.io/2019/08/08/hexo/hexo-create/</loc>
+    
+    <lastmod>2019-08-14T07:46:46.879Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://charleskou.github.io/2019/08/14/tools/linux/</loc>
     
     <lastmod>2019-08-14T06:44:22.559Z</lastmod>
@@ -47,13 +82,6 @@
     <loc>https://charleskou.github.io/2019/08/13/java/mybatis/</loc>
     
     <lastmod>2019-08-14T03:21:45.133Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://charleskou.github.io/2019/08/14/tools/mysql/</loc>
-    
-    <lastmod>2019-08-14T03:17:02.354Z</lastmod>
     
   </url>
   
@@ -170,14 +198,7 @@
   </url>
   
   <url>
-    <loc>https://charleskou.github.io/2019/08/08/hexo/hexo-create/</loc>
-    
-    <lastmod>2019-08-13T07:45:43.657Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://charleskou.github.io/2019/08/10/tools/vscode/</loc>
+    <loc>https://charleskou.github.io/2019/08/10/tools/jira/</loc>
     
     <lastmod>2019-08-13T07:44:36.598Z</lastmod>
     
@@ -192,13 +213,6 @@
   
   <url>
     <loc>https://charleskou.github.io/2019/08/10/tools/sublime/</loc>
-    
-    <lastmod>2019-08-13T07:44:36.598Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://charleskou.github.io/2019/08/10/tools/jira/</loc>
     
     <lastmod>2019-08-13T07:44:36.598Z</lastmod>
     

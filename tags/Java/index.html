@@ -123,6 +123,58 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-15T05:32:12.000Z">2019-08-15</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    几秒 读完 (大约 23 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/08/15/java/spring-retry/">spring-retry</a>
+            
+        </h1>
+        <div class="content">
+            <h2 id="dependency"><a href="#dependency" class="headerlink" title="dependency"></a>dependency</h2><figure class="highlight xml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.springframework.retry<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-retry<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="注解"><a href="#注解" class="headerlink" title="注解"></a>注解</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">@EnableRetry</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">@Retryable</span>(value = Exception.class, maxAttempts = <span class="hljs-number">3</span>,backoff = <span class="hljs-meta">@Backoff</span>(delay = <span class="hljs-number">2000</span>, multiplier = <span class="hljs-number">1.5</span>))</span><br></pre></td></tr></table></figure>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/08/15/java/spring-retry/#more">阅读更多</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2019-08-14T02:48:11.000Z">2019-08-14</time>
                 
                 
@@ -624,59 +676,6 @@
 
 
 
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-08-13T08:38:59.000Z">2019-08-13</time>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    1 分钟 读完 (大约 131 个字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/08/13/java/spring-cloud-config/">spring-cloud-config</a>
-            
-        </h1>
-        <div class="content">
-            <h2 id="dependency"><a href="#dependency" class="headerlink" title="dependency"></a>dependency</h2><h2 id="动态刷新"><a href="#动态刷新" class="headerlink" title="动态刷新"></a>动态刷新</h2><h3 id="使用限制"><a href="#使用限制" class="headerlink" title="使用限制"></a>使用限制</h3><p>@RefreshScope @Configuration 不能同时在一个类上使用<br>原因说明：</p>
-<blockquote>
-<p>@RefreshScope works (technically) on an @Configuration class, but it might lead to surprising behaviour: e.g. it does not mean that all the @Beans defined in that class are themselves @RefreshScope. Specifically, anything that depends on those beans cannot rely on them being updated when a refresh is initiated, unless it is itself in @RefreshScope (in which it will be rebuilt on a refresh and its dependencies re-injected, at which point they will be re-initialized from the refreshed @Configuration).</p>
-</blockquote>
-<p>参考：<br><a href="https://stackoverflow.com/questions/45137555/refreshscope-not-working-spring-boot" target="_blank" rel="noopener">https://stackoverflow.com/questions/45137555/refreshscope-not-working-spring-boot</a><br><a href="http://projects.spring.io/spring-cloud/spring-cloud.html#_refresh_scope" target="_blank" rel="noopener">http://projects.spring.io/spring-cloud/spring-cloud.html#_refresh_scope</a></p>
-
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/08/13/java/spring-cloud-config/#more">阅读更多</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
 
     
 <div class="card card-transparent">
@@ -692,6 +691,8 @@
             <li><a class="pagination-link is-current" href="/tags/Java/">1</a></li>
             
             <li><a class="pagination-link has-text-black-ter" href="/tags/Java/page/2/">2</a></li>
+            
+            <li><a class="pagination-link has-text-black-ter" href="/tags/Java/page/3/">3</a></li>
             
         </ul>
     </nav>
@@ -742,7 +743,7 @@
                         文章
                     </p>
                     <p class="title has-text-weight-normal">
-                        35
+                        37
                     </p>
                 </div>
             </div>
@@ -822,7 +823,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Java/">
                         <span class="tag">Java</span>
-                        <span class="tag is-grey">20</span>
+                        <span class="tag is-grey">21</span>
                     </a>
                 </div>
                 
@@ -871,7 +872,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Tool/">
                         <span class="tag">Tool</span>
-                        <span class="tag is-grey">15</span>
+                        <span class="tag is-grey">17</span>
                     </a>
                 </div>
                 
@@ -894,7 +895,7 @@
                     <span class="level-item">八月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">35</span>
+                    <span class="level-item tag">37</span>
                 </span>
             </a>
         </li>
@@ -910,6 +911,44 @@
         <h3 class="menu-label">
             最新文章
         </h3>
+        
+        <article class="media">
+            
+            <a href="/2019/08/15/java/spring-retry/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="spring-retry">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-15T05:32:12.000Z">2019-08-15</time></div>
+                    <a href="/2019/08/15/java/spring-retry/" class="title has-link-black-ter is-size-6 has-text-weight-normal">spring-retry</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/08/14/tools/proxy/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="proxy">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-14T09:06:11.000Z">2019-08-14</time></div>
+                    <a href="/2019/08/14/tools/proxy/" class="title has-link-black-ter is-size-6 has-text-weight-normal">proxy</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -961,44 +1000,6 @@
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-14T02:41:04.000Z">2019-08-14</time></div>
                     <a href="/2019/08/14/tools/linux/" class="title has-link-black-ter is-size-6 has-text-weight-normal">linux</a>
-                    <p class="is-size-7 is-uppercase">
-                        
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/08/14/java/docker/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="docker">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-14T02:29:03.000Z">2019-08-14</time></div>
-                    <a href="/2019/08/14/java/docker/" class="title has-link-black-ter is-size-6 has-text-weight-normal">docker</a>
-                    <p class="is-size-7 is-uppercase">
-                        
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/08/14/java/spring-boot/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="spring-boot">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-14T01:41:02.000Z">2019-08-14</time></div>
-                    <a href="/2019/08/14/java/spring-boot/" class="title has-link-black-ter is-size-6 has-text-weight-normal">spring-boot</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>

@@ -113,6 +113,133 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-13T10:14:10.000Z">2019-08-13</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    1 分钟 读完 (大约 170 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/08/13/java/deadlock/">deadlock</a>
+            
+        </h1>
+        <div class="content">
+            <ol>
+<li><p>for update 是否锁表</p>
+</li>
+<li><p>事务传播 @Transactional</p>
+</li>
+<li><p>异常 MySQLTransactionRollbackException</p>
+</li>
+<li><p>隔离级别</p>
+<figure class="highlight sql hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">show</span> <span class="hljs-keyword">engines</span>;</span><br><span class="line"><span class="hljs-keyword">show</span> <span class="hljs-keyword">variables</span> <span class="hljs-keyword">like</span> <span class="hljs-string">'%storage_engine%'</span>;</span><br><span class="line"><span class="hljs-keyword">select</span> <span class="hljs-keyword">version</span>();</span><br><span class="line"><span class="hljs-keyword">select</span> @@tx_isolation; <span class="hljs-comment">-- 查看数据库隔离级别</span></span><br><span class="line"><span class="hljs-keyword">select</span> @@autocommit;</span><br><span class="line"><span class="hljs-keyword">show</span> <span class="hljs-keyword">variables</span> <span class="hljs-keyword">like</span> <span class="hljs-string">'innodb_lock_wait_timeout'</span>;</span><br><span class="line"><span class="hljs-keyword">show</span> <span class="hljs-keyword">global</span> <span class="hljs-keyword">variables</span> <span class="hljs-keyword">like</span> <span class="hljs-string">'innodb_lock_wait_timeout'</span>;</span><br><span class="line"><span class="hljs-keyword">set</span> innodb_lock_wait_timeout=<span class="hljs-number">1000</span>; <span class="hljs-comment">-- 设置当前会话 Innodb 行锁等待超时时间，单位秒</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>INNODB 事务</p>
+<figure class="highlight sql hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">SELECT</span></span><br><span class="line">    <span class="hljs-string">`trx_id`</span>,</span><br><span class="line">    <span class="hljs-string">`trx_state`</span> <span class="hljs-keyword">AS</span> 事务状态,</span><br><span class="line">    <span class="hljs-string">`trx_started`</span> <span class="hljs-keyword">AS</span> 开始时间,</span><br><span class="line">    <span class="hljs-string">`trx_requested_lock_id`</span>,</span><br><span class="line">    <span class="hljs-string">`trx_wait_started`</span>,</span><br><span class="line">    <span class="hljs-string">`trx_weight`</span> <span class="hljs-keyword">AS</span> 权重,</span><br><span class="line">    <span class="hljs-string">`trx_mysql_thread_id`</span> <span class="hljs-keyword">AS</span> 线程<span class="hljs-keyword">ID</span>,</span><br><span class="line">    <span class="hljs-string">`trx_query`</span>,</span><br><span class="line">    <span class="hljs-string">`trx_operation_state`</span>,</span><br><span class="line">    <span class="hljs-string">`trx_tables_locked`</span> <span class="hljs-keyword">AS</span> 锁表个数,</span><br><span class="line">    <span class="hljs-string">`trx_rows_locked`</span> <span class="hljs-keyword">AS</span> 锁表行数,</span><br><span class="line">    <span class="hljs-string">`trx_rows_modified`</span> <span class="hljs-keyword">AS</span> 修改行数,</span><br><span class="line">    <span class="hljs-string">`trx_autocommit_non_locking`</span> <span class="hljs-keyword">AS</span> 是否自动提交</span><br><span class="line"><span class="hljs-keyword">FROM</span></span><br><span class="line">    INNODB_TRX t;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>场景模拟</p>
+</li>
+</ol>
+
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/08/13/java/deadlock/#more">阅读更多</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-13T08:54:38.000Z">2019-08-13</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    1 分钟 读完 (大约 185 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/08/13/java/spring-boot-2.0/">spring-boot-2.0</a>
+            
+        </h1>
+        <div class="content">
+            <h2 id="context-path"><a href="#context-path" class="headerlink" title="context-path"></a>context-path</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 旧版</span><br><span class="line">server.context-path: xxxx</span><br><span class="line"># 新版</span><br><span class="line">server.servlet.context-path: xxxx</span><br></pre></td></tr></table></figure>
+
+<h2 id="Actuator"><a href="#Actuator" class="headerlink" title="Actuator"></a>Actuator</h2><h3 id="Dependency"><a href="#Dependency" class="headerlink" title="Dependency"></a>Dependency</h3><figure class="highlight xml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.springframework.boot<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-boot-starter-actuator<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Endpoints"><a href="#Endpoints" class="headerlink" title="Endpoints"></a>Endpoints</h3><p>执行器端点（endpoints）可用于监控应用及与应用进行交互</p>
+<ul>
+<li>env 显示来自Spring的 ConfigurableEnvironment的属性</li>
+<li>health 显示应用的健康信息</li>
+<li>info 显示任意的应用信息</li>
+<li>metrics 展示当前应用的metrics信息</li>
+<li>mappings 显示一个所有@RequestMapping路径的集合列表</li>
+<li>logfile 返回日志文件内容（如果设置了logging.file或logging.path属性的话）</li>
+<li>prometheus 以可以被Prometheus服务器抓取的格式显示metrics信息</li>
+</ul>
+<p>启用禁用：</p>
+<figure class="highlight xml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">management.endpoint.metrics.enabled=true</span><br><span class="line">management.endpoint.env.enabled=true</span><br></pre></td></tr></table></figure>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/08/13/java/spring-boot-2.0/#more">阅读更多</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2019-08-13T08:42:01.000Z">2019-08-13</time>
                 
                 
@@ -545,104 +672,6 @@
 
 
 
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-08-10T08:24:03.000Z">2019-08-10</time>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    几秒 读完 (大约 2 个字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/08/10/java/guava/">guava</a>
-            
-        </h1>
-        <div class="content">
-            <h2 id="Lists"><a href="#Lists" class="headerlink" title="Lists"></a>Lists</h2><h2 id="Arrays"><a href="#Arrays" class="headerlink" title="Arrays"></a>Arrays</h2>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/08/10/java/guava/#more">阅读更多</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-08-10T08:20:07.000Z">2019-08-10</time>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    几秒 读完 (大约 74 个字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/08/10/tools/elk/">elk</a>
-            
-        </h1>
-        <div class="content">
-            <h2 id="组件"><a href="#组件" class="headerlink" title="组件"></a>组件</h2><h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><p>使用双引号包起来作为一个短语搜索    “like Gecko”<br>返回结果中需要有http字段    <em>exists</em>:http<br>不能含有http字段    <em>missing</em>:http<br>匹配单个字符    ?<br>匹配0到多个字符    *
-搜索结果中必须包含此项    +<br>不能含有此项    -</p>
-
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/08/10/tools/elk/#more">阅读更多</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
 
     
 <div class="card card-transparent">
@@ -712,7 +741,7 @@
                         文章
                     </p>
                     <p class="title has-text-weight-normal">
-                        35
+                        37
                     </p>
                 </div>
             </div>
@@ -792,7 +821,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Java/">
                         <span class="tag">Java</span>
-                        <span class="tag is-grey">20</span>
+                        <span class="tag is-grey">21</span>
                     </a>
                 </div>
                 
@@ -841,7 +870,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Tool/">
                         <span class="tag">Tool</span>
-                        <span class="tag is-grey">15</span>
+                        <span class="tag is-grey">17</span>
                     </a>
                 </div>
                 
@@ -864,7 +893,7 @@
                     <span class="level-item">八月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">35</span>
+                    <span class="level-item tag">37</span>
                 </span>
             </a>
         </li>
@@ -880,6 +909,44 @@
         <h3 class="menu-label">
             最新文章
         </h3>
+        
+        <article class="media">
+            
+            <a href="/2019/08/15/java/spring-retry/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="spring-retry">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-15T05:32:12.000Z">2019-08-15</time></div>
+                    <a href="/2019/08/15/java/spring-retry/" class="title has-link-black-ter is-size-6 has-text-weight-normal">spring-retry</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/08/14/tools/proxy/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="proxy">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-14T09:06:11.000Z">2019-08-14</time></div>
+                    <a href="/2019/08/14/tools/proxy/" class="title has-link-black-ter is-size-6 has-text-weight-normal">proxy</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -931,44 +998,6 @@
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-14T02:41:04.000Z">2019-08-14</time></div>
                     <a href="/2019/08/14/tools/linux/" class="title has-link-black-ter is-size-6 has-text-weight-normal">linux</a>
-                    <p class="is-size-7 is-uppercase">
-                        
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/08/14/java/docker/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="docker">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-14T02:29:03.000Z">2019-08-14</time></div>
-                    <a href="/2019/08/14/java/docker/" class="title has-link-black-ter is-size-6 has-text-weight-normal">docker</a>
-                    <p class="is-size-7 is-uppercase">
-                        
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/08/14/java/spring-boot/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="spring-boot">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-14T01:41:02.000Z">2019-08-14</time></div>
-                    <a href="/2019/08/14/java/spring-boot/" class="title has-link-black-ter is-size-6 has-text-weight-normal">spring-boot</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
