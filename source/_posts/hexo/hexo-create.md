@@ -79,6 +79,21 @@ theme-title: 自定义主题的名称
 family-sans = "Open Sans", "Helvetica Neue", "Microsoft YaHei", sans-serif
 ```
 
+内容区宽度, 修改layout.ejs文件中的
+```
+is-8-tablet is-8-desktop is-8-widescreen
+```
+为
+```
+is-9-tablet is-9-desktop is-9-widescreen
+```
+同时，修改widget.ejs文件
+
+参考：
+[Bulma](https://bulma.io/)
+[CSS 框架 Bulma 教程](http://www.ruanyifeng.com/blog/2017/10/bulma.html)
+
+
 ## 文章内链
 ```
 {% post_link post-title-sample 点此查看 %}
@@ -112,7 +127,3 @@ npm install hexo-browsersync --save
 ```
 npm install hexo-excerpt --save
 ```
-
-## 搜索收录
-参考：
-https://jactor-sue.github.io/zh-CN/how-blog-on-githubpages-can-be-searched-by-google/

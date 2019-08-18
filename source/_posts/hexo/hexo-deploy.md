@@ -48,3 +48,23 @@ git config --global user.name "username"
 ```
 
 提交时输入username和密码。
+
+## 搜索收录SEO
+查看网站是否被Google收录：
+```
+site:http://xxxx.github.io
+```
+站点地图生成插件安装
+```
+npm install hexo-generator-sitemap --save
+```
+配置文件_config.yml中添加：
+```
+sitemap:
+    path: sitemap.xml
+```
+之后在每一次执行hexo g编译命令时，sitemap会自动更新
+
+参考：
+[让Google搜索到搭建在Github Pages上的博客](https://jactor-sue.github.io/zh-CN/how-blog-on-githubpages-can-be-searched-by-google/)
+[Google Search Console](https://search.google.com/search-console/about)
