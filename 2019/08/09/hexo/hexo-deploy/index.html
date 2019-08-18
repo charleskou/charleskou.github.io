@@ -118,7 +118,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    3 分钟 读完 (大约 451 个字)
+                    4 分钟 读完 (大约 567 个字)
                 </span>
                 
                 
@@ -160,6 +160,17 @@
 <figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.email &quot;username@xx.com&quot;</span><br><span class="line">git config --global user.name &quot;username&quot;</span><br></pre></td></tr></table></figure>
 
 <p>提交时输入username和密码。</p>
+<h2 id="搜索收录SEO"><a href="#搜索收录SEO" class="headerlink" title="搜索收录SEO"></a>搜索收录SEO</h2><p>查看网站是否被Google收录：</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">site:http://xxxx.github.io</span><br></pre></td></tr></table></figure>
+
+<p>站点地图生成插件安装</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-sitemap --save</span><br></pre></td></tr></table></figure>
+
+<p>配置文件_config.yml中添加：</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sitemap:</span><br><span class="line">    path: sitemap.xml</span><br></pre></td></tr></table></figure>
+
+<p>之后在每一次执行hexo g编译命令时，sitemap会自动更新</p>
+<p>参考：<br><a href="https://jactor-sue.github.io/zh-CN/how-blog-on-githubpages-can-be-searched-by-google/" target="_blank" rel="noopener">让Google搜索到搭建在Github Pages上的博客</a><br><a href="https://search.google.com/search-console/about" target="_blank" rel="noopener">Google Search Console</a></p>
 
         </div>
         
@@ -258,7 +269,7 @@
                         文章
                     </p>
                     <p class="title has-text-weight-normal">
-                        38
+                        39
                     </p>
                 </div>
             </div>
@@ -278,7 +289,7 @@
                         标签
                     </p>
                     <p class="title has-text-weight-normal">
-                        13
+                        15
                     </p>
                 </div>
             </div>
@@ -303,6 +314,13 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Android/">
                         <span class="tag">Android</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Angular/">
+                        <span class="tag">Angular</span>
                         <span class="tag is-grey">1</span>
                     </a>
                 </div>
@@ -339,6 +357,13 @@
                     <a class="tags has-addons" href="/tags/Java/">
                         <span class="tag">Java</span>
                         <span class="tag is-grey">21</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Javascript/">
+                        <span class="tag">Javascript</span>
+                        <span class="tag is-grey">1</span>
                     </a>
                 </div>
                 
@@ -387,7 +412,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Tool/">
                         <span class="tag">Tool</span>
-                        <span class="tag is-grey">18</span>
+                        <span class="tag is-grey">19</span>
                     </a>
                 </div>
                 
@@ -410,7 +435,7 @@
                     <span class="level-item">八月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">38</span>
+                    <span class="level-item tag">39</span>
                 </span>
             </a>
         </li>
@@ -426,6 +451,25 @@
         <h3 class="menu-label">
             最新文章
         </h3>
+        
+        <article class="media">
+            
+            <a href="/2019/08/18/javascript/echarts/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="echarts - Angular 1.x指令集成">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-18T08:15:38.000Z">2019-08-18</time></div>
+                    <a href="/2019/08/18/javascript/echarts/" class="title has-link-black-ter is-size-6 has-text-weight-normal">echarts - Angular 1.x指令集成</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -496,25 +540,6 @@
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-14T02:51:56.000Z">2019-08-14</time></div>
                     <a href="/2019/08/14/tools/mysql/" class="title has-link-black-ter is-size-6 has-text-weight-normal">mysql</a>
-                    <p class="is-size-7 is-uppercase">
-                        
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/08/14/tools/redis/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="redis">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-14T02:48:11.000Z">2019-08-14</time></div>
-                    <a href="/2019/08/14/tools/redis/" class="title has-link-black-ter is-size-6 has-text-weight-normal">redis</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
