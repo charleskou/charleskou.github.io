@@ -142,7 +142,7 @@
             
         </h1>
         <div class="content">
-            <h2 id="Dockerfile"><a href="#Dockerfile" class="headerlink" title="Dockerfile"></a>Dockerfile</h2><figure class="highlight dockerfile hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">FROM</span> openjdk:<span class="hljs-number">8</span>-jre-alpine</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">LABEL</span> maintainer="username@gmail.com"</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">ARG</span> JAR_FILE=target/ec-so-rest*.jar</span><br><span class="line"><span class="hljs-keyword">ADD</span> $&#123;JAR_FILE&#125; /app/ec-so-rest.jar</span><br><span class="line"><span class="hljs-keyword">CMD</span> ["java", "-Xmx2048m", "-XX:-UseGCOverheadLimit", "-jar", "/app/ec-so-rest.jar"]</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">EXPOSE</span> <span class="hljs-number">8080</span></span><br></pre></td></tr></table></figure>
+            <h2 id="Dockerfile"><a href="#Dockerfile" class="headerlink" title="Dockerfile"></a>Dockerfile</h2><figure class="highlight dockerfile hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">FROM</span> openjdk:<span class="hljs-number">8</span>-jre-alpine</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">LABEL</span><span class="hljs-bash"> maintainer=<span class="hljs-string">"username@gmail.com"</span></span></span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">ARG</span> JAR_FILE=target/ec-so-rest*.jar</span><br><span class="line"><span class="hljs-keyword">ADD</span><span class="hljs-bash"> <span class="hljs-variable">$&#123;JAR_FILE&#125;</span> /app/ec-so-rest.jar</span></span><br><span class="line"><span class="hljs-keyword">CMD</span><span class="hljs-bash"> [<span class="hljs-string">"java"</span>, <span class="hljs-string">"-Xmx2048m"</span>, <span class="hljs-string">"-XX:-UseGCOverheadLimit"</span>, <span class="hljs-string">"-jar"</span>, <span class="hljs-string">"/app/ec-so-rest.jar"</span>]</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">EXPOSE</span> <span class="hljs-number">8080</span></span><br></pre></td></tr></table></figure>
 
 <ul>
 <li><p>FROM 为后续的命令设置基础镜像，它是Dockerfile文件的第一条命令</p>
@@ -229,7 +229,7 @@
                         文章
                     </p>
                     <p class="title has-text-weight-normal">
-                        37
+                        38
                     </p>
                 </div>
             </div>
@@ -358,7 +358,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Tool/">
                         <span class="tag">Tool</span>
-                        <span class="tag is-grey">17</span>
+                        <span class="tag is-grey">18</span>
                     </a>
                 </div>
                 
@@ -381,7 +381,7 @@
                     <span class="level-item">八月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">37</span>
+                    <span class="level-item tag">38</span>
                 </span>
             </a>
         </li>
@@ -397,6 +397,25 @@
         <h3 class="menu-label">
             最新文章
         </h3>
+        
+        <article class="media">
+            
+            <a href="/2019/08/18/tools/nvm-windows/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="nvm-windows安装使用指南">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-18T01:55:05.000Z">2019-08-18</time></div>
+                    <a href="/2019/08/18/tools/nvm-windows/" class="title has-link-black-ter is-size-6 has-text-weight-normal">nvm-windows安装使用指南</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -467,25 +486,6 @@
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-14T02:48:11.000Z">2019-08-14</time></div>
                     <a href="/2019/08/14/tools/redis/" class="title has-link-black-ter is-size-6 has-text-weight-normal">redis</a>
-                    <p class="is-size-7 is-uppercase">
-                        
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/08/14/tools/linux/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="linux">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-14T02:41:04.000Z">2019-08-14</time></div>
-                    <a href="/2019/08/14/tools/linux/" class="title has-link-black-ter is-size-6 has-text-weight-normal">linux</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>

@@ -123,6 +123,65 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-18T01:55:05.000Z">2019-08-18</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    5 分钟 读完 (大约 804 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/08/18/tools/nvm-windows/">nvm-windows安装使用指南</a>
+            
+        </h1>
+        <div class="content">
+            <h2 id="nvm-windows"><a href="#nvm-windows" class="headerlink" title="nvm-windows"></a>nvm-windows</h2><ul>
+<li>nvm-windows是一个命令行工具</li>
+<li>nvm-windows 并不是 nvm 的简单移植，他们也没有任何关系</li>
+<li>nvm-windows切换node版本时，不同node版本之间不共享npm模块</li>
+<li>安装nvm-windows前需要卸载及删除node npm相关文件</li>
+<li>安装nvm-windows后必须为每个新安装的node单独安装全局应用，如gulp</li>
+</ul>
+<h2 id="安装前建议"><a href="#安装前建议" class="headerlink" title="安装前建议"></a>安装前建议</h2><h3 id="全局模块"><a href="#全局模块" class="headerlink" title="全局模块"></a>全局模块</h3><p>如当前已经安装node，且npm全局安装过一些模块，建议记录下这些全局模块留档<br>命令如下：</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm list -g --depth 0</span><br></pre></td></tr></table></figure>
+
+<h3 id="项目模块"><a href="#项目模块" class="headerlink" title="项目模块"></a>项目模块</h3><p>如项目中node_modules中包含模块，建议保存一份存档；如确定项目中package.json里的dependencies和devDependencies配置是规范的，可略过此项</p>
+<h3 id="卸载node"><a href="#卸载node" class="headerlink" title="卸载node"></a>卸载node</h3><p>安装前先卸载任何现有版本的node.js, 并删除nodejs安装目录<br>可通过以下命令查找node或npm的安装路径：</p>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/08/18/tools/nvm-windows/#more">阅读更多</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2019-08-14T09:06:11.000Z">2019-08-14</time>
                 
                 
@@ -584,59 +643,6 @@
 
 
 
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-08-10T07:44:54.000Z">2019-08-10</time>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    1 分钟 读完 (大约 198 个字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/08/10/tools/vscode/">vscode</a>
-            
-        </h1>
-        <div class="content">
-            <h2 id="实时预览"><a href="#实时预览" class="headerlink" title="实时预览"></a>实时预览</h2><ul>
-<li>Ctrl + Shift + P 调出主命令框，输入 Markdown，应该会匹配到几项 Markdown相关命令, 选择Markdown: Open Preview to the Side，就能调出实时预览框</li>
-<li>先按Ctrl + K，然后放掉，紧接着再按 v，也能调出实时预览框</li>
-</ul>
-<h2 id="关闭预览模式"><a href="#关闭预览模式" class="headerlink" title="关闭预览模式"></a>关闭预览模式</h2><p>单击文件名默认打开“预览模式”的Tab，单击其他文件时，会覆盖当前打开的文件。<br>预览模式Tab的标志为Tab名称是斜体的。<br>此逻辑同Sublime等各类编辑器，为默认功能。<br>可关闭，关闭方式为：<br>文件 -&gt; 首选项 -&gt; 设置，搜索’preview’, 关闭工作台 -&gt; 编辑管理中的设置</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Workbench &gt; Editor &gt; Enable Preview</span><br><span class="line">Workbench &gt; Editor &gt; Enable Preview From Quick Open</span><br></pre></td></tr></table></figure>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/08/10/tools/vscode/#more">阅读更多</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
 
     
 <div class="card card-transparent">
@@ -702,7 +708,7 @@
                         文章
                     </p>
                     <p class="title has-text-weight-normal">
-                        37
+                        38
                     </p>
                 </div>
             </div>
@@ -831,7 +837,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Tool/">
                         <span class="tag">Tool</span>
-                        <span class="tag is-grey">17</span>
+                        <span class="tag is-grey">18</span>
                     </a>
                 </div>
                 
@@ -854,7 +860,7 @@
                     <span class="level-item">八月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">37</span>
+                    <span class="level-item tag">38</span>
                 </span>
             </a>
         </li>
@@ -870,6 +876,25 @@
         <h3 class="menu-label">
             最新文章
         </h3>
+        
+        <article class="media">
+            
+            <a href="/2019/08/18/tools/nvm-windows/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="nvm-windows安装使用指南">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-18T01:55:05.000Z">2019-08-18</time></div>
+                    <a href="/2019/08/18/tools/nvm-windows/" class="title has-link-black-ter is-size-6 has-text-weight-normal">nvm-windows安装使用指南</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -940,25 +965,6 @@
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-14T02:48:11.000Z">2019-08-14</time></div>
                     <a href="/2019/08/14/tools/redis/" class="title has-link-black-ter is-size-6 has-text-weight-normal">redis</a>
-                    <p class="is-size-7 is-uppercase">
-                        
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/08/14/tools/linux/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="linux">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-14T02:41:04.000Z">2019-08-14</time></div>
-                    <a href="/2019/08/14/tools/linux/" class="title has-link-black-ter is-size-6 has-text-weight-normal">linux</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>

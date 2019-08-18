@@ -118,7 +118,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    几秒 读完 (大约 23 个字)
+                    2 分钟 读完 (大约 362 个字)
                 </span>
                 
                 
@@ -131,11 +131,57 @@
             
         </h1>
         <div class="content">
-            <h2 id="dependency"><a href="#dependency" class="headerlink" title="dependency"></a>dependency</h2><figure class="highlight xml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.springframework.retry<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-retry<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+            <p>Spring Retry实现重试操作</p>
+<h2 id="dependency"><a href="#dependency" class="headerlink" title="dependency"></a>dependency</h2><figure class="highlight xml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.springframework.retry<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-retry<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="注解"><a href="#注解" class="headerlink" title="注解"></a>注解</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">@EnableRetry</span></span><br></pre></td></tr></table></figure>
+<h2 id="注解"><a href="#注解" class="headerlink" title="注解"></a>注解</h2><p>在启动入口加入重试配置</p>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">@EnableRetry</span></span><br></pre></td></tr></table></figure>
 
 <h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">@Retryable</span>(value = Exception.class, maxAttempts = <span class="hljs-number">3</span>,backoff = <span class="hljs-meta">@Backoff</span>(delay = <span class="hljs-number">2000</span>, multiplier = <span class="hljs-number">1.5</span>))</span><br></pre></td></tr></table></figure>
+
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li>@EnableRetry 能否重试</li>
+<li>@Retryable 标注此注解的方法在发生异常时会进行重试</li>
+<li><ul>
+<li>value：指定处理的异常类</li>
+</ul>
+</li>
+<li><ul>
+<li>include：指定处理的异常类和value一样，默认为空，当exclude也为空时，默认所有异常</li>
+</ul>
+</li>
+<li><ul>
+<li>exclude：指定异常不处理，默认空，当include也为空时，默认所有异常</li>
+</ul>
+</li>
+<li><ul>
+<li>maxAttempts：最大重试次数。默认3次</li>
+</ul>
+</li>
+<li><ul>
+<li>backoff： 重试等待策略。默认使用@Backoff注解</li>
+</ul>
+</li>
+<li>@Backoff 重试等待策略</li>
+<li><ul>
+<li>不设置参数时，默认使用FixedBackOffPolicy（指定等待时间），重试等待1000ms</li>
+</ul>
+</li>
+<li><ul>
+<li>设置delay,使用FixedBackOffPolicy（指定等待时间），重试等待填写的时间</li>
+</ul>
+</li>
+<li><ul>
+<li>设置delay和maxDealy时，重试等待在这两个值之间均态分布</li>
+</ul>
+</li>
+<li><ul>
+<li>设置delay、maxDealy、multiplier，使用 ExponentialBackOffPolicy（指数级重试间隔的实现 ），multiplier即指定延迟倍数，比如delay=5000l,multiplier=2,则第一次重试为5秒，第二次为10秒，第三次为20秒……</li>
+</ul>
+</li>
+<li>@Recover 用于@Retryable重试失败后处理方法，此注解注释的方法参数一定要是@Retryable抛出的异常，否则无法识别，可以在该方法中进行日志处理。</li>
+</ul>
+
         </div>
         
         <div class="level is-size-7 is-uppercase">
@@ -167,6 +213,13 @@
 
 <div class="card card-transparent">
     <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/08/18/tools/nvm-windows/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">nvm-windows安装使用指南</span>
+            </a>
+        </div>
         
         
         <div class="level-end">
@@ -226,7 +279,7 @@
                         文章
                     </p>
                     <p class="title has-text-weight-normal">
-                        37
+                        38
                     </p>
                 </div>
             </div>
@@ -355,7 +408,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Tool/">
                         <span class="tag">Tool</span>
-                        <span class="tag is-grey">17</span>
+                        <span class="tag is-grey">18</span>
                     </a>
                 </div>
                 
@@ -378,7 +431,7 @@
                     <span class="level-item">八月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">37</span>
+                    <span class="level-item tag">38</span>
                 </span>
             </a>
         </li>
@@ -394,6 +447,25 @@
         <h3 class="menu-label">
             最新文章
         </h3>
+        
+        <article class="media">
+            
+            <a href="/2019/08/18/tools/nvm-windows/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="nvm-windows安装使用指南">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-18T01:55:05.000Z">2019-08-18</time></div>
+                    <a href="/2019/08/18/tools/nvm-windows/" class="title has-link-black-ter is-size-6 has-text-weight-normal">nvm-windows安装使用指南</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -464,25 +536,6 @@
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-14T02:48:11.000Z">2019-08-14</time></div>
                     <a href="/2019/08/14/tools/redis/" class="title has-link-black-ter is-size-6 has-text-weight-normal">redis</a>
-                    <p class="is-size-7 is-uppercase">
-                        
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/08/14/tools/linux/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="linux">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-14T02:41:04.000Z">2019-08-14</time></div>
-                    <a href="/2019/08/14/tools/linux/" class="title has-link-black-ter is-size-6 has-text-weight-normal">linux</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>

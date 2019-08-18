@@ -2,7 +2,7 @@
 <html lang="zh">
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-<title>标签: Architecture - Coder</title>
+<title>nvm-windows安装使用指南 - Coder</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="google-site-verification" content="nf1fTgUwUjCPuVDdA4bZdWYWTonwbiJjQkRh15iKYfI">
 
@@ -72,7 +72,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="Coder" height="28">
+                <img src="/images/logo.svg" alt="nvm-windows安装使用指南" height="28">
             
             </a>
         </div>
@@ -107,29 +107,18 @@
         <div class="container">
             <div class="columns">
                 <div class="column is-8-tablet is-8-desktop is-8-widescreen has-order-2 column-main"><div class="card">
-    <div class="card-content">
-        <nav class="breadcrumb" aria-label="breadcrumbs">
-        <ul>
-            <li><a href="/tags">标签</a></li>
-            <li class="is-active"><a href="#" aria-current="page">Architecture</a></li>
-        </ul>
-        </nav>
-    </div>
-</div>
-
-    <div class="card">
     
     <div class="card-content article ">
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-08-14T01:23:34.000Z">2019-08-14</time>
+                <time class="level-item has-text-grey" datetime="2019-08-18T01:55:05.000Z">2019-08-18</time>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    19 分钟 读完 (大约 2804 个字)
+                    5 分钟 读完 (大约 804 个字)
                 </span>
                 
                 
@@ -138,25 +127,71 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/08/14/java/kubernetes/">kubernetes</a>
+                nvm-windows安装使用指南
             
         </h1>
         <div class="content">
-            <h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><h3 id="集群"><a href="#集群" class="headerlink" title="集群"></a>集群</h3><p>一个集群指容器运行所需要的云资源组合，关联了若干服务器节点、负载均衡、专有网络等云资源。</p>
-<h4 id="节点"><a href="#节点" class="headerlink" title="节点"></a>节点</h4><p>一台服务器（可以是虚拟机实例或者物理服务器）已经安装了 Docker Engine，可以用于部署和管理容器；容器服务的 Agent 程序会安装到节点上并注册到一个集群上。集群中的节点数量可以伸缩。</p>
-<h4 id="容器"><a href="#容器" class="headerlink" title="容器"></a>容器</h4><p>一个通过 Docker 镜像创建的运行时实例，一个节点可运行多个容器。</p>
-<h4 id="镜像"><a href="#镜像" class="headerlink" title="镜像"></a>镜像</h4><p>Docker 镜像是容器应用打包的标准格式，在部署容器化应用时可以指定镜像，镜像可以来自于 Docker Hub，阿里云容器 Hub，或者用户的私有 Registry。镜像 ID 可以由镜像所在仓库 URI 和镜像 Tag（缺省为 latest）唯一确认。</p>
-<h4 id="编排模板"><a href="#编排模板" class="headerlink" title="编排模板"></a>编排模板</h4>
+            <h2 id="nvm-windows"><a href="#nvm-windows" class="headerlink" title="nvm-windows"></a>nvm-windows</h2><ul>
+<li>nvm-windows是一个命令行工具</li>
+<li>nvm-windows 并不是 nvm 的简单移植，他们也没有任何关系</li>
+<li>nvm-windows切换node版本时，不同node版本之间不共享npm模块</li>
+<li>安装nvm-windows前需要卸载及删除node npm相关文件</li>
+<li>安装nvm-windows后必须为每个新安装的node单独安装全局应用，如gulp</li>
+</ul>
+<h2 id="安装前建议"><a href="#安装前建议" class="headerlink" title="安装前建议"></a>安装前建议</h2><h3 id="全局模块"><a href="#全局模块" class="headerlink" title="全局模块"></a>全局模块</h3><p>如当前已经安装node，且npm全局安装过一些模块，建议记录下这些全局模块留档<br>命令如下：</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm list -g --depth 0</span><br></pre></td></tr></table></figure>
+
+<h3 id="项目模块"><a href="#项目模块" class="headerlink" title="项目模块"></a>项目模块</h3><p>如项目中node_modules中包含模块，建议保存一份存档；如确定项目中package.json里的dependencies和devDependencies配置是规范的，可略过此项</p>
+<h3 id="卸载node"><a href="#卸载node" class="headerlink" title="卸载node"></a>卸载node</h3><p>安装前先卸载任何现有版本的node.js, 并删除nodejs安装目录<br>可通过以下命令查找node或npm的安装路径：</p>
+<figure class="highlight sh hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-built_in">where</span> node</span><br><span class="line"><span class="hljs-built_in">where</span> npm</span><br></pre></td></tr></table></figure>
+
+<p>查看是否完整删除的检查项包括但不限于：</p>
+<ul>
+<li>控制面板中卸载Node.js</li>
+<li>C:\Program Files\nodejs</li>
+<li>C:\Users\weiqinl\AppData\Roaming\npm</li>
+<li>删除环境变量中node npm相关项</li>
+<li>如条件允许，建议重启（刷新电脑软件注册表）</li>
+</ul>
+<h2 id="下载nvm-windows"><a href="#下载nvm-windows" class="headerlink" title="下载nvm-windows"></a>下载nvm-windows</h2><p><a href="https://github.com/coreybutler/nvm-windows/releases" target="_blank" rel="noopener">https://github.com/coreybutler/nvm-windows/releases</a><br>选择安装包方式, 对应文件：nvm-setup.zip</p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>使用nvm-setup.zip中的exe文件进行安装<br>安装注意事项：</p>
+<ul>
+<li>nvm的安装路径名称中最好不要有空格</li>
+<li>nodejs安装目录建议保持默认，即C:\Program Files\nodejs</li>
+</ul>
+<h2 id="检查"><a href="#检查" class="headerlink" title="检查"></a>检查</h2><p>检查是否安装成功，命令：</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm</span><br></pre></td></tr></table></figure>
+
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>常用命令：</p>
+<figure class="highlight sh hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment"># 显示当前运行的nvm版本, 可简写为nvm v</span></span><br><span class="line">nvm version</span><br><span class="line"><span class="hljs-comment"># 启用node.js版本管理</span></span><br><span class="line">nvm on</span><br><span class="line"><span class="hljs-comment"># 禁用node.js版本管理(不卸载任何东西)</span></span><br><span class="line">nvm off</span><br><span class="line"><span class="hljs-comment"># 设置node镜像</span></span><br><span class="line">nvm node_mirror https://npm.taobao.org/mirrors/node/</span><br><span class="line"><span class="hljs-comment"># 设置npm镜像</span></span><br><span class="line">nvm npm_mirror https://npm.taobao.org/mirrors/npm/</span><br><span class="line"><span class="hljs-comment"># 列出已经安装的node.js版本。可选的available，显示可下载版本的部分列表</span></span><br><span class="line"><span class="hljs-comment"># 命令可以简写为nvm ls [available]</span></span><br><span class="line">nvm list [available]</span><br><span class="line"><span class="hljs-comment"># 安装</span></span><br><span class="line">nvm install &lt;version&gt;</span><br><span class="line"><span class="hljs-comment"># 卸载</span></span><br><span class="line">nvm uninstall &lt;version&gt;</span><br><span class="line"><span class="hljs-comment"># 切换到使用指定的nodejs版本</span></span><br><span class="line">nvm use [version]</span><br></pre></td></tr></table></figure>
+
+<h2 id="node版本"><a href="#node版本" class="headerlink" title="node版本"></a>node版本</h2><p>LTS：长期支持（Long Term Support）<br>Current：当前最新版本</p>
+<p>Node.js 的版本命名规则遵循 semver语义化版本（Semantic Versioning），版本号分为三部分:</p>
+<ul>
+<li>第一个数字（semver-major）增加，表示有不兼容的改变</li>
+<li>第二个数字（semver-minor）增加，表示有保持兼容的新特性</li>
+<li>第三个数字（semver-patch）增加，表示有在保持兼容性与特性不变的前提下的改动，比如修复了 bug 或者改进了文档<br><img src="https://user-gold-cdn.xitu.io/2019/6/25/16b8c1d87261c0b0?imageslim" alt="Semver语义化版本"></li>
+</ul>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ol>
+<li><a href="https://github.com/coreybutler/nvm-windows" target="_blank" rel="noopener">nvm-windows - Github</a></li>
+<li><a href="https://www.cnblogs.com/weiqinl/p/7503123.html" target="_blank" rel="noopener">Windows上安装nodejs版本管理器nvm</a></li>
+<li><a href="https://nodejs.org/zh-cn/" target="_blank" rel="noopener">Node.js中文官网</a></li>
+<li><a href="http://nodejs.cn/api/" target="_blank" rel="noopener">Node.js中文网 - API</a></li>
+<li><a href="https://semver.org/lang/zh-CN/" target="_blank" rel="noopener">语义化版本</a></li>
+<li><a href="https://juejin.im/post/5d102863e51d45773e418aa0" target="_blank" rel="noopener">多版本node安装相关知识</a></li>
+</ol>
+
         </div>
         
-        
-        <div class="level is-mobile">
+        <div class="level is-size-7 is-uppercase">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/08/14/java/kubernetes/#more">阅读更多</a>
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/Tool/">Tool</a>
                 </div>
             </div>
         </div>
+        
         
         
     </div>
@@ -164,9 +199,30 @@
 
 
 
+<div class="card">
+    <div class="card-content">
+        <h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3>
+        <div class="buttons is-centered">
+            
+        </div>
+    </div>
+</div>
 
 
 
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/08/15/java/spring-retry/">
+                <span class="level-item">spring-retry</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
 
 
 </div>
@@ -495,7 +551,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="Coder" height="28">
+                    <img src="/images/logo.svg" alt="nvm-windows安装使用指南" height="28">
                 
                 </a>
                 <p class="is-size-7">
