@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://charleskou.github.io/2019/08/09/hexo/hexo-deploy/</loc>
+    
+    <lastmod>2019-08-18T09:40:12.230Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://charleskou.github.io/2019/08/08/hexo/hexo-command/</loc>
+    
+    <lastmod>2019-08-18T09:40:08.755Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://charleskou.github.io/2019/08/14/docker/docker/</loc>
     
     <lastmod>2019-08-18T09:31:04.584Z</lastmod>
@@ -54,13 +68,6 @@
     <loc>https://charleskou.github.io/2019/08/18/javascript/echarts/</loc>
     
     <lastmod>2019-08-18T08:28:49.263Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://charleskou.github.io/2019/08/09/hexo/hexo-deploy/</loc>
-    
-    <lastmod>2019-08-18T02:18:28.672Z</lastmod>
     
   </url>
   
@@ -166,13 +173,6 @@
     <loc>https://charleskou.github.io/2019/08/13/java/deadlock/</loc>
     
     <lastmod>2019-08-13T10:19:04.983Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://charleskou.github.io/2019/08/08/hexo/hexo-command/</loc>
-    
-    <lastmod>2019-08-13T09:36:34.498Z</lastmod>
     
   </url>
   

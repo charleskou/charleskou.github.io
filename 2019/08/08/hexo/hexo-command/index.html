@@ -118,7 +118,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    2 分钟 读完 (大约 251 个字)
+                    2 分钟 读完 (大约 325 个字)
                 </span>
                 
                 
@@ -133,24 +133,41 @@
         <div class="content">
             <h2 id="hexo-version"><a href="#hexo-version" class="headerlink" title="hexo version"></a>hexo version</h2><p>显示 Hexo 版本。</p>
 <h2 id="hexo-init-folder"><a href="#hexo-init-folder" class="headerlink" title="hexo init [folder]"></a>hexo init [folder]</h2><p>新建网站。如果没有设置 folder ，Hexo 默认在目前的文件夹建立网站。</p>
-<h2 id="hexo-g"><a href="#hexo-g" class="headerlink" title="hexo g"></a>hexo g</h2><p>生成静态文件。<br>完整命令：</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br></pre></td></tr></table></figure>
+<h2 id="hexo-g"><a href="#hexo-g" class="headerlink" title="hexo g"></a>hexo g</h2><p>生成静态文件。</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br><span class="line">hexo g</span><br></pre></td></tr></table></figure>
 
 <p>监控文件变动，实时编译</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo generate -w</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo generate --watch</span><br><span class="line">hexo g -w</span><br></pre></td></tr></table></figure>
+
+<p>生成静态文件后立即部署网站</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo generate --deploy</span><br><span class="line">hexo g -d</span><br></pre></td></tr></table></figure>
+
+<p>强制重新生成文件</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo generate --force</span><br><span class="line">hexo g -f</span><br></pre></td></tr></table></figure>
 
 
-<h2 id="hexo-s"><a href="#hexo-s" class="headerlink" title="hexo s"></a>hexo s</h2><p>启动服务器。默认情况下，访问网址为： <a href="http://localhost:4000/。" target="_blank" rel="noopener">http://localhost:4000/。</a><br>-p 或 –port 参数可指定端口<br>完整命令：</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+<h2 id="hexo-s"><a href="#hexo-s" class="headerlink" title="hexo s"></a>hexo s</h2><p>启动服务器。默认情况下，访问网址为： <a href="http://localhost:4000/。" target="_blank" rel="noopener">http://localhost:4000/。</a><br>-p 或 –port 参数可指定端口</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
 
-<h2 id="hexo-d"><a href="#hexo-d" class="headerlink" title="hexo d"></a>hexo d</h2><p>部署网站。<br>完整命令：</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+<p>参数：</p>
+<ul>
+<li>-p 重设端口</li>
+<li>-s 只使用静态文件</li>
+<li>-l 启动日志记录</li>
+</ul>
+<h2 id="hexo-d"><a href="#hexo-d" class="headerlink" title="hexo d"></a>hexo d</h2><p>部署网站。</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+
+<p>部署之前预先生成静态文件</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy --generate</span><br><span class="line">hexo d -g</span><br></pre></td></tr></table></figure>
 
 <h2 id="hexo-new-‘文章标题’"><a href="#hexo-new-‘文章标题’" class="headerlink" title="hexo new ‘文章标题’"></a>hexo new ‘文章标题’</h2><p>新建文章。如果标题包含空格，使用引号括起来。<br>eg:</p>
 <figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new &quot;post title with whitespace&quot;</span><br></pre></td></tr></table></figure>
 
 <h2 id="hexo-list"><a href="#hexo-list" class="headerlink" title="hexo list "></a>hexo list <type></type></h2><p>列出网站资料。<br>Description:<br>List the information of the site.<br>Arguments:<br>  type  Available types: page, post, route, tag, category</p>
-<h2 id="hexo-clean"><a href="#hexo-clean" class="headerlink" title="hexo clean"></a>hexo clean</h2><p>清除缓存文件 (db.json) 和已生成的静态文件 (public)。在某些情况（尤其是更换主题后），如果发现您对站点的更改无论如何也不生效，您可能需要运行该命令。</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo list post</span><br><span class="line">hexo list tag</span><br></pre></td></tr></table></figure>
+
+<h2 id="hexo-clean"><a href="#hexo-clean" class="headerlink" title="hexo clean"></a>hexo clean</h2><p>清除缓存文件 (db.json) 和已生成的静态文件 (public)。<br>在某些情况（尤其是更换主题后），如果发现您对站点的更改无论如何也不生效，您可能需要运行该命令。</p>
 
         </div>
         
