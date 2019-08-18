@@ -1,6 +1,6 @@
 ---
 title: mysql
-tags: [MySQL]
+tags: [MySQL, Tool]
 date: 2019-08-14 10:51:56
 ---
 

@@ -11,7 +11,7 @@ node -v
 npm -v
 
 ## git
-git -v
+git version
 
 ## github
 个人仓库
@@ -112,3 +112,7 @@ npm install hexo-browsersync --save
 ```
 npm install hexo-excerpt --save
 ```
+
+## 搜索收录
+参考：
+https://jactor-sue.github.io/zh-CN/how-blog-on-githubpages-can-be-searched-by-google/
