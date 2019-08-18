@@ -123,59 +123,6 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-08-13T08:38:59.000Z">2019-08-13</time>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    1 分钟 读完 (大约 131 个字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/08/13/java/spring-cloud-config/">spring-cloud-config</a>
-            
-        </h1>
-        <div class="content">
-            <h2 id="dependency"><a href="#dependency" class="headerlink" title="dependency"></a>dependency</h2><h2 id="动态刷新"><a href="#动态刷新" class="headerlink" title="动态刷新"></a>动态刷新</h2><h3 id="使用限制"><a href="#使用限制" class="headerlink" title="使用限制"></a>使用限制</h3><p>@RefreshScope @Configuration 不能同时在一个类上使用<br>原因说明：</p>
-<blockquote>
-<p>@RefreshScope works (technically) on an @Configuration class, but it might lead to surprising behaviour: e.g. it does not mean that all the @Beans defined in that class are themselves @RefreshScope. Specifically, anything that depends on those beans cannot rely on them being updated when a refresh is initiated, unless it is itself in @RefreshScope (in which it will be rebuilt on a refresh and its dependencies re-injected, at which point they will be re-initialized from the refreshed @Configuration).</p>
-</blockquote>
-<p>参考：<br><a href="https://stackoverflow.com/questions/45137555/refreshscope-not-working-spring-boot" target="_blank" rel="noopener">https://stackoverflow.com/questions/45137555/refreshscope-not-working-spring-boot</a><br><a href="http://projects.spring.io/spring-cloud/spring-cloud.html#_refresh_scope" target="_blank" rel="noopener">http://projects.spring.io/spring-cloud/spring-cloud.html#_refresh_scope</a></p>
-
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/08/13/java/spring-cloud-config/#more">阅读更多</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2019-08-13T08:30:12.000Z">2019-08-13</time>
                 
                 
@@ -636,6 +583,57 @@
 
 
 
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-10T07:09:21.000Z">2019-08-10</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    几秒 读完 (大约 43 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/08/10/java/postman/">Postman</a>
+            
+        </h1>
+        <div class="content">
+            <h2 id="Request"><a href="#Request" class="headerlink" title="Request"></a>Request</h2><p>headers<br>body</p>
+<h3 id="Presets"><a href="#Presets" class="headerlink" title="Presets"></a>Presets</h3><h2 id="Collection"><a href="#Collection" class="headerlink" title="Collection"></a>Collection</h2><h2 id="Export-amp-Import"><a href="#Export-amp-Import" class="headerlink" title="Export &amp; Import"></a>Export &amp; Import</h2><h2 id="Environment"><a href="#Environment" class="headerlink" title="Environment"></a>Environment</h2><h2 id="Mock"><a href="#Mock" class="headerlink" title="Mock"></a>Mock</h2><h2 id="Test"><a href="#Test" class="headerlink" title="Test"></a>Test</h2><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">pm.test(<span class="hljs-string">"Response is Success"</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>&#123;</span><br><span class="line">    pm.response.to.have.status(<span class="hljs-number">200</span>);</span><br><span class="line">    <span class="hljs-keyword">var</span> jsonData = pm.response.json();</span><br><span class="line">    pm.expect(jsonData.success).to.eql(<span class="hljs-literal">true</span>);</span><br><span class="line">    pm.expect(jsonData.messageId).to.eql(<span class="hljs-string">"10000"</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h2 id="Runner"><a href="#Runner" class="headerlink" title="Runner"></a>Runner</h2>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/08/10/java/postman/#more">阅读更多</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
 
     
 <div class="card card-transparent">
@@ -643,7 +641,7 @@
         <div class="pagination-previous">
             <a class="is-flex-grow has-text-black-ter" href="/tags/Java/">上一页</a>
         </div>
-        <div class="pagination-next">
+        <div class="pagination-next is-invisible is-hidden-mobile">
             <a class="is-flex-grow has-text-black-ter" href="/tags/Java/page/3/">下一页</a>
         </div>
         <ul class="pagination-list is-hidden-mobile">
@@ -651,8 +649,6 @@
             <li><a class="pagination-link has-text-black-ter" href="/tags/Java/">1</a></li>
             
             <li><a class="pagination-link is-current" href="/tags/Java/page/2/">2</a></li>
-            
-            <li><a class="pagination-link has-text-black-ter" href="/tags/Java/page/3/">3</a></li>
             
         </ul>
     </nav>
@@ -703,7 +699,7 @@
                         文章
                     </p>
                     <p class="title has-text-weight-normal">
-                        39
+                        42
                     </p>
                 </div>
             </div>
@@ -713,7 +709,7 @@
                         标签
                     </p>
                     <p class="title has-text-weight-normal">
-                        15
+                        16
                     </p>
                 </div>
             </div>
@@ -759,7 +755,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Docker/">
                         <span class="tag">Docker</span>
-                        <span class="tag is-grey">1</span>
+                        <span class="tag is-grey">4</span>
                     </a>
                 </div>
                 
@@ -780,14 +776,14 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Java/">
                         <span class="tag">Java</span>
-                        <span class="tag is-grey">21</span>
+                        <span class="tag is-grey">20</span>
                     </a>
                 </div>
                 
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Javascript/">
                         <span class="tag">Javascript</span>
-                        <span class="tag is-grey">1</span>
+                        <span class="tag is-grey">3</span>
                     </a>
                 </div>
                 
@@ -808,6 +804,13 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/MySQL/">
                         <span class="tag">MySQL</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Node-js/">
+                        <span class="tag">Node.js</span>
                         <span class="tag is-grey">2</span>
                     </a>
                 </div>
@@ -836,7 +839,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Tool/">
                         <span class="tag">Tool</span>
-                        <span class="tag is-grey">19</span>
+                        <span class="tag is-grey">18</span>
                     </a>
                 </div>
                 
@@ -859,7 +862,7 @@
                     <span class="level-item">八月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">39</span>
+                    <span class="level-item tag">42</span>
                 </span>
             </a>
         </li>
@@ -875,6 +878,63 @@
         <h3 class="menu-label">
             最新文章
         </h3>
+        
+        <article class="media">
+            
+            <a href="/2019/08/18/javascript/nrm/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="nrm切换registry">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-18T09:28:42.000Z">2019-08-18</time></div>
+                    <a href="/2019/08/18/javascript/nrm/" class="title has-link-black-ter is-size-6 has-text-weight-normal">nrm切换registry</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/08/18/docker/nginx/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Docker Nginx 安装">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-18T09:25:06.000Z">2019-08-18</time></div>
+                    <a href="/2019/08/18/docker/nginx/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Docker Nginx 安装</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/08/18/docker/ghost/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Docker Ghost 安装">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-18T09:16:15.000Z">2019-08-18</time></div>
+                    <a href="/2019/08/18/docker/ghost/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Docker Ghost 安装</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -897,7 +957,7 @@
         
         <article class="media">
             
-            <a href="/2019/08/18/tools/nvm-windows/" class="media-left">
+            <a href="/2019/08/18/javascript/nvm-windows/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/images/thumbnail.svg" alt="nvm-windows安装使用指南">
                 </p>
@@ -906,64 +966,7 @@
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-18T01:55:05.000Z">2019-08-18</time></div>
-                    <a href="/2019/08/18/tools/nvm-windows/" class="title has-link-black-ter is-size-6 has-text-weight-normal">nvm-windows安装使用指南</a>
-                    <p class="is-size-7 is-uppercase">
-                        
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/08/15/java/spring-retry/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="spring-retry">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-15T05:32:12.000Z">2019-08-15</time></div>
-                    <a href="/2019/08/15/java/spring-retry/" class="title has-link-black-ter is-size-6 has-text-weight-normal">spring-retry</a>
-                    <p class="is-size-7 is-uppercase">
-                        
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/08/14/tools/proxy/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="proxy">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-14T09:06:11.000Z">2019-08-14</time></div>
-                    <a href="/2019/08/14/tools/proxy/" class="title has-link-black-ter is-size-6 has-text-weight-normal">proxy</a>
-                    <p class="is-size-7 is-uppercase">
-                        
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/08/14/tools/mysql/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="mysql">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-14T02:51:56.000Z">2019-08-14</time></div>
-                    <a href="/2019/08/14/tools/mysql/" class="title has-link-black-ter is-size-6 has-text-weight-normal">mysql</a>
+                    <a href="/2019/08/18/javascript/nvm-windows/" class="title has-link-black-ter is-size-6 has-text-weight-normal">nvm-windows安装使用指南</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>

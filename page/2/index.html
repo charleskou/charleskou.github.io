@@ -113,6 +113,156 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-14T02:29:03.000Z">2019-08-14</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    3 分钟 读完 (大约 412 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/08/14/docker/docker/">Docker 安装 - CentOS系统</a>
+            
+        </h1>
+        <div class="content">
+            <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>脚本方式：</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -fsSL https://get.docker.com/ | sh</span><br></pre></td></tr></table></figure>
+
+<p>可选用阿里镜像站点安装：参考 <a href="https://yq.aliyun.com/articles/110806" target="_blank" rel="noopener">https://yq.aliyun.com/articles/110806</a></p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun</span><br></pre></td></tr></table></figure>
+
+<h2 id="centos命令"><a href="#centos命令" class="headerlink" title="centos命令"></a>centos命令</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">service docker start</span><br><span class="line">service docker stop</span><br><span class="line">service docker status</span><br><span class="line">service docker restart</span><br></pre></td></tr></table></figure>
+
+<h2 id="docker命令"><a href="#docker命令" class="headerlink" title="docker命令"></a>docker命令</h2><figure class="highlight sh hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">docker ps</span><br><span class="line">docker images</span><br><span class="line">docker rm <span class="hljs-comment">#&#123;container_id&#125;</span></span><br><span class="line">docker rmi <span class="hljs-comment">#&#123;image_id&#125;</span></span><br><span class="line"><span class="hljs-comment"># 进入运行中的容器</span></span><br><span class="line">docker <span class="hljs-built_in">exec</span> -it d48b21a7e439 /bin/sh <span class="hljs-comment"># d48b21a7e439 - 容器id，container_id</span></span><br></pre></td></tr></table></figure>
+
+<p>设置镜像加速：</p>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/08/14/docker/docker/#more">阅读更多</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-14T01:41:02.000Z">2019-08-14</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    几秒 读完 (大约 0 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/08/14/java/spring-boot/">spring-boot</a>
+            
+        </h1>
+        <div class="content">
+            
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-14T01:40:56.000Z">2019-08-14</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    2 分钟 读完 (大约 322 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/08/14/java/spring-cloud/">spring-cloud</a>
+            
+        </h1>
+        <div class="content">
+            <h2 id="registry"><a href="#registry" class="headerlink" title="registry"></a>registry</h2><p>注册中心<br>Eureka</p>
+<h3 id="Eureka自我保护机制"><a href="#Eureka自我保护机制" class="headerlink" title="Eureka自我保护机制"></a>Eureka自我保护机制</h3><p>springcloud服务已经关但是Eureka还是显示up，该状态持续很久，访问该服务也返回错误，但在注册中心界面，该服务却一直存在，且为UP状态，并且在大约十分钟后，出现一行红色大字：EMERGENCY! EUREKA MAY BE INCORRECTLY CLAIMING INSTANCES ARE UP WHEN THEY’RE NOT. RENEWALS ARE LESSER THAN THRESHOLD AND HENCE THE INSTANCES ARE NOT BEING EXPIRED JUST TO BE SAFE.<br>原因：自我保护机制。Eureka Server在运行期间，会统计心跳失败的比例在15分钟之内是否低于85%，如果出现低于的情况（在单机调试的时候很容易满足，实际在生产环境上通常是由于网络不稳定导致），Eureka Server会将当前的实例注册信息保护起来，同时提示这个警告。</p>
+<h2 id="进程间通信"><a href="#进程间通信" class="headerlink" title="进程间通信"></a>进程间通信</h2><p>Feign</p>
+<h2 id="负载均衡"><a href="#负载均衡" class="headerlink" title="负载均衡"></a>负载均衡</h2><p>客户端负载均衡<br>Ribbon</p>
+<h2 id="分布式配置中心"><a href="#分布式配置中心" class="headerlink" title="分布式配置中心"></a>分布式配置中心</h2><p>Spring Cloud Config<br>动态刷新<br><a href="http://blog.didispace.com/springcloud4-2/" target="_blank" rel="noopener">http://blog.didispace.com/springcloud4-2/</a><br>消息总线</p>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/08/14/java/spring-cloud/#more">阅读更多</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2019-08-14T01:23:34.000Z">2019-08-14</time>
                 
                 
@@ -505,165 +655,6 @@
 
 
 
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-08-13T07:42:51.000Z">2019-08-13</time>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    几秒 读完 (大约 19 个字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/08/13/java/lombok/">lombok</a>
-            
-        </h1>
-        <div class="content">
-            <h2 id="dependency"><a href="#dependency" class="headerlink" title="dependency"></a>dependency</h2><figure class="highlight xml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.projectlombok<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>lombok<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>1.16.18<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">scope</span>&gt;</span>provided<span class="hljs-tag">&lt;/<span class="hljs-name">scope</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h1 id="IDE支持"><a href="#IDE支持" class="headerlink" title="IDE支持"></a>IDE支持</h1><p>Eclipse<br>IDEA</p>
-<h2 id="Data"><a href="#Data" class="headerlink" title="@Data"></a>@Data</h2><h2 id="Getter"><a href="#Getter" class="headerlink" title="@Getter"></a>@Getter</h2><h2 id="Setter"><a href="#Setter" class="headerlink" title="@Setter"></a>@Setter</h2><h2 id="Slf4j"><a href="#Slf4j" class="headerlink" title="@Slf4j"></a>@Slf4j</h2><h2 id="AllArgsConstructor"><a href="#AllArgsConstructor" class="headerlink" title="@AllArgsConstructor"></a>@AllArgsConstructor</h2><h2 id="EqualsAndHashCode"><a href="#EqualsAndHashCode" class="headerlink" title="@EqualsAndHashCode"></a>@EqualsAndHashCode</h2>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/08/13/java/lombok/#more">阅读更多</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-08-13T07:32:18.000Z">2019-08-13</time>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    1 分钟 读完 (大约 112 个字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/08/13/java/mybatis/">mybatis</a>
-            
-        </h1>
-        <div class="content">
-            <h2 id="batch-update"><a href="#batch-update" class="headerlink" title="batch update"></a>batch update</h2><p>批量更新<br>eg:</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">update table_post p</span><br><span class="line">inner join (</span><br><span class="line">    SELECT u.user_id,u.post_count</span><br><span class="line">    FROM table_user u</span><br><span class="line">) as c_u on p.user_id = c_u.user_id</span><br><span class="line">set u.post_count=c_u.post_count;</span><br></pre></td></tr></table></figure>
-
-<p>mapper中batch update写法：</p>
-<figure class="highlight sql hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;update id="batchUpdate"  parameterType="java.util.List"&gt;</span><br><span class="line">    &lt;foreach collection="list" item="item" index="index" open="" close="" separator=";"&gt;</span><br><span class="line">        <span class="hljs-keyword">update</span> <span class="hljs-keyword">test</span></span><br><span class="line">            &lt;<span class="hljs-keyword">set</span>&gt;</span><br><span class="line">                <span class="hljs-keyword">test</span>=$&#123;item.test&#125;+<span class="hljs-number">1</span></span><br><span class="line">            &lt;/<span class="hljs-keyword">set</span>&gt;</span><br><span class="line">        <span class="hljs-keyword">where</span> <span class="hljs-keyword">id</span> = $&#123;item.id&#125;</span><br><span class="line">    &lt;/foreach&gt;</span><br><span class="line">&lt;/<span class="hljs-keyword">update</span>&gt;</span><br></pre></td></tr></table></figure>
-
-<p>TIP：数据库连接必须配置：&amp;allowMultiQueries=true</p>
-<h2 id="文档"><a href="#文档" class="headerlink" title="文档"></a>文档</h2><p>中文文档<br><a href="http://www.mybatis.org/mybatis-3/zh/" target="_blank" rel="noopener">http://www.mybatis.org/mybatis-3/zh/</a></p>
-<p>mybatis-spring<br><a href="http://www.mybatis.org/spring/zh/" target="_blank" rel="noopener">http://www.mybatis.org/spring/zh/</a></p>
-<p>MyBatis Generator<br><a href="http://www.mybatis.org/generator/" target="_blank" rel="noopener">http://www.mybatis.org/generator/</a><br><a href="http://generator.sturgeon.mopaas.com/" target="_blank" rel="noopener">http://generator.sturgeon.mopaas.com/</a></p>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/08/13/java/mybatis/#more">阅读更多</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-08-13T06:47:04.000Z">2019-08-13</time>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    几秒 读完 (大约 72 个字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/08/13/tools/vpn/">vpn</a>
-            
-        </h1>
-        <div class="content">
-            <h2 id="注册"><a href="#注册" class="headerlink" title="注册"></a>注册</h2><p>连接vpn后在管理员模式命令行执行以下命令进行注册</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">REG ADD HKLM\SYSTEM\CurrentControlSet\Services\PolicyAgent /v AssumeUDPEncapsulationContextOnSendRule /t REG_DWORD /d 0x2 /f</span><br><span class="line">REG ADD HKLM\SYSTEM\CurrentControlSet\Services\RasMan\Parameters /v ProhibitIpSec /t REG_DWORD /d 0x0 /f</span><br><span class="line">REG ADD HKLM\SYSTEM\CurrentControlSet\Services\PolicyAgent /v AllowL2TPWeakCrypto /t REG_DWORD /d 0x1 /f</span><br></pre></td></tr></table></figure>
-
-
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/08/13/tools/vpn/#more">阅读更多</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
 
     
 <div class="card card-transparent">
@@ -683,6 +674,8 @@
             <li><a class="pagination-link has-text-black-ter" href="/page/3/">3</a></li>
             
             <li><a class="pagination-link has-text-black-ter" href="/page/4/">4</a></li>
+            
+            <li><a class="pagination-link has-text-black-ter" href="/page/5/">5</a></li>
             
         </ul>
     </nav>
@@ -733,7 +726,7 @@
                         文章
                     </p>
                     <p class="title has-text-weight-normal">
-                        39
+                        42
                     </p>
                 </div>
             </div>
@@ -743,7 +736,7 @@
                         标签
                     </p>
                     <p class="title has-text-weight-normal">
-                        15
+                        16
                     </p>
                 </div>
             </div>
@@ -789,7 +782,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Docker/">
                         <span class="tag">Docker</span>
-                        <span class="tag is-grey">1</span>
+                        <span class="tag is-grey">4</span>
                     </a>
                 </div>
                 
@@ -810,14 +803,14 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Java/">
                         <span class="tag">Java</span>
-                        <span class="tag is-grey">21</span>
+                        <span class="tag is-grey">20</span>
                     </a>
                 </div>
                 
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Javascript/">
                         <span class="tag">Javascript</span>
-                        <span class="tag is-grey">1</span>
+                        <span class="tag is-grey">3</span>
                     </a>
                 </div>
                 
@@ -838,6 +831,13 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/MySQL/">
                         <span class="tag">MySQL</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Node-js/">
+                        <span class="tag">Node.js</span>
                         <span class="tag is-grey">2</span>
                     </a>
                 </div>
@@ -866,7 +866,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Tool/">
                         <span class="tag">Tool</span>
-                        <span class="tag is-grey">19</span>
+                        <span class="tag is-grey">18</span>
                     </a>
                 </div>
                 
@@ -889,7 +889,7 @@
                     <span class="level-item">八月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">39</span>
+                    <span class="level-item tag">42</span>
                 </span>
             </a>
         </li>
@@ -905,6 +905,63 @@
         <h3 class="menu-label">
             最新文章
         </h3>
+        
+        <article class="media">
+            
+            <a href="/2019/08/18/javascript/nrm/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="nrm切换registry">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-18T09:28:42.000Z">2019-08-18</time></div>
+                    <a href="/2019/08/18/javascript/nrm/" class="title has-link-black-ter is-size-6 has-text-weight-normal">nrm切换registry</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/08/18/docker/nginx/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Docker Nginx 安装">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-18T09:25:06.000Z">2019-08-18</time></div>
+                    <a href="/2019/08/18/docker/nginx/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Docker Nginx 安装</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/08/18/docker/ghost/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Docker Ghost 安装">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-18T09:16:15.000Z">2019-08-18</time></div>
+                    <a href="/2019/08/18/docker/ghost/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Docker Ghost 安装</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -927,7 +984,7 @@
         
         <article class="media">
             
-            <a href="/2019/08/18/tools/nvm-windows/" class="media-left">
+            <a href="/2019/08/18/javascript/nvm-windows/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/images/thumbnail.svg" alt="nvm-windows安装使用指南">
                 </p>
@@ -936,64 +993,7 @@
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-18T01:55:05.000Z">2019-08-18</time></div>
-                    <a href="/2019/08/18/tools/nvm-windows/" class="title has-link-black-ter is-size-6 has-text-weight-normal">nvm-windows安装使用指南</a>
-                    <p class="is-size-7 is-uppercase">
-                        
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/08/15/java/spring-retry/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="spring-retry">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-15T05:32:12.000Z">2019-08-15</time></div>
-                    <a href="/2019/08/15/java/spring-retry/" class="title has-link-black-ter is-size-6 has-text-weight-normal">spring-retry</a>
-                    <p class="is-size-7 is-uppercase">
-                        
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/08/14/tools/proxy/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="proxy">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-14T09:06:11.000Z">2019-08-14</time></div>
-                    <a href="/2019/08/14/tools/proxy/" class="title has-link-black-ter is-size-6 has-text-weight-normal">proxy</a>
-                    <p class="is-size-7 is-uppercase">
-                        
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/08/14/tools/mysql/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="mysql">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-14T02:51:56.000Z">2019-08-14</time></div>
-                    <a href="/2019/08/14/tools/mysql/" class="title has-link-black-ter is-size-6 has-text-weight-normal">mysql</a>
+                    <a href="/2019/08/18/javascript/nvm-windows/" class="title has-link-black-ter is-size-6 has-text-weight-normal">nvm-windows安装使用指南</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>

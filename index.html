@@ -113,6 +113,172 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-18T09:28:42.000Z">2019-08-18</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    几秒 读完 (大约 44 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/08/18/javascript/nrm/">nrm切换registry</a>
+            
+        </h1>
+        <div class="content">
+            <p>nrm 是npm registry的管理工具，能够查看和切换当前使用的registry<br>install:</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g nrm</span><br></pre></td></tr></table></figure>
+
+<p>list:</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nrm ls</span><br></pre></td></tr></table></figure>
+
+<p>test:</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nrm test</span><br></pre></td></tr></table></figure>
+
+<p>use:</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nrm use [registryname]</span><br></pre></td></tr></table></figure>
+
+<p>常用：nrm use taobao</p>
+
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/08/18/javascript/nrm/#more">阅读更多</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-18T09:25:06.000Z">2019-08-18</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    几秒 读完 (大约 53 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/08/18/docker/nginx/">Docker Nginx 安装</a>
+            
+        </h1>
+        <div class="content">
+            <figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">docker run -d --name nginx \</span><br><span class="line">    -v /usr/share/nginx/nginx.conf:/etc/nginx/nginx.conf:ro</span><br><span class="line">    -v /usr/share/nginx/html:/usr/share/nginx/html:ro \</span><br><span class="line">    -v /usr/share/nginx/log:/var/log/nginx \</span><br><span class="line">    -p 80:80 \</span><br><span class="line">    --restart=always \</span><br><span class="line">    nginx</span><br></pre></td></tr></table></figure>
+
+<p>简化版：</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d --name nginx -p 80:80 daocloud.io/library/nginx:latest</span><br></pre></td></tr></table></figure>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/08/18/docker/nginx/#more">阅读更多</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-18T09:16:15.000Z">2019-08-18</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    1 分钟 读完 (大约 163 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/08/18/docker/ghost/">Docker Ghost 安装</a>
+            
+        </h1>
+        <div class="content">
+            <h2 id="Ghost"><a href="#Ghost" class="headerlink" title="Ghost"></a>Ghost</h2><p>Ghost 是基于 Node.js 的开源博客平台，目的是为了给用户提供一种更加纯粹的内容写作与发布平台。</p>
+<h2 id="启动命令："><a href="#启动命令：" class="headerlink" title="启动命令："></a>启动命令：</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d -name ghost -p 80:2368 -v /root/ghost/data:/var/lib/ghost/content ghost</span><br></pre></td></tr></table></figure>
+
+<h2 id="释义："><a href="#释义：" class="headerlink" title="释义："></a>释义：</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">docker run -d \ #创建一个后台运行容器，并返回容器ID</span><br><span class="line">    --name ghost \ #为容器指定一个名称</span><br><span class="line">    -p 80:2368 \ #将容器的80端口映射到主机的80端口</span><br><span class="line">    -v /root/ghost/data:/var/lib/ghost/content \ #主机的目录/root/ghost/data映射到容器的目录/var/lib/ghost/content</span><br><span class="line">    ghost #使用docker官方镜像ghost:latest</span><br></pre></td></tr></table></figure>
+
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://ghost.org/" target="_blank" rel="noopener">Ghost</a><br><a href="http://www.ghostchina.com/" target="_blank" rel="noopener">Ghost中文网</a></p>
+
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/08/18/docker/ghost/#more">阅读更多</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2019-08-18T08:15:38.000Z">2019-08-18</time>
                 
                 
@@ -181,7 +347,7 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/08/18/tools/nvm-windows/">nvm-windows安装使用指南</a>
+                <a class="has-link-black-ter" href="/2019/08/18/javascript/nvm-windows/">nvm-windows安装使用指南</a>
             
         </h1>
         <div class="content">
@@ -203,7 +369,7 @@
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/08/18/tools/nvm-windows/#more">阅读更多</a>
+                <a class="button is-size-7 is-light" href="/2019/08/18/javascript/nvm-windows/#more">阅读更多</a>
                 </div>
             </div>
         </div>
@@ -377,7 +543,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    2 分钟 读完 (大约 263 个字)
+                    2 分钟 读完 (大约 333 个字)
                 </span>
                 
                 
@@ -395,7 +561,10 @@
 <h2 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h2><figure class="highlight sql hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">-- 查找name字段中以'st'为开头的所有数据</span></span><br><span class="line"><span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">name</span> <span class="hljs-keyword">FROM</span> person_tbl <span class="hljs-keyword">WHERE</span> <span class="hljs-keyword">name</span> REGEXP <span class="hljs-string">'^st'</span>;</span><br><span class="line"><span class="hljs-comment">-- 查找name字段中以'ok'为结尾的所有数据</span></span><br><span class="line"><span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">name</span> <span class="hljs-keyword">FROM</span> person_tbl <span class="hljs-keyword">WHERE</span> <span class="hljs-keyword">name</span> REGEXP <span class="hljs-string">'ok$'</span>;</span><br><span class="line"><span class="hljs-comment">-- 查找name字段中包含'mar'字符串的所有数据</span></span><br><span class="line"><span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">name</span> <span class="hljs-keyword">FROM</span> person_tbl <span class="hljs-keyword">WHERE</span> <span class="hljs-keyword">name</span> REGEXP <span class="hljs-string">'mar'</span>;</span><br></pre></td></tr></table></figure>
 
 <p>参考：<a href="https://www.runoob.com/mysql/mysql-regexp.html" target="_blank" rel="noopener">https://www.runoob.com/mysql/mysql-regexp.html</a></p>
-<h2 id="SQL优化"><a href="#SQL优化" class="headerlink" title="SQL优化"></a>SQL优化</h2>
+<h2 id="SQL优化"><a href="#SQL优化" class="headerlink" title="SQL优化"></a>SQL优化</h2><h2 id="docker安装mysql"><a href="#docker安装mysql" class="headerlink" title="docker安装mysql"></a>docker安装mysql</h2><p>拉取镜像</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull mysql:5.7</span><br></pre></td></tr></table></figure>
+
+<p>启动mysql容器</p>
         </div>
         
         
@@ -531,164 +700,6 @@
 
 
 
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-08-14T02:29:03.000Z">2019-08-14</time>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    2 分钟 读完 (大约 284 个字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/08/14/java/docker/">docker</a>
-            
-        </h1>
-        <div class="content">
-            <h2 id="Dockerfile"><a href="#Dockerfile" class="headerlink" title="Dockerfile"></a>Dockerfile</h2><figure class="highlight dockerfile hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">FROM</span> openjdk:<span class="hljs-number">8</span>-jre-alpine</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">LABEL</span> maintainer="username@gmail.com"</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">ARG</span> JAR_FILE=target/ec-so-rest*.jar</span><br><span class="line"><span class="hljs-keyword">ADD</span> $&#123;JAR_FILE&#125; /app/ec-so-rest.jar</span><br><span class="line"><span class="hljs-keyword">CMD</span> ["java", "-Xmx2048m", "-XX:-UseGCOverheadLimit", "-jar", "/app/ec-so-rest.jar"]</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">EXPOSE</span> <span class="hljs-number">8080</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><p>FROM 为后续的命令设置基础镜像，它是Dockerfile文件的第一条命令</p>
-</li>
-<li><p>LABEL 为镜像添加一些描述的元数据</p>
-</li>
-<li><p>ARG 设置环境变量, 与ENV相比不同的是，ARG 所设置的构建环境的环境变量，在将来容器运行时是不会存在这些环境变量的</p>
-</li>
-<li><p>ADD 用于从当前机器或远程URL中的<src>中拷贝文件、目录，并将它们添加到镜像文件系统的<dest>中
-格式：</dest></src></p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ADD [--chown=&lt;user&gt;:&lt;group&gt;] &lt;src&gt;... &lt;dest&gt;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>CMD 为容器提供一个默认的执行命令，在一个Dockerfile只能有一条CMD指令，如果设置多条CMD指令，只有最后一条CMD指令会生效</p>
-</li>
-<li><p>EXPOSE 设置暴露的端口, 容器在运行时将监听指定哪个指定的网络端口。并可以指定端口的协议是TCP或UDP，如果没有指定协议，则默认为TCP协议</p>
-</li>
-</ul>
-
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/08/14/java/docker/#more">阅读更多</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-08-14T01:41:02.000Z">2019-08-14</time>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    几秒 读完 (大约 0 个字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/08/14/java/spring-boot/">spring-boot</a>
-            
-        </h1>
-        <div class="content">
-            
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-08-14T01:40:56.000Z">2019-08-14</time>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    2 分钟 读完 (大约 322 个字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/08/14/java/spring-cloud/">spring-cloud</a>
-            
-        </h1>
-        <div class="content">
-            <h2 id="registry"><a href="#registry" class="headerlink" title="registry"></a>registry</h2><p>注册中心<br>Eureka</p>
-<h3 id="Eureka自我保护机制"><a href="#Eureka自我保护机制" class="headerlink" title="Eureka自我保护机制"></a>Eureka自我保护机制</h3><p>springcloud服务已经关但是Eureka还是显示up，该状态持续很久，访问该服务也返回错误，但在注册中心界面，该服务却一直存在，且为UP状态，并且在大约十分钟后，出现一行红色大字：EMERGENCY! EUREKA MAY BE INCORRECTLY CLAIMING INSTANCES ARE UP WHEN THEY’RE NOT. RENEWALS ARE LESSER THAN THRESHOLD AND HENCE THE INSTANCES ARE NOT BEING EXPIRED JUST TO BE SAFE.<br>原因：自我保护机制。Eureka Server在运行期间，会统计心跳失败的比例在15分钟之内是否低于85%，如果出现低于的情况（在单机调试的时候很容易满足，实际在生产环境上通常是由于网络不稳定导致），Eureka Server会将当前的实例注册信息保护起来，同时提示这个警告。</p>
-<h2 id="进程间通信"><a href="#进程间通信" class="headerlink" title="进程间通信"></a>进程间通信</h2><p>Feign</p>
-<h2 id="负载均衡"><a href="#负载均衡" class="headerlink" title="负载均衡"></a>负载均衡</h2><p>客户端负载均衡<br>Ribbon</p>
-<h2 id="分布式配置中心"><a href="#分布式配置中心" class="headerlink" title="分布式配置中心"></a>分布式配置中心</h2><p>Spring Cloud Config<br>动态刷新<br><a href="http://blog.didispace.com/springcloud4-2/" target="_blank" rel="noopener">http://blog.didispace.com/springcloud4-2/</a><br>消息总线</p>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/08/14/java/spring-cloud/#more">阅读更多</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
 
     
 <div class="card card-transparent">
@@ -705,9 +716,9 @@
             
             <li><a class="pagination-link has-text-black-ter" href="/page/2/">2</a></li>
             
-            <li><a class="pagination-link has-text-black-ter" href="/page/3/">3</a></li>
+            <li><span class="pagination-ellipsis has-text-black-ter">&hellip;</span></li>
             
-            <li><a class="pagination-link has-text-black-ter" href="/page/4/">4</a></li>
+            <li><a class="pagination-link has-text-black-ter" href="/page/5/">5</a></li>
             
         </ul>
     </nav>
@@ -758,7 +769,7 @@
                         文章
                     </p>
                     <p class="title has-text-weight-normal">
-                        39
+                        42
                     </p>
                 </div>
             </div>
@@ -768,7 +779,7 @@
                         标签
                     </p>
                     <p class="title has-text-weight-normal">
-                        15
+                        16
                     </p>
                 </div>
             </div>
@@ -814,7 +825,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Docker/">
                         <span class="tag">Docker</span>
-                        <span class="tag is-grey">1</span>
+                        <span class="tag is-grey">4</span>
                     </a>
                 </div>
                 
@@ -835,14 +846,14 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Java/">
                         <span class="tag">Java</span>
-                        <span class="tag is-grey">21</span>
+                        <span class="tag is-grey">20</span>
                     </a>
                 </div>
                 
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Javascript/">
                         <span class="tag">Javascript</span>
-                        <span class="tag is-grey">1</span>
+                        <span class="tag is-grey">3</span>
                     </a>
                 </div>
                 
@@ -863,6 +874,13 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/MySQL/">
                         <span class="tag">MySQL</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Node-js/">
+                        <span class="tag">Node.js</span>
                         <span class="tag is-grey">2</span>
                     </a>
                 </div>
@@ -891,7 +909,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Tool/">
                         <span class="tag">Tool</span>
-                        <span class="tag is-grey">19</span>
+                        <span class="tag is-grey">18</span>
                     </a>
                 </div>
                 
@@ -914,7 +932,7 @@
                     <span class="level-item">八月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">39</span>
+                    <span class="level-item tag">42</span>
                 </span>
             </a>
         </li>
@@ -930,6 +948,63 @@
         <h3 class="menu-label">
             最新文章
         </h3>
+        
+        <article class="media">
+            
+            <a href="/2019/08/18/javascript/nrm/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="nrm切换registry">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-18T09:28:42.000Z">2019-08-18</time></div>
+                    <a href="/2019/08/18/javascript/nrm/" class="title has-link-black-ter is-size-6 has-text-weight-normal">nrm切换registry</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/08/18/docker/nginx/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Docker Nginx 安装">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-18T09:25:06.000Z">2019-08-18</time></div>
+                    <a href="/2019/08/18/docker/nginx/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Docker Nginx 安装</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/08/18/docker/ghost/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Docker Ghost 安装">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-18T09:16:15.000Z">2019-08-18</time></div>
+                    <a href="/2019/08/18/docker/ghost/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Docker Ghost 安装</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -952,7 +1027,7 @@
         
         <article class="media">
             
-            <a href="/2019/08/18/tools/nvm-windows/" class="media-left">
+            <a href="/2019/08/18/javascript/nvm-windows/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/images/thumbnail.svg" alt="nvm-windows安装使用指南">
                 </p>
@@ -961,64 +1036,7 @@
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-18T01:55:05.000Z">2019-08-18</time></div>
-                    <a href="/2019/08/18/tools/nvm-windows/" class="title has-link-black-ter is-size-6 has-text-weight-normal">nvm-windows安装使用指南</a>
-                    <p class="is-size-7 is-uppercase">
-                        
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/08/15/java/spring-retry/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="spring-retry">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-15T05:32:12.000Z">2019-08-15</time></div>
-                    <a href="/2019/08/15/java/spring-retry/" class="title has-link-black-ter is-size-6 has-text-weight-normal">spring-retry</a>
-                    <p class="is-size-7 is-uppercase">
-                        
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/08/14/tools/proxy/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="proxy">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-14T09:06:11.000Z">2019-08-14</time></div>
-                    <a href="/2019/08/14/tools/proxy/" class="title has-link-black-ter is-size-6 has-text-weight-normal">proxy</a>
-                    <p class="is-size-7 is-uppercase">
-                        
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/08/14/tools/mysql/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="mysql">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-14T02:51:56.000Z">2019-08-14</time></div>
-                    <a href="/2019/08/14/tools/mysql/" class="title has-link-black-ter is-size-6 has-text-weight-normal">mysql</a>
+                    <a href="/2019/08/18/javascript/nvm-windows/" class="title has-link-black-ter is-size-6 has-text-weight-normal">nvm-windows安装使用指南</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
