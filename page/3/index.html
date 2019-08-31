@@ -113,6 +113,59 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-13T08:30:12.000Z">2019-08-13</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    1 分钟 读完 (大约 214 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/08/13/java/druid/">druid</a>
+            
+        </h1>
+        <div class="content">
+            <h2 id="dependency"><a href="#dependency" class="headerlink" title="dependency"></a>dependency</h2><figure class="highlight xml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">&lt;!-- https://mvnrepository.com/artifact/com.alibaba/druid --&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>com.alibaba<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>druid<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>1.1.10<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="config"><a href="#config" class="headerlink" title="config"></a>config</h2><figure class="highlight xml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">bean</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"dataSource"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"com.alibaba.druid.pool.DruidDataSource"</span> <span class="hljs-attr">init-method</span>=<span class="hljs-string">"init"</span> <span class="hljs-attr">destroy-method</span>=<span class="hljs-string">"close"</span>&gt;</span></span><br><span class="line">    <span class="hljs-comment">&lt;!-- 基本属性 url、user、password --&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"url"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"$&#123;jdbc_url&#125;"</span> /&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"username"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"$&#123;jdbc_user&#125;"</span> /&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"password"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"$&#123;jdbc_password&#125;"</span> /&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="hljs-comment">&lt;!-- 配置初始化大小、最小、最大 --&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"maxActive"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"20"</span> /&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"initialSize"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"1"</span> /&gt;</span></span><br><span class="line">    <span class="hljs-comment">&lt;!-- 配置获取连接等待超时的时间 --&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"maxWait"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"60000"</span> /&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"minIdle"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"1"</span> /&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="hljs-comment">&lt;!-- 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒 --&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"timeBetweenEvictionRunsMillis"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"60000"</span> /&gt;</span></span><br><span class="line">    <span class="hljs-comment">&lt;!-- 配置一个连接在池中最小生存的时间，单位是毫秒 --&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"minEvictableIdleTimeMillis"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"300000"</span> /&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="hljs-comment">&lt;!-- 用来检测连接是否有效的sql，要求是一个查询语句，常用select 'x'。如果validationQuery为null，testOnBorrow、testOnReturn、testWhileIdle都不会起作用。 --&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"validationQuery"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"SELECT 1"</span> /&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"testWhileIdle"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"true"</span> /&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"testOnBorrow"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"false"</span> /&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"testOnReturn"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"false"</span> /&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="hljs-comment">&lt;!-- 打开PSCache，并且指定每个连接上PSCache的大小 --&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"poolPreparedStatements"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"true"</span> /&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"maxPoolPreparedStatementPerConnectionSize"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"20"</span> /&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="hljs-comment">&lt;!-- 配置监控统计拦截的filters --&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"filters"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"stat"</span> /&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="hljs-comment">&lt;!-- 1.1.4中新增配置，如果有initialSize数量较多时，打开会加快应用启动时间 --&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"asyncInit"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"true"</span> /&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">bean</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://github.com/alibaba/druid/wiki/常见问题" target="_blank" rel="noopener">https://github.com/alibaba/druid/wiki/常见问题</a></p>
+
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/08/13/java/druid/#more">阅读更多</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2019-08-13T07:42:51.000Z">2019-08-13</time>
                 
                 
@@ -553,46 +606,6 @@
 
 
 
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-08-10T07:45:01.000Z">2019-08-10</time>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    几秒 读完 (大约 0 个字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/08/10/tools/sublime/">sublime</a>
-            
-        </h1>
-        <div class="content">
-            
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
 
     
 <div class="card card-transparent">
@@ -664,7 +677,7 @@
                         文章
                     </p>
                     <p class="title has-text-weight-normal">
-                        42
+                        43
                     </p>
                 </div>
             </div>
@@ -727,7 +740,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Git/">
                         <span class="tag">Git</span>
-                        <span class="tag is-grey">1</span>
+                        <span class="tag is-grey">2</span>
                     </a>
                 </div>
                 
@@ -804,7 +817,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Tool/">
                         <span class="tag">Tool</span>
-                        <span class="tag is-grey">18</span>
+                        <span class="tag is-grey">19</span>
                     </a>
                 </div>
                 
@@ -827,7 +840,7 @@
                     <span class="level-item">八月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">42</span>
+                    <span class="level-item tag">43</span>
                 </span>
             </a>
         </li>
@@ -843,6 +856,25 @@
         <h3 class="menu-label">
             最新文章
         </h3>
+        
+        <article class="media">
+            
+            <a href="/2019/08/31/tools/beyondcompare/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="beyondcompare">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-31T06:40:00.000Z">2019-08-31</time></div>
+                    <a href="/2019/08/31/tools/beyondcompare/" class="title has-link-black-ter is-size-6 has-text-weight-normal">beyondcompare</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -913,25 +945,6 @@
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-18T08:15:38.000Z">2019-08-18</time></div>
                     <a href="/2019/08/18/javascript/echarts/" class="title has-link-black-ter is-size-6 has-text-weight-normal">echarts - Angular 1.x指令集成</a>
-                    <p class="is-size-7 is-uppercase">
-                        
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/08/18/javascript/nvm-windows/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="nvm-windows安装使用指南">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-18T01:55:05.000Z">2019-08-18</time></div>
-                    <a href="/2019/08/18/javascript/nvm-windows/" class="title has-link-black-ter is-size-6 has-text-weight-normal">nvm-windows安装使用指南</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
