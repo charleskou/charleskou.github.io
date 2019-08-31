@@ -113,6 +113,176 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-31T09:55:21.000Z">2019-08-31</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    几秒 读完 (大约 20 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/08/31/git/git-diff/">Git 对比分支差异</a>
+            
+        </h1>
+        <div class="content">
+            <p>查看dev分支有而master分支没有的提交：</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git log dev ^master</span><br></pre></td></tr></table></figure>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/08/31/git/git-diff/#more">阅读更多</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-31T09:55:21.000Z">2019-08-31</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    6 分钟 读完 (大约 970 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/08/31/git/git/">Git常用操作命令</a>
+            
+        </h1>
+        <div class="content">
+            <h2 id="git-config-设置"><a href="#git-config-设置" class="headerlink" title="git config 设置"></a>git config 设置</h2><p>查看当前配置</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config -l</span><br></pre></td></tr></table></figure>
+
+<p>设置默认用户名邮箱</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;test&quot;</span><br><span class="line">git config --global user.email&quot;test@gmail.com&quot;</span><br></pre></td></tr></table></figure>
+
+<p>保存密码</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global credential.helper store</span><br></pre></td></tr></table></figure>
+
+<p>设置默认使用sublime编辑器</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global core.editor =&quot;&apos;D:/Program Files/Sublime Text 3/sublime_text.exe&apos; -w&quot; # 设置Editor使用sublime</span><br></pre></td></tr></table></figure>
+
+<p>设置别名</p>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/08/31/git/git/#more">阅读更多</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-31T09:55:21.000Z">2019-08-31</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    几秒 读完 (大约 76 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/08/31/git/git-remote/">Git 修改远程主机地址</a>
+            
+        </h1>
+        <div class="content">
+            <ol>
+<li>可直接修改远程主机地址：<blockquote>
+<p>git remote set-url origin [url]</p>
+</blockquote>
+</li>
+</ol>
+<p>其中origin为远程主机名称，url为要设置的远程主机地址<br>例如：git remote set-url origin <a href="mailto:gitlab@gitlab.chumob.com" target="_blank" rel="noopener">gitlab@gitlab.chumob.com</a>:php/hasoffer.git</p>
+<ol start="2">
+<li>删除远程主机后重新添加<blockquote>
+<p>git remote rm origin<br>git remote add origin [url]</p>
+</blockquote>
+</li>
+</ol>
+
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/08/31/git/git-remote/#more">阅读更多</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2019-08-31T06:40:00.000Z">2019-08-31</time>
                 
                 
@@ -146,6 +316,107 @@
             <div class="level-start">
                 <div class="level-item">
                 <a class="button is-size-7 is-light" href="/2019/08/31/tools/beyondcompare/#more">阅读更多</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-31T02:29:03.000Z">2019-08-31</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    几秒 读完 (大约 64 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/08/31/docker/docker-swarm/">Docker Swarm 集群</a>
+            
+        </h1>
+        <div class="content">
+            <p>swarm<br>指定副本数，服务运行节点数<br>–replicas 3</p>
+<p>docker service update<br>更新docker service<br>–update-delay 设置延迟时间<br>–update-parallelism 并行更新数<br>–update-failure-action 失败后行为<br>–update-max-failure-ratio 失败比例<br>–update-monitor 更新监控时间</p>
+<p>–rollback 回滚</p>
+
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/08/31/docker/docker-swarm/#more">阅读更多</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-31T02:29:01.000Z">2019-08-31</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    几秒 读完 (大约 18 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/08/31/docker/docker-portainer/">Docker Portainer 容器管理工具</a>
+            
+        </h1>
+        <div class="content">
+            <p>portainer 持久化</p>
+<p>数据文件夹<br>/home/portainer/data</p>
+<figure class="highlight yaml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-attr">volumes:</span></span><br><span class="line"><span class="hljs-bullet">    -</span> <span class="hljs-string">/home/portainer/data:/data</span></span><br></pre></td></tr></table></figure>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/08/31/docker/docker-portainer/#more">阅读更多</a>
                 </div>
             </div>
         </div>
@@ -380,324 +651,6 @@
 
 
 
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-08-18T01:55:05.000Z">2019-08-18</time>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    5 分钟 读完 (大约 804 个字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/08/18/javascript/nvm-windows/">nvm-windows安装使用指南</a>
-            
-        </h1>
-        <div class="content">
-            <h2 id="nvm-windows"><a href="#nvm-windows" class="headerlink" title="nvm-windows"></a>nvm-windows</h2><ul>
-<li>nvm-windows是一个命令行工具</li>
-<li>nvm-windows 并不是 nvm 的简单移植，他们也没有任何关系</li>
-<li>nvm-windows切换node版本时，不同node版本之间不共享npm模块</li>
-<li>安装nvm-windows前需要卸载及删除node npm相关文件</li>
-<li>安装nvm-windows后必须为每个新安装的node单独安装全局应用，如gulp</li>
-</ul>
-<h2 id="安装前建议"><a href="#安装前建议" class="headerlink" title="安装前建议"></a>安装前建议</h2><h3 id="全局模块"><a href="#全局模块" class="headerlink" title="全局模块"></a>全局模块</h3><p>如当前已经安装node，且npm全局安装过一些模块，建议记录下这些全局模块留档<br>命令如下：</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm list -g --depth 0</span><br></pre></td></tr></table></figure>
-
-<h3 id="项目模块"><a href="#项目模块" class="headerlink" title="项目模块"></a>项目模块</h3><p>如项目中node_modules中包含模块，建议保存一份存档；如确定项目中package.json里的dependencies和devDependencies配置是规范的，可略过此项</p>
-<h3 id="卸载node"><a href="#卸载node" class="headerlink" title="卸载node"></a>卸载node</h3><p>安装前先卸载任何现有版本的node.js, 并删除nodejs安装目录<br>可通过以下命令查找node或npm的安装路径：</p>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/08/18/javascript/nvm-windows/#more">阅读更多</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-08-15T05:32:12.000Z">2019-08-15</time>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    2 分钟 读完 (大约 362 个字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/08/15/java/spring-retry/">spring-retry</a>
-            
-        </h1>
-        <div class="content">
-            <p>Spring Retry实现重试操作</p>
-<h2 id="dependency"><a href="#dependency" class="headerlink" title="dependency"></a>dependency</h2><figure class="highlight xml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.springframework.retry<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-retry<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="注解"><a href="#注解" class="headerlink" title="注解"></a>注解</h2><p>在启动入口加入重试配置</p>
-<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">@EnableRetry</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">@Retryable</span>(value = Exception.class, maxAttempts = <span class="hljs-number">3</span>,backoff = <span class="hljs-meta">@Backoff</span>(delay = <span class="hljs-number">2000</span>, multiplier = <span class="hljs-number">1.5</span>))</span><br></pre></td></tr></table></figure>
-
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
-<li>@EnableRetry 能否重试</li>
-<li>@Retryable 标注此注解的方法在发生异常时会进行重试</li>
-<li><ul>
-<li>value：指定处理的异常类</li>
-</ul>
-</li>
-<li><ul>
-<li>include：指定处理的异常类和value一样，默认为空，当exclude也为空时，默认所有异常</li>
-</ul>
-</li>
-<li><ul>
-<li>exclude：指定异常不处理，默认空，当include也为空时，默认所有异常</li>
-</ul>
-</li>
-<li><ul>
-<li>maxAttempts：最大重试次数。默认3次</li>
-</ul>
-</li>
-<li><ul>
-<li>backoff： 重试等待策略。默认使用@Backoff注解</li>
-</ul>
-</li>
-<li>@Backoff 重试等待策略</li>
-<li><ul>
-<li>不设置参数时，默认使用FixedBackOffPolicy（指定等待时间），重试等待1000ms</li>
-</ul>
-</li>
-<li><ul>
-<li>设置delay,使用FixedBackOffPolicy（指定等待时间），重试等待填写的时间</li>
-</ul>
-</li>
-<li><ul>
-<li>设置delay和maxDealy时，重试等待在这两个值之间均态分布</li>
-</ul>
-</li>
-<li><ul>
-<li>设置delay、maxDealy、multiplier，使用 ExponentialBackOffPolicy（指数级重试间隔的实现 ），multiplier即指定延迟倍数，比如delay=5000l,multiplier=2,则第一次重试为5秒，第二次为10秒，第三次为20秒……</li>
-</ul>
-</li>
-<li>@Recover 用于@Retryable重试失败后处理方法，此注解注释的方法参数一定要是@Retryable抛出的异常，否则无法识别，可以在该方法中进行日志处理。</li>
-</ul>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/08/15/java/spring-retry/#more">阅读更多</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-08-14T09:06:11.000Z">2019-08-14</time>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    几秒 读完 (大约 19 个字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/08/14/tools/proxy/">proxy</a>
-            
-        </h1>
-        <div class="content">
-            <h2 id="代理"><a href="#代理" class="headerlink" title="代理"></a>代理</h2><h2 id="反向代理"><a href="#反向代理" class="headerlink" title="反向代理"></a>反向代理</h2><p><img src="https://pic2.zhimg.com/2582ac2a1366e3e12acf274265ea80f3_r.jpg" alt></p>
-
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/08/14/tools/proxy/#more">阅读更多</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-08-14T02:51:56.000Z">2019-08-14</time>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    2 分钟 读完 (大约 333 个字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/08/14/tools/mysql/">mysql</a>
-            
-        </h1>
-        <div class="content">
-            <h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><figure class="highlight sql hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">-- 求绝对值</span></span><br><span class="line">ABS(x)</span><br><span class="line"><span class="hljs-comment">-- 四舍五入</span></span><br><span class="line">ROUND(x)</span><br><span class="line"><span class="hljs-comment">-- 字符数</span></span><br><span class="line">CHAR_LENGTH(s)</span><br><span class="line"><span class="hljs-comment">-- 字符串长度</span></span><br><span class="line">LENGTH(s)</span><br><span class="line"><span class="hljs-comment">-- 字符串拼接</span></span><br><span class="line">CONCAT(s1,s2,...)</span><br><span class="line"><span class="hljs-comment">-- 字符串截取：从字符串s中的第a个字符开始取b个字符</span></span><br><span class="line">SUBSTRING(s,a,b)</span><br><span class="line"><span class="hljs-comment">-- 当前日期</span></span><br><span class="line">CURRENT_DATE()</span><br><span class="line"><span class="hljs-comment">-- 当前时间</span></span><br><span class="line">CURRENT_TIME()</span><br><span class="line"><span class="hljs-comment">-- 当前时间戳</span></span><br><span class="line">UNIX_TIMESTAMP()</span><br><span class="line"><span class="hljs-comment">-- 把UNIX时间戳的时间转换为普通格式的时间</span></span><br><span class="line">FROM_UNIXTIME(d)</span><br><span class="line"><span class="hljs-comment">-- 如果表达式expr成立，返回结果v1；否则，返回结果v2。</span></span><br><span class="line">IF(expr,v1,v2)</span><br><span class="line"><span class="hljs-comment">-- 如果v1的不为空，就显示v1的值；否则就显示v2的值。</span></span><br><span class="line">IFNULL(v1,v2)</span><br><span class="line"><span class="hljs-comment">-- 数据库版本号</span></span><br><span class="line">VERSION()</span><br></pre></td></tr></table></figure>
-
-<h2 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h2><figure class="highlight sql hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">-- 查找name字段中以'st'为开头的所有数据</span></span><br><span class="line"><span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">name</span> <span class="hljs-keyword">FROM</span> person_tbl <span class="hljs-keyword">WHERE</span> <span class="hljs-keyword">name</span> REGEXP <span class="hljs-string">'^st'</span>;</span><br><span class="line"><span class="hljs-comment">-- 查找name字段中以'ok'为结尾的所有数据</span></span><br><span class="line"><span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">name</span> <span class="hljs-keyword">FROM</span> person_tbl <span class="hljs-keyword">WHERE</span> <span class="hljs-keyword">name</span> REGEXP <span class="hljs-string">'ok$'</span>;</span><br><span class="line"><span class="hljs-comment">-- 查找name字段中包含'mar'字符串的所有数据</span></span><br><span class="line"><span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">name</span> <span class="hljs-keyword">FROM</span> person_tbl <span class="hljs-keyword">WHERE</span> <span class="hljs-keyword">name</span> REGEXP <span class="hljs-string">'mar'</span>;</span><br></pre></td></tr></table></figure>
-
-<p>参考：<a href="https://www.runoob.com/mysql/mysql-regexp.html" target="_blank" rel="noopener">https://www.runoob.com/mysql/mysql-regexp.html</a></p>
-<h2 id="SQL优化"><a href="#SQL优化" class="headerlink" title="SQL优化"></a>SQL优化</h2><h2 id="docker安装mysql"><a href="#docker安装mysql" class="headerlink" title="docker安装mysql"></a>docker安装mysql</h2><p>拉取镜像</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull mysql:5.7</span><br></pre></td></tr></table></figure>
-
-<p>启动mysql容器</p>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/08/14/tools/mysql/#more">阅读更多</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-08-14T02:48:11.000Z">2019-08-14</time>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    5 分钟 读完 (大约 697 个字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/08/14/tools/redis/">redis</a>
-            
-        </h1>
-        <div class="content">
-            <p>Redis是一个开源的使用 ANSI C语言编写，支持网络，可基于内存也可持久化的日志型，Key-Value数据库，并提供了多种语言的 API ,相比 Memcached 它支持存储的类型相对更多 (字符，哈希，集合，有序集合，列表等)，同时Redis是线程安全的。</p>
-<h2 id="redis-cli"><a href="#redis-cli" class="headerlink" title="redis-cli"></a>redis-cli</h2><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><h3 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h3><figure class="highlight sh hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">redis-cli -h redis.test.net -a TlJ8JsgzWHMOcbBMUEIw info memory</span><br><span class="line">redis-cli -h redis.test.net -a TlJ8JsgzWHMOcbBMUEIw keys <span class="hljs-string">"*"</span></span><br><span class="line">redis-cli -h redis.test.net -a TlJ8JsgzWHMOcbBMUEIw keys <span class="hljs-string">"KEY:KEYNAME*"</span></span><br><span class="line">redis-cli -h redis.test.net -a TlJ8JsgzWHMOcbBMUEIw keys <span class="hljs-string">"KEY:KEYNAME*"</span> | xargs redis-cli -h redis.test.net -a TlJ8JsgzWHMOcbBMUEIw del</span><br></pre></td></tr></table></figure>
-
-<h2 id="Redis-客户端"><a href="#Redis-客户端" class="headerlink" title="Redis 客户端"></a>Redis 客户端</h2><h3 id="连接池"><a href="#连接池" class="headerlink" title="连接池"></a>连接池</h3><p>客户端连接 Redis 使用的是 TCP协议，直连的方式每次需要建立 TCP连接，而连接池的方式是可以预先初始化好客户端连接，所以每次只需要从 连接池借用即可，而借用和归还操作是在本地进行的，只有少量的并发同步开销，远远小于新建TCP连接的开销。另外，直连的方式无法限制 redis客户端对象的个数，在极端情况下可能会造成连接泄漏，而连接池的形式可以有效的保护和控制资源的使用。<br>客户端直连方式和连接池方式的对比：<br>优点缺点<br>直连<br>优点：简单方便，适用于少量长期连接的场景<br>缺点：</p>
-<ol>
-<li>存在每次新建/关闭TCP连接开销 </li>
-<li>资源无法控制，极端情况下出现连接泄漏 </li>
-<li>Jedis对象线程不安全(Lettuce对象是线程安全的)<br>连接池<br>优点：无需每次连接生成Jedis对象，降低开销<br>缺点：使用连接池的形式保护和控制资源的使用相对于直连，使用更加麻烦，尤其在资源的管理上需要很多参数来保证，一旦规划不合理也会出现问题</li>
-</ol>
-<h3 id="Lettuce"><a href="#Lettuce" class="headerlink" title="Lettuce"></a>Lettuce</h3>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/08/14/tools/redis/#more">阅读更多</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
 
     
 <div class="card card-transparent">
@@ -716,7 +669,7 @@
             
             <li><span class="pagination-ellipsis has-text-black-ter">&hellip;</span></li>
             
-            <li><a class="pagination-link has-text-black-ter" href="/page/5/">5</a></li>
+            <li><a class="pagination-link has-text-black-ter" href="/page/6/">6</a></li>
             
         </ul>
     </nav>
@@ -767,7 +720,7 @@
                         文章
                     </p>
                     <p class="title has-text-weight-normal">
-                        43
+                        57
                     </p>
                 </div>
             </div>
@@ -823,14 +776,14 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Docker/">
                         <span class="tag">Docker</span>
-                        <span class="tag is-grey">4</span>
+                        <span class="tag is-grey">8</span>
                     </a>
                 </div>
                 
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Git/">
                         <span class="tag">Git</span>
-                        <span class="tag is-grey">2</span>
+                        <span class="tag is-grey">8</span>
                     </a>
                 </div>
                 
@@ -872,7 +825,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/MySQL/">
                         <span class="tag">MySQL</span>
-                        <span class="tag is-grey">2</span>
+                        <span class="tag is-grey">5</span>
                     </a>
                 </div>
                 
@@ -907,7 +860,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Tool/">
                         <span class="tag">Tool</span>
-                        <span class="tag is-grey">19</span>
+                        <span class="tag is-grey">17</span>
                     </a>
                 </div>
                 
@@ -930,7 +883,7 @@
                     <span class="level-item">八月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">43</span>
+                    <span class="level-item tag">57</span>
                 </span>
             </a>
         </li>
@@ -946,6 +899,63 @@
         <h3 class="menu-label">
             最新文章
         </h3>
+        
+        <article class="media">
+            
+            <a href="/2019/08/31/git/git-diff/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Git 对比分支差异">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-31T09:55:21.000Z">2019-08-31</time></div>
+                    <a href="/2019/08/31/git/git-diff/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Git 对比分支差异</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/08/31/git/git/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Git常用操作命令">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-31T09:55:21.000Z">2019-08-31</time></div>
+                    <a href="/2019/08/31/git/git/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Git常用操作命令</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/08/31/git/git-remote/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Git 修改远程主机地址">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-31T09:55:21.000Z">2019-08-31</time></div>
+                    <a href="/2019/08/31/git/git-remote/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Git 修改远程主机地址</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -968,73 +978,16 @@
         
         <article class="media">
             
-            <a href="/2019/08/18/javascript/nrm/" class="media-left">
+            <a href="/2019/08/31/docker/docker-swarm/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="nrm切换registry">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Docker Swarm 集群">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-18T09:28:42.000Z">2019-08-18</time></div>
-                    <a href="/2019/08/18/javascript/nrm/" class="title has-link-black-ter is-size-6 has-text-weight-normal">nrm切换registry</a>
-                    <p class="is-size-7 is-uppercase">
-                        
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/08/18/docker/nginx/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Docker Nginx 安装">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-18T09:25:06.000Z">2019-08-18</time></div>
-                    <a href="/2019/08/18/docker/nginx/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Docker Nginx 安装</a>
-                    <p class="is-size-7 is-uppercase">
-                        
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/08/18/docker/ghost/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Docker Ghost 安装">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-18T09:16:15.000Z">2019-08-18</time></div>
-                    <a href="/2019/08/18/docker/ghost/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Docker Ghost 安装</a>
-                    <p class="is-size-7 is-uppercase">
-                        
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/08/18/javascript/echarts/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="echarts - Angular 1.x指令集成">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-18T08:15:38.000Z">2019-08-18</time></div>
-                    <a href="/2019/08/18/javascript/echarts/" class="title has-link-black-ter is-size-6 has-text-weight-normal">echarts - Angular 1.x指令集成</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-31T02:29:03.000Z">2019-08-31</time></div>
+                    <a href="/2019/08/31/docker/docker-swarm/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Docker Swarm 集群</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>

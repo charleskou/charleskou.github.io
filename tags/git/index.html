@@ -123,6 +123,176 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-31T09:55:21.000Z">2019-08-31</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    几秒 读完 (大约 20 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/08/31/git/git-diff/">Git 对比分支差异</a>
+            
+        </h1>
+        <div class="content">
+            <p>查看dev分支有而master分支没有的提交：</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git log dev ^master</span><br></pre></td></tr></table></figure>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/08/31/git/git-diff/#more">阅读更多</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-31T09:55:21.000Z">2019-08-31</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    几秒 读完 (大约 76 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/08/31/git/git-remote/">Git 修改远程主机地址</a>
+            
+        </h1>
+        <div class="content">
+            <ol>
+<li>可直接修改远程主机地址：<blockquote>
+<p>git remote set-url origin [url]</p>
+</blockquote>
+</li>
+</ol>
+<p>其中origin为远程主机名称，url为要设置的远程主机地址<br>例如：git remote set-url origin <a href="mailto:gitlab@gitlab.chumob.com" target="_blank" rel="noopener">gitlab@gitlab.chumob.com</a>:php/hasoffer.git</p>
+<ol start="2">
+<li>删除远程主机后重新添加<blockquote>
+<p>git remote rm origin<br>git remote add origin [url]</p>
+</blockquote>
+</li>
+</ol>
+
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/08/31/git/git-remote/#more">阅读更多</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-31T09:55:21.000Z">2019-08-31</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    6 分钟 读完 (大约 970 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/08/31/git/git/">Git常用操作命令</a>
+            
+        </h1>
+        <div class="content">
+            <h2 id="git-config-设置"><a href="#git-config-设置" class="headerlink" title="git config 设置"></a>git config 设置</h2><p>查看当前配置</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config -l</span><br></pre></td></tr></table></figure>
+
+<p>设置默认用户名邮箱</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;test&quot;</span><br><span class="line">git config --global user.email&quot;test@gmail.com&quot;</span><br></pre></td></tr></table></figure>
+
+<p>保存密码</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global credential.helper store</span><br></pre></td></tr></table></figure>
+
+<p>设置默认使用sublime编辑器</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global core.editor =&quot;&apos;D:/Program Files/Sublime Text 3/sublime_text.exe&apos; -w&quot; # 设置Editor使用sublime</span><br></pre></td></tr></table></figure>
+
+<p>设置别名</p>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/08/31/git/git/#more">阅读更多</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2019-08-31T06:40:00.000Z">2019-08-31</time>
                 
                 
@@ -177,6 +347,165 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-10T05:40:21.000Z">2019-08-10</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    3 分钟 读完 (大约 378 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/08/10/git/github-pages-vue/">Github Pages Vue 项目发布</a>
+            
+        </h1>
+        <div class="content">
+            <h2 id="使用Github-Pages搭建Vue项目在线演示demo"><a href="#使用Github-Pages搭建Vue项目在线演示demo" class="headerlink" title="使用Github Pages搭建Vue项目在线演示demo"></a>使用Github Pages搭建Vue项目在线演示demo</h2><p>分支：gh-pages<br>访问Url：https://[user_name].github.io/[project_name]<br>关键点：利用Github提供的静态页解析功能, 将静态页面推送到Github个人项目仓库的gh-pages分支下</p>
+<h2 id="在现有vue项目的基础上，执行以下步骤："><a href="#在现有vue项目的基础上，执行以下步骤：" class="headerlink" title="在现有vue项目的基础上，执行以下步骤："></a>在现有vue项目的基础上，执行以下步骤：</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"># 1.切换分支</span><br><span class="line">git checkout gh-pages</span><br><span class="line"># 2.构建项目，生成build文件</span><br><span class="line">npm run build</span><br><span class="line"># 3.强制添加dist文件夹，因为.gitignore文件中定义了忽略该文件</span><br><span class="line">git add -f dist</span><br><span class="line"># 4.提交</span><br><span class="line">git commit -m &apos;Initial the page of project&apos;</span><br><span class="line"># 5.部署dist目录下的代码：使用git subtree命令可以在同一分支上维护源代码以及构建代码，在部署时仅仅推送dist目录下的内容</span><br><span class="line">git subtree push --prefix dist origin gh-pages</span><br></pre></td></tr></table></figure>
+
+<h2 id="提示："><a href="#提示：" class="headerlink" title="提示："></a>提示：</h2><p>在将Vue应用部署到gh-pages分支后，可能会出现部分资源无法加载的问题，原因就在于vue中的webpack配置在打包时其publicPath为根路径，如果该静态页在服务器中被访问则不会出现以上问题。在github解析时如果按照根路径解析会出错，因此在github上部署静态页时可以考虑将publicPath设置为当前目录，即 publicPath: ‘./‘。<br>同理，使用Vue-cli webpack模板生成的vue项目，出现上述问题应设置config/index.js中build对象下的assetsPublicPath字段为assetsPublicPath: ‘./‘,原理都是设置publicPath字段</p>
+
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/08/10/git/github-pages-vue/#more">阅读更多</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-09T09:55:21.000Z">2019-08-09</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    几秒 读完 (大约 69 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/08/09/git/git-commit-count/">Git-查看代码提交次数</a>
+            
+        </h1>
+        <div class="content">
+            <p>Git仓库代码提交次数：<br>git log –pretty=tformat: –numstat | awk ‘{ add += $1; subs += $2; loc += $1 - $2 } END { printf “added lines: %s, removed lines: %s, total lines: %s\n”, add, subs, loc }’ -</p>
+<p>代码新增修改总计行数：<br>git log –pretty=tformat: –numstat | awk ‘{ add += $1; subs += $2; loc += $1 - $2 } END { printf “added lines: %s, removed lines: %s, total lines: %s\n”, add, subs, loc }’ -</p>
+
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/08/09/git/git-commit-count/#more">阅读更多</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-09T09:55:21.000Z">2019-08-09</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    1 分钟 读完 (大约 166 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/08/09/git/git-cherry-pick/">Git cherry-pick 摘樱桃</a>
+            
+        </h1>
+        <div class="content">
+            <p>cherry-pick，顾名思义：摘樱桃。如果说每一次commit是一颗樱桃，那么你可以通过cherry-pick命令将这一颗樱桃采摘到另外一颗樱桃树(branch)上。<br>命令：</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git cherry-pick [--no-commit] 997367b(commit id)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>–no-commit:预计可能会出现冲突的时候，建议这样用，以便先自查并解决冲突后再手动提交</li>
+<li>commit id:可通过git log来查看，该命令执行后会把997367b这颗樱桃复制到当前分支并自动commit(如果没有冲突的话)</li>
+</ul>
+<hr>
+<p>注意一点，cherry-pick产生的提交与原提交commit id不同</p>
+
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/08/09/git/git-cherry-pick/#more">阅读更多</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2019-08-09T09:55:21.000Z">2019-08-09</time>
                 
                 
@@ -192,7 +521,7 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/08/09/tools/git-subtree/">Git Subtree</a>
+                <a class="has-link-black-ter" href="/2019/08/09/git/git-subtree/">Git Subtree</a>
             
         </h1>
         <div class="content">
@@ -206,7 +535,7 @@
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/08/09/tools/git-subtree/#more">阅读更多</a>
+                <a class="button is-size-7 is-light" href="/2019/08/09/git/git-subtree/#more">阅读更多</a>
                 </div>
             </div>
         </div>
@@ -268,7 +597,7 @@
                         文章
                     </p>
                     <p class="title has-text-weight-normal">
-                        43
+                        57
                     </p>
                 </div>
             </div>
@@ -324,14 +653,14 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Docker/">
                         <span class="tag">Docker</span>
-                        <span class="tag is-grey">4</span>
+                        <span class="tag is-grey">8</span>
                     </a>
                 </div>
                 
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Git/">
                         <span class="tag">Git</span>
-                        <span class="tag is-grey">2</span>
+                        <span class="tag is-grey">8</span>
                     </a>
                 </div>
                 
@@ -373,7 +702,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/MySQL/">
                         <span class="tag">MySQL</span>
-                        <span class="tag is-grey">2</span>
+                        <span class="tag is-grey">5</span>
                     </a>
                 </div>
                 
@@ -408,7 +737,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Tool/">
                         <span class="tag">Tool</span>
-                        <span class="tag is-grey">19</span>
+                        <span class="tag is-grey">17</span>
                     </a>
                 </div>
                 
@@ -431,7 +760,7 @@
                     <span class="level-item">八月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">43</span>
+                    <span class="level-item tag">57</span>
                 </span>
             </a>
         </li>
@@ -447,6 +776,63 @@
         <h3 class="menu-label">
             最新文章
         </h3>
+        
+        <article class="media">
+            
+            <a href="/2019/08/31/git/git-diff/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Git 对比分支差异">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-31T09:55:21.000Z">2019-08-31</time></div>
+                    <a href="/2019/08/31/git/git-diff/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Git 对比分支差异</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/08/31/git/git/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Git常用操作命令">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-31T09:55:21.000Z">2019-08-31</time></div>
+                    <a href="/2019/08/31/git/git/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Git常用操作命令</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/08/31/git/git-remote/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Git 修改远程主机地址">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-31T09:55:21.000Z">2019-08-31</time></div>
+                    <a href="/2019/08/31/git/git-remote/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Git 修改远程主机地址</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -469,73 +855,16 @@
         
         <article class="media">
             
-            <a href="/2019/08/18/javascript/nrm/" class="media-left">
+            <a href="/2019/08/31/docker/docker-swarm/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="nrm切换registry">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Docker Swarm 集群">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-18T09:28:42.000Z">2019-08-18</time></div>
-                    <a href="/2019/08/18/javascript/nrm/" class="title has-link-black-ter is-size-6 has-text-weight-normal">nrm切换registry</a>
-                    <p class="is-size-7 is-uppercase">
-                        
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/08/18/docker/nginx/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Docker Nginx 安装">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-18T09:25:06.000Z">2019-08-18</time></div>
-                    <a href="/2019/08/18/docker/nginx/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Docker Nginx 安装</a>
-                    <p class="is-size-7 is-uppercase">
-                        
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/08/18/docker/ghost/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Docker Ghost 安装">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-18T09:16:15.000Z">2019-08-18</time></div>
-                    <a href="/2019/08/18/docker/ghost/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Docker Ghost 安装</a>
-                    <p class="is-size-7 is-uppercase">
-                        
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/08/18/javascript/echarts/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="echarts - Angular 1.x指令集成">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-18T08:15:38.000Z">2019-08-18</time></div>
-                    <a href="/2019/08/18/javascript/echarts/" class="title has-link-black-ter is-size-6 has-text-weight-normal">echarts - Angular 1.x指令集成</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-31T02:29:03.000Z">2019-08-31</time></div>
+                    <a href="/2019/08/31/docker/docker-swarm/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Docker Swarm 集群</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
