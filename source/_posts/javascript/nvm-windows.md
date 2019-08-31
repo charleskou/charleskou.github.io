@@ -1,6 +1,6 @@
 ---
 title: nvm-windows安装使用指南
-tags: [Tool]
+tags: [Javascript, Node.js]
 date: 2019-08-18 09:55:05
 ---
 
