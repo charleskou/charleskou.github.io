@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://charleskou.github.io/2019/08/10/java/eclipse/</loc>
+    
+    <lastmod>2019-09-21T09:13:47.314Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://charleskou.github.io/2019/08/14/java/kubernetes/</loc>
     
     <lastmod>2019-09-21T06:39:03.370Z</lastmod>
@@ -82,13 +89,6 @@
     <loc>https://charleskou.github.io/2019/08/10/java/guava/</loc>
     
     <lastmod>2019-09-21T05:41:20.806Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://charleskou.github.io/2019/08/10/java/eclipse/</loc>
-    
-    <lastmod>2019-09-21T05:41:08.855Z</lastmod>
     
   </url>
   
