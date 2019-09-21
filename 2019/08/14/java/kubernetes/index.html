@@ -118,7 +118,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    19 分钟 读完 (大约 2804 个字)
+                    29 分钟 读完 (大约 4323 个字)
                 </span>
                 
                 
@@ -147,7 +147,15 @@
 <h4 id="标签（labels）"><a href="#标签（labels）" class="headerlink" title="标签（labels）"></a>标签（labels）</h4><p>Labels 的实质是附着在资源对象上的一系列 Key/Value 键值对，用于指定对用户有意义的对象的属性，标签对内核系统是没有直接意义的。标签可以在创建一个对象的时候直接赋予，也可以在后期随时修改，每一个对象可以拥有多个标签，但 key 值必须唯一。</p>
 <h4 id="存储卷（Volume）"><a href="#存储卷（Volume）" class="headerlink" title="存储卷（Volume）"></a>存储卷（Volume）</h4><p>Kubernetes 集群中的存储卷跟 Docker 的存储卷有些类似，只不过 Docker 的存储卷作用范围为一个容器，而 Kubernetes 的存储卷的生命周期和作用范围是一个 Pod。每个 Pod 中声明的存储卷由 Pod 中的所有容器共享。支持使用 Persistent Volume Claim 即 PVC 这种逻辑存储，使用者可以忽略后台的实际存储技术，具体关于 Persistent Volumn(pv)的配置由存储管理员来配置。<br>持久存储卷（Persistent Volume，PV）和持久存储卷声明（Persistent Volume Claim，PVC）<br>PV 和 PVC 使得 Kubernetes 集群具备了存储的逻辑抽象能力，使得在配置 Pod 的逻辑里可以忽略对实际后台存储技术的配置，而把这项配置的工作交给 PV 的配置者。存储的 PV 和 PVC 的这种关系，跟计算的 Node 和 Pod 的关系是非常类似的；PV 和 Node 是资源的提供者，根据集群的基础设施变化而变化，由 Kubernetes 集群管理员配置；而 PVC 和 Pod是资源的使用者，根据业务服务的需求变化而变化，由 Kubernetes 集群的使用者即服务的管理员来配置。</p>
 <h4 id="Ingress"><a href="#Ingress" class="headerlink" title="Ingress"></a>Ingress</h4><p>Ingress 是授权入站连接到达集群服务的规则集合。你可以通过 Ingress 配置提供外部可访问的 URL、负载均衡、SSL、基于名称的虚拟主机等。用户通过 POST Ingress 资源到 API server 的方式来请求 ingress。 Ingress controller 负责实现 Ingress，通常使用负载均衡器，它还可以配置边界路由和其他前端，这有助于以 HA 方式处理流量。<br>参考：<a href="https://www.alibabacloud.com/help/zh/doc-detail/25975.htm?spm=a2c63.p38356.b99.9.10c927a1mjblZa" target="_blank" rel="noopener">https://www.alibabacloud.com/help/zh/doc-detail/25975.htm?spm=a2c63.p38356.b99.9.10c927a1mjblZa</a></p>
-<h2 id="Pod-1"><a href="#Pod-1" class="headerlink" title="Pod"></a>Pod</h2><h2 id="Service"><a href="#Service" class="headerlink" title="Service"></a>Service</h2><h2 id="Deployment"><a href="#Deployment" class="headerlink" title="Deployment"></a>Deployment</h2><h2 id="Ingress-1"><a href="#Ingress-1" class="headerlink" title="Ingress"></a>Ingress</h2><p>Nginx<br>Traefik</p>
+<h2 id="Pod-1"><a href="#Pod-1" class="headerlink" title="Pod"></a>Pod</h2><h2 id="Service"><a href="#Service" class="headerlink" title="Service"></a>Service</h2><p>Service 的虚拟 IP 是有 Kubernetes 虚拟出来的内部网络，外部网络是无法访问的，但是有一些 Service 有需要对外暴露，比如 Web 前段。这时候就需要增加一层路由转发，即外网到内网的转发，Kubernetes 提供了 NodePort Service方式发布Service<br>外部访问 - NodePort:</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">apiVersion: v1</span><br><span class="line">kind: Service</span><br><span class="line">metadata:</span><br><span class="line">  name: my-nginx-svc</span><br><span class="line">  labels:</span><br><span class="line">    app: nginx</span><br><span class="line">spec:</span><br><span class="line">  type: NodePort</span><br><span class="line">  ports:</span><br><span class="line">  - port: 80</span><br><span class="line">    targetPort: 80</span><br><span class="line">    nodePort: 30010</span><br><span class="line">  selector:</span><br><span class="line">    app: nginx</span><br></pre></td></tr></table></figure>
+
+<h2 id="Deployment"><a href="#Deployment" class="headerlink" title="Deployment"></a>Deployment</h2><h2 id="Ingress-1"><a href="#Ingress-1" class="headerlink" title="Ingress"></a>Ingress</h2><p>Nginx<br>Traefik<br>Kubernetes Ingress 示例:<br>路径转换rewrite：</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">apiVersion: extensions/v1beta1</span><br><span class="line">kind: Ingress</span><br><span class="line">metadata:</span><br><span class="line">  name: wms</span><br><span class="line">  annotations:</span><br><span class="line">    nginx.ingress.kubernetes.io/rewrite-target: /</span><br><span class="line">spec:</span><br><span class="line">  rules:</span><br><span class="line">  - http:</span><br><span class="line">      paths:</span><br><span class="line">      - path: /wms</span><br><span class="line">        backend:</span><br><span class="line">          serviceName: wms</span><br><span class="line">          servicePort: 8080</span><br></pre></td></tr></table></figure>
+
+<p>host域名映射：</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">apiVersion: extensions/v1beta1</span><br><span class="line">kind: Ingress</span><br><span class="line">metadata:</span><br><span class="line">  name: config</span><br><span class="line">  annotations:</span><br><span class="line">    nginx.ingress.kubernetes.io/rewrite-target: /</span><br><span class="line">spec:</span><br><span class="line">  rules:</span><br><span class="line">  - host: config</span><br><span class="line">    http:</span><br><span class="line">      paths:</span><br><span class="line">      - path: /config</span><br><span class="line">        backend:</span><br><span class="line">          serviceName: config</span><br><span class="line">          servicePort: 8888</span><br></pre></td></tr></table></figure>
+
 <h2 id="kubectl"><a href="#kubectl" class="headerlink" title="kubectl"></a>kubectl</h2><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>官网提供的安装命令是:</p>
 <blockquote>
 <p>curl -LO <a href="https://storage.googleapis.com/kubernetes-release/release/$" target="_blank" rel="noopener">https://storage.googleapis.com/kubernetes-release/release/$</a>(curl -s <a href="https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl" target="_blank" rel="noopener">https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl</a><br>Github安装方式：</p>
@@ -174,8 +182,42 @@
 </ol>
 </li>
 </ul>
-<h3 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h3><h2 id="发布"><a href="#发布" class="headerlink" title="发布"></a>发布</h2><p>蓝绿部署<br>在进行蓝/绿部署时，应用程序的一个新副本（绿）将与现有版本（蓝）一起部署。然后更新应用程序的入口/路由器以切换到新版本（绿）。然后，您需要等待旧（蓝）版本来完成所有发送给它的请求，但是大多数情况下，应用程序的流量将一次更改为新版本。</p>
+<h3 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">kubectl get namespaces</span><br><span class="line">kubectl get nodes</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">kubectl get pods -n kube-system</span><br><span class="line">kubectl get rc -n kube-system</span><br><span class="line">kubectl get rs -n kube-system</span><br><span class="line">kubectl get deployment -n kube-system</span><br><span class="line">kubectl get services -n kube-system</span><br><span class="line"></span><br><span class="line">kubectl get secrets -n kube-system</span><br><span class="line">kubectl get roles.rbac.authorization.k8s.io -n kube-system</span><br><span class="line">kubectl get serviceaccounts -n kube-system</span><br><span class="line">kubectl get rolebindings.rbac.authorization.k8s.io -n kube-system</span><br><span class="line"></span><br><span class="line">kubectl get namespace</span><br><span class="line">kubectl get svc,deploy,pod,ingress -n ingress-nginx</span><br><span class="line">kubectl get cm -n ingress-nginx</span><br><span class="line">kubectl get svc -n ingress-nginx</span><br></pre></td></tr></table></figure>
+
+<h2 id="发布"><a href="#发布" class="headerlink" title="发布"></a>发布</h2><p><img src="https://jimmysong.io/kubernetes-handbook/images/kubernetes-jenkins-ci-cd.png" alt="基于Jenkins的持续集成与发布"></p>
+<p>应用构建和发布流程说明。</p>
+<ol>
+<li>用户向Gitlab提交代码，代码中必须包含Dockerfile</li>
+<li>将代码提交到远程仓库</li>
+<li>用户在发布应用时需要填写git仓库地址和分支、服务类型、服务名称、资源数量、实例个数，确定后触发Jenkins自动构建</li>
+<li>Jenkins的CI流水线自动编译代码并打包成docker镜像推送到Harbor镜像仓库</li>
+<li>Jenkins的CI流水线中包括了自定义脚本，根据我们已准备好的kubernetes的YAML模板，将其中的变量替换成用户输入的选项</li>
+<li>生成应用的kubernetes YAML配置文件</li>
+<li>更新Ingress的配置，根据新部署的应用的名称，在ingress的配置文件中增加一条路由信息</li>
+<li>更新PowerDNS，向其中插入一条DNS记录，IP地址是边缘节点的IP地址。</li>
+<li>Jenkins调用kubernetes的API，部署应用</li>
+</ol>
+<h3 id="滚动更新"><a href="#滚动更新" class="headerlink" title="滚动更新"></a>滚动更新</h3><p>  如果通过滚动更新来更新部署服务，Kubernetes 会慢慢终止旧的 pod，同时加速生成新的 pod。为了最大程度减小对最终用户的影响，并尽可能缩短恢复时间，应用程序能够正常终止十分重要。<br>  Kubernetes 决定终止 pod，将发生一系列事件。Kubernetes 终止生命周期的各个步骤如下：</p>
+<ol>
+<li>将 pod 设置为“正在终止”状态，并将其从所有服务的端点列表中移除<br>此时，pod 停止获取新流量，Pod 中运行的容器不受影响。</li>
+<li>执行 preStop 钩子<br>preStop 钩子是向 pod 中的容器发送的特殊命令或 http 请求。<br>如果您的应用程序在收到 SIGTERM 后未正常关闭，可使用此钩子触发正常关闭。大多数程序在收到 SIGTERM 后都会正常关闭，但如果您使用的是第三方代码或管理的系统不受您控制，preStop 钩子将是一个不错的方案，可帮您在不修改应用程序的情况下触发正常关闭。</li>
+<li>向 pod 发送 SIGTERM 信号<br>此时，Kubernetes 将向 pod 中的容器发送 SIGTERM 信号。此信号通知容器它们即将被关闭。<br>您的代码应侦听此事件，并在此时开始“干净地”关闭。这可能包括停止所有长时间连接（如数据库连接或 WebSocket 流）、保存当前状态或类似任务。<br>即使您现在已经在使用 preStop 钩子，也有必要测试一下应用程序在您向它发送 SIGTERM 信号后的反应，以免在实际使用时对实际情况感到惊讶！</li>
+<li>Kubernetes 等待片刻（宽限期）<br>此时，Kubernetes 将等待片刻，此时间称为终止宽限期，具体值可指定。默认值为 30 秒。需要注意的是，这与 preStop 钩子和 SIGTERM 信号并行发生。Kubernetes 不会等待 preStop 钩子完成。<br>如果您的应用在 terminationGracePeriod 完成之前完成关闭并退出，Kubernetes 将立即转到下一步。<br>如果您的 pod 通常需要 30 秒以上的时间才能关闭，请务必延长宽限期。您可以通过在 Pod YAML 中设置 terminationGracePeriodSeconds 选项来实现此目的。例如，可将该值改为 60 秒：</li>
+<li>向 pod 发送 SIGKILL 信号，pod 随即被移除<br>如果宽限期结束后容器仍在运行，将向容器发送 SIGKILL 信号并强制将它们移除。此时，所有 Kubernetes 对象将被一同清理。</li>
+</ol>
+<p>结论<br>Kubernetes 可以出于各种原因终止 pod，确保您的应用程序正常执行这些终止操作是创建稳定系统和提供良好用户体验的核心。</p>
+<p>蓝绿部署<br>在进行蓝/绿部署时，应用程序的一个新副本（绿）将与现有版本（蓝）一起部署。然后更新应用程序的入口/路由器以切换到新版本（绿）。然后，您需要等待旧（蓝）版本来完成所有发送给它的请求，但是大多数情况下，应用程序的流量将一次更改为新版本。</p>
 <p>无缝发布 滚动发布 金丝雀发布 灰度发布<br>Canary</p>
+<p>金丝雀发布:</p>
+<ul>
+<li>准备和生产环境隔离的“金丝雀”服务器。</li>
+<li>将新版本的服务部署到“金丝雀”服务器上。</li>
+<li>对“金丝雀”服务器上的服务进行自动化和人工测试。</li>
+<li>测试通过后，将“金丝雀”服务器连接到生产环境，将少量生产流量导入到“金丝雀”服务器中。</li>
+<li>如果在线测试出现问题，则通过把生产流量从“金丝雀”服务器中重新路由到老版本的服务的方式进行回退，修复问题后重新进行发布。</li>
+<li>如果在线测试顺利，则逐渐把生产流量按一定策略逐渐导入到新版本服务器中。</li>
+<li>待新版本服务稳定运行后，删除老版本服务。</li>
+</ul>
 <p>参考：<a href="https://mp.weixin.qq.com/s?__biz=MzI4MTY5NTk4Ng==&amp;mid=2247489100&amp;idx=1&amp;sn=eab291eb345c074114d946b732e037eb&amp;source=41#wechat_redirect" target="_blank" rel="noopener">https://mp.weixin.qq.com/s?__biz=MzI4MTY5NTk4Ng==&amp;mid=2247489100&amp;idx=1&amp;sn=eab291eb345c074114d946b732e037eb&amp;source=41#wechat_redirect</a></p>
 <h2 id="Liveness和Readiness探针"><a href="#Liveness和Readiness探针" class="headerlink" title="Liveness和Readiness探针"></a>Liveness和Readiness探针</h2><p>kubelet 使用 liveness probe（存活探针）来确定何时重启容器。例如，当应用程序处于运行状态但无法做进一步操作，liveness 探针将捕获到 deadlock，重启处于该状态下的容器，使应用程序在存在 bug 的情况下依然能够继续运行下去。<br>Kubelet 使用 readiness probe（就绪探针）来确定容器是否已经就绪可以接受流量。只有当 Pod 中的容器都处于就绪状态时 kubelet 才会认定该 Pod处于就绪状态。该信号的作用是控制哪些 Pod应该作为service的后端。如果 Pod 处于非就绪状态，那么它们将会被从 service 的 load balancer中移除。</p>
 <h3 id="配置-Probe"><a href="#配置-Probe" class="headerlink" title="配置 Probe"></a>配置 Probe</h3><p>Probe 中有很多精确和详细的配置，通过它们您能准确的控制 liveness 和 readiness 检查：</p>
@@ -290,7 +332,7 @@
                         文章
                     </p>
                     <p class="title has-text-weight-normal">
-                        57
+                        60
                     </p>
                 </div>
             </div>
@@ -300,7 +342,7 @@
                         标签
                     </p>
                     <p class="title has-text-weight-normal">
-                        16
+                        17
                     </p>
                 </div>
             </div>
@@ -374,7 +416,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Javascript/">
                         <span class="tag">Javascript</span>
-                        <span class="tag is-grey">3</span>
+                        <span class="tag is-grey">4</span>
                     </a>
                 </div>
                 
@@ -396,6 +438,13 @@
                     <a class="tags has-addons" href="/tags/MySQL/">
                         <span class="tag">MySQL</span>
                         <span class="tag is-grey">5</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Node/">
+                        <span class="tag">Node</span>
+                        <span class="tag is-grey">1</span>
                     </a>
                 </div>
                 
@@ -430,7 +479,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Tool/">
                         <span class="tag">Tool</span>
-                        <span class="tag is-grey">17</span>
+                        <span class="tag is-grey">19</span>
                     </a>
                 </div>
                 
@@ -446,6 +495,17 @@
             归档
         </h3>
         <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/09/">
+                <span class="level-start">
+                    <span class="level-item">九月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
         
         <li>
             <a class="level is-marginless" href="/archives/2019/08/">
@@ -472,16 +532,54 @@
         
         <article class="media">
             
-            <a href="/2019/08/31/git/git-diff/" class="media-left">
+            <a href="/2019/09/21/tools/ups/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Git 对比分支差异">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="UPS Tracking API">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-31T09:55:21.000Z">2019-08-31</time></div>
-                    <a href="/2019/08/31/git/git-diff/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Git 对比分支差异</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-21T05:58:55.000Z">2019-09-21</time></div>
+                    <a href="/2019/09/21/tools/ups/" class="title has-link-black-ter is-size-6 has-text-weight-normal">UPS Tracking API</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/09/21/tools/rest/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Rest接口批量调用">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-21T05:47:05.000Z">2019-09-21</time></div>
+                    <a href="/2019/09/21/tools/rest/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Rest接口批量调用</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/09/21/javascript/node-sass/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="node-sass 安装失败问题">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-21T05:45:19.000Z">2019-09-21</time></div>
+                    <a href="/2019/09/21/javascript/node-sass/" class="title has-link-black-ter is-size-6 has-text-weight-normal">node-sass 安装失败问题</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
@@ -520,44 +618,6 @@
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-31T09:55:21.000Z">2019-08-31</time></div>
                     <a href="/2019/08/31/git/git-remote/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Git 修改远程主机地址</a>
-                    <p class="is-size-7 is-uppercase">
-                        
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/08/31/tools/beyondcompare/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="使用Beyond Compare作为Git Bash文本差异对比冲突合并工具">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-31T06:40:00.000Z">2019-08-31</time></div>
-                    <a href="/2019/08/31/tools/beyondcompare/" class="title has-link-black-ter is-size-6 has-text-weight-normal">使用Beyond Compare作为Git Bash文本差异对比冲突合并工具</a>
-                    <p class="is-size-7 is-uppercase">
-                        
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/08/31/docker/docker-swarm/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Docker Swarm 集群">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-31T02:29:03.000Z">2019-08-31</time></div>
-                    <a href="/2019/08/31/docker/docker-swarm/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Docker Swarm 集群</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>

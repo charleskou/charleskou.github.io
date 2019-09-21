@@ -2,7 +2,7 @@
 <html lang="zh">
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-<title>Maven - Coder</title>
+<title>Maven常用功能 - Coder</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="google-site-verification" content="nf1fTgUwUjCPuVDdA4bZdWYWTonwbiJjQkRh15iKYfI">
 
@@ -72,7 +72,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="Maven" height="28">
+                <img src="/images/logo.svg" alt="Maven常用功能" height="28">
             
             </a>
         </div>
@@ -127,7 +127,7 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                Maven
+                Maven常用功能
             
         </h1>
         <div class="content">
@@ -150,37 +150,48 @@
 <h2 id="snapshot-更新策略"><a href="#snapshot-更新策略" class="headerlink" title="snapshot 更新策略"></a>snapshot 更新策略</h2><p>maven对构件的更新判断基本上是两种，一种是稳定版本，一种是maven特有的SNAPSHOT版本。<br>稳定版本很好判断，直接根据maven构件的坐标体系就能够获得。先从本地仓库中找，如果本地仓库没有，就从pom.xml和setting.xml配置的远程仓库来找。<br>SNAPSHOT版本的判断比较麻烦，基本步骤如下：<br>假设我在2014年08月22日09时40分52秒在我自己的电脑上使用 “mvn install” 构建了“com.mycompany.demo:test:1.0-SNAPSHOT”。那么Maven会在本地仓库目录“~/.m2/com/mycompany/demo/test/1.0-SNAPSHOT/”下生成文件“maven-metadata-local.xml”，内容如下：</p>
 <figure class="highlight xml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">metadata</span> <span class="hljs-attr">modelVersion</span>=<span class="hljs-string">"1.1.0"</span>&gt;</span></span><br><span class="line">  <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>com.mycompany.demo<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span></span><br><span class="line">  <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>test<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span></span><br><span class="line">  <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>1.0-SNAPSHOT<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span></span><br><span class="line">  <span class="hljs-tag">&lt;<span class="hljs-name">versioning</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">snapshot</span>&gt;</span></span><br><span class="line">      <span class="hljs-tag">&lt;<span class="hljs-name">localCopy</span>&gt;</span>true<span class="hljs-tag">&lt;/<span class="hljs-name">localCopy</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;/<span class="hljs-name">snapshot</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">lastUpdated</span>&gt;</span>20140822084052<span class="hljs-tag">&lt;/<span class="hljs-name">lastUpdated</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">snapshotVersions</span>&gt;</span></span><br><span class="line">      <span class="hljs-tag">&lt;<span class="hljs-name">snapshotVersion</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">extension</span>&gt;</span>jar<span class="hljs-tag">&lt;/<span class="hljs-name">extension</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">value</span>&gt;</span>1.0-SNAPSHOT<span class="hljs-tag">&lt;/<span class="hljs-name">value</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">updated</span>&gt;</span>20140822084052<span class="hljs-tag">&lt;/<span class="hljs-name">updated</span>&gt;</span></span><br><span class="line">      <span class="hljs-tag">&lt;/<span class="hljs-name">snapshotVersion</span>&gt;</span></span><br><span class="line">      <span class="hljs-tag">&lt;<span class="hljs-name">snapshotVersion</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">extension</span>&gt;</span>pom<span class="hljs-tag">&lt;/<span class="hljs-name">extension</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">value</span>&gt;</span>1.0-SNAPSHOT<span class="hljs-tag">&lt;/<span class="hljs-name">value</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">updated</span>&gt;</span>20140822084052<span class="hljs-tag">&lt;/<span class="hljs-name">updated</span>&gt;</span></span><br><span class="line">      <span class="hljs-tag">&lt;/<span class="hljs-name">snapshotVersion</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;/<span class="hljs-name">snapshotVersions</span>&gt;</span></span><br><span class="line">  <span class="hljs-tag">&lt;/<span class="hljs-name">versioning</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">metadata</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<p>十点钟的时候，其他同事更新了com.mycompany.demo:test:1.0-SNAPSHOT的内容，并通过 “mvn deploy” 发布到了公司的Maven服务器上。公司Maven服务器上产生了文件：test-1.0-20140822.100021-1.jar, test-1.0-20140822.100021-1.pom并更新了maven-metadata.xml，内容如下：<br><code>xml
-&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-&lt;metadata modelVersion=&quot;1.1.0&quot;&gt;
-  &lt;groupId&gt;com.mycompany.demo&lt;/groupId&gt;
-  &lt;artifactId&gt;test&lt;/artifactId&gt;
-  &lt;version&gt;1.0-SNAPSHOT&lt;/version&gt;
-  &lt;versioning&gt;
-    &lt;snapshot&gt;
-      &lt;timestamp&gt;20140822.100021&lt;/timestamp&gt;
-      &lt;buildNumber&gt;34&lt;/buildNumber&gt;
-    &lt;/snapshot&gt;
-    &lt;lastUpdated&gt;20140822100021&lt;/lastUpdated&gt;
-    &lt;snapshotVersions&gt;
-      &lt;snapshotVersion&gt;
-        &lt;extension&gt;jar&lt;/extension&gt;
-        &lt;value&gt;1.0-20140822.100021-1&lt;/value&gt;
-        &lt;updated&gt;20140822100021&lt;/updated&gt;
-      &lt;/snapshotVersion&gt;
-      &lt;snapshotVersion&gt;
-        &lt;extension&gt;pom&lt;/extension&gt;
-        &lt;value&gt;1.0-20140822.100021-1&lt;/value&gt;
-        &lt;updated&gt;20130407081828&lt;/updated&gt;
-      &lt;/snapshotVersion&gt;
-  &lt;/versioning&gt;
-&lt;/metadata&gt;</code>xml<br>在这期间我的电脑上没有发生过任何关于test的构建。</p>
-<p>某一天，我需要构建一个依赖于test的项目，于是我运行了mvn package来打包。这个时候，maven做了什么呢（背景：我通过配置镜像，使我本地Maven的任何资源都是从公司的Maven服务器下载的）？</p>
-<ul>
-<li>Step1：从公司的Maven服务器上下载maven-metadata.xml，重命名为“maven-metadata-<repositoryid>.xml”，并保存到本地仓库相应目录。</repositoryid></li>
-<li>Step2：比较maven-metadata-local.xml与maven-metadata-<repositoryid>.xml中的lastUpdated时间戳的值。<br>如果maven-metadata-local.xml中的时间戳比较大，则终止。<br>如果maven-metadata-<repositoryid>.xml中的时间戳较大，则从公司Maven服务器上下载最新版本。即：testu-1.0.1-20130407.081828-34.jar。<br>这个过程分两步：<br>（1）下载test-1.0-20140822.100021-1.jar到本地Maven仓库。<br>（2）将test-1.0-20140822.100021-1.jar复制一份，覆盖掉原先的test-1.0-SNAPSHOT.jar。也就是说，如果Maven从远程仓库下载了最新的SNAPSHOT发布包的话，那么最新的待时间戳的包和xxx-SNAPSHOT包是完全一样的。</repositoryid></repositoryid></li>
-</ul>
-<p>作者：邓涛<br>链接：<a href="https://www.zhihu.com/question/24930782/answer/29532274" target="_blank" rel="noopener">https://www.zhihu.com/question/24930782/answer/29532274</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<p>十点钟的时候，其他同事更新了com.mycompany.demo:test:1.0-SNAPSHOT的内容，并通过 “mvn deploy” 发布到了公司的Maven服务器上。公司Maven服务器上产生了文件：test-1.0-20140822.100021-1.jar, test-1.0-20140822.100021-1.pom并更新了maven-metadata.xml，内容如下：</p>
+<pre><code class="xml"><span class="meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="tag">&lt;<span class="name">metadata</span> <span class="attr">modelVersion</span>=<span class="string">"1.1.0"</span>&gt;</span>
+  <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.mycompany.demo<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span>
+  <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>test<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span>
+  <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.0-SNAPSHOT<span class="tag">&lt;/<span class="name">version</span>&gt;</span>
+  <span class="tag">&lt;<span class="name">versioning</span>&gt;</span>
+    <span class="tag">&lt;<span class="name">snapshot</span>&gt;</span>
+      <span class="tag">&lt;<span class="name">timestamp</span>&gt;</span>20140822.100021<span class="tag">&lt;/<span class="name">timestamp</span>&gt;</span>
+      <span class="tag">&lt;<span class="name">buildNumber</span>&gt;</span>34<span class="tag">&lt;/<span class="name">buildNumber</span>&gt;</span>
+    <span class="tag">&lt;/<span class="name">snapshot</span>&gt;</span>
+    <span class="tag">&lt;<span class="name">lastUpdated</span>&gt;</span>20140822100021<span class="tag">&lt;/<span class="name">lastUpdated</span>&gt;</span>
+    <span class="tag">&lt;<span class="name">snapshotVersions</span>&gt;</span>
+      <span class="tag">&lt;<span class="name">snapshotVersion</span>&gt;</span>
+        <span class="tag">&lt;<span class="name">extension</span>&gt;</span>jar<span class="tag">&lt;/<span class="name">extension</span>&gt;</span>
+        <span class="tag">&lt;<span class="name">value</span>&gt;</span>1.0-20140822.100021-1<span class="tag">&lt;/<span class="name">value</span>&gt;</span>
+        <span class="tag">&lt;<span class="name">updated</span>&gt;</span>20140822100021<span class="tag">&lt;/<span class="name">updated</span>&gt;</span>
+      <span class="tag">&lt;/<span class="name">snapshotVersion</span>&gt;</span>
+      <span class="tag">&lt;<span class="name">snapshotVersion</span>&gt;</span>
+        <span class="tag">&lt;<span class="name">extension</span>&gt;</span>pom<span class="tag">&lt;/<span class="name">extension</span>&gt;</span>
+        <span class="tag">&lt;<span class="name">value</span>&gt;</span>1.0-20140822.100021-1<span class="tag">&lt;/<span class="name">value</span>&gt;</span>
+        <span class="tag">&lt;<span class="name">updated</span>&gt;</span>20130407081828<span class="tag">&lt;/<span class="name">updated</span>&gt;</span>
+      <span class="tag">&lt;/<span class="name">snapshotVersion</span>&gt;</span>
+  <span class="tag">&lt;/<span class="name">versioning</span>&gt;</span>
+<span class="tag">&lt;/<span class="name">metadata</span>&gt;</span>
+```xml
+在这期间我的电脑上没有发生过任何关于test的构建。
+
+某一天，我需要构建一个依赖于test的项目，于是我运行了mvn package来打包。这个时候，maven做了什么呢（背景：我通过配置镜像，使我本地Maven的任何资源都是从公司的Maven服务器下载的）？
+- Step1：从公司的Maven服务器上下载maven-metadata.xml，重命名为“maven-metadata-<span class="tag">&lt;<span class="name">RepositoryID</span>&gt;</span>.xml”，并保存到本地仓库相应目录。
+- Step2：比较maven-metadata-local.xml与maven-metadata-<span class="tag">&lt;<span class="name">RepositoryID</span>&gt;</span>.xml中的lastUpdated时间戳的值。
+如果maven-metadata-local.xml中的时间戳比较大，则终止。
+如果maven-metadata-<span class="tag">&lt;<span class="name">RepositoryID</span>&gt;</span>.xml中的时间戳较大，则从公司Maven服务器上下载最新版本。即：testu-1.0.1-20130407.081828-34.jar。
+这个过程分两步：
+（1）下载test-1.0-20140822.100021-1.jar到本地Maven仓库。
+（2）将test-1.0-20140822.100021-1.jar复制一份，覆盖掉原先的test-1.0-SNAPSHOT.jar。也就是说，如果Maven从远程仓库下载了最新的SNAPSHOT发布包的话，那么最新的待时间戳的包和xxx-SNAPSHOT包是完全一样的。
+
+作者：邓涛
+链接：https://www.zhihu.com/question/24930782/answer/29532274
+来源：知乎
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+</code></pre>
 
         </div>
         
@@ -217,7 +228,7 @@
         <div class="level-start">
             <a class="level level-item has-link-grey  article-nav-prev" href="/2019/08/10/java/eclipse/">
                 <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">Eclipse</span>
+                <span class="level-item">Eclipse - Java开发工具</span>
             </a>
         </div>
         
@@ -279,7 +290,7 @@
                         文章
                     </p>
                     <p class="title has-text-weight-normal">
-                        57
+                        60
                     </p>
                 </div>
             </div>
@@ -289,7 +300,7 @@
                         标签
                     </p>
                     <p class="title has-text-weight-normal">
-                        16
+                        17
                     </p>
                 </div>
             </div>
@@ -363,7 +374,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Javascript/">
                         <span class="tag">Javascript</span>
-                        <span class="tag is-grey">3</span>
+                        <span class="tag is-grey">4</span>
                     </a>
                 </div>
                 
@@ -385,6 +396,13 @@
                     <a class="tags has-addons" href="/tags/MySQL/">
                         <span class="tag">MySQL</span>
                         <span class="tag is-grey">5</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Node/">
+                        <span class="tag">Node</span>
+                        <span class="tag is-grey">1</span>
                     </a>
                 </div>
                 
@@ -419,7 +437,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Tool/">
                         <span class="tag">Tool</span>
-                        <span class="tag is-grey">17</span>
+                        <span class="tag is-grey">19</span>
                     </a>
                 </div>
                 
@@ -435,6 +453,17 @@
             归档
         </h3>
         <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/09/">
+                <span class="level-start">
+                    <span class="level-item">九月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
         
         <li>
             <a class="level is-marginless" href="/archives/2019/08/">
@@ -461,16 +490,54 @@
         
         <article class="media">
             
-            <a href="/2019/08/31/git/git-diff/" class="media-left">
+            <a href="/2019/09/21/tools/ups/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Git 对比分支差异">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="UPS Tracking API">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-31T09:55:21.000Z">2019-08-31</time></div>
-                    <a href="/2019/08/31/git/git-diff/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Git 对比分支差异</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-21T05:58:55.000Z">2019-09-21</time></div>
+                    <a href="/2019/09/21/tools/ups/" class="title has-link-black-ter is-size-6 has-text-weight-normal">UPS Tracking API</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/09/21/tools/rest/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Rest接口批量调用">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-21T05:47:05.000Z">2019-09-21</time></div>
+                    <a href="/2019/09/21/tools/rest/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Rest接口批量调用</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/09/21/javascript/node-sass/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="node-sass 安装失败问题">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-21T05:45:19.000Z">2019-09-21</time></div>
+                    <a href="/2019/09/21/javascript/node-sass/" class="title has-link-black-ter is-size-6 has-text-weight-normal">node-sass 安装失败问题</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
@@ -516,44 +583,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2019/08/31/tools/beyondcompare/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="使用Beyond Compare作为Git Bash文本差异对比冲突合并工具">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-31T06:40:00.000Z">2019-08-31</time></div>
-                    <a href="/2019/08/31/tools/beyondcompare/" class="title has-link-black-ter is-size-6 has-text-weight-normal">使用Beyond Compare作为Git Bash文本差异对比冲突合并工具</a>
-                    <p class="is-size-7 is-uppercase">
-                        
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/08/31/docker/docker-swarm/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Docker Swarm 集群">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-31T02:29:03.000Z">2019-08-31</time></div>
-                    <a href="/2019/08/31/docker/docker-swarm/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Docker Swarm 集群</a>
-                    <p class="is-size-7 is-uppercase">
-                        
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -570,7 +599,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="Maven" height="28">
+                    <img src="/images/logo.svg" alt="Maven常用功能" height="28">
                 
                 </a>
                 <p class="is-size-7">
