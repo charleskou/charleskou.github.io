@@ -1,5 +1,5 @@
 ---
-title: Maven
+title: Maven常用功能
 date: 2019-08-10 15:15:21
 tags: [Java, Tool]
 ---
@@ -170,3 +170,4 @@ SNAPSHOT版本的判断比较麻烦，基本步骤如下：
 链接：https://www.zhihu.com/question/24930782/answer/29532274
 来源：知乎
 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+

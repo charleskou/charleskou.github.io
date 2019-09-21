@@ -1,5 +1,5 @@
 ---
-title: druid
+title: druid数据库连接池通用配置
 tags: [Java]
 date: 2019-08-13 16:30:12
 ---
@@ -50,6 +50,34 @@ date: 2019-08-13 16:30:12
     <property name="asyncInit" value="true" />
 </bean>
 ```
+
+## error: Error creating bean with name 'dataSource'
+Druid连接池与spring cloud config搭配使用时出现异常
+错误堆栈信息：
+```
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource': Could not bind properties to DruidDataSourceWrapper (prefix=spring.datasource, ignoreInvalidFields=false, ignoreUnknownFields=true, ignoreNestedProperties=false); nested exception is org.springframework.validation.BindException: org.springframework.boot.bind.RelaxedDataBinder$RelaxedBeanPropertyBindingResult: 3 errors
+Field error in object 'spring.datasource' on field 'driverClassName': rejected value [com.mysql.jdbc.Driver]; codes [methodInvocation.spring.datasource.driverClassName,methodInvocation.driverClassName,methodInvocation.java.lang.String,methodInvocation]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [spring.datasource.driverClassName,driverClassName]; arguments []; default message [driverClassName]]; default message [Property 'driverClassName' threw exception; nested exception is java.lang.UnsupportedOperationException]
+Field error in object 'spring.datasource' on field 'url'
+```
+
+异常出现代码位置：
+```
+public void setDriverClassName(String driverClass) {
+    if (inited) {
+        if (StringUtils.equals(this.driverClass, driverClass)) {
+            return;
+        }
+        
+        throw new UnsupportedOperationException();
+    }
+
+    this.driverClass = driverClass;
+}
+```
+代码中如有@PostConstruct并在其中进行了对数据库查询更新等于数据源有关的操作，则会出现此错误
+
+解决办法: 升级druid版本
+
 
 ## 参考
 https://github.com/alibaba/druid/wiki/常见问题

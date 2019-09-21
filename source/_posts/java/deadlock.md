@@ -1,5 +1,5 @@
 ---
-title: deadlock
+title: 死锁
 tags: [Java]
 date: 2019-08-13 18:14:10
 ---

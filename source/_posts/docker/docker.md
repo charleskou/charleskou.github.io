@@ -1,9 +1,10 @@
 ---
-title: Docker 安装 - CentOS系统
+title: Docker 安装
 tags: [Docker]
 date: 2019-08-14 10:29:03
 ---
 
+系统：CentOS系统
 ## 安装
 脚本方式：
 ```

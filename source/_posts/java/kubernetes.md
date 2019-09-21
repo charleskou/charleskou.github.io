@@ -52,13 +52,66 @@ Ingress 是授权入站连接到达集群服务的规则集合。你可以通过
 ## Pod
 
 ## Service
+Service 的虚拟 IP 是有 Kubernetes 虚拟出来的内部网络，外部网络是无法访问的，但是有一些 Service 有需要对外暴露，比如 Web 前段。这时候就需要增加一层路由转发，即外网到内网的转发，Kubernetes 提供了 NodePort Service方式发布Service
+外部访问 - NodePort:
+```
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-nginx-svc
+  labels:
+    app: nginx
+spec:
+  type: NodePort
+  ports:
+  - port: 80
+    targetPort: 80
+    nodePort: 30010
+  selector:
+    app: nginx
+```
 
 ## Deployment
 
 ## Ingress
 Nginx
 Traefik
-
+Kubernetes Ingress 示例:
+路径转换rewrite：
+```
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: wms
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+  - http:
+      paths:
+      - path: /wms
+        backend:
+          serviceName: wms
+          servicePort: 8080
+```
+host域名映射：
+```
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: config
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+  - host: config
+    http:
+      paths:
+      - path: /config
+        backend:
+          serviceName: config
+          servicePort: 8888
+```
 
 ## kubectl
 ### 安装
@@ -79,13 +132,82 @@ sudo mv ./kubectl /usr/local/bin/kubectl
 - 4. 运行 kubectl version，返回版本信息，说明安装成功
 
 ### 常用命令
+```
+kubectl get namespaces
+kubectl get nodes
+
+
+kubectl get pods -n kube-system
+kubectl get rc -n kube-system
+kubectl get rs -n kube-system
+kubectl get deployment -n kube-system
+kubectl get services -n kube-system
+
+kubectl get secrets -n kube-system
+kubectl get roles.rbac.authorization.k8s.io -n kube-system
+kubectl get serviceaccounts -n kube-system
+kubectl get rolebindings.rbac.authorization.k8s.io -n kube-system
+
+kubectl get namespace
+kubectl get svc,deploy,pod,ingress -n ingress-nginx
+kubectl get cm -n ingress-nginx
+kubectl get svc -n ingress-nginx
+```
 
 ## 发布
+
+![基于Jenkins的持续集成与发布](https://jimmysong.io/kubernetes-handbook/images/kubernetes-jenkins-ci-cd.png)
+
+应用构建和发布流程说明。
+
+1. 用户向Gitlab提交代码，代码中必须包含Dockerfile
+2. 将代码提交到远程仓库
+3. 用户在发布应用时需要填写git仓库地址和分支、服务类型、服务名称、资源数量、实例个数，确定后触发Jenkins自动构建
+4. Jenkins的CI流水线自动编译代码并打包成docker镜像推送到Harbor镜像仓库
+5. Jenkins的CI流水线中包括了自定义脚本，根据我们已准备好的kubernetes的YAML模板，将其中的变量替换成用户输入的选项
+6. 生成应用的kubernetes YAML配置文件
+7. 更新Ingress的配置，根据新部署的应用的名称，在ingress的配置文件中增加一条路由信息
+8. 更新PowerDNS，向其中插入一条DNS记录，IP地址是边缘节点的IP地址。
+8. Jenkins调用kubernetes的API，部署应用
+
+
+### 滚动更新
+  如果通过滚动更新来更新部署服务，Kubernetes 会慢慢终止旧的 pod，同时加速生成新的 pod。为了最大程度减小对最终用户的影响，并尽可能缩短恢复时间，应用程序能够正常终止十分重要。
+  Kubernetes 决定终止 pod，将发生一系列事件。Kubernetes 终止生命周期的各个步骤如下：
+1. 将 pod 设置为“正在终止”状态，并将其从所有服务的端点列表中移除
+此时，pod 停止获取新流量，Pod 中运行的容器不受影响。
+2. 执行 preStop 钩子
+preStop 钩子是向 pod 中的容器发送的特殊命令或 http 请求。
+如果您的应用程序在收到 SIGTERM 后未正常关闭，可使用此钩子触发正常关闭。大多数程序在收到 SIGTERM 后都会正常关闭，但如果您使用的是第三方代码或管理的系统不受您控制，preStop 钩子将是一个不错的方案，可帮您在不修改应用程序的情况下触发正常关闭。
+3. 向 pod 发送 SIGTERM 信号
+此时，Kubernetes 将向 pod 中的容器发送 SIGTERM 信号。此信号通知容器它们即将被关闭。
+您的代码应侦听此事件，并在此时开始“干净地”关闭。这可能包括停止所有长时间连接（如数据库连接或 WebSocket 流）、保存当前状态或类似任务。
+即使您现在已经在使用 preStop 钩子，也有必要测试一下应用程序在您向它发送 SIGTERM 信号后的反应，以免在实际使用时对实际情况感到惊讶！
+4. Kubernetes 等待片刻（宽限期）
+此时，Kubernetes 将等待片刻，此时间称为终止宽限期，具体值可指定。默认值为 30 秒。需要注意的是，这与 preStop 钩子和 SIGTERM 信号并行发生。Kubernetes 不会等待 preStop 钩子完成。
+如果您的应用在 terminationGracePeriod 完成之前完成关闭并退出，Kubernetes 将立即转到下一步。
+如果您的 pod 通常需要 30 秒以上的时间才能关闭，请务必延长宽限期。您可以通过在 Pod YAML 中设置 terminationGracePeriodSeconds 选项来实现此目的。例如，可将该值改为 60 秒：
+5. 向 pod 发送 SIGKILL 信号，pod 随即被移除
+如果宽限期结束后容器仍在运行，将向容器发送 SIGKILL 信号并强制将它们移除。此时，所有 Kubernetes 对象将被一同清理。
+
+结论
+Kubernetes 可以出于各种原因终止 pod，确保您的应用程序正常执行这些终止操作是创建稳定系统和提供良好用户体验的核心。
+
+
 蓝绿部署
 在进行蓝/绿部署时，应用程序的一个新副本（绿）将与现有版本（蓝）一起部署。然后更新应用程序的入口/路由器以切换到新版本（绿）。然后，您需要等待旧（蓝）版本来完成所有发送给它的请求，但是大多数情况下，应用程序的流量将一次更改为新版本。
 
 无缝发布 滚动发布 金丝雀发布 灰度发布
 Canary
+
+金丝雀发布:
+- 准备和生产环境隔离的“金丝雀”服务器。
+- 将新版本的服务部署到“金丝雀”服务器上。
+- 对“金丝雀”服务器上的服务进行自动化和人工测试。
+- 测试通过后，将“金丝雀”服务器连接到生产环境，将少量生产流量导入到“金丝雀”服务器中。
+- 如果在线测试出现问题，则通过把生产流量从“金丝雀”服务器中重新路由到老版本的服务的方式进行回退，修复问题后重新进行发布。
+- 如果在线测试顺利，则逐渐把生产流量按一定策略逐渐导入到新版本服务器中。
+- 待新版本服务稳定运行后，删除老版本服务。
 
 参考：https://mp.weixin.qq.com/s?__biz=MzI4MTY5NTk4Ng==&mid=2247489100&amp;idx=1&amp;sn=eab291eb345c074114d946b732e037eb&source=41#wechat_redirect
 
