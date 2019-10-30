@@ -5,10 +5,14 @@ tags: [Java, Tool]
 ---
 
 ## 安装设置
+- 字体设置
 - workspace 编码设置
 - installed jres
 - package explorer
 - startup and shutdown
+- compare
+  - Ignore white space
+  - Swap left and right
 
 可选：
 - sonar server
