@@ -113,6 +113,121 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-10-30T09:52:28.000Z">2019-10-30</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    几秒 读完 (大约 40 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/10/30/tools/common/">通用工具导航</a>
+            
+        </h1>
+        <div class="content">
+            <ul>
+<li>时间戳转换 <a href="http://tool.chinaz.com/Tools/unixtime.aspx" target="_blank" rel="noopener">http://tool.chinaz.com/Tools/unixtime.aspx</a></li>
+<li>BASE64编码解码 <a href="http://tool.oschina.net/encrypt?type=3" target="_blank" rel="noopener">http://tool.oschina.net/encrypt?type=3</a></li>
+<li>yaml转properties <a href="https://www.toyaml.com/index.html" target="_blank" rel="noopener">https://www.toyaml.com/index.html</a></li>
+<li>TTC转TTF <a href="https://transfonter.org/ttc-unpack" target="_blank" rel="noopener">https://transfonter.org/ttc-unpack</a></li>
+</ul>
+
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/10/30/tools/common/#more">阅读更多</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-10-30T09:11:33.000Z">2019-10-30</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    3 分钟 读完 (大约 457 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/10/30/java/pdfbox/">PDFBox使用指南</a>
+            
+        </h1>
+        <div class="content">
+            <h2 id="1-介绍"><a href="#1-介绍" class="headerlink" title="1. 介绍"></a>1. 介绍</h2><p>Apache PDFBox是一个开源Java库，支持PDF文档的开发和转换。使用该库可以开发创建，转换和操作PDF文档的Java程序。</p>
+<h2 id="2-特性"><a href="#2-特性" class="headerlink" title="2. 特性"></a>2. 特性</h2><ul>
+<li>提取文本 - 使用PDFBox，您可以从PDF文件中提取Unicode文本。</li>
+<li>拆分和合并 - 使用PDFBox，您可以将单个PDF文件分成多个文件，并将它们作为单个文件合并。</li>
+<li>填写表单 - 使用PDFBox，您可以填写文档中的表单数据。</li>
+<li>打印 - 使用PDFBox，您可以使用标准Java打印API打印PDF文件。</li>
+<li>另存为图像 - 使用PDFBox，您可以将PDF保存为图像文件，如PNG或JPEG。</li>
+<li>创建PDF - 使用PDFBox，您可以通过创建Java程序创建新的PDF文件，还可以包括图像和字体。</li>
+<li>签名 - 使用PDFBox，您可以将数字签名添加到PDF文件。</li>
+</ul>
+<h2 id="3-引入"><a href="#3-引入" class="headerlink" title="3. 引入"></a>3. 引入</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">  &lt;groupId&gt;org.apache.pdfbox&lt;/groupId&gt;</span><br><span class="line">  &lt;artifactId&gt;pdfbox&lt;/artifactId&gt;</span><br><span class="line">  &lt;version&gt;2.0.17&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-应用示例"><a href="#4-应用示例" class="headerlink" title="4. 应用示例"></a>4. 应用示例</h2><h3 id="4-1-PDFBox指定位置添加文本"><a href="#4-1-PDFBox指定位置添加文本" class="headerlink" title="4.1 PDFBox指定位置添加文本"></a>4.1 PDFBox指定位置添加文本</h3><p>指定字体文件simsun.ttf支持添加中文文本</p>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">PDDocument doc = <span class="hljs-keyword">null</span>;</span><br><span class="line"><span class="hljs-keyword">try</span> &#123;</span><br><span class="line">    File file = <span class="hljs-keyword">new</span> File(<span class="hljs-string">"C:\\origin.pdf"</span>);</span><br><span class="line">    doc = PDDocument.load(file);</span><br><span class="line"></span><br><span class="line">    String fontFilePath = <span class="hljs-string">"C:\\simsun.ttf"</span>;</span><br><span class="line">    PDType0Font font = PDType0Font.load(doc, <span class="hljs-keyword">new</span> File(fontFilePath));</span><br><span class="line"></span><br><span class="line">    PDPage page = doc.getPage(<span class="hljs-number">0</span>);</span><br><span class="line">    PDPageContentStream contentStream = <span class="hljs-keyword">new</span> PDPageContentStream(doc, page, PDPageContentStream.AppendMode.PREPEND,</span><br><span class="line">            <span class="hljs-keyword">true</span>);</span><br><span class="line">    contentStream.beginText();</span><br><span class="line">    contentStream.setFont(font, <span class="hljs-number">10</span>);</span><br><span class="line">    <span class="hljs-keyword">float</span> offsetx = <span class="hljs-number">40</span>;</span><br><span class="line">    <span class="hljs-keyword">float</span> offsety = <span class="hljs-number">105</span>;</span><br><span class="line">    contentStream.newLineAtOffset(offsetx, offsety);</span><br><span class="line">    contentStream.showText(<span class="hljs-string">"hello, world"</span>);</span><br><span class="line">    contentStream.endText();</span><br><span class="line">    contentStream.close();</span><br><span class="line"></span><br><span class="line">    doc.save(<span class="hljs-string">"C:\\result.pdf"</span>);</span><br><span class="line"></span><br><span class="line">    doc.close();</span><br><span class="line">&#125; <span class="hljs-keyword">catch</span> (IOException e) &#123;</span><br><span class="line">    <span class="hljs-comment">// TODO handle exception</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/10/30/java/pdfbox/#more">阅读更多</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2019-09-21T05:58:55.000Z">2019-09-21</time>
                 
                 
@@ -275,6 +390,55 @@
                 <span class="level-item has-text-grey">
                     
                     
+                    几秒 读完 (大约 20 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/08/31/git/git-diff/">Git 对比分支差异</a>
+            
+        </h1>
+        <div class="content">
+            <p>查看dev分支有而master分支没有的提交：</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git log dev ^master</span><br></pre></td></tr></table></figure>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/08/31/git/git-diff/#more">阅读更多</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-31T09:55:21.000Z">2019-08-31</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
                     6 分钟 读完 (大约 970 个字)
                 </span>
                 
@@ -369,55 +533,6 @@
             <div class="level-start">
                 <div class="level-item">
                 <a class="button is-size-7 is-light" href="/2019/08/31/git/git-remote/#more">阅读更多</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-08-31T09:55:21.000Z">2019-08-31</time>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    几秒 读完 (大约 20 个字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/08/31/git/git-diff/">Git 对比分支差异</a>
-            
-        </h1>
-        <div class="content">
-            <p>查看dev分支有而master分支没有的提交：</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git log dev ^master</span><br></pre></td></tr></table></figure>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/08/31/git/git-diff/#more">阅读更多</a>
                 </div>
             </div>
         </div>
@@ -538,117 +653,6 @@
 
 
 
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-08-31T02:29:01.000Z">2019-08-31</time>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    几秒 读完 (大约 18 个字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/08/31/docker/docker-portainer/">Docker Portainer 容器管理工具</a>
-            
-        </h1>
-        <div class="content">
-            <p>portainer 持久化</p>
-<p>数据文件夹<br>/home/portainer/data</p>
-<figure class="highlight yaml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-attr">volumes:</span></span><br><span class="line"><span class="hljs-bullet">    -</span> <span class="hljs-string">/home/portainer/data:/data</span></span><br></pre></td></tr></table></figure>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/08/31/docker/docker-portainer/#more">阅读更多</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-08-18T09:28:42.000Z">2019-08-18</time>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    几秒 读完 (大约 44 个字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/08/18/javascript/nrm/">nrm切换registry</a>
-            
-        </h1>
-        <div class="content">
-            <p>nrm 是npm registry的管理工具，能够查看和切换当前使用的registry<br>install:</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g nrm</span><br></pre></td></tr></table></figure>
-
-<p>list:</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nrm ls</span><br></pre></td></tr></table></figure>
-
-<p>test:</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nrm test</span><br></pre></td></tr></table></figure>
-
-<p>use:</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nrm use [registryname]</span><br></pre></td></tr></table></figure>
-
-<p>常用：nrm use taobao</p>
-
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/08/18/javascript/nrm/#more">阅读更多</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
 
     
 <div class="card card-transparent">
@@ -667,7 +671,7 @@
             
             <li><span class="pagination-ellipsis has-text-black-ter">&hellip;</span></li>
             
-            <li><a class="pagination-link has-text-black-ter" href="/page/6/">6</a></li>
+            <li><a class="pagination-link has-text-black-ter" href="/page/7/">7</a></li>
             
         </ul>
     </nav>
@@ -718,7 +722,7 @@
                         文章
                     </p>
                     <p class="title has-text-weight-normal">
-                        60
+                        62
                     </p>
                 </div>
             </div>
@@ -795,7 +799,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Java/">
                         <span class="tag">Java</span>
-                        <span class="tag is-grey">20</span>
+                        <span class="tag is-grey">21</span>
                     </a>
                 </div>
                 
@@ -865,7 +869,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Tool/">
                         <span class="tag">Tool</span>
-                        <span class="tag is-grey">19</span>
+                        <span class="tag is-grey">20</span>
                     </a>
                 </div>
                 
@@ -881,6 +885,17 @@
             归档
         </h3>
         <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/10/">
+                <span class="level-start">
+                    <span class="level-item">十月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
         
         <li>
             <a class="level is-marginless" href="/archives/2019/09/">
@@ -915,6 +930,44 @@
         <h3 class="menu-label">
             最新文章
         </h3>
+        
+        <article class="media">
+            
+            <a href="/2019/10/30/tools/common/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="通用工具导航">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-30T09:52:28.000Z">2019-10-30</time></div>
+                    <a href="/2019/10/30/tools/common/" class="title has-link-black-ter is-size-6 has-text-weight-normal">通用工具导航</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/10/30/java/pdfbox/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="PDFBox使用指南">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-30T09:11:33.000Z">2019-10-30</time></div>
+                    <a href="/2019/10/30/java/pdfbox/" class="title has-link-black-ter is-size-6 has-text-weight-normal">PDFBox使用指南</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -966,44 +1019,6 @@
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-21T05:45:19.000Z">2019-09-21</time></div>
                     <a href="/2019/09/21/javascript/node-sass/" class="title has-link-black-ter is-size-6 has-text-weight-normal">node-sass 安装失败问题</a>
-                    <p class="is-size-7 is-uppercase">
-                        
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/08/31/git/git/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Git常用操作命令">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-31T09:55:21.000Z">2019-08-31</time></div>
-                    <a href="/2019/08/31/git/git/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Git常用操作命令</a>
-                    <p class="is-size-7 is-uppercase">
-                        
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/08/31/git/git-remote/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Git 修改远程主机地址">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-31T09:55:21.000Z">2019-08-31</time></div>
-                    <a href="/2019/08/31/git/git-remote/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Git 修改远程主机地址</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
