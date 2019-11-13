@@ -113,6 +113,58 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-11-02T05:45:50.000Z">2019-11-02</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    几秒 读完 (大约 90 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/11/02/mysql/mysql-index/">MySQL索引</a>
+            
+        </h1>
+        <div class="content">
+            <p>索引<br>    基数：索引区分度，采样统计<br>        数据页<br>        变更触发索引统计<br>        重新统计索引信息命令：analyze table t</p>
+<p>优化器选择索引<br>    扫描行数</p>
+<p>explain<br>强制使用索引 force index(a)<br>设置慢查询SQL阈值 set long_query_time=0;<br>全表扫描</p>
+<p>前缀索引<br>    字符串字段创建索引</p>
+
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/11/02/mysql/mysql-index/#more">阅读更多</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2019-10-30T09:52:28.000Z">2019-10-30</time>
                 
                 
@@ -173,7 +225,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    3 分钟 读完 (大约 457 个字)
+                    3 分钟 读完 (大约 511 个字)
                 </span>
                 
                 
@@ -390,7 +442,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    几秒 读完 (大约 20 个字)
+                    几秒 读完 (大约 76 个字)
                 </span>
                 
                 
@@ -399,19 +451,31 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/08/31/git/git-diff/">Git 对比分支差异</a>
+                <a class="has-link-black-ter" href="/2019/08/31/git/git-remote/">Git 修改远程主机地址</a>
             
         </h1>
         <div class="content">
-            <p>查看dev分支有而master分支没有的提交：</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git log dev ^master</span><br></pre></td></tr></table></figure>
+            <ol>
+<li>可直接修改远程主机地址：<blockquote>
+<p>git remote set-url origin [url]</p>
+</blockquote>
+</li>
+</ol>
+<p>其中origin为远程主机名称，url为要设置的远程主机地址<br>例如：git remote set-url origin <a href="mailto:gitlab@gitlab.chumob.com" target="_blank" rel="noopener">gitlab@gitlab.chumob.com</a>:php/hasoffer.git</p>
+<ol start="2">
+<li>删除远程主机后重新添加<blockquote>
+<p>git remote rm origin<br>git remote add origin [url]</p>
+</blockquote>
+</li>
+</ol>
+
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/08/31/git/git-diff/#more">阅读更多</a>
+                <a class="button is-size-7 is-light" href="/2019/08/31/git/git-remote/#more">阅读更多</a>
                 </div>
             </div>
         </div>
@@ -499,7 +563,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    几秒 读完 (大约 76 个字)
+                    几秒 读完 (大约 20 个字)
                 </span>
                 
                 
@@ -508,31 +572,19 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/08/31/git/git-remote/">Git 修改远程主机地址</a>
+                <a class="has-link-black-ter" href="/2019/08/31/git/git-diff/">Git 对比分支差异</a>
             
         </h1>
         <div class="content">
-            <ol>
-<li>可直接修改远程主机地址：<blockquote>
-<p>git remote set-url origin [url]</p>
-</blockquote>
-</li>
-</ol>
-<p>其中origin为远程主机名称，url为要设置的远程主机地址<br>例如：git remote set-url origin <a href="mailto:gitlab@gitlab.chumob.com" target="_blank" rel="noopener">gitlab@gitlab.chumob.com</a>:php/hasoffer.git</p>
-<ol start="2">
-<li>删除远程主机后重新添加<blockquote>
-<p>git remote rm origin<br>git remote add origin [url]</p>
-</blockquote>
-</li>
-</ol>
-
+            <p>查看dev分支有而master分支没有的提交：</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git log dev ^master</span><br></pre></td></tr></table></figure>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/08/31/git/git-remote/#more">阅读更多</a>
+                <a class="button is-size-7 is-light" href="/2019/08/31/git/git-diff/#more">阅读更多</a>
                 </div>
             </div>
         </div>
@@ -587,57 +639,6 @@
             <div class="level-start">
                 <div class="level-item">
                 <a class="button is-size-7 is-light" href="/2019/08/31/tools/beyondcompare/#more">阅读更多</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-08-31T02:29:03.000Z">2019-08-31</time>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    几秒 读完 (大约 64 个字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/08/31/docker/docker-swarm/">Docker Swarm 集群</a>
-            
-        </h1>
-        <div class="content">
-            <p>swarm<br>指定副本数，服务运行节点数<br>–replicas 3</p>
-<p>docker service update<br>更新docker service<br>–update-delay 设置延迟时间<br>–update-parallelism 并行更新数<br>–update-failure-action 失败后行为<br>–update-max-failure-ratio 失败比例<br>–update-monitor 更新监控时间</p>
-<p>–rollback 回滚</p>
-
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/08/31/docker/docker-swarm/#more">阅读更多</a>
                 </div>
             </div>
         </div>
@@ -722,7 +723,7 @@
                         文章
                     </p>
                     <p class="title has-text-weight-normal">
-                        62
+                        63
                     </p>
                 </div>
             </div>
@@ -827,7 +828,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/MySQL/">
                         <span class="tag">MySQL</span>
-                        <span class="tag is-grey">5</span>
+                        <span class="tag is-grey">6</span>
                     </a>
                 </div>
                 
@@ -887,6 +888,17 @@
         <ul class="menu-list">
         
         <li>
+            <a class="level is-marginless" href="/archives/2019/11/">
+                <span class="level-start">
+                    <span class="level-item">十一月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
             <a class="level is-marginless" href="/archives/2019/10/">
                 <span class="level-start">
                     <span class="level-item">十月 2019</span>
@@ -930,6 +942,25 @@
         <h3 class="menu-label">
             最新文章
         </h3>
+        
+        <article class="media">
+            
+            <a href="/2019/11/02/mysql/mysql-index/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="MySQL索引">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-11-02T05:45:50.000Z">2019-11-02</time></div>
+                    <a href="/2019/11/02/mysql/mysql-index/" class="title has-link-black-ter is-size-6 has-text-weight-normal">MySQL索引</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -1000,25 +1031,6 @@
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-21T05:47:05.000Z">2019-09-21</time></div>
                     <a href="/2019/09/21/tools/rest/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Rest接口批量调用</a>
-                    <p class="is-size-7 is-uppercase">
-                        
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/09/21/javascript/node-sass/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="node-sass 安装失败问题">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-21T05:45:19.000Z">2019-09-21</time></div>
-                    <a href="/2019/09/21/javascript/node-sass/" class="title has-link-black-ter is-size-6 has-text-weight-normal">node-sass 安装失败问题</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
