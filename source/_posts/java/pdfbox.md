@@ -81,3 +81,17 @@ trueTypeCollection.close();
 - 官网 https://pdfbox.apache.org/
 - Github Mirror https://github.com/apache/pdfbox
 - PDFBox快速指南 http://www.vue5.com/pdfbox/pdfbox_quick_guide.html
+
+
+## 6. 使用
+执行一次的任务：
+- JDK / JRE
+- pdf.zip
+- C盘创建pdf文件夹，下载相应文件
+
+可重复执行的任务：
+- 1. 将PDF复制到C盘pdf文件夹下，同时在此路径下使用sublime软件创建PDF同名文本文档(后缀为.txt)
+- 2. 在资源管理器地址栏中输入命令：cmd，打开命令行窗口
+- 3. 在命令行窗口中输入：java -jar de[Tab按键补全]
+- 4. 浏览器访问 http://localhost:8080/pdf
+- 5. 查看结果文件，存储在C盘pdf/result文件夹中
