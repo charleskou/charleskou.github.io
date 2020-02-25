@@ -113,6 +113,181 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-31T09:55:21.000Z">2019-08-31</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    几秒 读完 (大约 76 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/08/31/git/git-remote/">Git 修改远程主机地址</a>
+            
+        </h1>
+        <div class="content">
+            <ol>
+<li>可直接修改远程主机地址：<blockquote>
+<p>git remote set-url origin [url]</p>
+</blockquote>
+</li>
+</ol>
+<p>其中origin为远程主机名称，url为要设置的远程主机地址<br>例如：git remote set-url origin <a href="mailto:gitlab@gitlab.chumob.com" target="_blank" rel="noopener">gitlab@gitlab.chumob.com</a>:php/hasoffer.git</p>
+<ol start="2">
+<li>删除远程主机后重新添加<blockquote>
+<p>git remote rm origin<br>git remote add origin [url]</p>
+</blockquote>
+</li>
+</ol>
+
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/08/31/git/git-remote/#more">阅读更多</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-31T09:55:21.000Z">2019-08-31</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    6 分钟 读完 (大约 970 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/08/31/git/git/">Git常用操作命令</a>
+            
+        </h1>
+        <div class="content">
+            <h2 id="git-config-设置"><a href="#git-config-设置" class="headerlink" title="git config 设置"></a>git config 设置</h2><p>查看当前配置</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config -l</span><br></pre></td></tr></table></figure>
+
+<p>设置默认用户名邮箱</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;test&quot;</span><br><span class="line">git config --global user.email&quot;test@gmail.com&quot;</span><br></pre></td></tr></table></figure>
+
+<p>保存密码</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global credential.helper store</span><br></pre></td></tr></table></figure>
+
+<p>设置默认使用sublime编辑器</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global core.editor =&quot;&apos;D:/Program Files/Sublime Text 3/sublime_text.exe&apos; -w&quot; # 设置Editor使用sublime</span><br></pre></td></tr></table></figure>
+
+<p>设置别名</p>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/08/31/git/git/#more">阅读更多</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-31T06:40:00.000Z">2019-08-31</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    2 分钟 读完 (大约 328 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/08/31/tools/beyondcompare/">使用Beyond Compare作为Git Bash文本差异对比冲突合并工具</a>
+            
+        </h1>
+        <div class="content">
+            <p>在Windows下安装Git命令行后，默认的文本比较工具一般是Git自己内置的diff实现，可以用更为通用方便的外部工具Beyond Compare工具来代替内置diff软件来进行文件比较及合并和解决冲突。</p>
+<h2 id="1-卸载"><a href="#1-卸载" class="headerlink" title="1. 卸载"></a>1. 卸载</h2><p>如安装过，记录当前版本号，例如：4.2.5.23088<br>卸载后重启计算机</p>
+<h2 id="2-安装"><a href="#2-安装" class="headerlink" title="2. 安装"></a>2. 安装</h2><p>下载地址：<br><a href="https://www.scootersoftware.com/download.php" target="_blank" rel="noopener">https://www.scootersoftware.com/download.php</a></p>
+<p>建议切换与原有安装版本不同的大版本</p>
+<p>安装时建议记录安装路径，如：C:\Program Files\Beyond Compare</p>
+<p>从官网上下载的评估版本评估周期为30天 - 根据打开软件的时间累加，实际评估时间根据使用频率不同，可达2~3个月<br>评估过期后，需要重新执行第1、2步</p>
+<h2 id="3-Git配置"><a href="#3-Git配置" class="headerlink" title="3. Git配置"></a>3. Git配置</h2><p>Git用户配置文件一般路径：<br>C:\Users\username.gitconfig</p>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/08/31/tools/beyondcompare/#more">阅读更多</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2019-08-31T02:29:03.000Z">2019-08-31</time>
                 
                 
@@ -486,203 +661,6 @@
 
 
 
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-08-15T05:32:12.000Z">2019-08-15</time>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    2 分钟 读完 (大约 362 个字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/08/15/java/spring-retry/">spring-retry</a>
-            
-        </h1>
-        <div class="content">
-            <p>Spring Retry实现重试操作</p>
-<h2 id="dependency"><a href="#dependency" class="headerlink" title="dependency"></a>dependency</h2><figure class="highlight xml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.springframework.retry<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-retry<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="注解"><a href="#注解" class="headerlink" title="注解"></a>注解</h2><p>在启动入口加入重试配置</p>
-<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">@EnableRetry</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">@Retryable</span>(value = Exception.class, maxAttempts = <span class="hljs-number">3</span>,backoff = <span class="hljs-meta">@Backoff</span>(delay = <span class="hljs-number">2000</span>, multiplier = <span class="hljs-number">1.5</span>))</span><br></pre></td></tr></table></figure>
-
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
-<li>@EnableRetry 能否重试</li>
-<li>@Retryable 标注此注解的方法在发生异常时会进行重试</li>
-<li><ul>
-<li>value：指定处理的异常类</li>
-</ul>
-</li>
-<li><ul>
-<li>include：指定处理的异常类和value一样，默认为空，当exclude也为空时，默认所有异常</li>
-</ul>
-</li>
-<li><ul>
-<li>exclude：指定异常不处理，默认空，当include也为空时，默认所有异常</li>
-</ul>
-</li>
-<li><ul>
-<li>maxAttempts：最大重试次数。默认3次</li>
-</ul>
-</li>
-<li><ul>
-<li>backoff： 重试等待策略。默认使用@Backoff注解</li>
-</ul>
-</li>
-<li>@Backoff 重试等待策略</li>
-<li><ul>
-<li>不设置参数时，默认使用FixedBackOffPolicy（指定等待时间），重试等待1000ms</li>
-</ul>
-</li>
-<li><ul>
-<li>设置delay,使用FixedBackOffPolicy（指定等待时间），重试等待填写的时间</li>
-</ul>
-</li>
-<li><ul>
-<li>设置delay和maxDealy时，重试等待在这两个值之间均态分布</li>
-</ul>
-</li>
-<li><ul>
-<li>设置delay、maxDealy、multiplier，使用 ExponentialBackOffPolicy（指数级重试间隔的实现 ），multiplier即指定延迟倍数，比如delay=5000l,multiplier=2,则第一次重试为5秒，第二次为10秒，第三次为20秒……</li>
-</ul>
-</li>
-<li>@Recover 用于@Retryable重试失败后处理方法，此注解注释的方法参数一定要是@Retryable抛出的异常，否则无法识别，可以在该方法中进行日志处理。</li>
-</ul>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/08/15/java/spring-retry/#more">阅读更多</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-08-14T09:06:11.000Z">2019-08-14</time>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    几秒 读完 (大约 19 个字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/08/14/tools/proxy/">proxy</a>
-            
-        </h1>
-        <div class="content">
-            <h2 id="代理"><a href="#代理" class="headerlink" title="代理"></a>代理</h2><h2 id="反向代理"><a href="#反向代理" class="headerlink" title="反向代理"></a>反向代理</h2><p><img src="https://pic2.zhimg.com/2582ac2a1366e3e12acf274265ea80f3_r.jpg" alt></p>
-
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/08/14/tools/proxy/#more">阅读更多</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-08-14T02:51:56.000Z">2019-08-14</time>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    几秒 读完 (大约 88 个字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/08/14/mysql/mysql-regexp/">Mysql Regexp 正则表达式</a>
-            
-        </h1>
-        <div class="content">
-            <figure class="highlight sql hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">-- 查找name字段中以'st'为开头的所有数据</span></span><br><span class="line"><span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">name</span> <span class="hljs-keyword">FROM</span> person_tbl <span class="hljs-keyword">WHERE</span> <span class="hljs-keyword">name</span> REGEXP <span class="hljs-string">'^st'</span>;</span><br><span class="line"><span class="hljs-comment">-- 查找name字段中以'ok'为结尾的所有数据</span></span><br><span class="line"><span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">name</span> <span class="hljs-keyword">FROM</span> person_tbl <span class="hljs-keyword">WHERE</span> <span class="hljs-keyword">name</span> REGEXP <span class="hljs-string">'ok$'</span>;</span><br><span class="line"><span class="hljs-comment">-- 查找name字段中包含'mar'字符串的所有数据</span></span><br><span class="line"><span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">name</span> <span class="hljs-keyword">FROM</span> person_tbl <span class="hljs-keyword">WHERE</span> <span class="hljs-keyword">name</span> REGEXP <span class="hljs-string">'mar'</span>;</span><br></pre></td></tr></table></figure>
-
-<p>参考：<a href="https://www.runoob.com/mysql/mysql-regexp.html" target="_blank" rel="noopener">https://www.runoob.com/mysql/mysql-regexp.html</a></p>
-
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/08/14/mysql/mysql-regexp/#more">阅读更多</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
 
     
 <div class="card card-transparent">
@@ -754,7 +732,7 @@
                         文章
                     </p>
                     <p class="title has-text-weight-normal">
-                        63
+                        66
                     </p>
                 </div>
             </div>
@@ -919,6 +897,17 @@
         <ul class="menu-list">
         
         <li>
+            <a class="level is-marginless" href="/archives/2020/02/">
+                <span class="level-start">
+                    <span class="level-item">二月 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
             <a class="level is-marginless" href="/archives/2019/11/">
                 <span class="level-start">
                     <span class="level-item">十一月 2019</span>
@@ -976,6 +965,63 @@
         
         <article class="media">
             
+            <a href="/2020/02/25/books/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="书籍">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-25T14:54:32.000Z">2020-02-25</time></div>
+                    <a href="/2020/02/25/books/" class="title has-link-black-ter is-size-6 has-text-weight-normal">书籍</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2020/02/25/internet-events/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="互联网大事记">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-25T14:10:30.000Z">2020-02-25</time></div>
+                    <a href="/2020/02/25/internet-events/" class="title has-link-black-ter is-size-6 has-text-weight-normal">互联网大事记</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2020/02/25/music/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="音乐">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-25T14:06:40.000Z">2020-02-25</time></div>
+                    <a href="/2020/02/25/music/" class="title has-link-black-ter is-size-6 has-text-weight-normal">音乐</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/2019/11/02/mysql/mysql-index/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/images/thumbnail.svg" alt="MySQL索引">
@@ -1005,63 +1051,6 @@
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-30T09:52:28.000Z">2019-10-30</time></div>
                     <a href="/2019/10/30/tools/common/" class="title has-link-black-ter is-size-6 has-text-weight-normal">通用工具导航</a>
-                    <p class="is-size-7 is-uppercase">
-                        
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/10/30/java/pdfbox/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="PDFBox使用指南">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-30T09:11:33.000Z">2019-10-30</time></div>
-                    <a href="/2019/10/30/java/pdfbox/" class="title has-link-black-ter is-size-6 has-text-weight-normal">PDFBox使用指南</a>
-                    <p class="is-size-7 is-uppercase">
-                        
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/09/21/tools/ups/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="UPS Tracking API">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-21T05:58:55.000Z">2019-09-21</time></div>
-                    <a href="/2019/09/21/tools/ups/" class="title has-link-black-ter is-size-6 has-text-weight-normal">UPS Tracking API</a>
-                    <p class="is-size-7 is-uppercase">
-                        
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/09/21/tools/rest/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Rest接口批量调用">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-21T05:47:05.000Z">2019-09-21</time></div>
-                    <a href="/2019/09/21/tools/rest/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Rest接口批量调用</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
