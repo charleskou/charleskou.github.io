@@ -2,7 +2,7 @@
 <html lang="zh">
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-<title>spring-cloud-config - Coder</title>
+<title>git-delete-tags - Coder</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="google-site-verification" content="nf1fTgUwUjCPuVDdA4bZdWYWTonwbiJjQkRh15iKYfI">
 
@@ -72,7 +72,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="spring-cloud-config" height="28">
+                <img src="/images/logo.svg" alt="git-delete-tags" height="28">
             
             </a>
         </div>
@@ -112,13 +112,13 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-08-13T08:38:59.000Z">2019-08-13</time>
+                <time class="level-item has-text-grey" datetime="2020-04-10T06:38:16.000Z">2020-04-10</time>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    1 分钟 读完 (大约 131 个字)
+                    几秒 读完 (大约 23 个字)
                 </span>
                 
                 
@@ -127,15 +127,16 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                spring-cloud-config
+                git-delete-tags
             
         </h1>
         <div class="content">
-            <h2 id="dependency"><a href="#dependency" class="headerlink" title="dependency"></a>dependency</h2><h2 id="动态刷新"><a href="#动态刷新" class="headerlink" title="动态刷新"></a>动态刷新</h2><h3 id="使用限制"><a href="#使用限制" class="headerlink" title="使用限制"></a>使用限制</h3><p>@RefreshScope @Configuration 不能同时在一个类上使用<br>原因说明：</p>
-<blockquote>
-<p>@RefreshScope works (technically) on an @Configuration class, but it might lead to surprising behaviour: e.g. it does not mean that all the @Beans defined in that class are themselves @RefreshScope. Specifically, anything that depends on those beans cannot rely on them being updated when a refresh is initiated, unless it is itself in @RefreshScope (in which it will be rebuilt on a refresh and its dependencies re-injected, at which point they will be re-initialized from the refreshed @Configuration).</p>
+            <h2 id="查看远程Tag"><a href="#查看远程Tag" class="headerlink" title="查看远程Tag"></a>查看远程Tag</h2><blockquote>
+<p>git ls-remote –tags</p>
 </blockquote>
-<p>参考：<br><a href="https://stackoverflow.com/questions/45137555/refreshscope-not-working-spring-boot" target="_blank" rel="noopener">https://stackoverflow.com/questions/45137555/refreshscope-not-working-spring-boot</a><br><a href="http://projects.spring.io/spring-cloud/spring-cloud.html#_refresh_scope" target="_blank" rel="noopener">http://projects.spring.io/spring-cloud/spring-cloud.html#_refresh_scope</a></p>
+<h2 id="删除远程主机指定Tag"><a href="#删除远程主机指定Tag" class="headerlink" title="删除远程主机指定Tag"></a>删除远程主机指定Tag</h2><blockquote>
+<p>git push origin :refs/tags/</p>
+</blockquote>
 
         </div>
         
@@ -143,7 +144,7 @@
             <div class="level-start">
                 <div class="level-item">
                     <span class="is-size-6 has-text-grey has-mr-7">#</span>
-                    <a class="has-link-grey -link" href="/tags/Java/">Java</a>, <a class="has-link-grey -link" href="/tags/Spring-Cloud/">Spring Cloud</a>
+                    <a class="has-link-grey -link" href="/tags/git/">git</a>
                 </div>
             </div>
         </div>
@@ -169,17 +170,10 @@
 <div class="card card-transparent">
     <div class="level post-navigation is-flex-wrap is-mobile">
         
-        <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/08/13/java/sonar/">
-                <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">sonar</span>
-            </a>
-        </div>
-        
         
         <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/2019/08/13/java/druid/">
-                <span class="level-item">druid数据库连接池通用配置</span>
+            <a class="level level-item has-link-grey  article-nav-next" href="/2020/02/25/books/">
+                <span class="level-item">书籍</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
@@ -594,7 +588,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="spring-cloud-config" height="28">
+                    <img src="/images/logo.svg" alt="git-delete-tags" height="28">
                 
                 </a>
                 <p class="is-size-7">

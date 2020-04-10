@@ -113,6 +113,65 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-18T01:55:05.000Z">2019-08-18</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    5 分钟 读完 (大约 804 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/08/18/javascript/nvm-windows/">nvm-windows安装使用指南</a>
+            
+        </h1>
+        <div class="content">
+            <h2 id="nvm-windows"><a href="#nvm-windows" class="headerlink" title="nvm-windows"></a>nvm-windows</h2><ul>
+<li>nvm-windows是一个命令行工具</li>
+<li>nvm-windows 并不是 nvm 的简单移植，他们也没有任何关系</li>
+<li>nvm-windows切换node版本时，不同node版本之间不共享npm模块</li>
+<li>安装nvm-windows前需要卸载及删除node npm相关文件</li>
+<li>安装nvm-windows后必须为每个新安装的node单独安装全局应用，如gulp</li>
+</ul>
+<h2 id="安装前建议"><a href="#安装前建议" class="headerlink" title="安装前建议"></a>安装前建议</h2><h3 id="全局模块"><a href="#全局模块" class="headerlink" title="全局模块"></a>全局模块</h3><p>如当前已经安装node，且npm全局安装过一些模块，建议记录下这些全局模块留档<br>命令如下：</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm list -g --depth 0</span><br></pre></td></tr></table></figure>
+
+<h3 id="项目模块"><a href="#项目模块" class="headerlink" title="项目模块"></a>项目模块</h3><p>如项目中node_modules中包含模块，建议保存一份存档；如确定项目中package.json里的dependencies和devDependencies配置是规范的，可略过此项</p>
+<h3 id="卸载node"><a href="#卸载node" class="headerlink" title="卸载node"></a>卸载node</h3><p>安装前先卸载任何现有版本的node.js, 并删除nodejs安装目录<br>可通过以下命令查找node或npm的安装路径：</p>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/08/18/javascript/nvm-windows/#more">阅读更多</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2019-08-15T05:32:12.000Z">2019-08-15</time>
                 
                 
@@ -265,7 +324,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    几秒 读完 (大约 88 个字)
+                    1 分钟 读完 (大约 165 个字)
                 </span>
                 
                 
@@ -274,13 +333,12 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/08/14/mysql/mysql-regexp/">Mysql Regexp 正则表达式</a>
+                <a class="has-link-black-ter" href="/2019/08/14/mysql/mysql-function/">Mysql常用函数</a>
             
         </h1>
         <div class="content">
-            <figure class="highlight sql hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">-- 查找name字段中以'st'为开头的所有数据</span></span><br><span class="line"><span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">name</span> <span class="hljs-keyword">FROM</span> person_tbl <span class="hljs-keyword">WHERE</span> <span class="hljs-keyword">name</span> REGEXP <span class="hljs-string">'^st'</span>;</span><br><span class="line"><span class="hljs-comment">-- 查找name字段中以'ok'为结尾的所有数据</span></span><br><span class="line"><span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">name</span> <span class="hljs-keyword">FROM</span> person_tbl <span class="hljs-keyword">WHERE</span> <span class="hljs-keyword">name</span> REGEXP <span class="hljs-string">'ok$'</span>;</span><br><span class="line"><span class="hljs-comment">-- 查找name字段中包含'mar'字符串的所有数据</span></span><br><span class="line"><span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">name</span> <span class="hljs-keyword">FROM</span> person_tbl <span class="hljs-keyword">WHERE</span> <span class="hljs-keyword">name</span> REGEXP <span class="hljs-string">'mar'</span>;</span><br></pre></td></tr></table></figure>
+            <figure class="highlight sql hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">-- 求绝对值</span></span><br><span class="line">ABS(x)</span><br><span class="line"><span class="hljs-comment">-- 四舍五入</span></span><br><span class="line">ROUND(x)</span><br><span class="line"><span class="hljs-comment">-- 字符数</span></span><br><span class="line">CHAR_LENGTH(s)</span><br><span class="line"><span class="hljs-comment">-- 字符串长度</span></span><br><span class="line">LENGTH(s)</span><br><span class="line"><span class="hljs-comment">-- 字符串拼接</span></span><br><span class="line">CONCAT(s1,s2,...)</span><br><span class="line"><span class="hljs-comment">-- 字符串截取：从字符串s中的第a个字符开始取b个字符</span></span><br><span class="line">SUBSTRING(s,a,b)</span><br><span class="line"><span class="hljs-comment">-- 当前日期</span></span><br><span class="line">CURRENT_DATE()</span><br><span class="line"><span class="hljs-comment">-- 当前时间</span></span><br><span class="line">CURRENT_TIME()</span><br><span class="line"><span class="hljs-comment">-- 当前时间戳</span></span><br><span class="line">UNIX_TIMESTAMP()</span><br><span class="line"><span class="hljs-comment">-- 把UNIX时间戳的时间转换为普通格式的时间</span></span><br><span class="line">FROM_UNIXTIME(d)</span><br><span class="line"><span class="hljs-comment">-- 如果表达式expr成立，返回结果v1；否则，返回结果v2。</span></span><br><span class="line">IF(expr,v1,v2)</span><br><span class="line"><span class="hljs-comment">-- 如果v1的不为空，就显示v1的值；否则就显示v2的值。</span></span><br><span class="line">IFNULL(v1,v2)</span><br><span class="line"><span class="hljs-comment">-- 数据库版本号</span></span><br><span class="line">VERSION()</span><br></pre></td></tr></table></figure>
 
-<p>参考：<a href="https://www.runoob.com/mysql/mysql-regexp.html" target="_blank" rel="noopener">https://www.runoob.com/mysql/mysql-regexp.html</a></p>
 
         </div>
         
@@ -288,7 +346,7 @@
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/08/14/mysql/mysql-regexp/#more">阅读更多</a>
+                <a class="button is-size-7 is-light" href="/2019/08/14/mysql/mysql-function/#more">阅读更多</a>
                 </div>
             </div>
         </div>
@@ -316,7 +374,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    1 分钟 读完 (大约 165 个字)
+                    1 分钟 读完 (大约 116 个字)
                 </span>
                 
                 
@@ -325,12 +383,16 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/08/14/mysql/mysql-function/">Mysql常用函数</a>
+                <a class="has-link-black-ter" href="/2019/08/14/mysql/mysql-binlog/">Mysql 查看binlog</a>
             
         </h1>
         <div class="content">
-            <figure class="highlight sql hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">-- 求绝对值</span></span><br><span class="line">ABS(x)</span><br><span class="line"><span class="hljs-comment">-- 四舍五入</span></span><br><span class="line">ROUND(x)</span><br><span class="line"><span class="hljs-comment">-- 字符数</span></span><br><span class="line">CHAR_LENGTH(s)</span><br><span class="line"><span class="hljs-comment">-- 字符串长度</span></span><br><span class="line">LENGTH(s)</span><br><span class="line"><span class="hljs-comment">-- 字符串拼接</span></span><br><span class="line">CONCAT(s1,s2,...)</span><br><span class="line"><span class="hljs-comment">-- 字符串截取：从字符串s中的第a个字符开始取b个字符</span></span><br><span class="line">SUBSTRING(s,a,b)</span><br><span class="line"><span class="hljs-comment">-- 当前日期</span></span><br><span class="line">CURRENT_DATE()</span><br><span class="line"><span class="hljs-comment">-- 当前时间</span></span><br><span class="line">CURRENT_TIME()</span><br><span class="line"><span class="hljs-comment">-- 当前时间戳</span></span><br><span class="line">UNIX_TIMESTAMP()</span><br><span class="line"><span class="hljs-comment">-- 把UNIX时间戳的时间转换为普通格式的时间</span></span><br><span class="line">FROM_UNIXTIME(d)</span><br><span class="line"><span class="hljs-comment">-- 如果表达式expr成立，返回结果v1；否则，返回结果v2。</span></span><br><span class="line">IF(expr,v1,v2)</span><br><span class="line"><span class="hljs-comment">-- 如果v1的不为空，就显示v1的值；否则就显示v2的值。</span></span><br><span class="line">IFNULL(v1,v2)</span><br><span class="line"><span class="hljs-comment">-- 数据库版本号</span></span><br><span class="line">VERSION()</span><br></pre></td></tr></table></figure>
-
+            <p>解压缩<br>tar -xzvf binlog-free.tar.gz</p>
+<p>mysqlbinlog -vvv –base64-output=decode-rows mysql-bin.02702* 这个命令是查看日志内容的<br>mysqlbinlog -vvv –base64-output=decode-rows mysql-bin.000001</p>
+<p>mysqlbinlog -vvv –base64-output=decode-rows mysql-bin.0273* &gt;prd.sql<br>mysqlbinlog -vvv –base64-output=decode-rows mysql-bin.0277* &gt;prd.sql<br>mysqlbinlog -vvv –base64-output=decode-rows mysql-bin.0280* &gt;prd.sql</p>
+<p>mysqlbinlog -vvv –base64-output=decode-rows mysql-bin.0293* &gt;prd.sql<br>mysqlbinlog -vvv –base64-output=decode-rows mysql-bin.0313* &gt;prd.sql</p>
+<p>linux 下执行<br>替换文件名中的.sql为空字符串<br>rename .sql.rm ‘’ *</p>
+<p>windows下添加后缀名<br>ren * *.sql</p>
 
         </div>
         
@@ -338,7 +400,7 @@
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/08/14/mysql/mysql-function/#more">阅读更多</a>
+                <a class="button is-size-7 is-light" href="/2019/08/14/mysql/mysql-binlog/#more">阅读更多</a>
                 </div>
             </div>
         </div>
@@ -421,7 +483,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    1 分钟 读完 (大约 116 个字)
+                    几秒 读完 (大约 88 个字)
                 </span>
                 
                 
@@ -430,16 +492,13 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/08/14/mysql/mysql-binlog/">Mysql 查看binlog</a>
+                <a class="has-link-black-ter" href="/2019/08/14/mysql/mysql-regexp/">Mysql Regexp 正则表达式</a>
             
         </h1>
         <div class="content">
-            <p>解压缩<br>tar -xzvf binlog-free.tar.gz</p>
-<p>mysqlbinlog -vvv –base64-output=decode-rows mysql-bin.02702* 这个命令是查看日志内容的<br>mysqlbinlog -vvv –base64-output=decode-rows mysql-bin.000001</p>
-<p>mysqlbinlog -vvv –base64-output=decode-rows mysql-bin.0273* &gt;prd.sql<br>mysqlbinlog -vvv –base64-output=decode-rows mysql-bin.0277* &gt;prd.sql<br>mysqlbinlog -vvv –base64-output=decode-rows mysql-bin.0280* &gt;prd.sql</p>
-<p>mysqlbinlog -vvv –base64-output=decode-rows mysql-bin.0293* &gt;prd.sql<br>mysqlbinlog -vvv –base64-output=decode-rows mysql-bin.0313* &gt;prd.sql</p>
-<p>linux 下执行<br>替换文件名中的.sql为空字符串<br>rename .sql.rm ‘’ *</p>
-<p>windows下添加后缀名<br>ren * *.sql</p>
+            <figure class="highlight sql hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">-- 查找name字段中以'st'为开头的所有数据</span></span><br><span class="line"><span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">name</span> <span class="hljs-keyword">FROM</span> person_tbl <span class="hljs-keyword">WHERE</span> <span class="hljs-keyword">name</span> REGEXP <span class="hljs-string">'^st'</span>;</span><br><span class="line"><span class="hljs-comment">-- 查找name字段中以'ok'为结尾的所有数据</span></span><br><span class="line"><span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">name</span> <span class="hljs-keyword">FROM</span> person_tbl <span class="hljs-keyword">WHERE</span> <span class="hljs-keyword">name</span> REGEXP <span class="hljs-string">'ok$'</span>;</span><br><span class="line"><span class="hljs-comment">-- 查找name字段中包含'mar'字符串的所有数据</span></span><br><span class="line"><span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">name</span> <span class="hljs-keyword">FROM</span> person_tbl <span class="hljs-keyword">WHERE</span> <span class="hljs-keyword">name</span> REGEXP <span class="hljs-string">'mar'</span>;</span><br></pre></td></tr></table></figure>
+
+<p>参考：<a href="https://www.runoob.com/mysql/mysql-regexp.html" target="_blank" rel="noopener">https://www.runoob.com/mysql/mysql-regexp.html</a></p>
 
         </div>
         
@@ -447,7 +506,7 @@
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/08/14/mysql/mysql-binlog/#more">阅读更多</a>
+                <a class="button is-size-7 is-light" href="/2019/08/14/mysql/mysql-regexp/#more">阅读更多</a>
                 </div>
             </div>
         </div>
@@ -561,63 +620,6 @@
             <div class="level-start">
                 <div class="level-item">
                 <a class="button is-size-7 is-light" href="/2019/08/14/tools/linux/#more">阅读更多</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-08-14T02:29:03.000Z">2019-08-14</time>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    几秒 读完 (大约 97 个字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/08/14/docker/docker-accelerator/">Docker镜像下载加速器</a>
-            
-        </h1>
-        <div class="content">
-            <h3 id="配置DaoCloud加速器："><a href="#配置DaoCloud加速器：" class="headerlink" title="配置DaoCloud加速器："></a>配置DaoCloud加速器：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -sSL https://get.daocloud.io/daotools/set_mirror.sh | sh -s http://b18c7aa2.m.daocloud.io</span><br></pre></td></tr></table></figure>
-
-<h3 id="配置阿里云加速器："><a href="#配置阿里云加速器：" class="headerlink" title="配置阿里云加速器："></a>配置阿里云加速器：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -sSL https://get.daocloud.io/daotools/set_mirror.sh | sh -s https://zf0ry6xq.mirror.aliyuncs.com</span><br></pre></td></tr></table></figure>
-
-<h3 id="查看加速配置信息："><a href="#查看加速配置信息：" class="headerlink" title="查看加速配置信息："></a>查看加速配置信息：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker info</span><br></pre></td></tr></table></figure>
-
-<h3 id="配置完成后需要重启docker服务："><a href="#配置完成后需要重启docker服务：" class="headerlink" title="配置完成后需要重启docker服务："></a>配置完成后需要重启docker服务：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart docker</span><br></pre></td></tr></table></figure>
-
-<p>或</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service docker restart</span><br></pre></td></tr></table></figure>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/08/14/docker/docker-accelerator/#more">阅读更多</a>
                 </div>
             </div>
         </div>
@@ -763,7 +765,7 @@
                         文章
                     </p>
                     <p class="title has-text-weight-normal">
-                        66
+                        67
                     </p>
                 </div>
             </div>
@@ -773,7 +775,7 @@
                         标签
                     </p>
                     <p class="title has-text-weight-normal">
-                        17
+                        18
                     </p>
                 </div>
             </div>
@@ -826,7 +828,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Git/">
                         <span class="tag">Git</span>
-                        <span class="tag is-grey">8</span>
+                        <span class="tag is-grey">1</span>
                     </a>
                 </div>
                 
@@ -914,6 +916,13 @@
                     </a>
                 </div>
                 
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/git/">
+                        <span class="tag">git</span>
+                        <span class="tag is-grey">8</span>
+                    </a>
+                </div>
+                
             </div>
         </div>
     </div>
@@ -926,6 +935,17 @@
             归档
         </h3>
         <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/04/">
+                <span class="level-start">
+                    <span class="level-item">四月 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
         
         <li>
             <a class="level is-marginless" href="/archives/2020/02/">
@@ -996,6 +1016,25 @@
         
         <article class="media">
             
+            <a href="/2020/04/10/git/git-delete-tags/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="git-delete-tags">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-04-10T06:38:16.000Z">2020-04-10</time></div>
+                    <a href="/2020/04/10/git/git-delete-tags/" class="title has-link-black-ter is-size-6 has-text-weight-normal">git-delete-tags</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/2020/02/25/books/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/images/thumbnail.svg" alt="书籍">
@@ -1063,25 +1102,6 @@
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-11-02T05:45:50.000Z">2019-11-02</time></div>
                     <a href="/2019/11/02/mysql/mysql-index/" class="title has-link-black-ter is-size-6 has-text-weight-normal">MySQL索引</a>
-                    <p class="is-size-7 is-uppercase">
-                        
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/10/30/tools/common/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="通用工具导航">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-30T09:52:28.000Z">2019-10-30</time></div>
-                    <a href="/2019/10/30/tools/common/" class="title has-link-black-ter is-size-6 has-text-weight-normal">通用工具导航</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
