@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://charleskou.github.io/2019/08/09/hexo/hexo-deploy/</loc>
+    
+    <lastmod>2020-04-10T08:22:51.489Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://charleskou.github.io/2019/08/31/git/git-diff/</loc>
     
     <lastmod>2020-04-10T06:41:03.870Z</lastmod>
@@ -103,13 +110,6 @@
     <loc>https://charleskou.github.io/2019/10/30/java/pdfbox/</loc>
     
     <lastmod>2019-11-26T10:01:47.209Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://charleskou.github.io/2019/08/09/hexo/hexo-deploy/</loc>
-    
-    <lastmod>2019-11-13T10:01:55.487Z</lastmod>
     
   </url>
   
@@ -429,14 +429,14 @@
   </url>
   
   <url>
-    <loc>https://charleskou.github.io/2019/08/10/tools/sublime/</loc>
+    <loc>https://charleskou.github.io/2019/08/10/tools/jira/</loc>
     
     <lastmod>2019-08-13T07:44:36.598Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://charleskou.github.io/2019/08/10/tools/jira/</loc>
+    <loc>https://charleskou.github.io/2019/08/10/tools/sublime/</loc>
     
     <lastmod>2019-08-13T07:44:36.598Z</lastmod>
     
@@ -450,14 +450,14 @@
   </url>
   
   <url>
-    <loc>https://charleskou.github.io/2019/08/10/java/postman/</loc>
+    <loc>https://charleskou.github.io/2019/08/10/tools/elk/</loc>
     
     <lastmod>2019-08-13T07:44:36.572Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://charleskou.github.io/2019/08/10/tools/elk/</loc>
+    <loc>https://charleskou.github.io/2019/08/10/java/postman/</loc>
     
     <lastmod>2019-08-13T07:44:36.572Z</lastmod>
     
