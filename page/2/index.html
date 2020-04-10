@@ -113,13 +113,13 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-08-31T09:55:21.000Z">2019-08-31</time>
+                <time class="level-item has-text-grey" datetime="2019-09-21T05:45:19.000Z">2019-09-21</time>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    6 分钟 读完 (大约 843 个字)
+                    几秒 读完 (大约 53 个字)
                 </span>
                 
                 
@@ -128,30 +128,25 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/08/31/git/git/">Git常用操作命令</a>
+                <a class="has-link-black-ter" href="/2019/09/21/javascript/node-sass/">node-sass 安装失败问题</a>
             
         </h1>
         <div class="content">
-            <h2 id="git-config-设置"><a href="#git-config-设置" class="headerlink" title="git config 设置"></a>git config 设置</h2><p>查看当前配置</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config -l</span><br></pre></td></tr></table></figure>
+            <ul>
+<li>环境变量中设置SASS_BINARY_PATH路径</li>
+<li>命令行中设置变量 <figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set SASS_BINARY_PATH=C:\Users\charles.kou\AppData\Roaming\npm\node_modules\node-sass\vendor\win32-x64-57\binding.node</span><br></pre></td></tr></table></figure>
 
-<p>设置默认用户名邮箱</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;test&quot;</span><br><span class="line">git config --global user.email&quot;test@gmail.com&quot;</span><br></pre></td></tr></table></figure>
-
-<p>保存密码</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global credential.helper store</span><br></pre></td></tr></table></figure>
-
-<p>设置默认使用sublime编辑器</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global core.editor =&quot;&apos;D:/Program Files/Sublime Text 3/sublime_text.exe&apos; -w&quot; # 设置Editor使用sublime</span><br></pre></td></tr></table></figure>
-
-<p>设置别名</p>
+</li>
+</ul>
+<p>查看已设置的变量：</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo %SASS_BINARY_PATH%</span><br></pre></td></tr></table></figure>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/08/31/git/git/#more">阅读更多</a>
+                <a class="button is-size-7 is-light" href="/2019/09/21/javascript/node-sass/#more">阅读更多</a>
                 </div>
             </div>
         </div>
@@ -262,6 +257,66 @@
             <div class="level-start">
                 <div class="level-item">
                 <a class="button is-size-7 is-light" href="/2019/08/31/git/git-diff/#more">阅读更多</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-31T09:55:21.000Z">2019-08-31</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    6 分钟 读完 (大约 843 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/08/31/git/git/">Git常用操作命令</a>
+            
+        </h1>
+        <div class="content">
+            <h2 id="git-config-设置"><a href="#git-config-设置" class="headerlink" title="git config 设置"></a>git config 设置</h2><p>查看当前配置</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config -l</span><br></pre></td></tr></table></figure>
+
+<p>设置默认用户名邮箱</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;test&quot;</span><br><span class="line">git config --global user.email&quot;test@gmail.com&quot;</span><br></pre></td></tr></table></figure>
+
+<p>保存密码</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global credential.helper store</span><br></pre></td></tr></table></figure>
+
+<p>设置默认使用sublime编辑器</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global core.editor =&quot;&apos;D:/Program Files/Sublime Text 3/sublime_text.exe&apos; -w&quot; # 设置Editor使用sublime</span><br></pre></td></tr></table></figure>
+
+<p>设置别名</p>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/08/31/git/git/#more">阅读更多</a>
                 </div>
             </div>
         </div>
@@ -598,59 +653,6 @@
 
 
 
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-08-18T08:15:38.000Z">2019-08-18</time>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    4 分钟 读完 (大约 587 个字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/08/18/javascript/echarts/">echarts - Angular 1.x指令集成</a>
-            
-        </h1>
-        <div class="content">
-            <h2 id="html"><a href="#html" class="headerlink" title="html"></a>html</h2><figure class="highlight html hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">ng-app</span>=<span class="hljs-string">"demo"</span> <span class="hljs-attr">ng-controller</span>=<span class="hljs-string">"myCtrl"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"demo"</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"width: 640px; height: 320px;"</span> <span class="hljs-attr">bar-chart</span> <span class="hljs-attr">e-data</span>=<span class="hljs-string">"data"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"width: 640px; height: 320px;"</span> <span class="hljs-attr">pie-chart</span> <span class="hljs-attr">e-data</span>=<span class="hljs-string">"data"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br><span class="line"><span class="hljs-comment">&lt;!-- ... 省略文件中其他无关内容 --&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"js/echarts.min.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="js"><a href="#js" class="headerlink" title="js"></a>js</h2><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">var</span> app = angular.module(<span class="hljs-string">'demo'</span>, []); <span class="hljs-comment">//定义一个模块</span></span><br><span class="line">angular.module(<span class="hljs-string">'demo'</span>).controller(<span class="hljs-string">"myCtrl"</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">$scope, $http, $interval</span>) </span>&#123; <span class="hljs-comment">//定义控制器</span></span><br><span class="line">  $interval(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>&#123; <span class="hljs-comment">//调用$interval服务执行循环任务，3秒自动更新一次数据</span></span><br><span class="line">    $http.get(<span class="hljs-string">"/demo_get"</span>) <span class="hljs-comment">//调用$http服务获取数据</span></span><br><span class="line">      .success(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">data</span>) </span>&#123;</span><br><span class="line">        <span class="hljs-keyword">if</span> (data.status == <span class="hljs-string">'0'</span>) &#123;</span><br><span class="line">          $scope.data = data.data; <span class="hljs-comment">//将数据放在model中</span></span><br><span class="line">        &#125;</span><br><span class="line">      &#125;).error(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>&#123;</span><br><span class="line">        $scope.data[<span class="hljs-number">0</span>].value = <span class="hljs-built_in">Math</span>.floor(<span class="hljs-built_in">Math</span>.random() * <span class="hljs-number">2000</span>); <span class="hljs-comment">//模拟数据改变测试</span></span><br><span class="line">      &#125;);</span><br><span class="line">  &#125;, <span class="hljs-number">3000</span>);</span><br><span class="line">  <span class="hljs-comment">//假设获取到的数据如下： </span></span><br><span class="line">  $scope.data = [&#123;</span><br><span class="line">    <span class="hljs-string">'value'</span>: <span class="hljs-number">335</span>,</span><br><span class="line">    <span class="hljs-string">'name'</span>: <span class="hljs-string">'直接访问'</span></span><br><span class="line">  &#125;, &#123;</span><br><span class="line">    <span class="hljs-string">'value'</span>: <span class="hljs-number">310</span>,</span><br><span class="line">    <span class="hljs-string">'name'</span>: <span class="hljs-string">'邮件营销'</span></span><br><span class="line">  &#125;, &#123;</span><br><span class="line">    <span class="hljs-string">'value'</span>: <span class="hljs-number">234</span>,</span><br><span class="line">    <span class="hljs-string">'name'</span>: <span class="hljs-string">'联盟广告'</span></span><br><span class="line">  &#125;, &#123;</span><br><span class="line">    <span class="hljs-string">'value'</span>: <span class="hljs-number">135</span>,</span><br><span class="line">    <span class="hljs-string">'name'</span>: <span class="hljs-string">'视频广告'</span></span><br><span class="line">  &#125;, &#123;</span><br><span class="line">    <span class="hljs-string">'value'</span>: <span class="hljs-number">748</span>,</span><br><span class="line">    <span class="hljs-string">'name'</span>: <span class="hljs-string">'搜索引擎'</span></span><br><span class="line">  &#125;];</span><br><span class="line"></span><br><span class="line">&#125;);</span><br><span class="line">angular.module(<span class="hljs-string">'demo'</span>).directive(<span class="hljs-string">'barChart'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">$window</span>) </span>&#123; <span class="hljs-comment">//定义条形图指令</span></span><br><span class="line">  <span class="hljs-keyword">return</span> &#123;</span><br><span class="line">    restrict: <span class="hljs-string">'A'</span>, <span class="hljs-comment">//以属性的方式调用指令</span></span><br><span class="line">    link: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">$scope, element, attrs</span>) </span>&#123; <span class="hljs-comment">//attrs是DOM元素的属性集合</span></span><br><span class="line">      <span class="hljs-keyword">var</span> myChart = echarts.init(element[<span class="hljs-number">0</span>]); <span class="hljs-comment">//element是一个jqlite对象，如果jQuery在AngularJS之前引入,则是一个jQuery对象,可使用jQuery所有的方法</span></span><br><span class="line">      $scope.$watch(attrs.eData, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">newValue, oldValue, scope</span>) </span>&#123; <span class="hljs-comment">//监听属性e-data的值，当数据发生改变时执行作为第二个参数的函数</span></span><br><span class="line">        <span class="hljs-keyword">var</span> xData = [],</span><br><span class="line">          sData = [],</span><br><span class="line">          data = newValue; <span class="hljs-comment">//获取$scope.data</span></span><br><span class="line">        angular.forEach(data, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">val</span>) </span>&#123;</span><br><span class="line">          xData.push(val.name);</span><br><span class="line">          sData.push(val.value);</span><br><span class="line">        &#125;);</span><br><span class="line">        <span class="hljs-keyword">var</span> option = &#123;</span><br><span class="line">          title: &#123;</span><br><span class="line">            text: <span class="hljs-string">'某站点用户访问来源'</span>,</span><br><span class="line">            subtext: <span class="hljs-string">'纯属虚构'</span>,</span><br><span class="line">            x: <span class="hljs-string">'center'</span></span><br><span class="line">          &#125;,</span><br><span class="line">          color: [<span class="hljs-string">'#3398DB'</span>],</span><br><span class="line">          tooltip: &#123;</span><br><span class="line">            trigger: <span class="hljs-string">'axis'</span>,</span><br><span class="line">            axisPointer: &#123;</span><br><span class="line">              type: <span class="hljs-string">'shadow'</span></span><br><span class="line">            &#125;</span><br><span class="line">          &#125;,</span><br><span class="line">          grid: &#123;</span><br><span class="line">            left: <span class="hljs-string">'3%'</span>,</span><br><span class="line">            right: <span class="hljs-string">'4%'</span>,</span><br><span class="line">            bottom: <span class="hljs-string">'3%'</span>,</span><br><span class="line">            containLabel: <span class="hljs-literal">true</span></span><br><span class="line">          &#125;,</span><br><span class="line">          xAxis: [&#123;</span><br><span class="line">            type: <span class="hljs-string">'category'</span>,</span><br><span class="line">            data: xData,</span><br><span class="line">            axisTick: &#123;</span><br><span class="line">              alignWithLabel: <span class="hljs-literal">true</span></span><br><span class="line">            &#125;</span><br><span class="line">          &#125;],</span><br><span class="line">          yAxis: [&#123;</span><br><span class="line">            type: <span class="hljs-string">'value'</span></span><br><span class="line">          &#125;],</span><br><span class="line">          series: [&#123;</span><br><span class="line">            name: <span class="hljs-string">'直接访问'</span>,</span><br><span class="line">            type: <span class="hljs-string">'bar'</span>,</span><br><span class="line">            barWidth: <span class="hljs-string">'60%'</span>,</span><br><span class="line">            data: sData</span><br><span class="line">          &#125;]</span><br><span class="line">        &#125;;</span><br><span class="line">        myChart.setOption(option);</span><br><span class="line">      &#125;, <span class="hljs-literal">true</span>); <span class="hljs-comment">//$watch的第三个参数，是否深度监听，true监听对象所有属性的变化。</span></span><br><span class="line">      $<span class="hljs-built_in">window</span>.onresize = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>&#123; <span class="hljs-comment">//调用window服务，使图表能响应式调整大小</span></span><br><span class="line">        myChart.resize();</span><br><span class="line">      &#125;;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">angular.module(<span class="hljs-string">'demo'</span>).directive(<span class="hljs-string">'pieChart'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">$window</span>) </span>&#123; <span class="hljs-comment">//定义饼图指令</span></span><br><span class="line">  <span class="hljs-keyword">return</span> &#123;</span><br><span class="line">    restrict: <span class="hljs-string">'A'</span>,</span><br><span class="line">    link: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">$scope, element, attrs</span>) </span>&#123; <span class="hljs-comment">//attrs是DOM元素的属性集合</span></span><br><span class="line">      <span class="hljs-keyword">var</span> myChart = echarts.init(element[<span class="hljs-number">0</span>]);</span><br><span class="line">      $scope.$watch(attrs.eData, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">newValue, oldValue, scope</span>) </span>&#123;</span><br><span class="line">        <span class="hljs-keyword">var</span> legend = [];</span><br><span class="line">        angular.forEach(newValue, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">val</span>) </span>&#123;</span><br><span class="line">          legend.push(val.name);</span><br><span class="line">        &#125;);</span><br><span class="line">        <span class="hljs-keyword">var</span> option = &#123;</span><br><span class="line">          title: &#123;</span><br><span class="line">            text: <span class="hljs-string">'某站点用户访问来源'</span>,</span><br><span class="line">            subtext: <span class="hljs-string">'纯属虚构'</span>,</span><br><span class="line">            x: <span class="hljs-string">'center'</span></span><br><span class="line">          &#125;,</span><br><span class="line">          tooltip: &#123;</span><br><span class="line">            trigger: <span class="hljs-string">'item'</span>,</span><br><span class="line">            formatter: <span class="hljs-string">"&#123;a&#125; &lt;br/&gt;&#123;b&#125; : &#123;c&#125; (&#123;d&#125;%)"</span></span><br><span class="line">          &#125;,</span><br><span class="line">          legend: &#123;</span><br><span class="line">            orient: <span class="hljs-string">'vertical'</span>,</span><br><span class="line">            left: <span class="hljs-string">'left'</span>,</span><br><span class="line">            data: legend</span><br><span class="line">          &#125;,</span><br><span class="line">          series: [&#123;</span><br><span class="line">            name: <span class="hljs-string">'访问来源'</span>,</span><br><span class="line">            type: <span class="hljs-string">'pie'</span>,</span><br><span class="line">            radius: <span class="hljs-string">'55%'</span>,</span><br><span class="line">            center: [<span class="hljs-string">'50%'</span>, <span class="hljs-string">'60%'</span>],</span><br><span class="line">            data: newValue,</span><br><span class="line">            itemStyle: &#123;</span><br><span class="line">              emphasis: &#123;</span><br><span class="line">                shadowBlur: <span class="hljs-number">10</span>,</span><br><span class="line">                shadowOffsetX: <span class="hljs-number">0</span>,</span><br><span class="line">                shadowColor: <span class="hljs-string">'rgba(0, 0, 0, 0.5)'</span></span><br><span class="line">              &#125;</span><br><span class="line">            &#125;</span><br><span class="line">          &#125;]</span><br><span class="line">        &#125;;</span><br><span class="line">        myChart.setOption(option);</span><br><span class="line">      &#125;, <span class="hljs-literal">true</span>);</span><br><span class="line">      <span class="hljs-built_in">window</span>.addEventListener(<span class="hljs-string">"resize"</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>&#123;  <span class="hljs-comment">//这里使用$window.onresize方法会使前面的图表无法调整大小</span></span><br><span class="line">        myChart.resize();</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://www.echartsjs.com/index.html" target="_blank" rel="noopener">ECharts - 可高度个性化定制的数据可视化图表</a><br><a href="https://www.echartsjs.com/api.html#echarts" target="_blank" rel="noopener">ECharts - API</a><br><a href="https://codepen.io/chj/pen/ZpLpQo" target="_blank" rel="noopener">在AngularJS中使用Echarts</a></p>
-
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/08/18/javascript/echarts/#more">阅读更多</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
 
     
 <div class="card card-transparent">
@@ -722,7 +724,7 @@
                         文章
                     </p>
                     <p class="title has-text-weight-normal">
-                        67
+                        68
                     </p>
                 </div>
             </div>
@@ -792,7 +794,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Hexo/">
                         <span class="tag">Hexo</span>
-                        <span class="tag is-grey">3</span>
+                        <span class="tag is-grey">4</span>
                     </a>
                 </div>
                 
@@ -892,7 +894,7 @@
                     <span class="level-item">四月 2020</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">1</span>
+                    <span class="level-item tag">2</span>
                 </span>
             </a>
         </li>
@@ -966,6 +968,25 @@
         
         <article class="media">
             
+            <a href="/2020/04/10/hexo/hexo-tags/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="hexo-tags">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-04-10T09:15:27.000Z">2020-04-10</time></div>
+                    <a href="/2020/04/10/hexo/hexo-tags/" class="title has-link-black-ter is-size-6 has-text-weight-normal">hexo-tags</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/2020/04/10/git/git-delete-tags/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/images/thumbnail.svg" alt="git-delete-tags">
@@ -1033,25 +1054,6 @@
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-25T14:06:40.000Z">2020-02-25</time></div>
                     <a href="/2020/02/25/music/" class="title has-link-black-ter is-size-6 has-text-weight-normal">音乐</a>
-                    <p class="is-size-7 is-uppercase">
-                        
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/11/02/mysql/mysql-index/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="MySQL索引">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-11-02T05:45:50.000Z">2019-11-02</time></div>
-                    <a href="/2019/11/02/mysql/mysql-index/" class="title has-link-black-ter is-size-6 has-text-weight-normal">MySQL索引</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>

@@ -2,7 +2,7 @@
 <html lang="zh">
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-<title>Git 修改远程主机地址 - Coder</title>
+<title>hexo-tags - Coder</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="google-site-verification" content="nf1fTgUwUjCPuVDdA4bZdWYWTonwbiJjQkRh15iKYfI">
 
@@ -72,7 +72,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="Git 修改远程主机地址" height="28">
+                <img src="/images/logo.svg" alt="hexo-tags" height="28">
             
             </a>
         </div>
@@ -112,13 +112,13 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-08-31T09:55:21.000Z">2019-08-31</time>
+                <time class="level-item has-text-grey" datetime="2020-04-10T09:15:27.000Z">2020-04-10</time>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    几秒 读完 (大约 76 个字)
+                    2 分钟 读完 (大约 245 个字)
                 </span>
                 
                 
@@ -127,23 +127,14 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                Git 修改远程主机地址
+                hexo-tags
             
         </h1>
         <div class="content">
-            <ol>
-<li>可直接修改远程主机地址：<blockquote>
-<p>git remote set-url origin [url]</p>
-</blockquote>
-</li>
-</ol>
-<p>其中origin为远程主机名称，url为要设置的远程主机地址<br>例如：git remote set-url origin <a href="mailto:gitlab@gitlab.chumob.com" target="_blank" rel="noopener">gitlab@gitlab.chumob.com</a>:php/hasoffer.git</p>
-<ol start="2">
-<li>删除远程主机后重新添加<blockquote>
-<p>git remote rm origin<br>git remote add origin [url]</p>
-</blockquote>
-</li>
-</ol>
+            <h2 id="分类标签中关于大小写的bug"><a href="#分类标签中关于大小写的bug" class="headerlink" title="分类标签中关于大小写的bug"></a>分类标签中关于大小写的bug</h2><h3 id="1-描述"><a href="#1-描述" class="headerlink" title="1. 描述"></a>1. 描述</h3><p>当我的分类标签写的是Scrapy时，打开我的博客找到Scrapy标签，点击Scrapy却出现404页面。<br>当我把标签改为scrapy小写，再发布到网上，点击scrapy就不会出现404问题。<br>后来发现原来是git标签生成时忽略了大写，生成的实际标签为scrapy。<br>于是我来到我的Github中，找到Gladysgong.github.io/categories/爬虫/这个目录，发现实际生成的也是scrapy，所以<br>原因就在这里了。</p>
+<h3 id="2-解决"><a href="#2-解决" class="headerlink" title="2. 解决"></a>2. 解决</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"># 修改文件：</span><br><span class="line">    cd blog/.deploy_git</span><br><span class="line">    vi .git/config</span><br><span class="line">    将ignorecase=true改为ignorecase=false</span><br><span class="line"># 删除Gladysgong.github.io中的文件并提交：</span><br><span class="line">    git rm -rm *</span><br><span class="line">    git commit -m &quot;clean all files&quot;</span><br><span class="line">    git push</span><br><span class="line"># Hexo再次生成及部署：</span><br><span class="line">    cd ..</span><br><span class="line">    hexo clean</span><br><span class="line">    hexo g</span><br><span class="line">    hexo d</span><br></pre></td></tr></table></figure>
+
+<p>参考：<a href="http://gongyanli.com/Hexo%E5%88%86%E7%B1%BB%E6%A0%87%E7%AD%BE%E4%B8%AD%E5%85%B3%E4%BA%8E%E5%A4%A7%E5%B0%8F%E5%86%99%E7%9A%84bug/" target="_blank" rel="noopener">http://gongyanli.com/Hexo%E5%88%86%E7%B1%BB%E6%A0%87%E7%AD%BE%E4%B8%AD%E5%85%B3%E4%BA%8E%E5%A4%A7%E5%B0%8F%E5%86%99%E7%9A%84bug/</a></p>
 
         </div>
         
@@ -151,7 +142,7 @@
             <div class="level-start">
                 <div class="level-item">
                     <span class="is-size-6 has-text-grey has-mr-7">#</span>
-                    <a class="has-link-grey -link" href="/tags/Git/">Git</a>
+                    <a class="has-link-grey -link" href="/tags/Hexo/">Hexo</a>
                 </div>
             </div>
         </div>
@@ -177,17 +168,10 @@
 <div class="card card-transparent">
     <div class="level post-navigation is-flex-wrap is-mobile">
         
-        <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/09/21/javascript/node-sass/">
-                <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">node-sass 安装失败问题</span>
-            </a>
-        </div>
-        
         
         <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/2019/08/31/git/git-diff/">
-                <span class="level-item">Git 对比分支差异</span>
+            <a class="level level-item has-link-grey  article-nav-next" href="/2020/04/10/git/git-delete-tags/">
+                <span class="level-item">git-delete-tags</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
@@ -595,7 +579,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="Git 修改远程主机地址" height="28">
+                    <img src="/images/logo.svg" alt="hexo-tags" height="28">
                 
                 </a>
                 <p class="is-size-7">
