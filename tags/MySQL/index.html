@@ -181,7 +181,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    1 分钟 读完 (大约 116 个字)
+                    1 分钟 读完 (大约 165 个字)
                 </span>
                 
                 
@@ -190,16 +190,12 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/08/14/mysql/mysql-binlog/">Mysql 查看binlog</a>
+                <a class="has-link-black-ter" href="/2019/08/14/mysql/mysql-function/">Mysql常用函数</a>
             
         </h1>
         <div class="content">
-            <p>解压缩<br>tar -xzvf binlog-free.tar.gz</p>
-<p>mysqlbinlog -vvv –base64-output=decode-rows mysql-bin.02702* 这个命令是查看日志内容的<br>mysqlbinlog -vvv –base64-output=decode-rows mysql-bin.000001</p>
-<p>mysqlbinlog -vvv –base64-output=decode-rows mysql-bin.0273* &gt;prd.sql<br>mysqlbinlog -vvv –base64-output=decode-rows mysql-bin.0277* &gt;prd.sql<br>mysqlbinlog -vvv –base64-output=decode-rows mysql-bin.0280* &gt;prd.sql</p>
-<p>mysqlbinlog -vvv –base64-output=decode-rows mysql-bin.0293* &gt;prd.sql<br>mysqlbinlog -vvv –base64-output=decode-rows mysql-bin.0313* &gt;prd.sql</p>
-<p>linux 下执行<br>替换文件名中的.sql为空字符串<br>rename .sql.rm ‘’ *</p>
-<p>windows下添加后缀名<br>ren * *.sql</p>
+            <figure class="highlight sql hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">-- 求绝对值</span></span><br><span class="line">ABS(x)</span><br><span class="line"><span class="hljs-comment">-- 四舍五入</span></span><br><span class="line">ROUND(x)</span><br><span class="line"><span class="hljs-comment">-- 字符数</span></span><br><span class="line">CHAR_LENGTH(s)</span><br><span class="line"><span class="hljs-comment">-- 字符串长度</span></span><br><span class="line">LENGTH(s)</span><br><span class="line"><span class="hljs-comment">-- 字符串拼接</span></span><br><span class="line">CONCAT(s1,s2,...)</span><br><span class="line"><span class="hljs-comment">-- 字符串截取：从字符串s中的第a个字符开始取b个字符</span></span><br><span class="line">SUBSTRING(s,a,b)</span><br><span class="line"><span class="hljs-comment">-- 当前日期</span></span><br><span class="line">CURRENT_DATE()</span><br><span class="line"><span class="hljs-comment">-- 当前时间</span></span><br><span class="line">CURRENT_TIME()</span><br><span class="line"><span class="hljs-comment">-- 当前时间戳</span></span><br><span class="line">UNIX_TIMESTAMP()</span><br><span class="line"><span class="hljs-comment">-- 把UNIX时间戳的时间转换为普通格式的时间</span></span><br><span class="line">FROM_UNIXTIME(d)</span><br><span class="line"><span class="hljs-comment">-- 如果表达式expr成立，返回结果v1；否则，返回结果v2。</span></span><br><span class="line">IF(expr,v1,v2)</span><br><span class="line"><span class="hljs-comment">-- 如果v1的不为空，就显示v1的值；否则就显示v2的值。</span></span><br><span class="line">IFNULL(v1,v2)</span><br><span class="line"><span class="hljs-comment">-- 数据库版本号</span></span><br><span class="line">VERSION()</span><br></pre></td></tr></table></figure>
+
 
         </div>
         
@@ -207,7 +203,7 @@
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/08/14/mysql/mysql-binlog/#more">阅读更多</a>
+                <a class="button is-size-7 is-light" href="/2019/08/14/mysql/mysql-function/#more">阅读更多</a>
                 </div>
             </div>
         </div>
@@ -235,7 +231,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    1 分钟 读完 (大约 165 个字)
+                    1 分钟 读完 (大约 116 个字)
                 </span>
                 
                 
@@ -244,12 +240,16 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/08/14/mysql/mysql-function/">Mysql常用函数</a>
+                <a class="has-link-black-ter" href="/2019/08/14/mysql/mysql-binlog/">Mysql 查看binlog</a>
             
         </h1>
         <div class="content">
-            <figure class="highlight sql hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">-- 求绝对值</span></span><br><span class="line">ABS(x)</span><br><span class="line"><span class="hljs-comment">-- 四舍五入</span></span><br><span class="line">ROUND(x)</span><br><span class="line"><span class="hljs-comment">-- 字符数</span></span><br><span class="line">CHAR_LENGTH(s)</span><br><span class="line"><span class="hljs-comment">-- 字符串长度</span></span><br><span class="line">LENGTH(s)</span><br><span class="line"><span class="hljs-comment">-- 字符串拼接</span></span><br><span class="line">CONCAT(s1,s2,...)</span><br><span class="line"><span class="hljs-comment">-- 字符串截取：从字符串s中的第a个字符开始取b个字符</span></span><br><span class="line">SUBSTRING(s,a,b)</span><br><span class="line"><span class="hljs-comment">-- 当前日期</span></span><br><span class="line">CURRENT_DATE()</span><br><span class="line"><span class="hljs-comment">-- 当前时间</span></span><br><span class="line">CURRENT_TIME()</span><br><span class="line"><span class="hljs-comment">-- 当前时间戳</span></span><br><span class="line">UNIX_TIMESTAMP()</span><br><span class="line"><span class="hljs-comment">-- 把UNIX时间戳的时间转换为普通格式的时间</span></span><br><span class="line">FROM_UNIXTIME(d)</span><br><span class="line"><span class="hljs-comment">-- 如果表达式expr成立，返回结果v1；否则，返回结果v2。</span></span><br><span class="line">IF(expr,v1,v2)</span><br><span class="line"><span class="hljs-comment">-- 如果v1的不为空，就显示v1的值；否则就显示v2的值。</span></span><br><span class="line">IFNULL(v1,v2)</span><br><span class="line"><span class="hljs-comment">-- 数据库版本号</span></span><br><span class="line">VERSION()</span><br></pre></td></tr></table></figure>
-
+            <p>解压缩<br>tar -xzvf binlog-free.tar.gz</p>
+<p>mysqlbinlog -vvv –base64-output=decode-rows mysql-bin.02702* 这个命令是查看日志内容的<br>mysqlbinlog -vvv –base64-output=decode-rows mysql-bin.000001</p>
+<p>mysqlbinlog -vvv –base64-output=decode-rows mysql-bin.0273* &gt;prd.sql<br>mysqlbinlog -vvv –base64-output=decode-rows mysql-bin.0277* &gt;prd.sql<br>mysqlbinlog -vvv –base64-output=decode-rows mysql-bin.0280* &gt;prd.sql</p>
+<p>mysqlbinlog -vvv –base64-output=decode-rows mysql-bin.0293* &gt;prd.sql<br>mysqlbinlog -vvv –base64-output=decode-rows mysql-bin.0313* &gt;prd.sql</p>
+<p>linux 下执行<br>替换文件名中的.sql为空字符串<br>rename .sql.rm ‘’ *</p>
+<p>windows下添加后缀名<br>ren * *.sql</p>
 
         </div>
         
@@ -257,7 +257,7 @@
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/08/14/mysql/mysql-function/#more">阅读更多</a>
+                <a class="button is-size-7 is-light" href="/2019/08/14/mysql/mysql-binlog/#more">阅读更多</a>
                 </div>
             </div>
         </div>
@@ -545,7 +545,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/git/">
                         <span class="tag">Git</span>
-                        <span class="tag is-grey">1</span>
+                        <span class="tag is-grey">8</span>
                     </a>
                 </div>
                 
@@ -636,7 +636,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/git/">
                         <span class="tag">git</span>
-                        <span class="tag is-grey">8</span>
+                        <span class="tag is-grey">1</span>
                     </a>
                 </div>
                 

@@ -119,6 +119,63 @@
                 <span class="level-item has-text-grey">
                     
                     
+                    几秒 读完 (大约 97 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/08/14/docker/docker-accelerator/">Docker镜像下载加速器</a>
+            
+        </h1>
+        <div class="content">
+            <h3 id="配置DaoCloud加速器："><a href="#配置DaoCloud加速器：" class="headerlink" title="配置DaoCloud加速器："></a>配置DaoCloud加速器：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -sSL https://get.daocloud.io/daotools/set_mirror.sh | sh -s http://b18c7aa2.m.daocloud.io</span><br></pre></td></tr></table></figure>
+
+<h3 id="配置阿里云加速器："><a href="#配置阿里云加速器：" class="headerlink" title="配置阿里云加速器："></a>配置阿里云加速器：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -sSL https://get.daocloud.io/daotools/set_mirror.sh | sh -s https://zf0ry6xq.mirror.aliyuncs.com</span><br></pre></td></tr></table></figure>
+
+<h3 id="查看加速配置信息："><a href="#查看加速配置信息：" class="headerlink" title="查看加速配置信息："></a>查看加速配置信息：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker info</span><br></pre></td></tr></table></figure>
+
+<h3 id="配置完成后需要重启docker服务："><a href="#配置完成后需要重启docker服务：" class="headerlink" title="配置完成后需要重启docker服务："></a>配置完成后需要重启docker服务：</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart docker</span><br></pre></td></tr></table></figure>
+
+<p>或</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service docker restart</span><br></pre></td></tr></table></figure>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/08/14/docker/docker-accelerator/#more">阅读更多</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-14T02:29:03.000Z">2019-08-14</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
                     4 分钟 读完 (大约 530 个字)
                 </span>
                 
@@ -149,72 +206,6 @@
             <div class="level-start">
                 <div class="level-item">
                 <a class="button is-size-7 is-light" href="/2019/08/14/docker/docker/#more">阅读更多</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-08-14T02:29:03.000Z">2019-08-14</time>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    1 分钟 读完 (大约 212 个字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/08/14/docker/docker-compose-file/">Docker compose file 配置参考</a>
-            
-        </h1>
-        <div class="content">
-            <h2 id="示例配置："><a href="#示例配置：" class="headerlink" title="示例配置："></a>示例配置：</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">version: &quot;3&quot;</span><br><span class="line">services:</span><br><span class="line"></span><br><span class="line">  redis:</span><br><span class="line">    image: redis:alpine</span><br><span class="line">    ports:</span><br><span class="line">      - &quot;6379&quot;</span><br><span class="line">    networks:</span><br><span class="line">      - frontend</span><br><span class="line">    deploy:</span><br><span class="line">      replicas: 2</span><br><span class="line">      update_config:</span><br><span class="line">        parallelism: 2</span><br><span class="line">        delay: 10s</span><br><span class="line">      restart_policy:</span><br><span class="line">        condition: on-failure</span><br><span class="line"></span><br><span class="line">  db:</span><br><span class="line">    image: postgres:9.4</span><br><span class="line">    volumes:</span><br><span class="line">      - db-data:/var/lib/postgresql/data</span><br><span class="line">    networks:</span><br><span class="line">      - backend</span><br><span class="line">    deploy:</span><br><span class="line">      placement:</span><br><span class="line">        constraints: [node.role == manager]</span><br><span class="line"></span><br><span class="line">networks:</span><br><span class="line">  frontend:</span><br><span class="line">  backend:</span><br><span class="line"></span><br><span class="line">volumes:</span><br><span class="line">  db-data:</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>version: </li>
-<li>services:</li>
-</ul>
-<h2 id="deploy-应用发布配置"><a href="#deploy-应用发布配置" class="headerlink" title="deploy - 应用发布配置"></a>deploy - 应用发布配置</h2><p><a href="https://docs.docker.com/compose/compose-file/#restart_policy" target="_blank" rel="noopener">restart_policy - 应用发布重启策略</a></p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">version: &quot;3&quot;</span><br><span class="line">services:</span><br><span class="line">  redis:</span><br><span class="line">    image: redis:alpine</span><br><span class="line">    deploy:</span><br><span class="line">      restart_policy:</span><br><span class="line">        condition: on-failure</span><br><span class="line">        delay: 5s</span><br><span class="line">        max_attempts: 3</span><br><span class="line">        window: 120s</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>condition: 可选项 none on-failure any(default)</li>
-<li>delay: 尝试重启等待时间，默认0s</li>
-<li>max_attempts: 最大重启次数，默认无限，首次启动不计入</li>
-<li>window: 判定重启是否成功等待时长，默认0s</li>
-</ul>
-<p><a href="https://docs.docker.com/compose/compose-file/#update_config" target="_blank" rel="noopener">update_config - 应用发布更新策略</a></p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">version: &apos;3.4&apos;</span><br><span class="line">services:</span><br><span class="line">  vote:</span><br><span class="line">    image: dockersamples/examplevotingapp_vote:before</span><br><span class="line">    depends_on:</span><br><span class="line">      - redis</span><br><span class="line">    deploy:</span><br><span class="line">      replicas: 2</span><br><span class="line">      update_config:</span><br><span class="line">        parallelism: 2</span><br><span class="line">        delay: 10s</span><br><span class="line">        order: stop-first</span><br></pre></td></tr></table></figure>
-
-<h2 id="官方参考文档地址："><a href="#官方参考文档地址：" class="headerlink" title="官方参考文档地址："></a>官方参考文档地址：</h2>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/08/14/docker/docker-compose-file/#more">阅读更多</a>
                 </div>
             </div>
         </div>
@@ -800,7 +791,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/git/">
                         <span class="tag">Git</span>
-                        <span class="tag is-grey">1</span>
+                        <span class="tag is-grey">8</span>
                     </a>
                 </div>
                 
@@ -891,7 +882,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/git/">
                         <span class="tag">git</span>
-                        <span class="tag is-grey">8</span>
+                        <span class="tag is-grey">1</span>
                     </a>
                 </div>
                 
