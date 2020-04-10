@@ -150,25 +150,3 @@ git branch --set-upstream origin/master 设置跟踪远程仓库
 ```
 git help <command>
 ```
-
-## Git其他命令
-查看远程Tag
-> git show-ref --tag
-
-删除远程主机指定Tag
-> git push origin :refs/tags/
-
-修改远程主机地址：
-> git remote set-url origin [url]
-其中origin为远程主机名称，url为要设置的远程主机地址
-例如：git remote set-url origin gitlab@gitlab.chumob.com:php/hasoffer.git
-
-删除远程主机后重新添加
-> git remote rm origin
-> git remote add origin [url]
-
-对比分支差异
-查看dev分支有而master分支没有的提交：
-```
-git log dev ^master
-```

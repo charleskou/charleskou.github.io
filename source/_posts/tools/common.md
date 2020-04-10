@@ -10,5 +10,8 @@ date: 2019-10-30 17:52:28
 - TTC转TTF https://transfonter.org/ttc-unpack
 - 博客：https://www.cnkirito.moe/
 - 插件网站：https://github.com/ppoffice
+- Online JSON Viewer：http://jsonviewer.stack.hu
+- Cron表达式生成器：https://cron.qqe2.com/
+- PHP在线执行：https://tool.lu/coderunner/
 - 
 
