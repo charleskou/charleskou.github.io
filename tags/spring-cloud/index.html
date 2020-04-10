@@ -2,7 +2,7 @@
 <html lang="zh">
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-<title>proxy - Coder</title>
+<title>标签: Spring Cloud - Coder</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="google-site-verification" content="nf1fTgUwUjCPuVDdA4bZdWYWTonwbiJjQkRh15iKYfI">
 
@@ -72,7 +72,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="proxy" height="28">
+                <img src="/images/logo.svg" alt="Coder" height="28">
             
             </a>
         </div>
@@ -107,18 +107,29 @@
         <div class="container">
             <div class="columns">
                 <div class="column is-9-tablet is-9-desktop is-9-widescreen has-order-2 column-main"><div class="card">
+    <div class="card-content">
+        <nav class="breadcrumb" aria-label="breadcrumbs">
+        <ul>
+            <li><a href="/tags">标签</a></li>
+            <li class="is-active"><a href="#" aria-current="page">Spring Cloud</a></li>
+        </ul>
+        </nav>
+    </div>
+</div>
+
+    <div class="card">
     
     <div class="card-content article ">
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-08-14T09:06:11.000Z">2019-08-14</time>
+                <time class="level-item has-text-grey" datetime="2019-08-14T01:40:56.000Z">2019-08-14</time>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    几秒 读完 (大约 19 个字)
+                    2 分钟 读完 (大约 322 个字)
                 </span>
                 
                 
@@ -127,61 +138,88 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                proxy
+                <a class="has-link-black-ter" href="/2019/08/14/java/spring-cloud/">spring-cloud</a>
             
         </h1>
         <div class="content">
-            <h2 id="代理"><a href="#代理" class="headerlink" title="代理"></a>代理</h2><h2 id="反向代理"><a href="#反向代理" class="headerlink" title="反向代理"></a>反向代理</h2><p><img src="https://pic2.zhimg.com/2582ac2a1366e3e12acf274265ea80f3_r.jpg" alt></p>
-
+            <h2 id="registry"><a href="#registry" class="headerlink" title="registry"></a>registry</h2><p>注册中心<br>Eureka</p>
+<h3 id="Eureka自我保护机制"><a href="#Eureka自我保护机制" class="headerlink" title="Eureka自我保护机制"></a>Eureka自我保护机制</h3><p>springcloud服务已经关但是Eureka还是显示up，该状态持续很久，访问该服务也返回错误，但在注册中心界面，该服务却一直存在，且为UP状态，并且在大约十分钟后，出现一行红色大字：EMERGENCY! EUREKA MAY BE INCORRECTLY CLAIMING INSTANCES ARE UP WHEN THEY’RE NOT. RENEWALS ARE LESSER THAN THRESHOLD AND HENCE THE INSTANCES ARE NOT BEING EXPIRED JUST TO BE SAFE.<br>原因：自我保护机制。Eureka Server在运行期间，会统计心跳失败的比例在15分钟之内是否低于85%，如果出现低于的情况（在单机调试的时候很容易满足，实际在生产环境上通常是由于网络不稳定导致），Eureka Server会将当前的实例注册信息保护起来，同时提示这个警告。</p>
+<h2 id="进程间通信"><a href="#进程间通信" class="headerlink" title="进程间通信"></a>进程间通信</h2><p>Feign</p>
+<h2 id="负载均衡"><a href="#负载均衡" class="headerlink" title="负载均衡"></a>负载均衡</h2><p>客户端负载均衡<br>Ribbon</p>
+<h2 id="分布式配置中心"><a href="#分布式配置中心" class="headerlink" title="分布式配置中心"></a>分布式配置中心</h2><p>Spring Cloud Config<br>动态刷新<br><a href="http://blog.didispace.com/springcloud4-2/" target="_blank" rel="noopener">http://blog.didispace.com/springcloud4-2/</a><br>消息总线</p>
         </div>
         
-        <div class="level is-size-7 is-uppercase">
+        
+        <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
-                    <a class="has-link-grey -link" href="/tags/tool/">Tool</a>
+                <a class="button is-size-7 is-light" href="/2019/08/14/java/spring-cloud/#more">阅读更多</a>
                 </div>
             </div>
         </div>
         
         
-        
     </div>
 </div>
 
 
 
-<div class="card">
-    <div class="card-content">
-        <h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3>
-        <div class="buttons is-centered">
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-13T08:38:59.000Z">2019-08-13</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    1 分钟 读完 (大约 131 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
+                <a class="has-link-black-ter" href="/2019/08/13/java/spring-cloud-config/">spring-cloud-config</a>
+            
+        </h1>
+        <div class="content">
+            <h2 id="dependency"><a href="#dependency" class="headerlink" title="dependency"></a>dependency</h2><h2 id="动态刷新"><a href="#动态刷新" class="headerlink" title="动态刷新"></a>动态刷新</h2><h3 id="使用限制"><a href="#使用限制" class="headerlink" title="使用限制"></a>使用限制</h3><p>@RefreshScope @Configuration 不能同时在一个类上使用<br>原因说明：</p>
+<blockquote>
+<p>@RefreshScope works (technically) on an @Configuration class, but it might lead to surprising behaviour: e.g. it does not mean that all the @Beans defined in that class are themselves @RefreshScope. Specifically, anything that depends on those beans cannot rely on them being updated when a refresh is initiated, unless it is itself in @RefreshScope (in which it will be rebuilt on a refresh and its dependencies re-injected, at which point they will be re-initialized from the refreshed @Configuration).</p>
+</blockquote>
+<p>参考：<br><a href="https://stackoverflow.com/questions/45137555/refreshscope-not-working-spring-boot" target="_blank" rel="noopener">https://stackoverflow.com/questions/45137555/refreshscope-not-working-spring-boot</a><br><a href="http://projects.spring.io/spring-cloud/spring-cloud.html#_refresh_scope" target="_blank" rel="noopener">http://projects.spring.io/spring-cloud/spring-cloud.html#_refresh_scope</a></p>
+
         </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/08/13/java/spring-cloud-config/#more">阅读更多</a>
+                </div>
+            </div>
+        </div>
+        
+        
     </div>
 </div>
 
 
 
-<div class="card card-transparent">
-    <div class="level post-navigation is-flex-wrap is-mobile">
-        
-        <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/08/15/java/spring-retry/">
-                <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">spring-retry</span>
-            </a>
-        </div>
-        
-        
-        <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/2019/08/14/mysql/mysql/">
-                <span class="level-item">Mysql相关</span>
-                <i class="level-item fas fa-chevron-right"></i>
-            </a>
-        </div>
-        
-    </div>
-</div>
+
+
+
 
 
 </div>
@@ -590,7 +628,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="proxy" height="28">
+                    <img src="/images/logo.svg" alt="Coder" height="28">
                 
                 </a>
                 <p class="is-size-7">

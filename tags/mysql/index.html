@@ -2,7 +2,7 @@
 <html lang="zh">
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-<title>proxy - Coder</title>
+<title>标签: MySQL - Coder</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="google-site-verification" content="nf1fTgUwUjCPuVDdA4bZdWYWTonwbiJjQkRh15iKYfI">
 
@@ -72,7 +72,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="proxy" height="28">
+                <img src="/images/logo.svg" alt="Coder" height="28">
             
             </a>
         </div>
@@ -107,18 +107,29 @@
         <div class="container">
             <div class="columns">
                 <div class="column is-9-tablet is-9-desktop is-9-widescreen has-order-2 column-main"><div class="card">
+    <div class="card-content">
+        <nav class="breadcrumb" aria-label="breadcrumbs">
+        <ul>
+            <li><a href="/tags">标签</a></li>
+            <li class="is-active"><a href="#" aria-current="page">MySQL</a></li>
+        </ul>
+        </nav>
+    </div>
+</div>
+
+    <div class="card">
     
     <div class="card-content article ">
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-08-14T09:06:11.000Z">2019-08-14</time>
+                <time class="level-item has-text-grey" datetime="2019-11-02T05:45:50.000Z">2019-11-02</time>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    几秒 读完 (大约 19 个字)
+                    几秒 读完 (大约 90 个字)
                 </span>
                 
                 
@@ -127,61 +138,302 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                proxy
+                <a class="has-link-black-ter" href="/2019/11/02/mysql/mysql-index/">MySQL索引</a>
             
         </h1>
         <div class="content">
-            <h2 id="代理"><a href="#代理" class="headerlink" title="代理"></a>代理</h2><h2 id="反向代理"><a href="#反向代理" class="headerlink" title="反向代理"></a>反向代理</h2><p><img src="https://pic2.zhimg.com/2582ac2a1366e3e12acf274265ea80f3_r.jpg" alt></p>
+            <p>索引<br>    基数：索引区分度，采样统计<br>        数据页<br>        变更触发索引统计<br>        重新统计索引信息命令：analyze table t</p>
+<p>优化器选择索引<br>    扫描行数</p>
+<p>explain<br>强制使用索引 force index(a)<br>设置慢查询SQL阈值 set long_query_time=0;<br>全表扫描</p>
+<p>前缀索引<br>    字符串字段创建索引</p>
 
         </div>
         
-        <div class="level is-size-7 is-uppercase">
+        
+        <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
-                    <a class="has-link-grey -link" href="/tags/tool/">Tool</a>
+                <a class="button is-size-7 is-light" href="/2019/11/02/mysql/mysql-index/#more">阅读更多</a>
                 </div>
             </div>
         </div>
         
         
-        
     </div>
 </div>
 
 
 
-<div class="card">
-    <div class="card-content">
-        <h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3>
-        <div class="buttons is-centered">
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-14T02:51:56.000Z">2019-08-14</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    1 分钟 读完 (大约 116 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
+                <a class="has-link-black-ter" href="/2019/08/14/mysql/mysql-binlog/">Mysql 查看binlog</a>
+            
+        </h1>
+        <div class="content">
+            <p>解压缩<br>tar -xzvf binlog-free.tar.gz</p>
+<p>mysqlbinlog -vvv –base64-output=decode-rows mysql-bin.02702* 这个命令是查看日志内容的<br>mysqlbinlog -vvv –base64-output=decode-rows mysql-bin.000001</p>
+<p>mysqlbinlog -vvv –base64-output=decode-rows mysql-bin.0273* &gt;prd.sql<br>mysqlbinlog -vvv –base64-output=decode-rows mysql-bin.0277* &gt;prd.sql<br>mysqlbinlog -vvv –base64-output=decode-rows mysql-bin.0280* &gt;prd.sql</p>
+<p>mysqlbinlog -vvv –base64-output=decode-rows mysql-bin.0293* &gt;prd.sql<br>mysqlbinlog -vvv –base64-output=decode-rows mysql-bin.0313* &gt;prd.sql</p>
+<p>linux 下执行<br>替换文件名中的.sql为空字符串<br>rename .sql.rm ‘’ *</p>
+<p>windows下添加后缀名<br>ren * *.sql</p>
+
         </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/08/14/mysql/mysql-binlog/#more">阅读更多</a>
+                </div>
+            </div>
+        </div>
+        
+        
     </div>
 </div>
 
 
 
-<div class="card card-transparent">
-    <div class="level post-navigation is-flex-wrap is-mobile">
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
         
-        <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/08/15/java/spring-retry/">
-                <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">spring-retry</span>
-            </a>
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-14T02:51:56.000Z">2019-08-14</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    1 分钟 读完 (大约 165 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/08/14/mysql/mysql-function/">Mysql常用函数</a>
+            
+        </h1>
+        <div class="content">
+            <figure class="highlight sql hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">-- 求绝对值</span></span><br><span class="line">ABS(x)</span><br><span class="line"><span class="hljs-comment">-- 四舍五入</span></span><br><span class="line">ROUND(x)</span><br><span class="line"><span class="hljs-comment">-- 字符数</span></span><br><span class="line">CHAR_LENGTH(s)</span><br><span class="line"><span class="hljs-comment">-- 字符串长度</span></span><br><span class="line">LENGTH(s)</span><br><span class="line"><span class="hljs-comment">-- 字符串拼接</span></span><br><span class="line">CONCAT(s1,s2,...)</span><br><span class="line"><span class="hljs-comment">-- 字符串截取：从字符串s中的第a个字符开始取b个字符</span></span><br><span class="line">SUBSTRING(s,a,b)</span><br><span class="line"><span class="hljs-comment">-- 当前日期</span></span><br><span class="line">CURRENT_DATE()</span><br><span class="line"><span class="hljs-comment">-- 当前时间</span></span><br><span class="line">CURRENT_TIME()</span><br><span class="line"><span class="hljs-comment">-- 当前时间戳</span></span><br><span class="line">UNIX_TIMESTAMP()</span><br><span class="line"><span class="hljs-comment">-- 把UNIX时间戳的时间转换为普通格式的时间</span></span><br><span class="line">FROM_UNIXTIME(d)</span><br><span class="line"><span class="hljs-comment">-- 如果表达式expr成立，返回结果v1；否则，返回结果v2。</span></span><br><span class="line">IF(expr,v1,v2)</span><br><span class="line"><span class="hljs-comment">-- 如果v1的不为空，就显示v1的值；否则就显示v2的值。</span></span><br><span class="line">IFNULL(v1,v2)</span><br><span class="line"><span class="hljs-comment">-- 数据库版本号</span></span><br><span class="line">VERSION()</span><br></pre></td></tr></table></figure>
+
+
         </div>
         
         
-        <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/2019/08/14/mysql/mysql/">
-                <span class="level-item">Mysql相关</span>
-                <i class="level-item fas fa-chevron-right"></i>
-            </a>
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/08/14/mysql/mysql-function/#more">阅读更多</a>
+                </div>
+            </div>
         </div>
+        
         
     </div>
 </div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-14T02:51:56.000Z">2019-08-14</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    几秒 读完 (大约 88 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/08/14/mysql/mysql-regexp/">Mysql Regexp 正则表达式</a>
+            
+        </h1>
+        <div class="content">
+            <figure class="highlight sql hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">-- 查找name字段中以'st'为开头的所有数据</span></span><br><span class="line"><span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">name</span> <span class="hljs-keyword">FROM</span> person_tbl <span class="hljs-keyword">WHERE</span> <span class="hljs-keyword">name</span> REGEXP <span class="hljs-string">'^st'</span>;</span><br><span class="line"><span class="hljs-comment">-- 查找name字段中以'ok'为结尾的所有数据</span></span><br><span class="line"><span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">name</span> <span class="hljs-keyword">FROM</span> person_tbl <span class="hljs-keyword">WHERE</span> <span class="hljs-keyword">name</span> REGEXP <span class="hljs-string">'ok$'</span>;</span><br><span class="line"><span class="hljs-comment">-- 查找name字段中包含'mar'字符串的所有数据</span></span><br><span class="line"><span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">name</span> <span class="hljs-keyword">FROM</span> person_tbl <span class="hljs-keyword">WHERE</span> <span class="hljs-keyword">name</span> REGEXP <span class="hljs-string">'mar'</span>;</span><br></pre></td></tr></table></figure>
+
+<p>参考：<a href="https://www.runoob.com/mysql/mysql-regexp.html" target="_blank" rel="noopener">https://www.runoob.com/mysql/mysql-regexp.html</a></p>
+
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/08/14/mysql/mysql-regexp/#more">阅读更多</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-14T02:51:56.000Z">2019-08-14</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    3 分钟 读完 (大约 516 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/08/14/mysql/mysql/">Mysql相关</a>
+            
+        </h1>
+        <div class="content">
+            <h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><figure class="highlight sql hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">-- 求绝对值</span></span><br><span class="line">ABS(x)</span><br><span class="line"><span class="hljs-comment">-- 四舍五入</span></span><br><span class="line">ROUND(x)</span><br><span class="line"><span class="hljs-comment">-- 字符数</span></span><br><span class="line">CHAR_LENGTH(s)</span><br><span class="line"><span class="hljs-comment">-- 字符串长度</span></span><br><span class="line">LENGTH(s)</span><br><span class="line"><span class="hljs-comment">-- 字符串拼接</span></span><br><span class="line">CONCAT(s1,s2,...)</span><br><span class="line"><span class="hljs-comment">-- 字符串截取：从字符串s中的第a个字符开始取b个字符</span></span><br><span class="line">SUBSTRING(s,a,b)</span><br><span class="line"><span class="hljs-comment">-- 当前日期</span></span><br><span class="line">CURRENT_DATE()</span><br><span class="line"><span class="hljs-comment">-- 当前时间</span></span><br><span class="line">CURRENT_TIME()</span><br><span class="line"><span class="hljs-comment">-- 当前时间戳</span></span><br><span class="line">UNIX_TIMESTAMP()</span><br><span class="line"><span class="hljs-comment">-- 把UNIX时间戳的时间转换为普通格式的时间</span></span><br><span class="line">FROM_UNIXTIME(d)</span><br><span class="line"><span class="hljs-comment">-- 如果表达式expr成立，返回结果v1；否则，返回结果v2。</span></span><br><span class="line">IF(expr,v1,v2)</span><br><span class="line"><span class="hljs-comment">-- 如果v1的不为空，就显示v1的值；否则就显示v2的值。</span></span><br><span class="line">IFNULL(v1,v2)</span><br><span class="line"><span class="hljs-comment">-- 数据库版本号</span></span><br><span class="line">VERSION()</span><br></pre></td></tr></table></figure>
+
+<h2 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h2><figure class="highlight sql hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">-- 查找name字段中以'st'为开头的所有数据</span></span><br><span class="line"><span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">name</span> <span class="hljs-keyword">FROM</span> person_tbl <span class="hljs-keyword">WHERE</span> <span class="hljs-keyword">name</span> REGEXP <span class="hljs-string">'^st'</span>;</span><br><span class="line"><span class="hljs-comment">-- 查找name字段中以'ok'为结尾的所有数据</span></span><br><span class="line"><span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">name</span> <span class="hljs-keyword">FROM</span> person_tbl <span class="hljs-keyword">WHERE</span> <span class="hljs-keyword">name</span> REGEXP <span class="hljs-string">'ok$'</span>;</span><br><span class="line"><span class="hljs-comment">-- 查找name字段中包含'mar'字符串的所有数据</span></span><br><span class="line"><span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">name</span> <span class="hljs-keyword">FROM</span> person_tbl <span class="hljs-keyword">WHERE</span> <span class="hljs-keyword">name</span> REGEXP <span class="hljs-string">'mar'</span>;</span><br></pre></td></tr></table></figure>
+
+<p>参考：<a href="https://www.runoob.com/mysql/mysql-regexp.html" target="_blank" rel="noopener">https://www.runoob.com/mysql/mysql-regexp.html</a></p>
+<h2 id="查看数据库表结构"><a href="#查看数据库表结构" class="headerlink" title="查看数据库表结构"></a>查看数据库表结构</h2><h3 id="表"><a href="#表" class="headerlink" title="表"></a>表</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">SELECT</span><br><span class="line">    t.TABLE_SCHEMA,</span><br><span class="line">    t.TABLE_NAME,</span><br><span class="line">    t.TABLE_TYPE,</span><br><span class="line">    t.CREATE_TIME,</span><br><span class="line">    t.TABLE_COMMENT</span><br><span class="line">FROM</span><br><span class="line">    information_schema.`TABLES` t;</span><br></pre></td></tr></table></figure>
+
+<h3 id="列"><a href="#列" class="headerlink" title="列"></a>列</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">SELECT</span><br><span class="line">    t.TABLE_SCHEMA,</span><br><span class="line">        t.TABLE_NAME,</span><br><span class="line">        t.COLUMN_NAME,</span><br><span class="line">        t.ORDINAL_POSITION,</span><br><span class="line">        t.COLUMN_DEFAULT,</span><br><span class="line">        t.IS_NULLABLE,</span><br><span class="line">        t.COLUMN_TYPE,</span><br><span class="line">        t.COLUMN_COMMENT</span><br><span class="line">FROM</span><br><span class="line">    information_schema.`COLUMNS` t;</span><br></pre></td></tr></table></figure>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/08/14/mysql/mysql/#more">阅读更多</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-13T07:32:18.000Z">2019-08-13</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    1 分钟 读完 (大约 112 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/08/13/java/mybatis/">mybatis</a>
+            
+        </h1>
+        <div class="content">
+            <h2 id="batch-update"><a href="#batch-update" class="headerlink" title="batch update"></a>batch update</h2><p>批量更新<br>eg:</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">update table_post p</span><br><span class="line">inner join (</span><br><span class="line">    SELECT u.user_id,u.post_count</span><br><span class="line">    FROM table_user u</span><br><span class="line">) as c_u on p.user_id = c_u.user_id</span><br><span class="line">set u.post_count=c_u.post_count;</span><br></pre></td></tr></table></figure>
+
+<p>mapper中batch update写法：</p>
+<figure class="highlight sql hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;update id="batchUpdate"  parameterType="java.util.List"&gt;</span><br><span class="line">    &lt;foreach collection="list" item="item" index="index" open="" close="" separator=";"&gt;</span><br><span class="line">        <span class="hljs-keyword">update</span> <span class="hljs-keyword">test</span></span><br><span class="line">            &lt;<span class="hljs-keyword">set</span>&gt;</span><br><span class="line">                <span class="hljs-keyword">test</span>=$&#123;item.test&#125;+<span class="hljs-number">1</span></span><br><span class="line">            &lt;/<span class="hljs-keyword">set</span>&gt;</span><br><span class="line">        <span class="hljs-keyword">where</span> <span class="hljs-keyword">id</span> = $&#123;item.id&#125;</span><br><span class="line">    &lt;/foreach&gt;</span><br><span class="line">&lt;/<span class="hljs-keyword">update</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<p>TIP：数据库连接必须配置：&amp;allowMultiQueries=true</p>
+<h2 id="文档"><a href="#文档" class="headerlink" title="文档"></a>文档</h2><p>中文文档<br><a href="http://www.mybatis.org/mybatis-3/zh/" target="_blank" rel="noopener">http://www.mybatis.org/mybatis-3/zh/</a></p>
+<p>mybatis-spring<br><a href="http://www.mybatis.org/spring/zh/" target="_blank" rel="noopener">http://www.mybatis.org/spring/zh/</a></p>
+<p>MyBatis Generator<br><a href="http://www.mybatis.org/generator/" target="_blank" rel="noopener">http://www.mybatis.org/generator/</a><br><a href="http://generator.sturgeon.mopaas.com/" target="_blank" rel="noopener">http://generator.sturgeon.mopaas.com/</a></p>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/08/13/java/mybatis/#more">阅读更多</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
 
 
 </div>
@@ -590,7 +842,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="proxy" height="28">
+                    <img src="/images/logo.svg" alt="Coder" height="28">
                 
                 </a>
                 <p class="is-size-7">

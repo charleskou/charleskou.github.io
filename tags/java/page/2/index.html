@@ -2,7 +2,7 @@
 <html lang="zh">
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-<title>Coder</title>
+<title>标签: Java - Coder</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="google-site-verification" content="nf1fTgUwUjCPuVDdA4bZdWYWTonwbiJjQkRh15iKYfI">
 
@@ -106,20 +106,30 @@
     <section class="section">
         <div class="container">
             <div class="columns">
-                <div class="column is-9-tablet is-9-desktop is-9-widescreen has-order-2 column-main">
+                <div class="column is-9-tablet is-9-desktop is-9-widescreen has-order-2 column-main"><div class="card">
+    <div class="card-content">
+        <nav class="breadcrumb" aria-label="breadcrumbs">
+        <ul>
+            <li><a href="/tags">标签</a></li>
+            <li class="is-active"><a href="#" aria-current="page">Java</a></li>
+        </ul>
+        </nav>
+    </div>
+</div>
+
     <div class="card">
     
     <div class="card-content article ">
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-08-14T02:29:03.000Z">2019-08-14</time>
+                <time class="level-item has-text-grey" datetime="2019-08-13T08:38:59.000Z">2019-08-13</time>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    4 分钟 读完 (大约 530 个字)
+                    1 分钟 读完 (大约 131 个字)
                 </span>
                 
                 
@@ -128,27 +138,23 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/08/14/docker/docker/">Docker 安装</a>
+                <a class="has-link-black-ter" href="/2019/08/13/java/spring-cloud-config/">spring-cloud-config</a>
             
         </h1>
         <div class="content">
-            <p>系统：CentOS系统</p>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>脚本方式：</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -fsSL https://get.docker.com/ | sh</span><br></pre></td></tr></table></figure>
+            <h2 id="dependency"><a href="#dependency" class="headerlink" title="dependency"></a>dependency</h2><h2 id="动态刷新"><a href="#动态刷新" class="headerlink" title="动态刷新"></a>动态刷新</h2><h3 id="使用限制"><a href="#使用限制" class="headerlink" title="使用限制"></a>使用限制</h3><p>@RefreshScope @Configuration 不能同时在一个类上使用<br>原因说明：</p>
+<blockquote>
+<p>@RefreshScope works (technically) on an @Configuration class, but it might lead to surprising behaviour: e.g. it does not mean that all the @Beans defined in that class are themselves @RefreshScope. Specifically, anything that depends on those beans cannot rely on them being updated when a refresh is initiated, unless it is itself in @RefreshScope (in which it will be rebuilt on a refresh and its dependencies re-injected, at which point they will be re-initialized from the refreshed @Configuration).</p>
+</blockquote>
+<p>参考：<br><a href="https://stackoverflow.com/questions/45137555/refreshscope-not-working-spring-boot" target="_blank" rel="noopener">https://stackoverflow.com/questions/45137555/refreshscope-not-working-spring-boot</a><br><a href="http://projects.spring.io/spring-cloud/spring-cloud.html#_refresh_scope" target="_blank" rel="noopener">http://projects.spring.io/spring-cloud/spring-cloud.html#_refresh_scope</a></p>
 
-<p>可选用阿里镜像站点安装：参考 <a href="https://yq.aliyun.com/articles/110806" target="_blank" rel="noopener">https://yq.aliyun.com/articles/110806</a></p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun</span><br></pre></td></tr></table></figure>
-
-<h2 id="centos命令"><a href="#centos命令" class="headerlink" title="centos命令"></a>centos命令</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">service docker start</span><br><span class="line">service docker stop</span><br><span class="line">service docker status</span><br><span class="line">service docker restart</span><br></pre></td></tr></table></figure>
-
-<h2 id="docker命令"><a href="#docker命令" class="headerlink" title="docker命令"></a>docker命令</h2><figure class="highlight sh hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">docker ps</span><br><span class="line">docker images</span><br><span class="line">docker rm <span class="hljs-comment">#&#123;container_id&#125;</span></span><br><span class="line">docker rmi <span class="hljs-comment">#&#123;image_id&#125;</span></span><br><span class="line"><span class="hljs-comment"># 进入运行中的容器</span></span><br><span class="line">docker <span class="hljs-built_in">exec</span> -it d48b21a7e439 /bin/sh <span class="hljs-comment"># d48b21a7e439 - 容器id，container_id</span></span><br></pre></td></tr></table></figure>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/08/14/docker/docker/#more">阅读更多</a>
+                <a class="button is-size-7 is-light" href="/2019/08/13/java/spring-cloud-config/#more">阅读更多</a>
                 </div>
             </div>
         </div>
@@ -170,13 +176,13 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-08-14T02:29:03.000Z">2019-08-14</time>
+                <time class="level-item has-text-grey" datetime="2019-08-13T08:30:12.000Z">2019-08-13</time>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    1 分钟 读完 (大约 212 个字)
+                    3 分钟 读完 (大约 425 个字)
                 </span>
                 
                 
@@ -185,36 +191,28 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/08/14/docker/docker-compose-file/">Docker compose file 配置参考</a>
+                <a class="has-link-black-ter" href="/2019/08/13/java/druid/">druid数据库连接池通用配置</a>
             
         </h1>
         <div class="content">
-            <h2 id="示例配置："><a href="#示例配置：" class="headerlink" title="示例配置："></a>示例配置：</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">version: &quot;3&quot;</span><br><span class="line">services:</span><br><span class="line"></span><br><span class="line">  redis:</span><br><span class="line">    image: redis:alpine</span><br><span class="line">    ports:</span><br><span class="line">      - &quot;6379&quot;</span><br><span class="line">    networks:</span><br><span class="line">      - frontend</span><br><span class="line">    deploy:</span><br><span class="line">      replicas: 2</span><br><span class="line">      update_config:</span><br><span class="line">        parallelism: 2</span><br><span class="line">        delay: 10s</span><br><span class="line">      restart_policy:</span><br><span class="line">        condition: on-failure</span><br><span class="line"></span><br><span class="line">  db:</span><br><span class="line">    image: postgres:9.4</span><br><span class="line">    volumes:</span><br><span class="line">      - db-data:/var/lib/postgresql/data</span><br><span class="line">    networks:</span><br><span class="line">      - backend</span><br><span class="line">    deploy:</span><br><span class="line">      placement:</span><br><span class="line">        constraints: [node.role == manager]</span><br><span class="line"></span><br><span class="line">networks:</span><br><span class="line">  frontend:</span><br><span class="line">  backend:</span><br><span class="line"></span><br><span class="line">volumes:</span><br><span class="line">  db-data:</span><br></pre></td></tr></table></figure>
+            <h2 id="dependency"><a href="#dependency" class="headerlink" title="dependency"></a>dependency</h2><figure class="highlight xml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">&lt;!-- https://mvnrepository.com/artifact/com.alibaba/druid --&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>com.alibaba<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>druid<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>1.1.10<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<ul>
-<li>version: </li>
-<li>services:</li>
-</ul>
-<h2 id="deploy-应用发布配置"><a href="#deploy-应用发布配置" class="headerlink" title="deploy - 应用发布配置"></a>deploy - 应用发布配置</h2><p><a href="https://docs.docker.com/compose/compose-file/#restart_policy" target="_blank" rel="noopener">restart_policy - 应用发布重启策略</a></p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">version: &quot;3&quot;</span><br><span class="line">services:</span><br><span class="line">  redis:</span><br><span class="line">    image: redis:alpine</span><br><span class="line">    deploy:</span><br><span class="line">      restart_policy:</span><br><span class="line">        condition: on-failure</span><br><span class="line">        delay: 5s</span><br><span class="line">        max_attempts: 3</span><br><span class="line">        window: 120s</span><br></pre></td></tr></table></figure>
+<h2 id="config"><a href="#config" class="headerlink" title="config"></a>config</h2><figure class="highlight xml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">bean</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"dataSource"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"com.alibaba.druid.pool.DruidDataSource"</span> <span class="hljs-attr">init-method</span>=<span class="hljs-string">"init"</span> <span class="hljs-attr">destroy-method</span>=<span class="hljs-string">"close"</span>&gt;</span></span><br><span class="line">    <span class="hljs-comment">&lt;!-- 基本属性 url、user、password --&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"url"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"$&#123;jdbc_url&#125;"</span> /&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"username"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"$&#123;jdbc_user&#125;"</span> /&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"password"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"$&#123;jdbc_password&#125;"</span> /&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="hljs-comment">&lt;!-- 配置初始化大小、最小、最大 --&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"maxActive"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"20"</span> /&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"initialSize"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"1"</span> /&gt;</span></span><br><span class="line">    <span class="hljs-comment">&lt;!-- 配置获取连接等待超时的时间 --&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"maxWait"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"60000"</span> /&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"minIdle"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"1"</span> /&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="hljs-comment">&lt;!-- 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒 --&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"timeBetweenEvictionRunsMillis"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"60000"</span> /&gt;</span></span><br><span class="line">    <span class="hljs-comment">&lt;!-- 配置一个连接在池中最小生存的时间，单位是毫秒 --&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"minEvictableIdleTimeMillis"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"300000"</span> /&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="hljs-comment">&lt;!-- 用来检测连接是否有效的sql，要求是一个查询语句，常用select 'x'。如果validationQuery为null，testOnBorrow、testOnReturn、testWhileIdle都不会起作用。 --&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"validationQuery"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"SELECT 1"</span> /&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"testWhileIdle"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"true"</span> /&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"testOnBorrow"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"false"</span> /&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"testOnReturn"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"false"</span> /&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="hljs-comment">&lt;!-- 打开PSCache，并且指定每个连接上PSCache的大小 --&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"poolPreparedStatements"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"true"</span> /&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"maxPoolPreparedStatementPerConnectionSize"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"20"</span> /&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="hljs-comment">&lt;!-- 配置监控统计拦截的filters --&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"filters"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"stat"</span> /&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="hljs-comment">&lt;!-- 1.1.4中新增配置，如果有initialSize数量较多时，打开会加快应用启动时间 --&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"asyncInit"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"true"</span> /&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">bean</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<ul>
-<li>condition: 可选项 none on-failure any(default)</li>
-<li>delay: 尝试重启等待时间，默认0s</li>
-<li>max_attempts: 最大重启次数，默认无限，首次启动不计入</li>
-<li>window: 判定重启是否成功等待时长，默认0s</li>
-</ul>
-<p><a href="https://docs.docker.com/compose/compose-file/#update_config" target="_blank" rel="noopener">update_config - 应用发布更新策略</a></p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">version: &apos;3.4&apos;</span><br><span class="line">services:</span><br><span class="line">  vote:</span><br><span class="line">    image: dockersamples/examplevotingapp_vote:before</span><br><span class="line">    depends_on:</span><br><span class="line">      - redis</span><br><span class="line">    deploy:</span><br><span class="line">      replicas: 2</span><br><span class="line">      update_config:</span><br><span class="line">        parallelism: 2</span><br><span class="line">        delay: 10s</span><br><span class="line">        order: stop-first</span><br></pre></td></tr></table></figure>
+<h2 id="error-Error-creating-bean-with-name-‘dataSource’"><a href="#error-Error-creating-bean-with-name-‘dataSource’" class="headerlink" title="error: Error creating bean with name ‘dataSource’"></a>error: Error creating bean with name ‘dataSource’</h2><p>Druid连接池与spring cloud config搭配使用时出现异常<br>错误堆栈信息：</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">org.springframework.beans.factory.BeanCreationException: Error creating bean with name &apos;dataSource&apos;: Could not bind properties to DruidDataSourceWrapper (prefix=spring.datasource, ignoreInvalidFields=false, ignoreUnknownFields=true, ignoreNestedProperties=false); nested exception is org.springframework.validation.BindException: org.springframework.boot.bind.RelaxedDataBinder$RelaxedBeanPropertyBindingResult: 3 errors</span><br><span class="line">Field error in object &apos;spring.datasource&apos; on field &apos;driverClassName&apos;: rejected value [com.mysql.jdbc.Driver]; codes [methodInvocation.spring.datasource.driverClassName,methodInvocation.driverClassName,methodInvocation.java.lang.String,methodInvocation]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [spring.datasource.driverClassName,driverClassName]; arguments []; default message [driverClassName]]; default message [Property &apos;driverClassName&apos; threw exception; nested exception is java.lang.UnsupportedOperationException]</span><br><span class="line">Field error in object &apos;spring.datasource&apos; on field &apos;url&apos;</span><br></pre></td></tr></table></figure>
 
-<h2 id="官方参考文档地址："><a href="#官方参考文档地址：" class="headerlink" title="官方参考文档地址："></a>官方参考文档地址：</h2>
+<p>异常出现代码位置：</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">public void setDriverClassName(String driverClass) &#123;</span><br><span class="line">    if (inited) &#123;</span><br><span class="line">        if (StringUtils.equals(this.driverClass, driverClass)) &#123;</span><br><span class="line">            return;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        throw new UnsupportedOperationException();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    this.driverClass = driverClass;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>代码中如有@PostConstruct并在其中进行了对数据库查询更新等于数据源有关的操作，则会出现此错误</p>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/08/14/docker/docker-compose-file/#more">阅读更多</a>
+                <a class="button is-size-7 is-light" href="/2019/08/13/java/druid/#more">阅读更多</a>
                 </div>
             </div>
         </div>
@@ -236,13 +234,13 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-08-14T02:29:03.000Z">2019-08-14</time>
+                <time class="level-item has-text-grey" datetime="2019-08-13T07:42:51.000Z">2019-08-13</time>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    几秒 读完 (大约 76 个字)
+                    几秒 读完 (大约 19 个字)
                 </span>
                 
                 
@@ -251,18 +249,21 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/08/14/docker/docker-image-manage/">Docker 镜像清理</a>
+                <a class="has-link-black-ter" href="/2019/08/13/java/lombok/">lombok</a>
             
         </h1>
         <div class="content">
-            <figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"># 删除所有 Docker 镜像</span><br><span class="line">docker rmi $(docker images -f &quot;dangling=true&quot; -q)</span><br><span class="line"># 删除所有未运行 Docker 容器</span><br><span class="line">docker rm $(docker ps -a -q)</span><br><span class="line"># 删除所有未打 tag 的镜像</span><br><span class="line">docker rmi $(docker images -q | awk &apos;/^&lt;none&gt;/ &#123; print $3 &#125;&apos;)</span><br><span class="line"># 删除所有镜像</span><br><span class="line">docker rmi $(docker images -q)</span><br><span class="line">#根据格式删除所有镜像</span><br><span class="line">docker rm $(docker ps -qf status=exited)</span><br></pre></td></tr></table></figure>
+            <h2 id="dependency"><a href="#dependency" class="headerlink" title="dependency"></a>dependency</h2><figure class="highlight xml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.projectlombok<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>lombok<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>1.16.18<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">scope</span>&gt;</span>provided<span class="hljs-tag">&lt;/<span class="hljs-name">scope</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="IDE支持"><a href="#IDE支持" class="headerlink" title="IDE支持"></a>IDE支持</h1><p>Eclipse<br>IDEA</p>
+<h2 id="Data"><a href="#Data" class="headerlink" title="@Data"></a>@Data</h2><h2 id="Getter"><a href="#Getter" class="headerlink" title="@Getter"></a>@Getter</h2><h2 id="Setter"><a href="#Setter" class="headerlink" title="@Setter"></a>@Setter</h2><h2 id="Slf4j"><a href="#Slf4j" class="headerlink" title="@Slf4j"></a>@Slf4j</h2><h2 id="AllArgsConstructor"><a href="#AllArgsConstructor" class="headerlink" title="@AllArgsConstructor"></a>@AllArgsConstructor</h2><h2 id="EqualsAndHashCode"><a href="#EqualsAndHashCode" class="headerlink" title="@EqualsAndHashCode"></a>@EqualsAndHashCode</h2>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/08/14/docker/docker-image-manage/#more">阅读更多</a>
+                <a class="button is-size-7 is-light" href="/2019/08/13/java/lombok/#more">阅读更多</a>
                 </div>
             </div>
         </div>
@@ -284,7 +285,169 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-08-14T01:41:02.000Z">2019-08-14</time>
+                <time class="level-item has-text-grey" datetime="2019-08-13T07:32:18.000Z">2019-08-13</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    1 分钟 读完 (大约 112 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/08/13/java/mybatis/">mybatis</a>
+            
+        </h1>
+        <div class="content">
+            <h2 id="batch-update"><a href="#batch-update" class="headerlink" title="batch update"></a>batch update</h2><p>批量更新<br>eg:</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">update table_post p</span><br><span class="line">inner join (</span><br><span class="line">    SELECT u.user_id,u.post_count</span><br><span class="line">    FROM table_user u</span><br><span class="line">) as c_u on p.user_id = c_u.user_id</span><br><span class="line">set u.post_count=c_u.post_count;</span><br></pre></td></tr></table></figure>
+
+<p>mapper中batch update写法：</p>
+<figure class="highlight sql hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;update id="batchUpdate"  parameterType="java.util.List"&gt;</span><br><span class="line">    &lt;foreach collection="list" item="item" index="index" open="" close="" separator=";"&gt;</span><br><span class="line">        <span class="hljs-keyword">update</span> <span class="hljs-keyword">test</span></span><br><span class="line">            &lt;<span class="hljs-keyword">set</span>&gt;</span><br><span class="line">                <span class="hljs-keyword">test</span>=$&#123;item.test&#125;+<span class="hljs-number">1</span></span><br><span class="line">            &lt;/<span class="hljs-keyword">set</span>&gt;</span><br><span class="line">        <span class="hljs-keyword">where</span> <span class="hljs-keyword">id</span> = $&#123;item.id&#125;</span><br><span class="line">    &lt;/foreach&gt;</span><br><span class="line">&lt;/<span class="hljs-keyword">update</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<p>TIP：数据库连接必须配置：&amp;allowMultiQueries=true</p>
+<h2 id="文档"><a href="#文档" class="headerlink" title="文档"></a>文档</h2><p>中文文档<br><a href="http://www.mybatis.org/mybatis-3/zh/" target="_blank" rel="noopener">http://www.mybatis.org/mybatis-3/zh/</a></p>
+<p>mybatis-spring<br><a href="http://www.mybatis.org/spring/zh/" target="_blank" rel="noopener">http://www.mybatis.org/spring/zh/</a></p>
+<p>MyBatis Generator<br><a href="http://www.mybatis.org/generator/" target="_blank" rel="noopener">http://www.mybatis.org/generator/</a><br><a href="http://generator.sturgeon.mopaas.com/" target="_blank" rel="noopener">http://generator.sturgeon.mopaas.com/</a></p>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/08/13/java/mybatis/#more">阅读更多</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-10T08:34:10.000Z">2019-08-10</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    1 分钟 读完 (大约 171 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/08/10/java/android/">android</a>
+            
+        </h1>
+        <div class="content">
+            <p>版本 9</p>
+<p>IDE<br>Android Studio</p>
+<p>val<br>val a: Int = ch.toInt();</p>
+<p>var 变量<br>val 常量<br>    常量不能再次更改</p>
+<p>boolean</p>
+<p>arrayOf</p>
+<p>Array</p>
+<p>日志</p>
+<p>swith ==&gt; when</p>
+<p>for 倒序遍历</p>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/08/10/java/android/#more">阅读更多</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-10T08:24:03.000Z">2019-08-10</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    几秒 读完 (大约 2 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/08/10/java/guava/">guava - Java开发工具</a>
+            
+        </h1>
+        <div class="content">
+            <h2 id="Lists"><a href="#Lists" class="headerlink" title="Lists"></a>Lists</h2><h2 id="Arrays"><a href="#Arrays" class="headerlink" title="Arrays"></a>Arrays</h2>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/08/10/java/guava/#more">阅读更多</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-10T08:17:14.000Z">2019-08-10</time>
                 
                 
                 <span class="level-item has-text-grey">
@@ -299,7 +462,7 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/08/14/java/spring-boot/">spring-boot</a>
+                <a class="has-link-black-ter" href="/2019/08/10/java/design-pattern/">设计模式</a>
             
         </h1>
         <div class="content">
@@ -324,13 +487,13 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-08-14T01:40:56.000Z">2019-08-14</time>
+                <time class="level-item has-text-grey" datetime="2019-08-10T08:16:08.000Z">2019-08-10</time>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    2 分钟 读完 (大约 322 个字)
+                    几秒 读完 (大约 0 个字)
                 </span>
                 
                 
@@ -339,25 +502,13 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/08/14/java/spring-cloud/">spring-cloud</a>
+                <a class="has-link-black-ter" href="/2019/08/10/java/lambda/">lambda</a>
             
         </h1>
         <div class="content">
-            <h2 id="registry"><a href="#registry" class="headerlink" title="registry"></a>registry</h2><p>注册中心<br>Eureka</p>
-<h3 id="Eureka自我保护机制"><a href="#Eureka自我保护机制" class="headerlink" title="Eureka自我保护机制"></a>Eureka自我保护机制</h3><p>springcloud服务已经关但是Eureka还是显示up，该状态持续很久，访问该服务也返回错误，但在注册中心界面，该服务却一直存在，且为UP状态，并且在大约十分钟后，出现一行红色大字：EMERGENCY! EUREKA MAY BE INCORRECTLY CLAIMING INSTANCES ARE UP WHEN THEY’RE NOT. RENEWALS ARE LESSER THAN THRESHOLD AND HENCE THE INSTANCES ARE NOT BEING EXPIRED JUST TO BE SAFE.<br>原因：自我保护机制。Eureka Server在运行期间，会统计心跳失败的比例在15分钟之内是否低于85%，如果出现低于的情况（在单机调试的时候很容易满足，实际在生产环境上通常是由于网络不稳定导致），Eureka Server会将当前的实例注册信息保护起来，同时提示这个警告。</p>
-<h2 id="进程间通信"><a href="#进程间通信" class="headerlink" title="进程间通信"></a>进程间通信</h2><p>Feign</p>
-<h2 id="负载均衡"><a href="#负载均衡" class="headerlink" title="负载均衡"></a>负载均衡</h2><p>客户端负载均衡<br>Ribbon</p>
-<h2 id="分布式配置中心"><a href="#分布式配置中心" class="headerlink" title="分布式配置中心"></a>分布式配置中心</h2><p>Spring Cloud Config<br>动态刷新<br><a href="http://blog.didispace.com/springcloud4-2/" target="_blank" rel="noopener">http://blog.didispace.com/springcloud4-2/</a><br>消息总线</p>
+            
         </div>
         
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/08/14/java/spring-cloud/#more">阅读更多</a>
-                </div>
-            </div>
-        </div>
         
         
     </div>
@@ -376,13 +527,13 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-08-14T01:23:34.000Z">2019-08-14</time>
+                <time class="level-item has-text-grey" datetime="2019-08-10T07:27:21.000Z">2019-08-10</time>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    29 分钟 读完 (大约 4323 个字)
+                    1 分钟 读完 (大约 158 个字)
                 </span>
                 
                 
@@ -391,198 +542,38 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/08/14/java/kubernetes/">kubernetes</a>
+                <a class="has-link-black-ter" href="/2019/08/10/java/eclipse/">Eclipse - Java开发工具</a>
             
         </h1>
         <div class="content">
-            <h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><h3 id="集群"><a href="#集群" class="headerlink" title="集群"></a>集群</h3><p>一个集群指容器运行所需要的云资源组合，关联了若干服务器节点、负载均衡、专有网络等云资源。</p>
-<h4 id="节点"><a href="#节点" class="headerlink" title="节点"></a>节点</h4><p>一台服务器（可以是虚拟机实例或者物理服务器）已经安装了 Docker Engine，可以用于部署和管理容器；容器服务的 Agent 程序会安装到节点上并注册到一个集群上。集群中的节点数量可以伸缩。</p>
-<h4 id="容器"><a href="#容器" class="headerlink" title="容器"></a>容器</h4><p>一个通过 Docker 镜像创建的运行时实例，一个节点可运行多个容器。</p>
-<h4 id="镜像"><a href="#镜像" class="headerlink" title="镜像"></a>镜像</h4><p>Docker 镜像是容器应用打包的标准格式，在部署容器化应用时可以指定镜像，镜像可以来自于 Docker Hub，阿里云容器 Hub，或者用户的私有 Registry。镜像 ID 可以由镜像所在仓库 URI 和镜像 Tag（缺省为 latest）唯一确认。</p>
-<h4 id="编排模板"><a href="#编排模板" class="headerlink" title="编排模板"></a>编排模板</h4>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/08/14/java/kubernetes/#more">阅读更多</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-08-13T10:19:42.000Z">2019-08-13</time>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    几秒 读完 (大约 5 个字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/08/13/java/java-8/">java-8</a>
-            
-        </h1>
-        <div class="content">
-            <h2 id="Stream-API"><a href="#Stream-API" class="headerlink" title="Stream API"></a>Stream API</h2><p>lambda</p>
-<h2 id="Date-Time"><a href="#Date-Time" class="headerlink" title="Date-Time"></a>Date-Time</h2>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/08/13/java/java-8/#more">阅读更多</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-08-13T10:14:10.000Z">2019-08-13</time>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    1 分钟 读完 (大约 170 个字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/08/13/java/deadlock/">死锁</a>
-            
-        </h1>
-        <div class="content">
-            <ol>
-<li><p>for update 是否锁表</p>
+            <h2 id="Why-Eclipse"><a href="#Why-Eclipse" class="headerlink" title="Why Eclipse"></a>Why Eclipse</h2><p>默认配置的热部署：方法内部代码修改无需重新启动</p>
+<h2 id="安装设置"><a href="#安装设置" class="headerlink" title="安装设置"></a>安装设置</h2><ul>
+<li>字体设置</li>
+<li>workspace 编码设置</li>
+<li>installed jres</li>
+<li>package explorer</li>
+<li>startup and shutdown</li>
+<li>compare<ul>
+<li>Ignore white space</li>
+<li>Swap left and right</li>
+</ul>
 </li>
-<li><p>事务传播 @Transactional</p>
-</li>
-<li><p>异常 MySQLTransactionRollbackException</p>
-</li>
-<li><p>隔离级别</p>
-<figure class="highlight sql hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">show</span> <span class="hljs-keyword">engines</span>;</span><br><span class="line"><span class="hljs-keyword">show</span> <span class="hljs-keyword">variables</span> <span class="hljs-keyword">like</span> <span class="hljs-string">'%storage_engine%'</span>;</span><br><span class="line"><span class="hljs-keyword">select</span> <span class="hljs-keyword">version</span>();</span><br><span class="line"><span class="hljs-keyword">select</span> @@tx_isolation; <span class="hljs-comment">-- 查看数据库隔离级别</span></span><br><span class="line"><span class="hljs-keyword">select</span> @@autocommit;</span><br><span class="line"><span class="hljs-keyword">show</span> <span class="hljs-keyword">variables</span> <span class="hljs-keyword">like</span> <span class="hljs-string">'innodb_lock_wait_timeout'</span>;</span><br><span class="line"><span class="hljs-keyword">show</span> <span class="hljs-keyword">global</span> <span class="hljs-keyword">variables</span> <span class="hljs-keyword">like</span> <span class="hljs-string">'innodb_lock_wait_timeout'</span>;</span><br><span class="line"><span class="hljs-keyword">set</span> innodb_lock_wait_timeout=<span class="hljs-number">1000</span>; <span class="hljs-comment">-- 设置当前会话 Innodb 行锁等待超时时间，单位秒</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>INNODB 事务</p>
-<figure class="highlight sql hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">SELECT</span></span><br><span class="line">    <span class="hljs-string">`trx_id`</span>,</span><br><span class="line">    <span class="hljs-string">`trx_state`</span> <span class="hljs-keyword">AS</span> 事务状态,</span><br><span class="line">    <span class="hljs-string">`trx_started`</span> <span class="hljs-keyword">AS</span> 开始时间,</span><br><span class="line">    <span class="hljs-string">`trx_requested_lock_id`</span>,</span><br><span class="line">    <span class="hljs-string">`trx_wait_started`</span>,</span><br><span class="line">    <span class="hljs-string">`trx_weight`</span> <span class="hljs-keyword">AS</span> 权重,</span><br><span class="line">    <span class="hljs-string">`trx_mysql_thread_id`</span> <span class="hljs-keyword">AS</span> 线程<span class="hljs-keyword">ID</span>,</span><br><span class="line">    <span class="hljs-string">`trx_query`</span>,</span><br><span class="line">    <span class="hljs-string">`trx_operation_state`</span>,</span><br><span class="line">    <span class="hljs-string">`trx_tables_locked`</span> <span class="hljs-keyword">AS</span> 锁表个数,</span><br><span class="line">    <span class="hljs-string">`trx_rows_locked`</span> <span class="hljs-keyword">AS</span> 锁表行数,</span><br><span class="line">    <span class="hljs-string">`trx_rows_modified`</span> <span class="hljs-keyword">AS</span> 修改行数,</span><br><span class="line">    <span class="hljs-string">`trx_autocommit_non_locking`</span> <span class="hljs-keyword">AS</span> 是否自动提交</span><br><span class="line"><span class="hljs-keyword">FROM</span></span><br><span class="line">    INNODB_TRX t;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>场景模拟</p>
-</li>
-</ol>
-
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/08/13/java/deadlock/#more">阅读更多</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-08-13T08:54:38.000Z">2019-08-13</time>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    1 分钟 读完 (大约 185 个字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/08/13/java/spring-boot-2.0/">spring-boot-2.0</a>
-            
-        </h1>
-        <div class="content">
-            <h2 id="context-path"><a href="#context-path" class="headerlink" title="context-path"></a>context-path</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 旧版</span><br><span class="line">server.context-path: xxxx</span><br><span class="line"># 新版</span><br><span class="line">server.servlet.context-path: xxxx</span><br></pre></td></tr></table></figure>
-
-<h2 id="Actuator"><a href="#Actuator" class="headerlink" title="Actuator"></a>Actuator</h2><h3 id="Dependency"><a href="#Dependency" class="headerlink" title="Dependency"></a>Dependency</h3><figure class="highlight xml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.springframework.boot<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-boot-starter-actuator<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="Endpoints"><a href="#Endpoints" class="headerlink" title="Endpoints"></a>Endpoints</h3><p>执行器端点（endpoints）可用于监控应用及与应用进行交互</p>
+</ul>
+<p>可选：</p>
 <ul>
-<li>env 显示来自Spring的 ConfigurableEnvironment的属性</li>
-<li>health 显示应用的健康信息</li>
-<li>info 显示任意的应用信息</li>
-<li>metrics 展示当前应用的metrics信息</li>
-<li>mappings 显示一个所有@RequestMapping路径的集合列表</li>
-<li>logfile 返回日志文件内容（如果设置了logging.file或logging.path属性的话）</li>
-<li>prometheus 以可以被Prometheus服务器抓取的格式显示metrics信息</li>
+<li>sonar server</li>
+<li>中文语言包</li>
 </ul>
-<p>启用禁用：</p>
-<figure class="highlight xml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">management.endpoint.metrics.enabled=true</span><br><span class="line">management.endpoint.env.enabled=true</span><br></pre></td></tr></table></figure>
+<h2 id="自动升级"><a href="#自动升级" class="headerlink" title="自动升级"></a>自动升级</h2><p><img src="http://download.eclipse.org/errors/content/eclipse-software-install-win10-v1.png" alt></p>
+<p>原文链接：<br><a href="https://download.eclipse.org/releases/2019-06/" target="_blank" rel="noopener">https://download.eclipse.org/releases/2019-06/</a></p>
+<h2 id="格式"><a href="#格式" class="headerlink" title="格式"></a>格式</h2>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/08/13/java/spring-boot-2.0/#more">阅读更多</a>
+                <a class="button is-size-7 is-light" href="/2019/08/10/java/eclipse/#more">阅读更多</a>
                 </div>
             </div>
         </div>
@@ -604,13 +595,13 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-08-13T08:42:01.000Z">2019-08-13</time>
+                <time class="level-item has-text-grey" datetime="2019-08-10T07:15:21.000Z">2019-08-10</time>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    2 分钟 读完 (大约 366 个字)
+                    6 分钟 读完 (大约 891 个字)
                 </span>
                 
                 
@@ -619,34 +610,25 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/08/13/java/sonar/">sonar</a>
+                <a class="has-link-black-ter" href="/2019/08/10/java/maven/">Maven常用功能</a>
             
         </h1>
         <div class="content">
-            <h2 id="start"><a href="#start" class="headerlink" title="start"></a>start</h2><figure class="highlight sh hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">docker run -d --name sonarqube \</span><br><span class="line">    -p 9797:9000 -p 9092:9092 \</span><br><span class="line">    -v /opt/sonarqube/temp:/opt/sonarqube/temp \</span><br><span class="line">    -v /opt/sonarqube/conf:/opt/sonarqube/conf \</span><br><span class="line">    -v /opt/sonarqube/extensions:/opt/sonarqube/extensions \</span><br><span class="line">    -e SONARQUBE_JDBC_USERNAME=username \</span><br><span class="line">    -e SONARQUBE_JDBC_PASSWORD=password \</span><br><span class="line">    -e SONARQUBE_JDBC_URL=<span class="hljs-string">"jdbc:mysql://192.168.20.234:3306/sonar?useUnicode=true&amp;characterEncoding=utf8"</span> \</span><br><span class="line">    sonarqube:7.1</span><br></pre></td></tr></table></figure>
+            <h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">mvn clean</span><br><span class="line">mvn package</span><br><span class="line">mvn install</span><br><span class="line">mvn clean package -DskipTests</span><br><span class="line">mvn clean package -DskipTests -U</span><br></pre></td></tr></table></figure>
 
-<h2 id="plugins"><a href="#plugins" class="headerlink" title="plugins"></a>plugins</h2><figure class="highlight sh hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">FROM sonarqube</span><br><span class="line">ADD ./sonar-l10n-zh-plugin-1.15.jar /opt/sonarqube/extensions/plugins/sonar-l10n-zh-plugin-1.15.jar</span><br><span class="line">ADD ./sonar-java-plugin-4.7.0.9212.jar /opt/sonarqube/extensions/plugins/sonar-java-plugin-4.7.0.9212.jar</span><br><span class="line">ADD ./sonar-findbugs-plugin-3.4.4.jar /opt/sonarqube/extensions/plugins/sonar-findbugs-plugin-3.4.4.jar</span><br><span class="line">ADD ./checkstyle-sonar-plugin-3.6.jar /opt/sonarqube/extensions/plugins/checkstyle-sonar-plugin-3.6.jar</span><br><span class="line">ADD ./backelite-sonar-swift-plugin-0.3.2.jar /opt/sonarqube/extensions/plugins/backelite-sonar-swift-plugin-0.3.2.jar</span><br><span class="line">ADD ./sonar-web-plugin-2.5.0.476.jar /opt/sonarqube/extensions/plugins/sonar-web-plugin-2.5.0.476.jar</span><br><span class="line">ADD ./sonar-javascript-plugin-2.21.0.4409.jar /opt/sonarqube/extensions/plugins/sonar-javascript-plugin-2.21.0.4409.jar</span><br></pre></td></tr></table></figure>
+<p>mvn install 会将项目生成的构件安装到本地Maven仓库</p>
+<h2 id="mirror"><a href="#mirror" class="headerlink" title="mirror"></a>mirror</h2><p>阿里镜像：</p>
+<figure class="highlight xml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">mirror</span>&gt;</span>  </span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">id</span>&gt;</span>repo2<span class="hljs-tag">&lt;/<span class="hljs-name">id</span>&gt;</span>  </span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">mirrorOf</span>&gt;</span>central<span class="hljs-tag">&lt;/<span class="hljs-name">mirrorOf</span>&gt;</span>  </span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">name</span>&gt;</span>human readable name for this mirror.<span class="hljs-tag">&lt;/<span class="hljs-name">name</span>&gt;</span>  </span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">url</span>&gt;</span>http://maven.aliyun.com/nexus/content/groups/public/<span class="hljs-tag">&lt;/<span class="hljs-name">url</span>&gt;</span>  </span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">mirror</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="IDE-Support"><a href="#IDE-Support" class="headerlink" title="IDE Support"></a>IDE Support</h2><p>Eclipse<br>IDEA</p>
-<p>maven项目sonar扫描本地配置和扫描相关命令</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn sonar:sonar</span><br></pre></td></tr></table></figure>
-
-<h2 id="术语"><a href="#术语" class="headerlink" title="术语"></a>术语</h2><ul>
-<li>Reliability 可靠性</li>
-<li>Security 安全</li>
-<li>Maintainability 可维护性</li>
-<li>Coverage 覆盖率</li>
-<li>Duplications 重复</li>
-<li>Quality Gate 质量门限</li>
-<li>Compliant Solution 兼容的解决方案</li>
-</ul>
+<h2 id="nexus"><a href="#nexus" class="headerlink" title="nexus"></a>nexus</h2><p>maven私服</p>
+<h3 id="配置参考"><a href="#配置参考" class="headerlink" title="配置参考"></a>配置参考</h3><p>配置文件路径(示例)：C:\Users\username.m2\settings.xml</p>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/08/13/java/sonar/#more">阅读更多</a>
+                <a class="button is-size-7 is-light" href="/2019/08/10/java/maven/#more">阅读更多</a>
                 </div>
             </div>
         </div>
@@ -667,26 +649,18 @@
 <div class="card card-transparent">
     <nav class="pagination is-centered" role="navigation" aria-label="pagination">
         <div class="pagination-previous">
-            <a class="is-flex-grow has-text-black-ter" href="/page/3/">上一页</a>
+            <a class="is-flex-grow has-text-black-ter" href="/tags/java/">上一页</a>
         </div>
         <div class="pagination-next">
-            <a class="is-flex-grow has-text-black-ter" href="/page/5/">下一页</a>
+            <a class="is-flex-grow has-text-black-ter" href="/tags/java/page/3/">下一页</a>
         </div>
         <ul class="pagination-list is-hidden-mobile">
             
-            <li><a class="pagination-link has-text-black-ter" href="/">1</a></li>
+            <li><a class="pagination-link has-text-black-ter" href="/tags/java/">1</a></li>
             
-            <li><a class="pagination-link has-text-black-ter" href="/page/2/">2</a></li>
+            <li><a class="pagination-link is-current" href="/tags/java/page/2/">2</a></li>
             
-            <li><a class="pagination-link has-text-black-ter" href="/page/3/">3</a></li>
-            
-            <li><a class="pagination-link is-current" href="/page/4/">4</a></li>
-            
-            <li><a class="pagination-link has-text-black-ter" href="/page/5/">5</a></li>
-            
-            <li><a class="pagination-link has-text-black-ter" href="/page/6/">6</a></li>
-            
-            <li><a class="pagination-link has-text-black-ter" href="/page/7/">7</a></li>
+            <li><a class="pagination-link has-text-black-ter" href="/tags/java/page/3/">3</a></li>
             
         </ul>
     </nav>

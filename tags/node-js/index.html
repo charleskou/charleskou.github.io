@@ -2,7 +2,7 @@
 <html lang="zh">
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-<title>docker - Coder</title>
+<title>标签: Node.js - Coder</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="google-site-verification" content="nf1fTgUwUjCPuVDdA4bZdWYWTonwbiJjQkRh15iKYfI">
 
@@ -72,7 +72,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="docker" height="28">
+                <img src="/images/logo.svg" alt="Coder" height="28">
             
             </a>
         </div>
@@ -107,18 +107,29 @@
         <div class="container">
             <div class="columns">
                 <div class="column is-9-tablet is-9-desktop is-9-widescreen has-order-2 column-main"><div class="card">
+    <div class="card-content">
+        <nav class="breadcrumb" aria-label="breadcrumbs">
+        <ul>
+            <li><a href="/tags">标签</a></li>
+            <li class="is-active"><a href="#" aria-current="page">Node.js</a></li>
+        </ul>
+        </nav>
+    </div>
+</div>
+
+    <div class="card">
     
     <div class="card-content article ">
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-08-14T02:29:03.000Z">2019-08-14</time>
+                <time class="level-item has-text-grey" datetime="2019-08-18T09:28:42.000Z">2019-08-18</time>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    2 分钟 读完 (大约 284 个字)
+                    几秒 读完 (大约 44 个字)
                 </span>
                 
                 
@@ -127,78 +138,103 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                docker
+                <a class="has-link-black-ter" href="/2019/08/18/javascript/nrm/">nrm切换registry</a>
             
         </h1>
         <div class="content">
-            <h2 id="Dockerfile"><a href="#Dockerfile" class="headerlink" title="Dockerfile"></a>Dockerfile</h2><figure class="highlight dockerfile hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">FROM</span> openjdk:<span class="hljs-number">8</span>-jre-alpine</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">LABEL</span> maintainer="username@gmail.com"</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">ARG</span> JAR_FILE=target/ec-so-rest*.jar</span><br><span class="line"><span class="hljs-keyword">ADD</span> $&#123;JAR_FILE&#125; /app/ec-so-rest.jar</span><br><span class="line"><span class="hljs-keyword">CMD</span> ["java", "-Xmx2048m", "-XX:-UseGCOverheadLimit", "-jar", "/app/ec-so-rest.jar"]</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">EXPOSE</span> <span class="hljs-number">8080</span></span><br></pre></td></tr></table></figure>
+            <p>nrm 是npm registry的管理工具，能够查看和切换当前使用的registry<br>install:</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g nrm</span><br></pre></td></tr></table></figure>
 
-<ul>
-<li><p>FROM 为后续的命令设置基础镜像，它是Dockerfile文件的第一条命令</p>
-</li>
-<li><p>LABEL 为镜像添加一些描述的元数据</p>
-</li>
-<li><p>ARG 设置环境变量, 与ENV相比不同的是，ARG 所设置的构建环境的环境变量，在将来容器运行时是不会存在这些环境变量的</p>
-</li>
-<li><p>ADD 用于从当前机器或远程URL中的<src>中拷贝文件、目录，并将它们添加到镜像文件系统的<dest>中
-格式：</dest></src></p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ADD [--chown=&lt;user&gt;:&lt;group&gt;] &lt;src&gt;... &lt;dest&gt;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>CMD 为容器提供一个默认的执行命令，在一个Dockerfile只能有一条CMD指令，如果设置多条CMD指令，只有最后一条CMD指令会生效</p>
-</li>
-<li><p>EXPOSE 设置暴露的端口, 容器在运行时将监听指定哪个指定的网络端口。并可以指定端口的协议是TCP或UDP，如果没有指定协议，则默认为TCP协议</p>
-</li>
-</ul>
+<p>list:</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nrm ls</span><br></pre></td></tr></table></figure>
+
+<p>test:</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nrm test</span><br></pre></td></tr></table></figure>
+
+<p>use:</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nrm use [registryname]</span><br></pre></td></tr></table></figure>
+
+<p>常用：nrm use taobao</p>
 
         </div>
         
-        <div class="level is-size-7 is-uppercase">
+        
+        <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
-                    <a class="has-link-grey -link" href="/tags/Docker/">Docker</a>, <a class="has-link-grey -link" href="/tags/Java/">Java</a>
+                <a class="button is-size-7 is-light" href="/2019/08/18/javascript/nrm/#more">阅读更多</a>
                 </div>
             </div>
         </div>
         
         
-        
     </div>
 </div>
 
 
 
-<div class="card">
-    <div class="card-content">
-        <h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3>
-        <div class="buttons is-centered">
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-18T01:55:05.000Z">2019-08-18</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    5 分钟 读完 (大约 804 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
+                <a class="has-link-black-ter" href="/2019/08/18/javascript/nvm-windows/">nvm-windows安装使用指南</a>
+            
+        </h1>
+        <div class="content">
+            <h2 id="nvm-windows"><a href="#nvm-windows" class="headerlink" title="nvm-windows"></a>nvm-windows</h2><ul>
+<li>nvm-windows是一个命令行工具</li>
+<li>nvm-windows 并不是 nvm 的简单移植，他们也没有任何关系</li>
+<li>nvm-windows切换node版本时，不同node版本之间不共享npm模块</li>
+<li>安装nvm-windows前需要卸载及删除node npm相关文件</li>
+<li>安装nvm-windows后必须为每个新安装的node单独安装全局应用，如gulp</li>
+</ul>
+<h2 id="安装前建议"><a href="#安装前建议" class="headerlink" title="安装前建议"></a>安装前建议</h2><h3 id="全局模块"><a href="#全局模块" class="headerlink" title="全局模块"></a>全局模块</h3><p>如当前已经安装node，且npm全局安装过一些模块，建议记录下这些全局模块留档<br>命令如下：</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm list -g --depth 0</span><br></pre></td></tr></table></figure>
+
+<h3 id="项目模块"><a href="#项目模块" class="headerlink" title="项目模块"></a>项目模块</h3><p>如项目中node_modules中包含模块，建议保存一份存档；如确定项目中package.json里的dependencies和devDependencies配置是规范的，可略过此项</p>
+<h3 id="卸载node"><a href="#卸载node" class="headerlink" title="卸载node"></a>卸载node</h3><p>安装前先卸载任何现有版本的node.js, 并删除nodejs安装目录<br>可通过以下命令查找node或npm的安装路径：</p>
         </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/08/18/javascript/nvm-windows/#more">阅读更多</a>
+                </div>
+            </div>
+        </div>
+        
+        
     </div>
 </div>
 
 
 
-<div class="card card-transparent">
-    <div class="level post-navigation is-flex-wrap is-mobile">
-        
-        <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/08/14/tools/linux/">
-                <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">linux</span>
-            </a>
-        </div>
-        
-        
-        <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/2019/08/14/java/spring-boot/">
-                <span class="level-item">spring-boot</span>
-                <i class="level-item fas fa-chevron-right"></i>
-            </a>
-        </div>
-        
-    </div>
-</div>
+
+
+
 
 
 </div>
@@ -247,7 +283,7 @@
                         文章
                     </p>
                     <p class="title has-text-weight-normal">
-                        39
+                        67
                     </p>
                 </div>
             </div>
@@ -257,7 +293,7 @@
                         标签
                     </p>
                     <p class="title has-text-weight-normal">
-                        15
+                        18
                     </p>
                 </div>
             </div>
@@ -280,107 +316,128 @@
             <div class="field is-grouped is-grouped-multiline">
                 
                 <div class="control">
-                    <a class="tags has-addons" href="/tags/Android/">
+                    <a class="tags has-addons" href="/tags/android/">
                         <span class="tag">Android</span>
                         <span class="tag is-grey">1</span>
                     </a>
                 </div>
                 
                 <div class="control">
-                    <a class="tags has-addons" href="/tags/Angular/">
+                    <a class="tags has-addons" href="/tags/angular/">
                         <span class="tag">Angular</span>
                         <span class="tag is-grey">1</span>
                     </a>
                 </div>
                 
                 <div class="control">
-                    <a class="tags has-addons" href="/tags/Architecture/">
+                    <a class="tags has-addons" href="/tags/architecture/">
                         <span class="tag">Architecture</span>
                         <span class="tag is-grey">1</span>
                     </a>
                 </div>
                 
                 <div class="control">
-                    <a class="tags has-addons" href="/tags/Docker/">
+                    <a class="tags has-addons" href="/tags/docker/">
                         <span class="tag">Docker</span>
-                        <span class="tag is-grey">1</span>
+                        <span class="tag is-grey">8</span>
                     </a>
                 </div>
                 
                 <div class="control">
-                    <a class="tags has-addons" href="/tags/Git/">
+                    <a class="tags has-addons" href="/tags/git/">
                         <span class="tag">Git</span>
                         <span class="tag is-grey">1</span>
                     </a>
                 </div>
                 
                 <div class="control">
-                    <a class="tags has-addons" href="/tags/Hexo/">
+                    <a class="tags has-addons" href="/tags/hexo/">
                         <span class="tag">Hexo</span>
                         <span class="tag is-grey">3</span>
                     </a>
                 </div>
                 
                 <div class="control">
-                    <a class="tags has-addons" href="/tags/Java/">
+                    <a class="tags has-addons" href="/tags/java/">
                         <span class="tag">Java</span>
                         <span class="tag is-grey">21</span>
                     </a>
                 </div>
                 
                 <div class="control">
-                    <a class="tags has-addons" href="/tags/Javascript/">
+                    <a class="tags has-addons" href="/tags/javascript/">
                         <span class="tag">Javascript</span>
-                        <span class="tag is-grey">1</span>
+                        <span class="tag is-grey">4</span>
                     </a>
                 </div>
                 
                 <div class="control">
-                    <a class="tags has-addons" href="/tags/Kotlin/">
+                    <a class="tags has-addons" href="/tags/kotlin/">
                         <span class="tag">Kotlin</span>
                         <span class="tag is-grey">1</span>
                     </a>
                 </div>
                 
                 <div class="control">
-                    <a class="tags has-addons" href="/tags/Kubernetes/">
+                    <a class="tags has-addons" href="/tags/kubernetes/">
                         <span class="tag">Kubernetes</span>
                         <span class="tag is-grey">1</span>
                     </a>
                 </div>
                 
                 <div class="control">
-                    <a class="tags has-addons" href="/tags/MySQL/">
+                    <a class="tags has-addons" href="/tags/mysql/">
                         <span class="tag">MySQL</span>
+                        <span class="tag is-grey">6</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/node/">
+                        <span class="tag">Node</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/node-js/">
+                        <span class="tag">Node.js</span>
                         <span class="tag is-grey">2</span>
                     </a>
                 </div>
                 
                 <div class="control">
-                    <a class="tags has-addons" href="/tags/Spring-Boot/">
+                    <a class="tags has-addons" href="/tags/spring-boot/">
                         <span class="tag">Spring Boot</span>
                         <span class="tag is-grey">1</span>
                     </a>
                 </div>
                 
                 <div class="control">
-                    <a class="tags has-addons" href="/tags/Spring-Cloud/">
+                    <a class="tags has-addons" href="/tags/spring-cloud/">
                         <span class="tag">Spring Cloud</span>
                         <span class="tag is-grey">2</span>
                     </a>
                 </div>
                 
                 <div class="control">
-                    <a class="tags has-addons" href="/tags/TODO/">
+                    <a class="tags has-addons" href="/tags/todo/">
                         <span class="tag">TODO</span>
                         <span class="tag is-grey">5</span>
                     </a>
                 </div>
                 
                 <div class="control">
-                    <a class="tags has-addons" href="/tags/Tool/">
+                    <a class="tags has-addons" href="/tags/tool/">
                         <span class="tag">Tool</span>
-                        <span class="tag is-grey">19</span>
+                        <span class="tag is-grey">20</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/git/">
+                        <span class="tag">git</span>
+                        <span class="tag is-grey">8</span>
                     </a>
                 </div>
                 
@@ -398,12 +455,67 @@
         <ul class="menu-list">
         
         <li>
+            <a class="level is-marginless" href="/archives/2020/04/">
+                <span class="level-start">
+                    <span class="level-item">四月 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/02/">
+                <span class="level-start">
+                    <span class="level-item">二月 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/11/">
+                <span class="level-start">
+                    <span class="level-item">十一月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/10/">
+                <span class="level-start">
+                    <span class="level-item">十月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/09/">
+                <span class="level-start">
+                    <span class="level-item">九月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
             <a class="level is-marginless" href="/archives/2019/08/">
                 <span class="level-start">
                     <span class="level-item">八月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">39</span>
+                    <span class="level-item tag">57</span>
                 </span>
             </a>
         </li>
@@ -422,16 +534,16 @@
         
         <article class="media">
             
-            <a href="/2019/08/18/javascript/echarts/" class="media-left">
+            <a href="/2020/04/10/git/git-delete-tags/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="echarts - Angular 1.x指令集成">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="git-delete-tags">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-18T08:15:38.000Z">2019-08-18</time></div>
-                    <a href="/2019/08/18/javascript/echarts/" class="title has-link-black-ter is-size-6 has-text-weight-normal">echarts - Angular 1.x指令集成</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-04-10T06:38:16.000Z">2020-04-10</time></div>
+                    <a href="/2020/04/10/git/git-delete-tags/" class="title has-link-black-ter is-size-6 has-text-weight-normal">git-delete-tags</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
@@ -441,16 +553,16 @@
         
         <article class="media">
             
-            <a href="/2019/08/18/tools/nvm-windows/" class="media-left">
+            <a href="/2020/02/25/books/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="nvm-windows安装使用指南">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="书籍">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-18T01:55:05.000Z">2019-08-18</time></div>
-                    <a href="/2019/08/18/tools/nvm-windows/" class="title has-link-black-ter is-size-6 has-text-weight-normal">nvm-windows安装使用指南</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-25T14:54:32.000Z">2020-02-25</time></div>
+                    <a href="/2020/02/25/books/" class="title has-link-black-ter is-size-6 has-text-weight-normal">书籍</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
@@ -460,16 +572,16 @@
         
         <article class="media">
             
-            <a href="/2019/08/15/java/spring-retry/" class="media-left">
+            <a href="/2020/02/25/internet-events/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="spring-retry">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="互联网大事记">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-15T05:32:12.000Z">2019-08-15</time></div>
-                    <a href="/2019/08/15/java/spring-retry/" class="title has-link-black-ter is-size-6 has-text-weight-normal">spring-retry</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-25T14:10:30.000Z">2020-02-25</time></div>
+                    <a href="/2020/02/25/internet-events/" class="title has-link-black-ter is-size-6 has-text-weight-normal">互联网大事记</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
@@ -479,16 +591,16 @@
         
         <article class="media">
             
-            <a href="/2019/08/14/tools/proxy/" class="media-left">
+            <a href="/2020/02/25/music/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="proxy">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="音乐">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-14T09:06:11.000Z">2019-08-14</time></div>
-                    <a href="/2019/08/14/tools/proxy/" class="title has-link-black-ter is-size-6 has-text-weight-normal">proxy</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-25T14:06:40.000Z">2020-02-25</time></div>
+                    <a href="/2020/02/25/music/" class="title has-link-black-ter is-size-6 has-text-weight-normal">音乐</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
@@ -498,16 +610,16 @@
         
         <article class="media">
             
-            <a href="/2019/08/14/tools/mysql/" class="media-left">
+            <a href="/2019/11/02/mysql/mysql-index/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="mysql">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="MySQL索引">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-14T02:51:56.000Z">2019-08-14</time></div>
-                    <a href="/2019/08/14/tools/mysql/" class="title has-link-black-ter is-size-6 has-text-weight-normal">mysql</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-11-02T05:45:50.000Z">2019-11-02</time></div>
+                    <a href="/2019/11/02/mysql/mysql-index/" class="title has-link-black-ter is-size-6 has-text-weight-normal">MySQL索引</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
@@ -531,11 +643,11 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="docker" height="28">
+                    <img src="/images/logo.svg" alt="Coder" height="28">
                 
                 </a>
                 <p class="is-size-7">
-                &copy; 2019 Coder&nbsp;
+                &copy; 2020 Coder&nbsp;
                 Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> & <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a>
                 
                 </p>

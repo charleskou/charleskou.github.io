@@ -523,6 +523,58 @@
                 <span class="level-item has-text-grey">
                     
                     
+                    3 分钟 读完 (大约 378 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/08/10/git/github-pages-vue/">Github Pages Vue 项目发布</a>
+            
+        </h1>
+        <div class="content">
+            <h2 id="使用Github-Pages搭建Vue项目在线演示demo"><a href="#使用Github-Pages搭建Vue项目在线演示demo" class="headerlink" title="使用Github Pages搭建Vue项目在线演示demo"></a>使用Github Pages搭建Vue项目在线演示demo</h2><p>分支：gh-pages<br>访问Url：https://[user_name].github.io/[project_name]<br>关键点：利用Github提供的静态页解析功能, 将静态页面推送到Github个人项目仓库的gh-pages分支下</p>
+<h2 id="在现有vue项目的基础上，执行以下步骤："><a href="#在现有vue项目的基础上，执行以下步骤：" class="headerlink" title="在现有vue项目的基础上，执行以下步骤："></a>在现有vue项目的基础上，执行以下步骤：</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"># 1.切换分支</span><br><span class="line">git checkout gh-pages</span><br><span class="line"># 2.构建项目，生成build文件</span><br><span class="line">npm run build</span><br><span class="line"># 3.强制添加dist文件夹，因为.gitignore文件中定义了忽略该文件</span><br><span class="line">git add -f dist</span><br><span class="line"># 4.提交</span><br><span class="line">git commit -m &apos;Initial the page of project&apos;</span><br><span class="line"># 5.部署dist目录下的代码：使用git subtree命令可以在同一分支上维护源代码以及构建代码，在部署时仅仅推送dist目录下的内容</span><br><span class="line">git subtree push --prefix dist origin gh-pages</span><br></pre></td></tr></table></figure>
+
+<h2 id="提示："><a href="#提示：" class="headerlink" title="提示："></a>提示：</h2><p>在将Vue应用部署到gh-pages分支后，可能会出现部分资源无法加载的问题，原因就在于vue中的webpack配置在打包时其publicPath为根路径，如果该静态页在服务器中被访问则不会出现以上问题。在github解析时如果按照根路径解析会出错，因此在github上部署静态页时可以考虑将publicPath设置为当前目录，即 publicPath: ‘./‘。<br>同理，使用Vue-cli webpack模板生成的vue项目，出现上述问题应设置config/index.js中build对象下的assetsPublicPath字段为assetsPublicPath: ‘./‘,原理都是设置publicPath字段</p>
+
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/08/10/git/github-pages-vue/#more">阅读更多</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-10T05:40:21.000Z">2019-08-10</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
                     几秒 读完 (大约 94 个字)
                 </span>
                 
@@ -553,58 +605,6 @@
             <div class="level-start">
                 <div class="level-item">
                 <a class="button is-size-7 is-light" href="/2019/08/10/tools/grafana/#more">阅读更多</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-08-10T05:40:21.000Z">2019-08-10</time>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    3 分钟 读完 (大约 378 个字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/08/10/git/github-pages-vue/">Github Pages Vue 项目发布</a>
-            
-        </h1>
-        <div class="content">
-            <h2 id="使用Github-Pages搭建Vue项目在线演示demo"><a href="#使用Github-Pages搭建Vue项目在线演示demo" class="headerlink" title="使用Github Pages搭建Vue项目在线演示demo"></a>使用Github Pages搭建Vue项目在线演示demo</h2><p>分支：gh-pages<br>访问Url：https://[user_name].github.io/[project_name]<br>关键点：利用Github提供的静态页解析功能, 将静态页面推送到Github个人项目仓库的gh-pages分支下</p>
-<h2 id="在现有vue项目的基础上，执行以下步骤："><a href="#在现有vue项目的基础上，执行以下步骤：" class="headerlink" title="在现有vue项目的基础上，执行以下步骤："></a>在现有vue项目的基础上，执行以下步骤：</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"># 1.切换分支</span><br><span class="line">git checkout gh-pages</span><br><span class="line"># 2.构建项目，生成build文件</span><br><span class="line">npm run build</span><br><span class="line"># 3.强制添加dist文件夹，因为.gitignore文件中定义了忽略该文件</span><br><span class="line">git add -f dist</span><br><span class="line"># 4.提交</span><br><span class="line">git commit -m &apos;Initial the page of project&apos;</span><br><span class="line"># 5.部署dist目录下的代码：使用git subtree命令可以在同一分支上维护源代码以及构建代码，在部署时仅仅推送dist目录下的内容</span><br><span class="line">git subtree push --prefix dist origin gh-pages</span><br></pre></td></tr></table></figure>
-
-<h2 id="提示："><a href="#提示：" class="headerlink" title="提示："></a>提示：</h2><p>在将Vue应用部署到gh-pages分支后，可能会出现部分资源无法加载的问题，原因就在于vue中的webpack配置在打包时其publicPath为根路径，如果该静态页在服务器中被访问则不会出现以上问题。在github解析时如果按照根路径解析会出错，因此在github上部署静态页时可以考虑将publicPath设置为当前目录，即 publicPath: ‘./‘。<br>同理，使用Vue-cli webpack模板生成的vue项目，出现上述问题应设置config/index.js中build对象下的assetsPublicPath字段为assetsPublicPath: ‘./‘,原理都是设置publicPath字段</p>
-
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/08/10/git/github-pages-vue/#more">阅读更多</a>
                 </div>
             </div>
         </div>
