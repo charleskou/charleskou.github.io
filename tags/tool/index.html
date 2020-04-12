@@ -129,7 +129,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    几秒 读完 (大约 86 个字)
+                    几秒 读完 (大约 94 个字)
                 </span>
                 
                 
@@ -152,6 +152,7 @@
 <li>Online JSON Viewer：<a href="http://jsonviewer.stack.hu" target="_blank" rel="noopener">http://jsonviewer.stack.hu</a></li>
 <li>Cron表达式生成器：<a href="https://cron.qqe2.com/" target="_blank" rel="noopener">https://cron.qqe2.com/</a></li>
 <li>PHP在线执行：<a href="https://tool.lu/coderunner/" target="_blank" rel="noopener">https://tool.lu/coderunner/</a></li>
+<li>压缩图片：<a href="https://tinypng.com/" target="_blank" rel="noopener">https://tinypng.com/</a></li>
 <li></li>
 </ul>
 
@@ -189,7 +190,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    几秒 读完 (大约 20 个字)
+                    几秒 读完 (大约 52 个字)
                 </span>
                 
                 
@@ -205,6 +206,10 @@
             <p>Request Url: </p>
 <p>JSON Request Sample:</p>
 <figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;UPSSecurity&quot;: &#123;</span><br><span class="line">        &quot;UsernameToken&quot;: &#123;</span><br><span class="line">            &quot;Username&quot;: &quot; userHere&quot;,</span><br><span class="line">            &quot;Password&quot;: &quot; passHere&quot;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    &quot;ServiceAccessToken&quot;: &#123;</span><br><span class="line">        &quot;AccessLicenseNumber&quot;: &quot;licNoHere&quot;</span><br><span class="line">    &#125;,</span><br><span class="line">    &quot;Request&quot;: &#123;</span><br><span class="line">        &quot;RequestOption&quot;: &quot;15&quot;</span><br><span class="line">    &#125;,</span><br><span class="line">    &quot;InquiryNumber&quot;: &quot;1Z12345E0291980793&quot;,</span><br><span class="line">    &quot;TrackingOption&quot;: &quot;02&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>UPS SurePost rates:<br>92: UPS SurePost Less than 1LB - USL<br>93: UPS SurePost 1LB or greater - USG<br>94: UPS SurePost BPM - USB<br>95: UPS SurePost Media Mail - USM</p>
+<p>参考：<br><a href="https://www.ups.com/upsdeveloperkit" target="_blank" rel="noopener">https://www.ups.com/upsdeveloperkit</a></p>
+
         </div>
         
         
@@ -503,7 +508,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    2 分钟 读完 (大约 366 个字)
+                    3 分钟 读完 (大约 409 个字)
                 </span>
                 
                 
@@ -518,21 +523,13 @@
         <div class="content">
             <h2 id="start"><a href="#start" class="headerlink" title="start"></a>start</h2><figure class="highlight sh hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">docker run -d --name sonarqube \</span><br><span class="line">    -p 9797:9000 -p 9092:9092 \</span><br><span class="line">    -v /opt/sonarqube/temp:/opt/sonarqube/temp \</span><br><span class="line">    -v /opt/sonarqube/conf:/opt/sonarqube/conf \</span><br><span class="line">    -v /opt/sonarqube/extensions:/opt/sonarqube/extensions \</span><br><span class="line">    -e SONARQUBE_JDBC_USERNAME=username \</span><br><span class="line">    -e SONARQUBE_JDBC_PASSWORD=password \</span><br><span class="line">    -e SONARQUBE_JDBC_URL=<span class="hljs-string">"jdbc:mysql://192.168.20.234:3306/sonar?useUnicode=true&amp;characterEncoding=utf8"</span> \</span><br><span class="line">    sonarqube:7.1</span><br></pre></td></tr></table></figure>
 
+<h2 id="postgres-db"><a href="#postgres-db" class="headerlink" title="postgres db"></a>postgres db</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">docker pull postgres:10</span><br><span class="line">docker pull sonarqube:7.9.1-community</span><br><span class="line">docker run -d -p 5432:5432 -e POSTGRES_PASSWORD=1 --name postgres postgres:10</span><br><span class="line">docker run -d --name sonarqube \</span><br><span class="line">    -p 9000:9000 \</span><br><span class="line">    -e &quot;SONARQUBE_JDBC_URL=jdbc:postgresql://192.168.114.131:5432/sonar&quot; \</span><br><span class="line">    -e &quot;SONARQUBE_JDBC_USERNAME=postgres&quot; \</span><br><span class="line">    -e &quot;SONARQUBE_JDBC_PASSWORD=1&quot; \</span><br><span class="line">    sonarqube:7.9.1-community</span><br></pre></td></tr></table></figure>
+
 <h2 id="plugins"><a href="#plugins" class="headerlink" title="plugins"></a>plugins</h2><figure class="highlight sh hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">FROM sonarqube</span><br><span class="line">ADD ./sonar-l10n-zh-plugin-1.15.jar /opt/sonarqube/extensions/plugins/sonar-l10n-zh-plugin-1.15.jar</span><br><span class="line">ADD ./sonar-java-plugin-4.7.0.9212.jar /opt/sonarqube/extensions/plugins/sonar-java-plugin-4.7.0.9212.jar</span><br><span class="line">ADD ./sonar-findbugs-plugin-3.4.4.jar /opt/sonarqube/extensions/plugins/sonar-findbugs-plugin-3.4.4.jar</span><br><span class="line">ADD ./checkstyle-sonar-plugin-3.6.jar /opt/sonarqube/extensions/plugins/checkstyle-sonar-plugin-3.6.jar</span><br><span class="line">ADD ./backelite-sonar-swift-plugin-0.3.2.jar /opt/sonarqube/extensions/plugins/backelite-sonar-swift-plugin-0.3.2.jar</span><br><span class="line">ADD ./sonar-web-plugin-2.5.0.476.jar /opt/sonarqube/extensions/plugins/sonar-web-plugin-2.5.0.476.jar</span><br><span class="line">ADD ./sonar-javascript-plugin-2.21.0.4409.jar /opt/sonarqube/extensions/plugins/sonar-javascript-plugin-2.21.0.4409.jar</span><br></pre></td></tr></table></figure>
 
 <h2 id="IDE-Support"><a href="#IDE-Support" class="headerlink" title="IDE Support"></a>IDE Support</h2><p>Eclipse<br>IDEA</p>
 <p>maven项目sonar扫描本地配置和扫描相关命令</p>
 <figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn sonar:sonar</span><br></pre></td></tr></table></figure>
-
-<h2 id="术语"><a href="#术语" class="headerlink" title="术语"></a>术语</h2><ul>
-<li>Reliability 可靠性</li>
-<li>Security 安全</li>
-<li>Maintainability 可维护性</li>
-<li>Coverage 覆盖率</li>
-<li>Duplications 重复</li>
-<li>Quality Gate 质量门限</li>
-<li>Compliant Solution 兼容的解决方案</li>
-</ul>
         </div>
         
         
@@ -722,7 +719,7 @@
                         文章
                     </p>
                     <p class="title has-text-weight-normal">
-                        68
+                        69
                     </p>
                 </div>
             </div>
@@ -785,7 +782,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Git/">
                         <span class="tag">Git</span>
-                        <span class="tag is-grey">9</span>
+                        <span class="tag is-grey">10</span>
                     </a>
                 </div>
                 
@@ -892,7 +889,7 @@
                     <span class="level-item">四月 2020</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">2</span>
+                    <span class="level-item tag">3</span>
                 </span>
             </a>
         </li>
@@ -966,6 +963,25 @@
         
         <article class="media">
             
+            <a href="/2020/04/11/git/git-upgrade/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="git-upgrade">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-04-11T13:17:47.000Z">2020-04-11</time></div>
+                    <a href="/2020/04/11/git/git-upgrade/" class="title has-link-black-ter is-size-6 has-text-weight-normal">git-upgrade</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/2020/04/10/hexo/hexo-tags/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/images/thumbnail.svg" alt="hexo-tags">
@@ -1033,25 +1049,6 @@
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-25T14:10:30.000Z">2020-02-25</time></div>
                     <a href="/2020/02/25/internet-events/" class="title has-link-black-ter is-size-6 has-text-weight-normal">互联网大事记</a>
-                    <p class="is-size-7 is-uppercase">
-                        
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2020/02/25/music/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="音乐">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-25T14:06:40.000Z">2020-02-25</time></div>
-                    <a href="/2020/02/25/music/" class="title has-link-black-ter is-size-6 has-text-weight-normal">音乐</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>

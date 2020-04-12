@@ -113,13 +113,76 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-13T08:54:38.000Z">2019-08-13</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    1 分钟 读完 (大约 185 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/08/13/java/spring-boot-2.0/">spring-boot-2.0</a>
+            
+        </h1>
+        <div class="content">
+            <h2 id="context-path"><a href="#context-path" class="headerlink" title="context-path"></a>context-path</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 旧版</span><br><span class="line">server.context-path: xxxx</span><br><span class="line"># 新版</span><br><span class="line">server.servlet.context-path: xxxx</span><br></pre></td></tr></table></figure>
+
+<h2 id="Actuator"><a href="#Actuator" class="headerlink" title="Actuator"></a>Actuator</h2><h3 id="Dependency"><a href="#Dependency" class="headerlink" title="Dependency"></a>Dependency</h3><figure class="highlight xml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.springframework.boot<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-boot-starter-actuator<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Endpoints"><a href="#Endpoints" class="headerlink" title="Endpoints"></a>Endpoints</h3><p>执行器端点（endpoints）可用于监控应用及与应用进行交互</p>
+<ul>
+<li>env 显示来自Spring的 ConfigurableEnvironment的属性</li>
+<li>health 显示应用的健康信息</li>
+<li>info 显示任意的应用信息</li>
+<li>metrics 展示当前应用的metrics信息</li>
+<li>mappings 显示一个所有@RequestMapping路径的集合列表</li>
+<li>logfile 返回日志文件内容（如果设置了logging.file或logging.path属性的话）</li>
+<li>prometheus 以可以被Prometheus服务器抓取的格式显示metrics信息</li>
+</ul>
+<p>启用禁用：</p>
+<figure class="highlight xml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">management.endpoint.metrics.enabled=true</span><br><span class="line">management.endpoint.env.enabled=true</span><br></pre></td></tr></table></figure>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/08/13/java/spring-boot-2.0/#more">阅读更多</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2019-08-13T08:42:01.000Z">2019-08-13</time>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    2 分钟 读完 (大约 366 个字)
+                    3 分钟 读完 (大约 409 个字)
                 </span>
                 
                 
@@ -134,21 +197,13 @@
         <div class="content">
             <h2 id="start"><a href="#start" class="headerlink" title="start"></a>start</h2><figure class="highlight sh hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">docker run -d --name sonarqube \</span><br><span class="line">    -p 9797:9000 -p 9092:9092 \</span><br><span class="line">    -v /opt/sonarqube/temp:/opt/sonarqube/temp \</span><br><span class="line">    -v /opt/sonarqube/conf:/opt/sonarqube/conf \</span><br><span class="line">    -v /opt/sonarqube/extensions:/opt/sonarqube/extensions \</span><br><span class="line">    -e SONARQUBE_JDBC_USERNAME=username \</span><br><span class="line">    -e SONARQUBE_JDBC_PASSWORD=password \</span><br><span class="line">    -e SONARQUBE_JDBC_URL=<span class="hljs-string">"jdbc:mysql://192.168.20.234:3306/sonar?useUnicode=true&amp;characterEncoding=utf8"</span> \</span><br><span class="line">    sonarqube:7.1</span><br></pre></td></tr></table></figure>
 
+<h2 id="postgres-db"><a href="#postgres-db" class="headerlink" title="postgres db"></a>postgres db</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">docker pull postgres:10</span><br><span class="line">docker pull sonarqube:7.9.1-community</span><br><span class="line">docker run -d -p 5432:5432 -e POSTGRES_PASSWORD=1 --name postgres postgres:10</span><br><span class="line">docker run -d --name sonarqube \</span><br><span class="line">    -p 9000:9000 \</span><br><span class="line">    -e &quot;SONARQUBE_JDBC_URL=jdbc:postgresql://192.168.114.131:5432/sonar&quot; \</span><br><span class="line">    -e &quot;SONARQUBE_JDBC_USERNAME=postgres&quot; \</span><br><span class="line">    -e &quot;SONARQUBE_JDBC_PASSWORD=1&quot; \</span><br><span class="line">    sonarqube:7.9.1-community</span><br></pre></td></tr></table></figure>
+
 <h2 id="plugins"><a href="#plugins" class="headerlink" title="plugins"></a>plugins</h2><figure class="highlight sh hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">FROM sonarqube</span><br><span class="line">ADD ./sonar-l10n-zh-plugin-1.15.jar /opt/sonarqube/extensions/plugins/sonar-l10n-zh-plugin-1.15.jar</span><br><span class="line">ADD ./sonar-java-plugin-4.7.0.9212.jar /opt/sonarqube/extensions/plugins/sonar-java-plugin-4.7.0.9212.jar</span><br><span class="line">ADD ./sonar-findbugs-plugin-3.4.4.jar /opt/sonarqube/extensions/plugins/sonar-findbugs-plugin-3.4.4.jar</span><br><span class="line">ADD ./checkstyle-sonar-plugin-3.6.jar /opt/sonarqube/extensions/plugins/checkstyle-sonar-plugin-3.6.jar</span><br><span class="line">ADD ./backelite-sonar-swift-plugin-0.3.2.jar /opt/sonarqube/extensions/plugins/backelite-sonar-swift-plugin-0.3.2.jar</span><br><span class="line">ADD ./sonar-web-plugin-2.5.0.476.jar /opt/sonarqube/extensions/plugins/sonar-web-plugin-2.5.0.476.jar</span><br><span class="line">ADD ./sonar-javascript-plugin-2.21.0.4409.jar /opt/sonarqube/extensions/plugins/sonar-javascript-plugin-2.21.0.4409.jar</span><br></pre></td></tr></table></figure>
 
 <h2 id="IDE-Support"><a href="#IDE-Support" class="headerlink" title="IDE Support"></a>IDE Support</h2><p>Eclipse<br>IDEA</p>
 <p>maven项目sonar扫描本地配置和扫描相关命令</p>
 <figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn sonar:sonar</span><br></pre></td></tr></table></figure>
-
-<h2 id="术语"><a href="#术语" class="headerlink" title="术语"></a>术语</h2><ul>
-<li>Reliability 可靠性</li>
-<li>Security 安全</li>
-<li>Maintainability 可维护性</li>
-<li>Coverage 覆盖率</li>
-<li>Duplications 重复</li>
-<li>Quality Gate 质量门限</li>
-<li>Compliant Solution 兼容的解决方案</li>
-</ul>
         </div>
         
         
@@ -598,56 +653,6 @@
 
 
 
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-08-10T08:20:07.000Z">2019-08-10</time>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    几秒 读完 (大约 74 个字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/08/10/tools/elk/">elk</a>
-            
-        </h1>
-        <div class="content">
-            <h2 id="组件"><a href="#组件" class="headerlink" title="组件"></a>组件</h2><h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><p>使用双引号包起来作为一个短语搜索    “like Gecko”<br>返回结果中需要有http字段    <em>exists</em>:http<br>不能含有http字段    <em>missing</em>:http<br>匹配单个字符    ?<br>匹配0到多个字符    *
-搜索结果中必须包含此项    +<br>不能含有此项    -</p>
-
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/08/10/tools/elk/#more">阅读更多</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
 
     
 <div class="card card-transparent">
@@ -721,7 +726,7 @@
                         文章
                     </p>
                     <p class="title has-text-weight-normal">
-                        68
+                        69
                     </p>
                 </div>
             </div>
@@ -784,7 +789,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Git/">
                         <span class="tag">Git</span>
-                        <span class="tag is-grey">9</span>
+                        <span class="tag is-grey">10</span>
                     </a>
                 </div>
                 
@@ -891,7 +896,7 @@
                     <span class="level-item">四月 2020</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">2</span>
+                    <span class="level-item tag">3</span>
                 </span>
             </a>
         </li>
@@ -965,6 +970,25 @@
         
         <article class="media">
             
+            <a href="/2020/04/11/git/git-upgrade/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="git-upgrade">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-04-11T13:17:47.000Z">2020-04-11</time></div>
+                    <a href="/2020/04/11/git/git-upgrade/" class="title has-link-black-ter is-size-6 has-text-weight-normal">git-upgrade</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/2020/04/10/hexo/hexo-tags/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/images/thumbnail.svg" alt="hexo-tags">
@@ -1032,25 +1056,6 @@
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-25T14:10:30.000Z">2020-02-25</time></div>
                     <a href="/2020/02/25/internet-events/" class="title has-link-black-ter is-size-6 has-text-weight-normal">互联网大事记</a>
-                    <p class="is-size-7 is-uppercase">
-                        
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2020/02/25/music/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="音乐">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-25T14:06:40.000Z">2020-02-25</time></div>
-                    <a href="/2020/02/25/music/" class="title has-link-black-ter is-size-6 has-text-weight-normal">音乐</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>

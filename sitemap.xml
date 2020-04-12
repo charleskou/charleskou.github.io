@@ -2,6 +2,41 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://charleskou.github.io/2019/10/30/tools/common/</loc>
+    
+    <lastmod>2020-04-12T01:12:28.335Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://charleskou.github.io/2019/08/13/java/sonar/</loc>
+    
+    <lastmod>2020-04-11T14:31:24.941Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://charleskou.github.io/2020/04/11/git/git-upgrade/</loc>
+    
+    <lastmod>2020-04-11T13:19:49.018Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://charleskou.github.io/2019/08/14/mysql/mysql/</loc>
+    
+    <lastmod>2020-04-11T13:13:46.139Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://charleskou.github.io/2019/09/21/tools/ups/</loc>
+    
+    <lastmod>2020-04-11T09:59:07.957Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://charleskou.github.io/2020/04/10/hexo/hexo-tags/</loc>
     
     <lastmod>2020-04-10T09:18:58.990Z</lastmod>
@@ -72,13 +107,6 @@
   </url>
   
   <url>
-    <loc>https://charleskou.github.io/2019/10/30/tools/common/</loc>
-    
-    <lastmod>2020-03-20T05:10:02.805Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://charleskou.github.io/2019/08/09/study/</loc>
     
     <lastmod>2020-02-25T15:03:59.261Z</lastmod>
@@ -145,13 +173,6 @@
     <loc>https://charleskou.github.io/2019/08/13/java/druid/</loc>
     
     <lastmod>2019-09-21T06:22:10.729Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://charleskou.github.io/2019/09/21/tools/ups/</loc>
-    
-    <lastmod>2019-09-21T06:00:03.431Z</lastmod>
     
   </url>
   
@@ -271,13 +292,6 @@
     <loc>https://charleskou.github.io/2019/08/14/docker/docker/</loc>
     
     <lastmod>2019-09-21T05:36:50.472Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://charleskou.github.io/2019/08/14/mysql/mysql/</loc>
-    
-    <lastmod>2019-08-31T09:59:59.330Z</lastmod>
     
   </url>
   
@@ -422,13 +436,6 @@
   </url>
   
   <url>
-    <loc>https://charleskou.github.io/2019/08/13/java/sonar/</loc>
-    
-    <lastmod>2019-08-13T08:54:03.474Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://charleskou.github.io/2019/08/13/java/lombok/</loc>
     
     <lastmod>2019-08-13T08:28:17.448Z</lastmod>
@@ -436,7 +443,7 @@
   </url>
   
   <url>
-    <loc>https://charleskou.github.io/2019/08/10/tools/jira/</loc>
+    <loc>https://charleskou.github.io/2019/08/13/tools/vpn/</loc>
     
     <lastmod>2019-08-13T07:44:36.598Z</lastmod>
     
@@ -450,21 +457,21 @@
   </url>
   
   <url>
-    <loc>https://charleskou.github.io/2019/08/13/tools/vpn/</loc>
+    <loc>https://charleskou.github.io/2019/08/10/tools/jira/</loc>
     
     <lastmod>2019-08-13T07:44:36.598Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://charleskou.github.io/2019/08/10/tools/elk/</loc>
+    <loc>https://charleskou.github.io/2019/08/10/java/postman/</loc>
     
     <lastmod>2019-08-13T07:44:36.572Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://charleskou.github.io/2019/08/10/java/postman/</loc>
+    <loc>https://charleskou.github.io/2019/08/10/tools/elk/</loc>
     
     <lastmod>2019-08-13T07:44:36.572Z</lastmod>
     
