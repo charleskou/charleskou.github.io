@@ -25,3 +25,12 @@ JSON Request Sample:
     "TrackingOption": "02"
 }
 ```
+
+UPS SurePost rates:
+92: UPS SurePost Less than 1LB - USL
+93: UPS SurePost 1LB or greater - USG
+94: UPS SurePost BPM - USB
+95: UPS SurePost Media Mail - USM
+
+参考：
+https://www.ups.com/upsdeveloperkit

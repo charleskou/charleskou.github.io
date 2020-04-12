@@ -34,6 +34,13 @@ IFNULL(v1,v2)
 VERSION()
 ```
 
+## 查询隔离级别
+```sql
+SELECT @@global.tx_isolation;
+SELECT @@session.tx_isolation;
+SELECT @@tx_isolation;
+```
+
 ## 正则表达式
 ```sql
 -- 查找name字段中以'st'为开头的所有数据

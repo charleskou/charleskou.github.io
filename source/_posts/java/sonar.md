@@ -17,6 +17,19 @@ docker run -d --name sonarqube \
     sonarqube:7.1
 ```
 
+## postgres db
+```
+docker pull postgres:10
+docker pull sonarqube:7.9.1-community
+docker run -d -p 5432:5432 -e POSTGRES_PASSWORD=1 --name postgres postgres:10
+docker run -d --name sonarqube \
+    -p 9000:9000 \
+    -e "SONARQUBE_JDBC_URL=jdbc:postgresql://192.168.114.131:5432/sonar" \
+    -e "SONARQUBE_JDBC_USERNAME=postgres" \
+    -e "SONARQUBE_JDBC_PASSWORD=1" \
+    sonarqube:7.9.1-community
+```
+
 ## plugins
 ```sh
 FROM sonarqube
