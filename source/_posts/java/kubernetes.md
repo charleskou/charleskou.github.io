@@ -230,4 +230,19 @@ Probe 中有很多精确和详细的配置，通过它们您能准确的控制 l
 - port：访问的容器的端口名字或者端口号。端口号必须介于 1 和 65525 之间。
 对于 HTTP 探测器，kubelet 向指定的路径和端口发送 HTTP 请求以执行检查。 Kubelet 将 probe 发送到容器的 IP 地址，除非地址被httpGet中的可选host字段覆盖。 在大多数情况下，您不想设置主机字段。 有一种情况下您可以设置它。 假设容器在127.0.0.1上侦听，并且 Pod 的hostNetwork字段为 true。 然后，在httpGet下的host应该设置为127.0.0.1。 如果您的 pod 依赖于虚拟主机，这可能是更常见的情况，您不应该是用host，而是应该在httpHeaders中设置Host头。
 
-What’s next
+## kubenetes dashboard
+
+https://docs.aws.amazon.com/zh_cn/eks/latest/userguide/dashboard-tutorial.html
+
+```
+kubectl proxy
+```
+访问：
+```
+# 获取Token
+kubectl -n kube-system describe secret $(kubectl -n kube-system get secret | grep eks-admin | awk '{print $1}')
+
+
+http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/#!/login
+```
+
