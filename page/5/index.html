@@ -113,6 +113,70 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-13T10:14:10.000Z">2019-08-13</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    1 分钟 读完 (大约 170 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/08/13/java/deadlock/">死锁</a>
+            
+        </h1>
+        <div class="content">
+            <ol>
+<li><p>for update 是否锁表</p>
+</li>
+<li><p>事务传播 @Transactional</p>
+</li>
+<li><p>异常 MySQLTransactionRollbackException</p>
+</li>
+<li><p>隔离级别</p>
+<figure class="highlight sql hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">show</span> <span class="hljs-keyword">engines</span>;</span><br><span class="line"><span class="hljs-keyword">show</span> <span class="hljs-keyword">variables</span> <span class="hljs-keyword">like</span> <span class="hljs-string">'%storage_engine%'</span>;</span><br><span class="line"><span class="hljs-keyword">select</span> <span class="hljs-keyword">version</span>();</span><br><span class="line"><span class="hljs-keyword">select</span> @@tx_isolation; <span class="hljs-comment">-- 查看数据库隔离级别</span></span><br><span class="line"><span class="hljs-keyword">select</span> @@autocommit;</span><br><span class="line"><span class="hljs-keyword">show</span> <span class="hljs-keyword">variables</span> <span class="hljs-keyword">like</span> <span class="hljs-string">'innodb_lock_wait_timeout'</span>;</span><br><span class="line"><span class="hljs-keyword">show</span> <span class="hljs-keyword">global</span> <span class="hljs-keyword">variables</span> <span class="hljs-keyword">like</span> <span class="hljs-string">'innodb_lock_wait_timeout'</span>;</span><br><span class="line"><span class="hljs-keyword">set</span> innodb_lock_wait_timeout=<span class="hljs-number">1000</span>; <span class="hljs-comment">-- 设置当前会话 Innodb 行锁等待超时时间，单位秒</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>INNODB 事务</p>
+<figure class="highlight sql hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">SELECT</span></span><br><span class="line">    <span class="hljs-string">`trx_id`</span>,</span><br><span class="line">    <span class="hljs-string">`trx_state`</span> <span class="hljs-keyword">AS</span> 事务状态,</span><br><span class="line">    <span class="hljs-string">`trx_started`</span> <span class="hljs-keyword">AS</span> 开始时间,</span><br><span class="line">    <span class="hljs-string">`trx_requested_lock_id`</span>,</span><br><span class="line">    <span class="hljs-string">`trx_wait_started`</span>,</span><br><span class="line">    <span class="hljs-string">`trx_weight`</span> <span class="hljs-keyword">AS</span> 权重,</span><br><span class="line">    <span class="hljs-string">`trx_mysql_thread_id`</span> <span class="hljs-keyword">AS</span> 线程<span class="hljs-keyword">ID</span>,</span><br><span class="line">    <span class="hljs-string">`trx_query`</span>,</span><br><span class="line">    <span class="hljs-string">`trx_operation_state`</span>,</span><br><span class="line">    <span class="hljs-string">`trx_tables_locked`</span> <span class="hljs-keyword">AS</span> 锁表个数,</span><br><span class="line">    <span class="hljs-string">`trx_rows_locked`</span> <span class="hljs-keyword">AS</span> 锁表行数,</span><br><span class="line">    <span class="hljs-string">`trx_rows_modified`</span> <span class="hljs-keyword">AS</span> 修改行数,</span><br><span class="line">    <span class="hljs-string">`trx_autocommit_non_locking`</span> <span class="hljs-keyword">AS</span> 是否自动提交</span><br><span class="line"><span class="hljs-keyword">FROM</span></span><br><span class="line">    INNODB_TRX t;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>场景模拟</p>
+</li>
+</ol>
+
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/08/13/java/deadlock/#more">阅读更多</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2019-08-13T08:54:38.000Z">2019-08-13</time>
                 
                 
@@ -605,54 +669,6 @@
 
 
 
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-08-10T08:24:03.000Z">2019-08-10</time>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    几秒 读完 (大约 2 个字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/08/10/java/guava/">guava - Java开发工具</a>
-            
-        </h1>
-        <div class="content">
-            <h2 id="Lists"><a href="#Lists" class="headerlink" title="Lists"></a>Lists</h2><h2 id="Arrays"><a href="#Arrays" class="headerlink" title="Arrays"></a>Arrays</h2>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/08/10/java/guava/#more">阅读更多</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
 
     
 <div class="card card-transparent">
@@ -726,7 +742,7 @@
                         文章
                     </p>
                     <p class="title has-text-weight-normal">
-                        69
+                        70
                     </p>
                 </div>
             </div>
@@ -789,7 +805,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Git/">
                         <span class="tag">Git</span>
-                        <span class="tag is-grey">10</span>
+                        <span class="tag is-grey">11</span>
                     </a>
                 </div>
                 
@@ -891,6 +907,17 @@
         <ul class="menu-list">
         
         <li>
+            <a class="level is-marginless" href="/archives/2020/05/">
+                <span class="level-start">
+                    <span class="level-item">五月 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
             <a class="level is-marginless" href="/archives/2020/04/">
                 <span class="level-start">
                     <span class="level-item">四月 2020</span>
@@ -970,6 +997,25 @@
         
         <article class="media">
             
+            <a href="/2020/05/09/git/github-stars/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="github-stars">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-05-09T08:13:44.000Z">2020-05-09</time></div>
+                    <a href="/2020/05/09/git/github-stars/" class="title has-link-black-ter is-size-6 has-text-weight-normal">github-stars</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/2020/04/11/git/git-upgrade/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/images/thumbnail.svg" alt="git-upgrade">
@@ -1037,25 +1083,6 @@
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-25T14:54:32.000Z">2020-02-25</time></div>
                     <a href="/2020/02/25/books/" class="title has-link-black-ter is-size-6 has-text-weight-normal">书籍</a>
-                    <p class="is-size-7 is-uppercase">
-                        
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2020/02/25/internet-events/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="互联网大事记">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-25T14:10:30.000Z">2020-02-25</time></div>
-                    <a href="/2020/02/25/internet-events/" class="title has-link-black-ter is-size-6 has-text-weight-normal">互联网大事记</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
