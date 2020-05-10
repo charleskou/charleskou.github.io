@@ -56,3 +56,15 @@ git difftool
 ```
 git mergetool
 ```
+
+
+
+## 5. 处理使用期限
+
+C:\Users\[Your User Name]\AppData\Roaming\Scooter Software\Beyond Compare 4\BCState.xml
+删除<TCheckForUpdatesState>节点（即<TCheckForUpdatesState>到</TCheckForUpdatesState>之间的部分）,保存退出编辑软件。
+
+AppData为隐藏文件夹。
+
+
+
